@@ -25,19 +25,78 @@ export interface ConvergenceMap {
 /**
  * Builds the convergence map from two readers' judgements over the same claims.
  *
- * CONTRACT (to be honored by the implementation + locked by tests):
- *  - converge on the same supporting lean  → robust-core
- *  - opposite leans (supports vs contradicts) → live-crux
- *  - any reader "insufficient"             → unsupported
+ * CONTRACT (honored here, locked by tests):
+ *  - converge on the same lean (both supports, or both contradicts) → robust-core
+ *  - opposite leans (supports vs contradicts)                        → live-crux
+ *  - any reader "insufficient"                                       → unsupported
  *  - the two judgement lists MUST cover the same claim ids; a mismatch is an
  *    error, never silently dropped.
  *
- * NOTE: skeleton. Implementation comes under TDD (tests first).
+ * Juxtapose, never fuse: each reader's lean is preserved verbatim in the
+ * verdict's `leans` map. The signal classifies the RELATION between the two
+ * doubts; it does not collapse them into one voice. (Mirrors the production
+ * orchestrator's C-2: dissent is the product, not consensus.)
+ *
+ * Each judgement carries its own `readerId`; the two reader ids are extracted
+ * from the lists and must be internally uniform and mutually distinct.
  */
-export declare function buildConvergenceMap(
+export function buildConvergenceMap(
   a: readonly ReaderJudgement[],
   b: readonly ReaderJudgement[],
-): ConvergenceMap;
+): ConvergenceMap {
+  const readerIdA = uniformReaderId(a, "A");
+  const readerIdB = uniformReaderId(b, "B");
+  if (readerIdA === readerIdB) {
+    throw new Error(
+      `convergence: both lists carry the same readerId '${readerIdA}' — need two distinct readers`,
+    );
+  }
+  if (a.length !== b.length) {
+    throw new Error(
+      `convergence: reader judgement counts differ (${readerIdA}=${a.length}, ${readerIdB}=${b.length})`,
+    );
+  }
+  const byIdB = new Map(b.map((j) => [j.claimId, j]));
+  const verdicts: ClaimVerdict[] = a.map((ja) => {
+    const jb = byIdB.get(ja.claimId);
+    if (jb === undefined) {
+      throw new Error(
+        `convergence: claim id mismatch — '${ja.claimId}' judged by ${readerIdA} but not by ${readerIdB}`,
+      );
+    }
+    return {
+      claimId: ja.claimId,
+      signal: classifySignal(ja.lean, jb.lean),
+      leans: { [readerIdA]: ja.lean, [readerIdB]: jb.lean },
+    };
+  });
+  return { verdicts };
+}
+
+/** Extracts the single readerId shared by every judgement in a list. An empty
+ * list or a list that mixes readers is an error — never silent. */
+function uniformReaderId(judgements: readonly ReaderJudgement[], side: string): string {
+  const first = judgements[0];
+  if (first === undefined) {
+    throw new Error(`convergence: reader list ${side} is empty — no readerId to extract`);
+  }
+  for (const j of judgements) {
+    if (j.readerId !== first.readerId) {
+      throw new Error(
+        `convergence: reader list ${side} mixes readerIds ('${first.readerId}' vs '${j.readerId}')`,
+      );
+    }
+  }
+  return first.readerId;
+}
+
+/** The three-signal classifier. Insufficient dominates; same lean converges;
+ * opposite leans are a live crux. */
+function classifySignal(a: Lean, b: Lean): ClaimSignal {
+  if (a === "insufficient" || b === "insufficient") return "unsupported";
+  if (a === b) return "robust-core";
+  return "live-crux";
+}
 
 // ---------------------------------------------------------------------------
 
@@ -63,11 +122,7 @@ export interface ReliabilityProfile {
   readonly agreementFromDoubt: AxisValue<ClaimSignal>;
 }
 
-/**
- * Claim-level abstention falls out of the profile, it is not a separate rule:
- * a reader abstains when the profile is weak across ALL measured axes. Defined
- * here as a pure predicate over the profile.
- *
- * NOTE: skeleton. Implementation + threshold semantics locked by tests.
- */
-export declare function shouldAbstain(profile: ReliabilityProfile): boolean;
+// The reliability profile BUILDER and the `shouldAbstain` predicate live in
+// `./reliability.ts` (kept separate to honor the ~200-line file limit and to
+// keep the convergence map and the profile as distinct concerns). The types
+// above (ReliabilityProfile, AxisValue) stay here per ARCHITECTURE.md.

@@ -12,6 +12,8 @@ is a separate effort. Simplifying here does **not** change that future plan.
 
 ---
 
+LEIA SKILL-METODO-AKITA-ESTENDIDO.md antes de continuar
+
 ## Arquitetura
 
 - **Stack:** TypeScript + Next.js. Domain core in pure TypeScript (no framework
@@ -25,6 +27,7 @@ is a separate effort. Simplifying here does **not** change that future plan.
   (Next routes, glue, I/O).
 
 ### Estrutura de diretórios
+
 ```
 src/
   domain/      Pure domain objects: Claim, Reader, Bench, ReliabilityProfile,
@@ -58,11 +61,13 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
 ## Spec Epistêmica
 
 ### Modos de operação
+
 - **replay** — runs over curated fixtures, no model call, deterministic,
   zero-GPU. This is the judge's default path.
 - **live** — calls a real model behind the Reader interface (added later).
 
 ### O método (o que o sistema FAZ)
+
 1. **Ingest** evidence into claims with provenance.
 2. **Two undecided readers** read the SAME evidence. Each starts position-agnostic
    (no side assigned). They are NOT advocates. Held undecided by guard prompts.
@@ -80,11 +85,12 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
    - internal contestation (does the base contradict it?)
    - agreement-from-doubt (did the two readers converge/diverge? — same signal as
      the map; reused by design, not by oversight)
-   Each axis that cannot be computed reliably reports **"not measured"** rather
-   than guessing (graceful degradation). Claim-level abstention = profile weak
-   across all measured axes.
+     Each axis that cannot be computed reliably reports **"not measured"** rather
+     than guessing (graceful degradation). Claim-level abstention = profile weak
+     across all measured axes.
 
 ### Restrições semânticas (inegociáveis)
+
 - A reader **certifies coherence, never truth.** It judges conceptual coherence,
   traceability, attribution, temporal consistency — never whether a claim is TRUE.
   Every output states this limit.
@@ -96,6 +102,7 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
   layer = output layer, descriptive, AFTER judgment — never inside it.)
 
 ### Erros epistêmicos do agente (vícios a evitar)
+
 - Concordância automática ("perfeito!", "ótimo!") antes de pensar.
 - Inflar escopo: entregar X + Y + Z quando pediram X.
 - Recomendação travestida de pergunta (uma opção só, justificada longamente).
@@ -134,6 +141,7 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
 ---
 
 ## Dados DIAMOND (nunca versionar / nunca tocar sem aprovação)
+
 - Nenhuma credencial, chave de API, ou .env real. Só `.env.example`.
 - Nenhum dado de produção do tmu-ecosystem. Nenhum corpus bruto de terceiros.
 - Nenhum histórico .git do monorepo. Repo começa limpo.
@@ -143,4 +151,11 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
 ---
 
 ## Erros técnicos documentados
-- (a preencher conforme aparecerem)
+
+- **tsx/esbuild trava no Windows ("The service was stopped" / hang sem saída).**
+  Sintoma: `npm run demo:replay` fica pendurado; ao matar, esbuild loga
+  "service was stopped". Causa: o binário nativo do esbuild fica num estado ruim
+  após reinstalação parcial (ex.: `.bin/` regenerado mas esbuild não). Fix:
+  `npm rebuild esbuild`. Verificação alternativa sem tsx: `tsc --outDir <tmp>
+  --noEmit false` e rodar o `.js` emitido com `node` (imports já usam extensão
+  `.js`, então o ESM do node resolve direto).

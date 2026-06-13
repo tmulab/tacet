@@ -47,9 +47,44 @@ export interface CoverageAudit {
  *  - never invents expected categories; only those passed in (baseline is cited)
  *  - descriptive only: reports the gap, does NOT conclude what the gap "means"
  *
- * NOTE: skeleton. Implementation comes under TDD.
+ * One finding per expected category, in input order — so `expected` is true for
+ * every finding here (we audit only the cited baseline; reporting observed-but-
+ * unexpected categories is deliberately out of scope). The output carries no
+ * field that interprets the gap; the human reader interprets.
  */
-export declare function auditCoverage(
+export function auditCoverage(
   claims: readonly Claim[],
   expected: readonly ExpectedCategory[],
-): CoverageAudit;
+): CoverageAudit {
+  const findings: CoverageFinding[] = expected.map((category) => {
+    const observedSources = countObservedSources(claims, category.dimension, category.value);
+    return {
+      dimension: category.dimension,
+      value: category.value,
+      observedSources,
+      expected: true,
+      isEmptyChair: observedSources === 0,
+      justification: category.justification,
+    };
+  });
+  const emptyChairs = findings.filter((f) => f.isEmptyChair);
+  return { findings, emptyChairs };
+}
+
+/** Counts distinct sources (by sourceId) whose provenance tags match
+ * (dimension,value). The same source cited across several claims counts once. */
+function countObservedSources(
+  claims: readonly Claim[],
+  dimension: string,
+  value: string,
+): number {
+  const sourceIds = new Set<string>();
+  for (const claim of claims) {
+    for (const p of claim.provenance) {
+      if (p.tags?.[dimension] === value) {
+        sourceIds.add(p.sourceId);
+      }
+    }
+  }
+  return sourceIds.size;
+}

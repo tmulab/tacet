@@ -9,7 +9,12 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "demo:replay": "tsx src/pipeline/run-replay.ts"
+    "demo:replay": "tsx src/pipeline/run-replay.ts",
+    "build:fixture": "tsx src/ingestion/build-ingested-fixture.ts",
+    "harvest": "tsx --env-file-if-exists=.env src/ingestion/harvest.ts",
+    "summarize": "tsx --env-file-if-exists=.env src/ingestion/summarize.ts",
+    "read": "tsx --env-file-if-exists=.env src/ingestion/read.ts",
+    "llm:check": "tsx --env-file-if-exists=.env src/ingestion/llm-check.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

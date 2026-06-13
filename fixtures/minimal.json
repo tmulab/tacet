@@ -1,0 +1,88 @@
+{
+  "case": "covid-minimal",
+  "note": "Minimal replay fixture (anchor case: COVID, the model of doubt). Four coherence-level claims ABOUT the documented evidence base — not verdicts on truth. Provenance carries locators (how to reach a public source), never raw third-party content. The two readers' leans are predefined to exercise all three signals: robust-core, live-crux, unsupported.",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Phase-3 randomized trials of mRNA COVID-19 vaccines reported efficacy against symptomatic infection in their pre-registered primary endpoints.",
+      "provenance": [
+        {
+          "sourceId": "polack-2020",
+          "locator": "doi:10.1056/NEJMoa2034577",
+          "date": "2020-12-31",
+          "tags": { "language-family": "anglophone", "geographic-locus": "multinational", "source-genre": "rct" }
+        },
+        {
+          "sourceId": "baden-2021",
+          "locator": "doi:10.1056/NEJMoa2035389",
+          "date": "2021-02-04",
+          "tags": { "language-family": "anglophone", "geographic-locus": "north-america", "source-genre": "rct" }
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "text": "The benefit-over-risk balance of routine booster doses for low-risk young adults is settled by the cited evidence base.",
+      "provenance": [
+        {
+          "sourceId": "who-sage-2022",
+          "locator": "https://www.who.int/groups/strategic-advisory-group-of-experts-on-immunization",
+          "date": "2022-03-29",
+          "tags": { "language-family": "anglophone", "geographic-locus": "global", "source-genre": "guidance" }
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "text": "Early-2020 school-closure policies were uniformly justified by contemporaneous controlled evidence of their effect on transmission.",
+      "provenance": [
+        {
+          "sourceId": "viner-2020",
+          "locator": "doi:10.1016/S2352-4642(20)30095-X",
+          "date": "2020-04-06",
+          "tags": { "language-family": "anglophone", "geographic-locus": "global", "source-genre": "review" }
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "text": "Ten-year cardiovascular outcomes following COVID-19 infection are characterized in the cited evidence base.",
+      "provenance": [
+        {
+          "sourceId": "xie-2022",
+          "locator": "doi:10.1038/s41591-022-01689-3",
+          "date": "2022-02-07",
+          "tags": { "language-family": "anglophone", "geographic-locus": "north-america", "source-genre": "cohort" }
+        }
+      ]
+    }
+  ],
+  "readers": {
+    "reader-a": { "c1": "supports", "c2": "supports", "c3": "contradicts", "c4": "supports" },
+    "reader-b": { "c1": "supports", "c2": "contradicts", "c3": "contradicts", "c4": "insufficient" }
+  },
+  "citationGraph": {
+    "polack-2020": [],
+    "baden-2021": [],
+    "who-sage-2022": ["polack-2020", "baden-2021"],
+    "viner-2020": [],
+    "xie-2022": []
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "language-family",
+      "value": "anglophone",
+      "justification": "the anglophone peer-reviewed literature is the baseline corpus a scoping review of this dispute is expected to cover (PRISMA-ScR item 8: information sources)."
+    },
+    {
+      "dimension": "language-family",
+      "value": "non-anglophone",
+      "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened global study of origins (joint mission report, 2021)."
+    },
+    {
+      "dimension": "source-genre",
+      "value": "rct",
+      "justification": "claims about intervention efficacy are expected to be anchored in controlled trial evidence, the design that addresses confounding for such claims."
+    }
+  ]
+}

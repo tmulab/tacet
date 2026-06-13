@@ -3,3 +3,7 @@ node_modules/
 dist/
 *.log
 .DS_Store
+
+# Harvested corpus: third-party content in bulk is never versioned (DIAMOND).
+# The curated, open-license replay fixture lives in fixtures/ and IS versioned.
+corpus/

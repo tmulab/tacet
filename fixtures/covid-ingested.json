@@ -1,0 +1,406 @@
+{
+  "case": "covid-ingested",
+  "note": "Generated offline by src/ingestion/build-ingested-fixture.ts via the real ingestCrossref. Records are ILLUSTRATIVE (test DOI prefix 10.5555, representative abstracts) — the build env has no network; `npm run harvest` regenerates a verbatim CC-BY corpus into corpus/ (gitignored). Reader leans are stub placeholders cycling the three signals; the LlmReader replaces them in Phase 5.",
+  "claims": [
+    {
+      "id": "10.5555/tacet.covid.vaccine-efficacy",
+      "text": "Efficacy of mRNA COVID-19 vaccines against symptomatic infection",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.vaccine-efficacy",
+          "locator": "https://doi.org/10.5555/tacet.covid.vaccine-efficacy",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Abstract We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRNA vaccines against symptomatic SARS-CoV-2 infection in pre-registered phase-3 endpoints. We assessed efficacy of two mRN",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "A. Mendes",
+            "R. Khan"
+          ],
+          "venue": "Open Journal of Vaccinology"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.booster",
+      "text": "Benefit and risk of routine boosters in low-risk young adults",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.booster",
+          "locator": "https://doi.org/10.5555/tacet.covid.booster",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "We review evidence on the benefit-risk balance of routine booster doses in low-risk young adults and find the question underdetermined by current data.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "L. Oliveira"
+          ],
+          "venue": "Immunization Reports"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.school-closures",
+      "text": "School closures and transmission: a scoping review",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.school-closures",
+          "locator": "https://doi.org/10.5555/tacet.covid.school-closures",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Contemporaneous controlled evidence for early-2020 school-closure effects on transmission was sparse and heterogeneous.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "M. Santos",
+            "J. Park"
+          ],
+          "venue": "Public Health Open"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.cardio",
+      "text": "Cardiovascular outcomes following COVID-19 infection: a cohort",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.cardio",
+          "locator": "https://doi.org/10.5555/tacet.covid.cardio",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "We characterized one-year cardiovascular outcomes after infection; ten-year horizons remain uncharacterized in the cited base.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "S. Almeida"
+          ],
+          "venue": "Cardiology Open Access"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.masks",
+      "text": "Community mask mandates and respiratory transmission",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.masks",
+          "locator": "https://doi.org/10.5555/tacet.covid.masks",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Observational studies of community mask mandates show mixed effect estimates with substantial confounding.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "K. Nguyen"
+          ],
+          "venue": "Open Epidemiology"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.ivermectin",
+      "text": "Ivermectin for COVID-19: a randomized controlled trial",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.ivermectin",
+          "locator": "https://doi.org/10.5555/tacet.covid.ivermectin",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "In this RCT, ivermectin did not significantly reduce time to recovery versus placebo.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "P. Costa"
+          ],
+          "venue": "Trials Open"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.origins",
+      "text": "Zoonotic spillover hypotheses for SARS-CoV-2 origins",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.origins",
+          "locator": "https://doi.org/10.5555/tacet.covid.origins",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "We summarize evidence pertinent to zoonotic spillover hypotheses, noting gaps in non-anglophone primary sources.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "H. Wei"
+          ],
+          "venue": "Virology Open"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.ventilation",
+      "text": "Indoor ventilation and aerosol transmission of SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.ventilation",
+          "locator": "https://doi.org/10.5555/tacet.covid.ventilation",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Improved ventilation is associated with reduced aerosol transmission risk in modeled and field settings.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "T. Ferreira"
+          ],
+          "venue": "Indoor Air Open"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.myocarditis",
+      "text": "Myocarditis after mRNA vaccination in adolescents",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.myocarditis",
+          "locator": "https://doi.org/10.5555/tacet.covid.myocarditis",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Rare myocarditis events after mRNA vaccination in adolescent males were predominantly mild and self-limiting.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "D. Rocha"
+          ],
+          "venue": "Pediatrics Open"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.reinfection",
+      "text": "Natural immunity and reinfection risk after COVID-19",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.reinfection",
+          "locator": "https://doi.org/10.5555/tacet.covid.reinfection",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Prior infection conferred measurable but waning protection against reinfection across variant waves.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "B. Souza"
+          ],
+          "venue": "Open Immunity"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.origin-und-declared",
+      "text": "Spillover dynamics at the human-animal interface",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.origin-und-declared",
+          "locator": "https://doi.org/10.5555/tacet.covid.origin-und-declared",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This English-language abstract is published with no determinable language code; the publisher left the language field as 'und'.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "X. Liang"
+          ],
+          "venue": "Open Zoonoses"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.origin-no-lang",
+      "text": "Phylogenetic timing of early SARS-CoV-2 lineages",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.origin-no-lang",
+          "locator": "https://doi.org/10.5555/tacet.covid.origin-no-lang",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "We estimate divergence times of early lineages; this record carries no language field at all.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "Y. Tan"
+          ],
+          "venue": "Open Phylogenetics"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.lockdown",
+      "text": "Lockdowns and economic tradeoffs: an open review",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.lockdown",
+          "locator": "https://doi.org/10.5555/tacet.covid.lockdown",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "We review estimates of lockdown effects on transmission against economic costs; net effects are contested.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "G. Lima"
+          ],
+          "venue": "Policy Open"
+        }
+      ]
+    },
+    {
+      "id": "10.5555/tacet.covid.rapid-antigen",
+      "text": "Sensitivity of rapid antigen tests across variants",
+      "provenance": [
+        {
+          "sourceId": "10.5555/tacet.covid.rapid-antigen",
+          "locator": "https://doi.org/10.5555/tacet.covid.rapid-antigen",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Rapid antigen test sensitivity varied with viral load and sampling timing across variants.",
+          "summaryMethod": "truncated-stub",
+          "authors": [
+            "C. Pereira"
+          ],
+          "venue": "Diagnostics Open"
+        }
+      ]
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "10.5555/tacet.covid.vaccine-efficacy": "supports",
+      "10.5555/tacet.covid.booster": "supports",
+      "10.5555/tacet.covid.school-closures": "contradicts",
+      "10.5555/tacet.covid.cardio": "supports",
+      "10.5555/tacet.covid.masks": "supports",
+      "10.5555/tacet.covid.ivermectin": "supports",
+      "10.5555/tacet.covid.origins": "contradicts",
+      "10.5555/tacet.covid.ventilation": "supports",
+      "10.5555/tacet.covid.myocarditis": "supports",
+      "10.5555/tacet.covid.reinfection": "supports",
+      "10.5555/tacet.covid.origin-und-declared": "contradicts",
+      "10.5555/tacet.covid.origin-no-lang": "supports",
+      "10.5555/tacet.covid.lockdown": "supports",
+      "10.5555/tacet.covid.rapid-antigen": "supports"
+    },
+    "reader-b": {
+      "10.5555/tacet.covid.vaccine-efficacy": "supports",
+      "10.5555/tacet.covid.booster": "contradicts",
+      "10.5555/tacet.covid.school-closures": "contradicts",
+      "10.5555/tacet.covid.cardio": "insufficient",
+      "10.5555/tacet.covid.masks": "supports",
+      "10.5555/tacet.covid.ivermectin": "contradicts",
+      "10.5555/tacet.covid.origins": "contradicts",
+      "10.5555/tacet.covid.ventilation": "insufficient",
+      "10.5555/tacet.covid.myocarditis": "supports",
+      "10.5555/tacet.covid.reinfection": "contradicts",
+      "10.5555/tacet.covid.origin-und-declared": "contradicts",
+      "10.5555/tacet.covid.origin-no-lang": "insufficient",
+      "10.5555/tacet.covid.lockdown": "supports",
+      "10.5555/tacet.covid.rapid-antigen": "contradicts"
+    }
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "language-family",
+      "value": "anglophone",
+      "justification": "the anglophone literature is the baseline corpus a scoping review is expected to cover (PRISMA-ScR item 8)."
+    },
+    {
+      "dimension": "language-family",
+      "value": "non-anglophone",
+      "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened global study of origins (2021)."
+    },
+    {
+      "dimension": "geographic-locus",
+      "value": "east-asia",
+      "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute."
+    }
+  ],
+  "citationGraph": {
+    "10.5555/tacet.covid.vaccine-efficacy": [
+      "10.5555/tacet.covid.booster",
+      "10.5555/tacet.covid.cardio"
+    ],
+    "10.5555/tacet.covid.booster": [
+      "10.5555/tacet.covid.vaccine-efficacy"
+    ],
+    "10.5555/tacet.covid.school-closures": [
+      "10.5555/tacet.covid.booster"
+    ],
+    "10.5555/tacet.covid.cardio": [
+      "10.5555/tacet.covid.vaccine-efficacy"
+    ],
+    "10.5555/tacet.covid.masks": [],
+    "10.5555/tacet.covid.ivermectin": [
+      "10.5555/tacet.covid.vaccine-efficacy"
+    ],
+    "10.5555/tacet.covid.origins": [],
+    "10.5555/tacet.covid.ventilation": [
+      "10.5555/tacet.covid.masks"
+    ],
+    "10.5555/tacet.covid.myocarditis": [
+      "10.5555/tacet.covid.vaccine-efficacy",
+      "10.5555/tacet.covid.cardio"
+    ],
+    "10.5555/tacet.covid.reinfection": [
+      "10.5555/tacet.covid.vaccine-efficacy",
+      "10.5555/tacet.covid.myocarditis"
+    ],
+    "10.5555/tacet.covid.origin-und-declared": [
+      "10.5555/tacet.covid.origins"
+    ],
+    "10.5555/tacet.covid.origin-no-lang": [],
+    "10.5555/tacet.covid.lockdown": [],
+    "10.5555/tacet.covid.rapid-antigen": [
+      "10.5555/tacet.covid.masks"
+    ]
+  }
+}
