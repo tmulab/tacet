@@ -3,6 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 import { ingestCrossref } from "./crossref.js";
 import type { CrossrefWork } from "./crossref.js";
+import { fetchWithRetry } from "./fetch-retry.js";
 
 /**
  * Harvest utility — the ONLY part of TACET that touches the network. It is a
@@ -66,26 +67,42 @@ function buildUrl(query: string, cursor: string, rows: number, license: string |
   return url.toString();
 }
 
+/** Injectable dependencies for the networked fetch — defaults are the real fetch,
+ * a real sleep, and 4 attempts. Tests inject a fetch double and an instant sleep
+ * so the retry path is exercised offline; production omits this entirely. */
+export interface HarvestDeps {
+  readonly fetchFn?: typeof fetch;
+  readonly sleep?: (ms: number) => Promise<void>;
+  readonly maxAttempts?: number;
+}
+
+const realSleep = (ms: number): Promise<void> => new Promise((r) => setTimeout(r, ms));
+
 /**
  * Page through Crossref for `query`, keeping records WITH an abstract. `license`
  * defaults to CC-BY (the redistributable slice, for the frozen fixture); pass
- * `null` to drop the license clause (exploratory corpus). The ONLY network here;
- * never reached by replay or tests.
+ * `null` to drop the license clause (exploratory corpus). Each page fetch is
+ * retried with backoff (see fetch-retry); a transient Crossref hiccup no longer
+ * aborts the harvest. The ONLY network here; never reached by replay or tests
+ * (which inject `deps`).
  */
 export async function fetchCrossrefWorks(
   query: string,
   limit: number,
   mailto: string,
   license: string | null = CC_BY,
+  deps: HarvestDeps = {},
 ): Promise<readonly CrossrefWork[]> {
   const headers = { "User-Agent": `TACET/0.1 (mailto:${mailto})` };
+  const fetchFn = deps.fetchFn ?? globalThis.fetch.bind(globalThis);
+  const sleep = deps.sleep ?? realSleep;
+  const maxAttempts = deps.maxAttempts ?? 4;
   const collected: CrossrefWork[] = [];
   let cursor = "*";
 
   while (collected.length < limit) {
     const rows = Math.min(PAGE_ROWS, limit - collected.length);
-    const res = await fetch(buildUrl(query, cursor, rows, license), { headers });
-    if (!res.ok) throw new Error(`Crossref HTTP ${res.status}`);
+    const res = await fetchWithRetry(buildUrl(query, cursor, rows, license), { headers }, { fetchFn, sleep, maxAttempts });
     const page = (await res.json()) as CrossrefPage;
     const items = page.message.items ?? [];
     if (items.length === 0) break;
