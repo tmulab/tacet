@@ -24,17 +24,38 @@ their evidence never covered is the empty chair.
 
 A reader **certifies coherence, never truth.**
 
-## Run it (replay mode — no model, no GPU, ~deterministic)
+## Run it — one command, offline, no key
+
+**Prerequisite:** Node.js ≥ 18 (tested on 22). That's all.
 
 ```bash
-npm install
-npm run demo:replay      # runs over fixtures/, prints map + audit + profiles
-npm test                 # the contract, as tests
-npm run typecheck
+npm ci && npm run demo:replay
 ```
 
-Replay mode is the default and needs **no API key**. `live` mode (a real model
-behind the `Reader` interface) is opt-in via `.env` — see `.env.example`.
+This compiles TypeScript → `dist/` with `tsc` and runs the demo on **plain
+`node` over the compiled JS** — it does **not** use `tsx`/`ts-node`. It loads the
+frozen fixture `fixtures/replay/sago-origin-v0.1.json` and prints, as text, the
+three outcomes the engine distinguishes (robust convergence / genuine crux /
+empty chair) plus the four juxtaposed reliability axes (an axis it cannot
+compute prints `not measured`). No server, **no network, no API key**.
+
+> **Contingency (Norton / antivirus).** Some antivirus quarantines `esbuild`
+> (a dependency of the dev tooling `tsx`/`vitest`). The judge path above does
+> **not** use esbuild — only `tsc` + `node`. If `npm ci` itself trips on
+> esbuild's install step, run `npm rebuild esbuild` and retry, or install
+> without dev tooling: `npm ci --omit=dev` is enough for `npm run demo:replay`.
+
+Other scripts (`npm test`, `npm run typecheck`) are for maintainers and do use
+the dev tooling.
+
+### What this verifies (and what it doesn't)
+
+- **Honest limitation.** The corpus contains only sources whose **abstract was
+  available** (records without an abstract are filtered at ingestion). The
+  replay is the **deterministic floor**: same input → same output, frozen from a
+  real run. A **live mode** (readers calling models over the network, behind the
+  `Reader` interface, keys via `.env`) is **0.2** and is **not required** to
+  verify 0.1 — everything the judge needs is in the frozen fixture.
 
 ## Two worked cases
 

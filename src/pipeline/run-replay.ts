@@ -35,7 +35,12 @@ function printMap(
   const claimText = new Map(claims.map((c) => [c.id, c.text]));
   console.log(`\nTACET — replay mode · case: ${caseName}`);
   console.log("Two UNDECIDED readers over the same evidence. Signals certify");
-  console.log("COHERENCE of the evidence relation, never TRUTH.\n");
+  console.log("COHERENCE of the evidence relation, never TRUTH.");
+  console.log("\nThe three outcomes the engine distinguishes:");
+  console.log("  ● robust-core  — both readers converge: robust convergence");
+  console.log("  ▲ live-crux    — readers take opposite leans: a genuine crux");
+  console.log("  ○ unsupported  — at least one reader: evidence insufficient");
+  console.log("(the empty chair — a measured coverage gap — is the section below the map.)\n");
 
   for (const v of map.verdicts) {
     console.log(`${SIGNAL_GLYPH[v.signal]}  [${v.claimId}]`);
