@@ -53,25 +53,38 @@ interface CrossrefPage {
   };
 }
 
-function buildUrl(query: string, cursor: string, rows: number): string {
+function buildUrl(query: string, cursor: string, rows: number, license: string | null): string {
   const url = new URL(API_BASE);
   url.searchParams.set("query", query);
-  // Polite filter: only abstracted, open-license (CC-BY) records — exactly what
-  // the versioned fixture is allowed to contain.
-  url.searchParams.set("filter", `has-abstract:true,license.url:${CC_BY}`);
+  // has-abstract is always required; the license clause is optional. The frozen
+  // fixture path keeps CC-BY (redistributable); an EXPLORATORY corpus (step-0
+  // bridge) relaxes it (license=null) to see the true field, not the CC-BY slice.
+  const filter = license === null ? "has-abstract:true" : `has-abstract:true,license.url:${license}`;
+  url.searchParams.set("filter", filter);
   url.searchParams.set("rows", String(rows));
   url.searchParams.set("cursor", cursor);
   return url.toString();
 }
 
-async function harvest(query: string, limit: number, mailto: string): Promise<readonly CrossrefWork[]> {
+/**
+ * Page through Crossref for `query`, keeping records WITH an abstract. `license`
+ * defaults to CC-BY (the redistributable slice, for the frozen fixture); pass
+ * `null` to drop the license clause (exploratory corpus). The ONLY network here;
+ * never reached by replay or tests.
+ */
+export async function fetchCrossrefWorks(
+  query: string,
+  limit: number,
+  mailto: string,
+  license: string | null = CC_BY,
+): Promise<readonly CrossrefWork[]> {
   const headers = { "User-Agent": `TACET/0.1 (mailto:${mailto})` };
   const collected: CrossrefWork[] = [];
   let cursor = "*";
 
   while (collected.length < limit) {
     const rows = Math.min(PAGE_ROWS, limit - collected.length);
-    const res = await fetch(buildUrl(query, cursor, rows), { headers });
+    const res = await fetch(buildUrl(query, cursor, rows, license), { headers });
     if (!res.ok) throw new Error(`Crossref HTTP ${res.status}`);
     const page = (await res.json()) as CrossrefPage;
     const items = page.message.items ?? [];
@@ -95,7 +108,7 @@ async function main(): Promise<void> {
   const limit = Number(process.argv[3] ?? "50");
 
   console.log(`harvesting up to ${limit} CC-BY abstracted records for "${query}"…`);
-  const works = await harvest(query, limit, mailto);
+  const works = await fetchCrossrefWorks(query, limit, mailto);
   const { claims, citationGraph } = ingestCrossref(works);
   console.log(`fetched ${works.length} records → ${claims.length} ingested claims`);
 
@@ -110,7 +123,10 @@ async function main(): Promise<void> {
   console.log(`wrote corpus → ${outPath} (gitignored)`);
 }
 
-main().catch((err: unknown) => {
-  console.error(err);
-  process.exitCode = 1;
-});
+// Run only when invoked directly (not when the bridge imports fetchCrossrefWorks).
+if (process.argv[1] !== undefined && /harvest\.(ts|js)$/.test(process.argv[1])) {
+  main().catch((err: unknown) => {
+    console.error(err);
+    process.exitCode = 1;
+  });
+}

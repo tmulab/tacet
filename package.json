@@ -17,6 +17,7 @@
     "build:fixture": "node --use-system-ca --import tsx src/ingestion/build-ingested-fixture.ts",
     "protocol": "node --use-system-ca --import tsx --env-file-if-exists=.env src/protocol/prepare.ts",
     "protocol:harvest": "node --use-system-ca --import tsx --env-file-if-exists=.env src/protocol/harvest-from-protocol.ts",
+    "protocol:coverage": "node --import tsx src/protocol/coverage-audit.ts",
     "harvest": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/harvest.ts",
     "summarize": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/summarize.ts",
     "read": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/read.ts",

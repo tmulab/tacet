@@ -71,6 +71,78 @@ export function auditCoverage(
   return { findings, emptyChairs };
 }
 
+// ---------------------------------------------------------------------------
+// Measurability-aware audit (graceful degradation).
+//
+// The plain auditCoverage above counts observed sources and calls any expected
+// category with zero observed an empty chair. But some expected dimensions
+// CANNOT be measured from the metadata at hand: a paper's theoretical TRADITION
+// needs content inference (post-LLM), not a Crossref tag. Reporting such a
+// dimension as "0 observed → empty chair" would be a GUESS dressed as a
+// measurement. auditCoverageMeasured separates the two: a dimension present in
+// the corpus tags is MEASURED (and a real 0 is an empty chair); a dimension with
+// no tag anywhere is NOT-MEASURED (observed is null, never an empty chair).
+// ---------------------------------------------------------------------------
+
+export type Measurability = "measured" | "not-measured";
+
+export interface MeasuredFinding {
+  readonly dimension: string;
+  readonly value: string;
+  readonly justification: string;
+  readonly measurability: Measurability;
+  /** observed source count when measured; null when not-measured (no metadata to
+   * count — graceful degradation, never a guessed zero). */
+  readonly observedSources: number | null;
+  /** empty chair = MEASURED with zero observed. A not-measured dimension is NEVER
+   * an empty chair. */
+  readonly isEmptyChair: boolean;
+}
+
+export interface MeasuredCoverageAudit {
+  readonly findings: readonly MeasuredFinding[];
+  readonly emptyChairs: readonly MeasuredFinding[];
+  readonly notMeasured: readonly MeasuredFinding[];
+}
+
+/** The tag keys actually present in the corpus = the dimensions we CAN measure
+ * from metadata. A dimension absent here (e.g. theoretical "tradition") is
+ * reported not-measured, never guessed. */
+function measurableDimensions(claims: readonly Claim[]): ReadonlySet<string> {
+  const keys = new Set<string>();
+  for (const claim of claims) {
+    for (const p of claim.provenance) {
+      for (const k of Object.keys(p.tags ?? {})) keys.add(k);
+    }
+  }
+  return keys;
+}
+
+/**
+ * Audit coverage WITH graceful degradation. Same cited-baseline discipline as
+ * auditCoverage (audits only the expected categories passed in, never invents
+ * them, never interprets the gap), but a dimension with no metadata is reported
+ * not-measured instead of being scored a false empty chair.
+ */
+export function auditCoverageMeasured(
+  claims: readonly Claim[],
+  expected: readonly ExpectedCategory[],
+): MeasuredCoverageAudit {
+  const measurable = measurableDimensions(claims);
+  const findings: MeasuredFinding[] = expected.map((c) => {
+    if (!measurable.has(c.dimension)) {
+      return { dimension: c.dimension, value: c.value, justification: c.justification, measurability: "not-measured", observedSources: null, isEmptyChair: false };
+    }
+    const observedSources = countObservedSources(claims, c.dimension, c.value);
+    return { dimension: c.dimension, value: c.value, justification: c.justification, measurability: "measured", observedSources, isEmptyChair: observedSources === 0 };
+  });
+  return {
+    findings,
+    emptyChairs: findings.filter((f) => f.isEmptyChair),
+    notMeasured: findings.filter((f) => f.measurability === "not-measured"),
+  };
+}
+
 /** Counts distinct sources (by sourceId) whose provenance tags match
  * (dimension,value). The same source cited across several claims counts once. */
 function countObservedSources(

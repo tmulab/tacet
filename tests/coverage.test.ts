@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { auditCoverage } from "../src/domain/coverage.js";
+import { auditCoverage, auditCoverageMeasured } from "../src/domain/coverage.js";
 import type { ExpectedCategory } from "../src/domain/coverage.js";
 import type { Claim, Provenance } from "../src/domain/types.js";
 
@@ -87,5 +87,46 @@ describe("auditCoverage", () => {
     const audit = auditCoverage(claims, [cat("language-family", "unknown", "undetectable language is its own bucket")]);
     expect(audit.findings[0]?.observedSources).toBe(1);
     expect(audit.findings[0]?.isEmptyChair).toBe(false);
+  });
+});
+
+describe("auditCoverageMeasured — graceful degradation (measured vs not-measured)", () => {
+  // Corpus carries language + genre metadata, but NOT a theoretical "tradition".
+  const claims = [
+    claim("c1", [src("s1", { language: "en", genre: "book" })]),
+    claim("c2", [src("s2", { language: "en", genre: "article" })]),
+  ];
+
+  it("a measurable dimension with observed > 0 is present (not an empty chair)", () => {
+    const a = auditCoverageMeasured(claims, [cat("language", "en", "anglophone baseline")]);
+    expect(a.findings[0]).toMatchObject({ measurability: "measured", observedSources: 2, isEmptyChair: false });
+    expect(a.emptyChairs).toHaveLength(0);
+  });
+
+  it("a measurable dimension with zero observed IS an empty chair (real, measured)", () => {
+    const a = auditCoverageMeasured(claims, [cat("language", "pt", "lusophone Freud-and-capital tradition")]);
+    expect(a.findings[0]).toMatchObject({ measurability: "measured", observedSources: 0, isEmptyChair: true });
+    expect(a.emptyChairs).toHaveLength(1);
+  });
+
+  it("a dimension with NO metadata is NOT-MEASURED, never a guessed empty chair", () => {
+    const a = auditCoverageMeasured(claims, [cat("tradition", "franco-lacaniana", "the French line is pertinent")]);
+    const f = a.findings[0];
+    expect(f?.measurability).toBe("not-measured");
+    expect(f?.observedSources).toBeNull();
+    expect(f?.isEmptyChair).toBe(false); // crucial: not-measured ≠ empty chair
+    expect(a.notMeasured).toHaveLength(1);
+    expect(a.emptyChairs).toHaveLength(0);
+  });
+
+  it("mixes all three: present, empty chair, not-measured — in one audit", () => {
+    const a = auditCoverageMeasured(claims, [
+      cat("genre", "book", "monographs carry the canon"),
+      cat("genre", "chapter", "edited volumes carry the debate"),
+      cat("tradition", "frankfurt-school", "Adorno/Marcuse are pertinent"),
+    ]);
+    expect(a.findings.map((f) => f.measurability)).toEqual(["measured", "measured", "not-measured"]);
+    expect(a.emptyChairs.map((f) => f.value)).toEqual(["chapter"]); // book present, chapter empty
+    expect(a.notMeasured).toHaveLength(1);
   });
 });

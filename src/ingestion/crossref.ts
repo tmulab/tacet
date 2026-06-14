@@ -37,6 +37,8 @@ export interface CrossrefWork {
   readonly issued?: { readonly "date-parts"?: readonly (readonly (number | null)[])[] };
   readonly published?: { readonly "date-parts"?: readonly (readonly (number | null)[])[] };
   readonly "container-title"?: readonly string[];
+  readonly publisher?: string;
+  readonly type?: string;
   readonly language?: string;
   readonly abstract?: string;
   readonly reference?: readonly CrossrefReference[];
@@ -109,13 +111,27 @@ function buildProvenance(doi: string, work: CrossrefWork, cleaned: string): Prov
     sourceId: doi,
     locator: `https://doi.org/${doi}`,
     ...(year !== null ? { date: String(year) } : {}),
-    tags: { "language-family": family, language },
+    tags: { "language-family": family, language, genre: classifyGenre(work.type) },
     languageSource: source,
     summary: cleaned.slice(0, SUMMARY_MAX),
     summaryMethod: "truncated-stub",
     ...(authors.length > 0 ? { authors } : {}),
     ...(venue !== undefined && venue.length > 0 ? { venue } : {}),
   };
+}
+
+/** Coarse document genre from the Crossref `type`, for the coverage audit's
+ * genre dimension. Crossref's many types collapse to book / chapter / article /
+ * preprint / other. */
+const GENRE_MAP: Readonly<Record<string, string>> = {
+  "journal-article": "article", "proceedings-article": "article", "report": "article",
+  "book-chapter": "chapter", "book-section": "chapter", "book-part": "chapter",
+  "book": "book", "monograph": "book", "edited-book": "book", "reference-book": "book",
+  "posted-content": "preprint",
+};
+export function classifyGenre(type: string | null | undefined): string {
+  if (!type) return "other";
+  return GENRE_MAP[type.trim().toLowerCase()] ?? "other";
 }
 
 function firstYear(work: CrossrefWork): number | null {
