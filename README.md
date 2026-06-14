@@ -48,6 +48,25 @@ compute prints `not measured`). No server, **no network, no API key**.
 Other scripts (`npm test`, `npm run typecheck`) are for maintainers and do use
 the dev tooling.
 
+### Visual replay — `TACET.html`
+
+`TACET.html` (repo root) is the **same replay, read visually**. Open it in a
+browser — **offline, no server, no key**. It shows the three outcomes (a genuine
+crux, a robust core, an empty chair with the reserve swap) with the real leans,
+models, and four axes. (Google Fonts are the only external reference and degrade
+to system fonts offline.)
+
+The terminal demo and the page **read the same frozen fixture**
+(`fixtures/replay/sago-origin-v0.1.json`) and must agree — same leans, same
+models, same axes. The page's data is generated from the fixture by
+`npm run build:html` (plain `node`, no tsx), and `tests/html-fixture.test.ts`
+fails if the two ever drift. **To regenerate after the fixture changes:**
+
+```bash
+npm run freeze -- corpus/<corpus>.summarized.read.json   # rebuild the fixture
+npm run build:html                                        # re-embed it into TACET.html
+```
+
 ### What this verifies (and what it doesn't)
 
 - **Honest limitation.** The corpus contains only sources whose **abstract was

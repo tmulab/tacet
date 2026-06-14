@@ -19,6 +19,7 @@
     "summarize": "tsx --env-file-if-exists=.env src/ingestion/summarize.ts",
     "read": "tsx --env-file-if-exists=.env src/ingestion/read.ts",
     "freeze": "tsx src/pipeline/freeze-fixture.ts",
+    "build:html": "node scripts/build-html.mjs",
     "llm:check": "tsx --env-file-if-exists=.env src/ingestion/llm-check.ts"
   },
   "devDependencies": {
