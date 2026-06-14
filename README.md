@@ -119,10 +119,16 @@ published under **CC BY-NC-SA 3.0 IGO**; attribution: **World Health
 Organization**. The anchor is a paraphrased two-clause derivation, not a
 verbatim reproduction, and it is carried inside the fixture (not hardcoded).
 
-**Reader models.** Leans were produced by two independent models —
-`z-ai/glm-4.6` and `minimax/minimax-m2.7` — with `google/gemma-4-31b-it:free`
-as a technical fallback; every saved lean records its `readerModel` so any
-disagreement is auditable. Replaying the fixture makes **no network call**.
+**Reader models.** The demo replays **v0.2**, produced entirely by **free
+OpenRouter models from distinct companies** — reader A `nvidia/nemotron-3-nano-30b-a3b:free`
+(NVIDIA), reader B `openai/gpt-oss-120b:free` (OpenAI), reserve pool led by
+`google/gemma-4-26b-a4b-it:free` (Google) — ranked by `bench/free-model-bench.mjs`.
+**v0.1** is kept as historical provenance: its leans came from `z-ai/glm-4.6` and
+`minimax/minimax-m2.7` (with `google/gemma-4-31b-it:free` fallback). Every saved
+lean records its `readerModel`, so any disagreement is auditable, and replaying
+either fixture makes **no network call**. The two independent free pairs land on
+nearly the same map (robust-core 8 vs 9), evidence the doubt is in the method,
+not a brand.
 
 **What is NOT redistributed:** no raw third-party full texts, no closed-license
 abstracts, no API keys. Bulk harvested corpora live in `corpus/` and are

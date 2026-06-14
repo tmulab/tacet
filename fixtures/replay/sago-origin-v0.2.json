@@ -1,0 +1,4414 @@
+{
+  "schema": "tacet/replay-fixture@0.1",
+  "case": "sago-origin",
+  "version": "0.2",
+  "frozenFrom": "corpus/sars-cov-2-origin-zoonotic-spillover-lab.summarized.read.json",
+  "referenceHypothesis": "A origem zoonótica natural por spillover (de animais selvagens, diretamente ou via hospedeiro intermediário) é a hipótese atualmente mais sustentada pela evidência científica disponível; porém a questão permanece inconclusiva. A hipótese de um acidente laboratorial ou relacionado a pesquisa não pode ser descartada nem provada, por falta de dados disponibilizados.",
+  "source": {
+    "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
+    "referenceHypothesis": "Paraphrased from the WHO Scientific Advisory Group for the Origins of Novel Pathogens (SAGO) report, 2025 — CC BY-NC-SA 3.0 IGO. Attribution: World Health Organization.",
+    "readerModels": {
+      "reader-a": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "reader-b": "openai/gpt-oss-120b:free"
+    }
+  },
+  "notes": {
+    "nonLlmSummaries": [],
+    "nonLlmReason": "These records' LLM summary fell back to a truncated abstract stub. They are off-topic to origin and both readers independently judged them 'insufficient', so a real summary changes no lean and no signal. Kept as LABELLED non-summaries (summaryMethod: 'truncated-stub'), never as a fabricated summary.",
+    "oneReaderClaims": 0
+  },
+  "claims": [
+    {
+      "id": "10.14202/vetworld.2021.190-199",
+      "text": "The emerging SARS-CoV, MERS-CoV, and SARS-CoV-2: An insight into the viruses zoonotic aspects",
+      "provenance": [
+        {
+          "sourceId": "10.14202/vetworld.2021.190-199",
+          "locator": "https://doi.org/10.14202/vetworld.2021.190-199",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This review examines how SARS-CoV-2, like SARS-CoV and MERS-CoV, likely originated from animal hosts and discusses intermediate reservoirs that facilitated its jump to humans. It compares the zoonotic features of the three viruses and underscores the importance of understanding animal origins in preventing future outbreaks.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Karima A. Al-Salihi",
+            "Jenan Mahmood Khalaf"
+          ],
+          "venue": "Veterinary World",
+          "structured": {
+            "centralClaim": "The review highlights the zoonotic characteristics of SARS-CoV-2 in comparison to SARS-CoV and MERS-CoV, emphasizing the role of animal origins and intermediate reservoirs in the emergence of COVID-19.",
+            "citedEvidence": "The abstract notes that SARS-CoV-2 is a novel coronavirus causing severe respiratory disease, and that the review discusses its zoonotic aspects relative to earlier coronaviruses, citing global case, death, and recovery statistics as context.",
+            "originStance": "both-considered",
+            "summaryText": "This review examines how SARS-CoV-2, like SARS-CoV and MERS-CoV, likely originated from animal hosts and discusses intermediate reservoirs that facilitated its jump to humans. It compares the zoonotic features of the three viruses and underscores the importance of understanding animal origins in preventing future outbreaks."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1371/journal.pone.0301195",
+      "text": "Assessing the emergence time of SARS-CoV-2 zoonotic spillover",
+      "provenance": [
+        {
+          "sourceId": "10.1371/journal.pone.0301195",
+          "locator": "https://doi.org/10.1371/journal.pone.0301195",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "By applying Bayesian phylogenetics to diverse coronavirus genomes, the authors demonstrate that SARS‑CoV‑2 variants exhibit a clear temporal signal, enabling them to date the likely zoonotic spillover event. Their analysis focuses on evolutionary events—speciation, gene transfer, and recombination—between bat, pangolin, and human strains, underscoring a natural origin while not dismissing alternative hypotheses.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Stéphane Samson",
+            "Étienne Lord",
+            "Vladimir Makarenkov"
+          ],
+          "venue": "PLOS ONE",
+          "structured": {
+            "centralClaim": "The study estimates the timing of the SARS‑CoV‑2 zoonotic spillover event by analyzing temporal structure in viral genomic data using Bayesian phylogenetic methods.",
+            "citedEvidence": "Bayesian phylogenetic analysis of multiple coronavirus datasets, including strict and relaxed clock models, revealed strong temporal signal in SARS‑CoV‑2 variants, allowing inference of key speciation, gene‑transfer, and recombination events that preceded the spillover.",
+            "originStance": "both-considered",
+            "summaryText": "By applying Bayesian phylogenetics to diverse coronavirus genomes, the authors demonstrate that SARS‑CoV‑2 variants exhibit a clear temporal signal, enabling them to date the likely zoonotic spillover event. Their analysis focuses on evolutionary events—speciation, gene transfer, and recombination—between bat, pangolin, and human strains, underscoring a natural origin while not dismissing alternative hypotheses."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2020.08.10.245290",
+      "text": "The selection of reference genome and the search for the origin of SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2020.08.10.245290",
+          "locator": "https://doi.org/10.1101/2020.08.10.245290",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper examines how the choice of reference genome influences coronavirus assembly from pangolin samples. It shows that RaTG13 produces better assembly metrics than SARS-CoV-2, implying that RaTG13 may be a more appropriate reference for investigating intermediate hosts in the SARS-CoV-2 origin debate.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Yuan Liu",
+            "Changhui Yan"
+          ],
+          "structured": {
+            "centralClaim": "Using RaTG13 as a reference genome yields more accurate coronavirus assemblies from pangolin samples than using SARS-CoV-2, suggesting RaTG13 may be a better reference for studying potential intermediate hosts.",
+            "citedEvidence": "The study compared assemblies generated with different reference genomes, finding that the RaTG13-guided assembly had superior total length and N50 statistics compared to the SARS-CoV-2-guided assembly.",
+            "originStance": "both-considered",
+            "summaryText": "The paper examines how the choice of reference genome influences coronavirus assembly from pangolin samples. It shows that RaTG13 produces better assembly metrics than SARS-CoV-2, implying that RaTG13 may be a more appropriate reference for investigating intermediate hosts in the SARS-CoV-2 origin debate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1002/bies.202000240",
+      "text": "The genetic structure of SARS‐CoV‐2 does not rule out a laboratory origin",
+      "provenance": [
+        {
+          "sourceId": "10.1002/bies.202000240",
+          "locator": "https://doi.org/10.1002/bies.202000240",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The paper argues that the genetic makeup of SARS‑CoV‑2—its chimeric nature, the pangolin‑like receptor binding domain, and the novel furin cleavage site—could be consistent with natural recombination or with deliberate genetic manipulation. It highlights that site‑directed mutagenesis could produce these features without leaving detectable signatures, thereby keeping a laboratory origin plausible. The authors call for further investigation to clarify the virus’s origins.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Rossana Segreto",
+            "Yuri Deigin"
+          ],
+          "venue": "BioEssays",
+          "structured": {
+            "centralClaim": "The genetic structure of SARS‑CoV‑2 does not exclude a laboratory origin.",
+            "citedEvidence": "Genomic analyses reveal a chimeric virus with most of its sequence closest to bat CoV RaTG13 and an RBD almost identical to that of a pangolin CoV; the unique furin cleavage site and the specific RBD could arise from site‑directed mutagenesis, a technique that leaves no trace.",
+            "originStance": "both-considered",
+            "summaryText": "The paper argues that the genetic makeup of SARS‑CoV‑2—its chimeric nature, the pangolin‑like receptor binding domain, and the novel furin cleavage site—could be consistent with natural recombination or with deliberate genetic manipulation. It highlights that site‑directed mutagenesis could produce these features without leaving detectable signatures, thereby keeping a laboratory origin plausible. The authors call for further investigation to clarify the virus’s origins."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.12688/f1000research.72956.3",
+      "text": "Differential enrichment of yeast DNA in SARS-CoV-2 and related genomes supports synthetic origin hypothesis",
+      "provenance": [
+        {
+          "sourceId": "10.12688/f1000research.72956.3",
+          "locator": "https://doi.org/10.12688/f1000research.72956.3",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The study reports that SARS-CoV-2 and SARS-CoV-1 genomes contain short sequences derived from the yeast S. cerevisiae at biologically important loci. This differential enrichment is presented as evidence supporting a laboratory or synthetic origin of the viruses. The authors argue that such yeast DNA insertions are unlikely to arise naturally and point to engineered manipulation.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Andreas Martin Lisewski"
+          ],
+          "venue": "F1000Research",
+          "structured": {
+            "centralClaim": "The presence of short S. cerevisiae chromosomal sequences at key functional sites in SARS-CoV-2 and SARS-CoV-1 genomes indicates a synthetic origin.",
+            "citedEvidence": "The genomes of SARS-CoV-2 and SARS-CoV-1 are differentially enriched with short yeast DNA fragments at focal positions critical for host cell invasion, virus replication, and host immune response, such as the start of the replicase domain and the spike protein’s receptor binding domain.",
+            "originStance": "lab",
+            "summaryText": "The study reports that SARS-CoV-2 and SARS-CoV-1 genomes contain short sequences derived from the yeast S. cerevisiae at biologically important loci. This differential enrichment is presented as evidence supporting a laboratory or synthetic origin of the viruses. The authors argue that such yeast DNA insertions are unlikely to arise naturally and point to engineered manipulation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2020.05.05.078956",
+      "text": "Selectomic and Evolvability Analyses of the Highly Pathogenic Betacoronaviruses SARS-CoV-2, SARS-CoV, and MERS-CoV",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2020.05.05.078956",
+          "locator": "https://doi.org/10.1101/2020.05.05.078956",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper presents a comprehensive analysis of selection pressures acting on SARS-CoV-2, SARS-CoV, and MERS-CoV genomes, highlighting specific amino acid sites that have evolved under diversifying selection. It compares these patterns to infer evolutionary dynamics following zoonotic spillover and evaluates the virus’s potential for future adaptation. The work focuses on genomic plasticity and evolutionary risk assessment rather than the origin of the virus.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Meghan May",
+            "Bahman Rostama",
+            "Ryan F. Relich"
+          ],
+          "structured": {
+            "centralClaim": "The study maps pervasive and episodic diversifying selection across the SARS-CoV-2 genome and compares these patterns to SARS-CoV and MERS-CoV to assess evolutionary dynamics and potential for future adaptation.",
+            "citedEvidence": "By calculating selection rates for every amino acid coding position, the authors identified sites under pervasive and episodic diversifying selection and performed evolvability analyses based on SARS-CoV data.",
+            "originStance": "none",
+            "summaryText": "The paper presents a comprehensive analysis of selection pressures acting on SARS-CoV-2, SARS-CoV, and MERS-CoV genomes, highlighting specific amino acid sites that have evolved under diversifying selection. It compares these patterns to infer evolutionary dynamics following zoonotic spillover and evaluates the virus’s potential for future adaptation. The work focuses on genomic plasticity and evolutionary risk assessment rather than the origin of the virus."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/s0104-59702025000100061en",
+      "text": "From nature or from a laboratory? Science, health, and politics in the dispute over the origin of SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.1590/s0104-59702025000100061en",
+          "locator": "https://doi.org/10.1590/s0104-59702025000100061en",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article reviews how two influential books frame the SARS‑CoV‑2 origin debate, underscoring differing views on natural spillover and laboratory research. It points out that both narratives emphasize the need to pinpoint the virus’s source to avert future pandemics, while also critiquing the scientific community’s internal competition and potential conflicts of interest.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ricardo Waizbort",
+            "Francisco Dionísio"
+          ],
+          "venue": "História, Ciências, Saúde-Manguinhos",
+          "structured": {
+            "centralClaim": "The paper analyzes how scientific and sociopolitical discourses on SARS‑CoV‑2 origins are shaped by contrasting narratives in key books, highlighting competition and conflicts of interest within the scientific community.",
+            "citedEvidence": "It references the Huanan Seafood Market and the Wuhan Institute of Virology, noting debates over zoonotic spillover versus high‑containment laboratory research as central to the controversy.",
+            "originStance": "both-considered",
+            "summaryText": "The article reviews how two influential books frame the SARS‑CoV‑2 origin debate, underscoring differing views on natural spillover and laboratory research. It points out that both narratives emphasize the need to pinpoint the virus’s source to avert future pandemics, while also critiquing the scientific community’s internal competition and potential conflicts of interest."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2020.03.16.993816",
+      "text": "Evidence of the Recombinant Origin and Ongoing Mutations in Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-CoV-2)",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2020.03.16.993816",
+          "locator": "https://doi.org/10.1101/2020.03.16.993816",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study presents genomic evidence that SARS-CoV-2 is a recombinant of bat and pangolin coronaviruses, highlighting high similarity to bat RaTG13 and shared receptor-binding domain features with pangolin strains. It also documents ongoing mutations across 125 genomes, underscoring the virus’s evolutionary potential. The authors conclude a natural, zoonotic origin through recombination between bat and pangolin viruses.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Jiao-Mei Huang",
+            "Syed Sajid Jan",
+            "Xiaobin Wei",
+            "Yi Wan",
+            "Songying Ouyang"
+          ],
+          "structured": {
+            "centralClaim": "SARS-CoV-2 originated as a recombinant virus combining genetic material from bat and pangolin coronaviruses, as indicated by genomic similarity and shared receptor-binding domain features.",
+            "citedEvidence": "Whole-genome analysis shows ~96% similarity to bat CoV RaTG13 and 97.43% spike protein similarity, while the receptor-binding domain and key amino acid residues are homologous to pangolin CoVs; additionally, 125 SARS-CoV-2 genomes exhibit mutations in coding regions.",
+            "originStance": "zoonotic",
+            "summaryText": "The study presents genomic evidence that SARS-CoV-2 is a recombinant of bat and pangolin coronaviruses, highlighting high similarity to bat RaTG13 and shared receptor-binding domain features with pangolin strains. It also documents ongoing mutations across 125 genomes, underscoring the virus’s evolutionary potential. The authors conclude a natural, zoonotic origin through recombination between bat and pangolin viruses."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/s0104-59702025000100061",
+      "text": "Natural ou laboratorial? Ciência, saúde e política no debate sobre a origem do SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.1590/s0104-59702025000100061",
+          "locator": "https://doi.org/10.1590/s0104-59702025000100061",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper analyzes the scientific and political discourse surrounding SARS‑CoV‑2 origins, focusing on two books that present opposing narratives. It highlights conflicts of interest and competition within the scientific community, and contrasts zoonotic spillover with laboratory research at the Wuhan Institute. The authors stress the importance of identifying the virus’s origins to avert future pandemics, while noting differing assessments of laboratory risks.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ricardo Waizbort",
+            "Francisco Dionísio"
+          ],
+          "venue": "História, Ciências, Saúde-Manguinhos",
+          "structured": {
+            "centralClaim": "The article examines how scientific and sociopolitical debates about SARS‑CoV‑2 origins, as portrayed in two contrasting books, reveal conflicts of interest, competition, and divergent views on zoonotic spillover versus laboratory research, emphasizing the need to pinpoint origins to prevent future pandemics.",
+            "citedEvidence": "It cites the books Viral by Alina Chan and Matt Ridley and Sem fôlego by David Quammen, and references the Huanan Seafood Market and the Wuhan Institute of Virology, discussing both zoonotic spillover and high‑containment laboratory research.",
+            "originStance": "both-considered",
+            "summaryText": "The paper analyzes the scientific and political discourse surrounding SARS‑CoV‑2 origins, focusing on two books that present opposing narratives. It highlights conflicts of interest and competition within the scientific community, and contrasts zoonotic spillover with laboratory research at the Wuhan Institute. The authors stress the importance of identifying the virus’s origins to avert future pandemics, while noting differing assessments of laboratory risks."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.12688/f1000research.73170.3",
+      "text": "Evidence of mitochondria origin of SARS-CoV-2 double-membrane vesicles: a review.",
+      "provenance": [
+        {
+          "sourceId": "10.12688/f1000research.73170.3",
+          "locator": "https://doi.org/10.12688/f1000research.73170.3",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The paper reviews evidence that mitochondria, through mitochondria‑derived vesicles, may give rise to the double‑membrane vesicles used by SARS‑CoV‑2 for replication. It focuses on the role of these organelles in viral infection and the potential for therapeutic targeting, without addressing the virus’s origin debate.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Pavel Montes de Oca-B"
+          ],
+          "venue": "F1000Research",
+          "structured": {
+            "centralClaim": "Mitochondria, via mitochondria-derived vesicles, are the origin of SARS‑CoV‑2 double‑membrane vesicles that serve as viral replication niches.",
+            "citedEvidence": "The review cites findings that mitochondria play a critical role in SARS‑CoV‑2 infection and suggests that mitochondria-derived vesicles (MDV) are involved in the formation of double‑membrane vesicles (DMV).",
+            "originStance": "none",
+            "summaryText": "The paper reviews evidence that mitochondria, through mitochondria‑derived vesicles, may give rise to the double‑membrane vesicles used by SARS‑CoV‑2 for replication. It focuses on the role of these organelles in viral infection and the potential for therapeutic targeting, without addressing the virus’s origin debate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1093/pcmedi/pbaa032",
+      "text": "Estimated prevalence and viral transmissibility in subjects with asymptomatic SARS-CoV-2 infections in Wuhan, China",
+      "provenance": [
+        {
+          "sourceId": "10.1093/pcmedi/pbaa032",
+          "locator": "https://doi.org/10.1093/pcmedi/pbaa032",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This study quantified the hidden burden of asymptomatic SARS‑CoV‑2 infections in Wuhan, showing they are far more common than symptomatic cases and still contribute to transmission, albeit at a lower rate. The findings highlight the need for public health policies to consider this silent source of infection in controlling the pandemic.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Kang Zhang",
+            "Weiwei Tong",
+            "Xinghuan Wang",
+            "Johnson Yiu-Nam Lau"
+          ],
+          "venue": "Precision Clinical Medicine",
+          "structured": {
+            "centralClaim": "The proportion of asymptomatic SARS‑CoV‑2 infections in Wuhan was approximately seven times that of symptomatic cases, and asymptomatic individuals transmit the virus at about 10% the rate of symptomatic patients.",
+            "citedEvidence": "Using seroprevalence data and a four‑compartment mathematical model, the study estimated a 7:1 asymptomatic‑to‑symptomatic ratio (95% CI: 2.8–12.4) and a transmissibility of asymptomatic cases at 10% (95% CI: 7.6%–12.3%) of symptomatic cases.",
+            "originStance": "none",
+            "summaryText": "This study quantified the hidden burden of asymptomatic SARS‑CoV‑2 infections in Wuhan, showing they are far more common than symptomatic cases and still contribute to transmission, albeit at a lower rate. The findings highlight the need for public health policies to consider this silent source of infection in controlling the pandemic."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s13104-021-05561-4",
+      "text": "Data mining of coronavirus: SARS-CoV-2, SARS-CoV and MERS-CoV",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s13104-021-05561-4",
+          "locator": "https://doi.org/10.1186/s13104-021-05561-4",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The study compares the genetic sequences of SARS-CoV-2, SARS-CoV, and MERS-CoV, finding that SARS-CoV-2 is more similar to SARS-CoV. Machine learning techniques, including SVM with non-linear kernels, can distinguish these viruses based on codon usage, highlighting subtle genetic differences despite overall similarity.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Jung Eun Huh",
+            "Seunghee Han",
+            "Taeseon Yoon"
+          ],
+          "venue": "BMC Research Notes",
+          "structured": {
+            "centralClaim": "SARS-CoV-2 shares higher amino acid and codon sequence similarity with SARS-CoV than with MERS-CoV, yet distinct codon patterns allow effective classification of the viruses using machine learning methods.",
+            "citedEvidence": "BLAST, Apriori, Decision Tree, and SVM analyses revealed high similarity between SARS-CoV-2 and SARS-CoV, lower similarity with MERS-CoV, and that non-linear SVM kernels can classify the viruses based on codon differences.",
+            "originStance": "none",
+            "summaryText": "The study compares the genetic sequences of SARS-CoV-2, SARS-CoV, and MERS-CoV, finding that SARS-CoV-2 is more similar to SARS-CoV. Machine learning techniques, including SVM with non-linear kernels, can distinguish these viruses based on codon usage, highlighting subtle genetic differences despite overall similarity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2020.12.03.410233",
+      "text": "Horizontal gene transfer and recombination analysis of SARS-CoV-2 genes helps discover its close relatives and shed light on its origin",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2020.12.03.410233",
+          "locator": "https://doi.org/10.1101/2020.12.03.410233",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "By mapping recombination and gene‑transfer events in SARS‑CoV‑2’s main genes, the authors highlight its close genetic ties to bat and pangolin coronaviruses, supporting a natural zoonotic origin while systematically evaluating alternative emergence mechanisms. The analysis underscores the importance of intermediate hosts and recombination in the virus’s evolutionary history.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Vladimir Makarenkov",
+            "Bogdan Mazoure",
+            "Guillaume Rabusseau",
+            "Pierre Legendre"
+          ],
+          "structured": {
+            "centralClaim": "The evolutionary patterns of 11 key SARS‑CoV‑2 genes, revealed through horizontal gene transfer and recombination analysis, identify close relatives in horseshoe bat RaTG13 and Malayan pangolin coronaviruses, shedding light on the virus’s emergence.",
+            "citedEvidence": "The study reports statistically significant intergenic and intragenic horizontal gene transfer and recombination events across the 11 genes, noting high similarity to bat RaTG13 for most genes and to pangolin CoV strains for the spike protein’s receptor‑binding domain.",
+            "originStance": "both-considered",
+            "summaryText": "By mapping recombination and gene‑transfer events in SARS‑CoV‑2’s main genes, the authors highlight its close genetic ties to bat and pangolin coronaviruses, supporting a natural zoonotic origin while systematically evaluating alternative emergence mechanisms. The analysis underscores the importance of intermediate hosts and recombination in the virus’s evolutionary history."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.12688/f1000research.72956.5",
+      "text": "Evidence for yeast artificial synthesis in SARS-CoV-2 and SARS-CoV-1 genomic sequences",
+      "provenance": [
+        {
+          "sourceId": "10.12688/f1000research.72956.5",
+          "locator": "https://doi.org/10.12688/f1000research.72956.5",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The study reports that SARS-CoV-2 and SARS-CoV-1 genomes diverge from other SARS-like coronaviruses by incorporating short sequences from the yeast S. cerevisiae at critical functional sites. This finding is presented as evidence supporting a laboratory or artificial synthesis origin for these viruses.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Andreas Martin Lisewski"
+          ],
+          "venue": "F1000Research",
+          "structured": {
+            "centralClaim": "The genomes of SARS-CoV-2 and SARS-CoV-1 contain short chromosomal sequences derived from the yeast Saccharomyces cerevisiae at key functional positions, suggesting artificial synthesis.",
+            "citedEvidence": "The authors identified two yeast-derived sites in SARS-CoV-1 (at the start of the RNA-dependent RNA polymerase gene and the spike protein’s receptor binding domain) and two sites in SARS-CoV-2 (at the start of the viral replicase domain and near the end of the spike gene).",
+            "originStance": "lab",
+            "summaryText": "The study reports that SARS-CoV-2 and SARS-CoV-1 genomes diverge from other SARS-like coronaviruses by incorporating short sequences from the yeast S. cerevisiae at critical functional sites. This finding is presented as evidence supporting a laboratory or artificial synthesis origin for these viruses."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/s2199-1006.1.sor-.ppdo2zu.v1",
+      "text": "Hypothesis of Potential Evolution of SARS-CoV-2 through Hybridization of SARS-CoV-1 with Saccharomyces cerevisiae and Mycobacterium avium naturally inside an immunocompromised Pangolin",
+      "provenance": [
+        {
+          "sourceId": "10.14293/s2199-1006.1.sor-.ppdo2zu.v1",
+          "locator": "https://doi.org/10.14293/s2199-1006.1.sor-.ppdo2zu.v1",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors suggest a novel evolutionary pathway for SARS‑CoV‑2 involving genetic exchange between SARS‑CoV‑1, yeast, and mycobacteria within an immunocompromised pangolin. They reference pangolin infections, high genetic similarity to SARS‑CoV‑2, and environmental factors that could facilitate such hybridization. The paper discusses this hypothesis without asserting a definitive origin, thereby engaging with the broader origin debate.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Shimaa Abdelgawad"
+          ],
+          "structured": {
+            "centralClaim": "The paper proposes that SARS‑CoV‑2 may have evolved through hybridization of SARS‑CoV‑1 with Saccharomyces cerevisiae and Mycobacterium avium inside an immunocompromised pangolin.",
+            "citedEvidence": "It cites pangolins infected with a SARS‑like virus 99% homologous to SARS‑CoV‑2, a mutation that increases susceptibility to flagellated bacteria, and the introduction of yeast‑containing food at zoos as a potential source of opportunistic Saccharomyces infection.",
+            "originStance": "both-considered",
+            "summaryText": "The authors suggest a novel evolutionary pathway for SARS‑CoV‑2 involving genetic exchange between SARS‑CoV‑1, yeast, and mycobacteria within an immunocompromised pangolin. They reference pangolin infections, high genetic similarity to SARS‑CoV‑2, and environmental factors that could facilitate such hybridization. The paper discusses this hypothesis without asserting a definitive origin, thereby engaging with the broader origin debate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12859-020-03935-2",
+      "text": "H2V: a database of human genes and proteins that respond to SARS-CoV-2, SARS-CoV, and MERS-CoV infection",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12859-020-03935-2",
+          "locator": "https://doi.org/10.1186/s12859-020-03935-2",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "H2V aggregates published transcriptomic and proteomic studies of coronavirus infections to identify human genes and proteins that change expression upon infection. The database is intended to aid researchers in understanding host responses and accelerating antiviral development. The paper focuses on data curation and analysis rather than on the virus’s origin.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Nan Zhou",
+            "Jinku Bao",
+            "Yuping Ning"
+          ],
+          "venue": "BMC Bioinformatics",
+          "structured": {
+            "centralClaim": "The authors present H2V, a curated database of human genes and proteins that respond to SARS-CoV-2, SARS-CoV, and MERS-CoV infection.",
+            "citedEvidence": "They compiled journal articles and transcriptomic and proteomic datasets on coronavirus infections, then performed differential analyses to identify response genes and proteins by comparing infected versus control samples.",
+            "originStance": "none",
+            "summaryText": "H2V aggregates published transcriptomic and proteomic studies of coronavirus infections to identify human genes and proteins that change expression upon infection. The database is intended to aid researchers in understanding host responses and accelerating antiviral development. The paper focuses on data curation and analysis rather than on the virus’s origin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1172/jci203781",
+      "text": "Hitting the hidden: arming the immune system for the next zoonotic coronavirus spillover",
+      "provenance": [
+        {
+          "sourceId": "10.1172/jci203781",
+          "locator": "https://doi.org/10.1172/jci203781",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This research presents an intranasal vaccine that targets dendritic cells to generate broad mucosal and systemic immunity against diverse sarbecoviruses. By covering clades 1a and 1b, it aims to block transmission and improve readiness for future coronavirus spillovers, addressing gaps left by existing COVID-19 mRNA vaccines.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Charlie Fricke",
+            "Stanley Perlman"
+          ],
+          "venue": "Journal of Clinical Investigation",
+          "structured": {
+            "centralClaim": "A DC-targeting intranasal booster vaccine can elicit robust, durable mucosal and systemic immunity across sarbecovirus clades 1a and 1b, offering a promising pan-sarbecovirus strategy to prevent transmission and enhance pandemic preparedness.",
+            "citedEvidence": "The study demonstrates that the intranasal booster induces strong mucosal and systemic immune responses against multiple sarbecovirus clades, surpassing the limited variant-specific protection of current parenteral mRNA vaccines.",
+            "originStance": "none",
+            "summaryText": "This research presents an intranasal vaccine that targets dendritic cells to generate broad mucosal and systemic immunity against diverse sarbecoviruses. By covering clades 1a and 1b, it aims to block transmission and improve readiness for future coronavirus spillovers, addressing gaps left by existing COVID-19 mRNA vaccines."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.05.19.25327215",
+      "text": "Measuring T-Cell Response to SARS-CoV-2 Using Elecsys IGRA SARS-CoV-2 Assay",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.05.19.25327215",
+          "locator": "https://doi.org/10.1101/2025.05.19.25327215",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This study evaluates the Elecsys IGRA SARS‑CoV‑2 assay, which combines in‑vitro T‑cell stimulation with electrochemiluminescence detection of interferon‑γ, to measure T‑cell immunity in convalescent and vaccinated adults. Preliminary results show a robust, durable T‑cell response that remains effective across variants. The assay offers a potential tool for assessing cellular immunity alongside antibody responses.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Markus Eckl",
+            "Chih-Yeh Chen",
+            "Ulrike Schulte-Spechtel",
+            "Qian Feng"
+          ],
+          "structured": {
+            "centralClaim": "The Elecsys IGRA SARS‑CoV‑2 assay can qualitatively detect a broad‑spectrum, robust, and durable T‑cell response in individuals who have recovered from COVID‑19 or have been vaccinated.",
+            "citedEvidence": "Preliminary data indicate that SARS‑CoV‑2 elicits a strong T‑cell response that persists over time and is not substantially affected by emerging variants, and that this response, together with antibody response, may aid infection control.",
+            "originStance": "none",
+            "summaryText": "This study evaluates the Elecsys IGRA SARS‑CoV‑2 assay, which combines in‑vitro T‑cell stimulation with electrochemiluminescence detection of interferon‑γ, to measure T‑cell immunity in convalescent and vaccinated adults. Preliminary results show a robust, durable T‑cell response that remains effective across variants. The assay offers a potential tool for assessing cellular immunity alongside antibody responses."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1371/journal.pone.0251913",
+      "text": "Computational designing of a peptide that potentially blocks the entry of SARS-CoV, SARS-CoV-2 and MERS-CoV",
+      "provenance": [
+        {
+          "sourceId": "10.1371/journal.pone.0251913",
+          "locator": "https://doi.org/10.1371/journal.pone.0251913",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The authors used computational methods to create a consensus peptide that targets the receptor‑binding domains of three coronaviruses. Simulations suggest the peptide binds more tightly than the natural receptors, offering a possible broad‑spectrum entry inhibitor. The study focuses on therapeutic design rather than virus origin.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Priya V. K.",
+            "Satish Prasad Rath",
+            "Parvin Abraham"
+          ],
+          "venue": "PLOS ONE",
+          "structured": {
+            "centralClaim": "A computationally designed peptide (Peptide 7) can bind the receptor‑binding domain of SARS‑CoV, SARS‑CoV‑2 and MERS‑CoV with higher affinity than their native receptors, potentially blocking viral entry into host cells.",
+            "citedEvidence": "Docking studies and molecular dynamics simulations show that Peptide 7 forms a stable complex with the RBDs, preventing further viral‑receptor interaction.",
+            "originStance": "none",
+            "summaryText": "The authors used computational methods to create a consensus peptide that targets the receptor‑binding domains of three coronaviruses. Simulations suggest the peptide binds more tightly than the natural receptors, offering a possible broad‑spectrum entry inhibitor. The study focuses on therapeutic design rather than virus origin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1017/dmp.2020.300",
+      "text": "Holistic Analysis of Coronavirus Literature: A Scientometric Study of the Global Publications Relevant to SARS-CoV-2 (COVID-19), MERS-CoV (MERS) and SARS-CoV (SARS)",
+      "provenance": [
+        {
+          "sourceId": "10.1017/dmp.2020.300",
+          "locator": "https://doi.org/10.1017/dmp.2020.300",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This paper conducts a holistic scientometric evaluation of coronavirus research spanning four decades, revealing the geographic distribution of publications and highlighting key productive nations. By mapping global production and collaboration networks, it offers a baseline for understanding the scientific response to coronaviruses prior to the COVID-19 pandemic. The study does not address the origin of SARS-CoV-2 or any related hypotheses.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Engin Şenel",
+            "Fatih Esad Topal"
+          ],
+          "venue": "Disaster Medicine and Public Health Preparedness",
+          "structured": {
+            "centralClaim": "The study provides the first comprehensive scientometric analysis of coronavirus literature from 1980 to 2019, mapping global research output and collaboration networks.",
+            "citedEvidence": "It uses the Web of Science Collection database to include all coronavirus-related publications, identifies the United States, China, Germany, the United Kingdom, and the Netherlands as the most productive countries, and notes that coronavirus research has been produced from almost every country except some in Asia and Africa.",
+            "originStance": "none",
+            "summaryText": "This paper conducts a holistic scientometric evaluation of coronavirus research spanning four decades, revealing the geographic distribution of publications and highlighting key productive nations. By mapping global production and collaboration networks, it offers a baseline for understanding the scientific response to coronaviruses prior to the COVID-19 pandemic. The study does not address the origin of SARS-CoV-2 or any related hypotheses."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/s2199-1006.1.sor-.pp4vz1s.v1",
+      "text": "COVID-19 and SARS-COV-2 Infection and Virulence, Hypothesis II: Elevated Temperature, Humidity and Far Infrared Irradiation will significantly lower the Viability, Infectivity and Virulence of SARS-COV-2",
+      "provenance": [
+        {
+          "sourceId": "10.14293/s2199-1006.1.sor-.pp4vz1s.v1",
+          "locator": "https://doi.org/10.14293/s2199-1006.1.sor-.pp4vz1s.v1",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper proposes that higher temperatures, increased humidity, and exposure to far infrared radiation could diminish SARS‑CoV‑2’s ability to survive and cause disease. It draws on limited comparative infectivity data and biochemical insights, noting that far infrared radiation has been shown to inactivate RNA viruses. The study does not address the virus’s origin or evolutionary pathway.",
+          "summaryMethod": "llm",
+          "authors": [
+            "H.Y. Lim Tung"
+          ],
+          "structured": {
+            "centralClaim": "Elevated temperature, humidity, and far infrared irradiation will significantly reduce the viability, infectivity, and virulence of SARS‑CoV‑2.",
+            "citedEvidence": "The authors cite comparative studies of infectivity and virulence across populations and environments, limited biochemical analyses of SARS‑CoV‑2, and prior findings that far infrared radiation can eradicate RNA viruses, suggesting that low temperature, low sunlight, and low humidity may promote viral emergence.",
+            "originStance": "none",
+            "summaryText": "The paper proposes that higher temperatures, increased humidity, and exposure to far infrared radiation could diminish SARS‑CoV‑2’s ability to survive and cause disease. It draws on limited comparative infectivity data and biochemical insights, noting that far infrared radiation has been shown to inactivate RNA viruses. The study does not address the virus’s origin or evolutionary pathway."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s40168-020-00973-z",
+      "text": "Next-generation diagnostics: virus capture facilitates a sensitive viral diagnosis for epizootic and zoonotic pathogens including SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s40168-020-00973-z",
+          "locator": "https://doi.org/10.1186/s40168-020-00973-z",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This study presents a novel virus capture enrichment strategy that boosts the detection limits of high‑throughput sequencing for a broad panel of epizootic and zoonotic viruses. By applying biotinylated RNA baits (VirBaits) and a SARS‑CoV‑2 specific set, the authors show that enriched libraries yield higher sensitivity than unenriched sequencing in complex samples. The work focuses on diagnostic methodology rather than virus origin questions.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Claudia Wylezich",
+            "Sten Calvelage",
+            "Kore Schlottau",
+            "Ute Ziegler",
+            "Anne Pohlmann",
+            "Dirk Höper",
+            "Martin Beer"
+          ],
+          "venue": "Microbiome",
+          "structured": {
+            "centralClaim": "Virus capture enrichment using a biotinylated RNA bait panel (VirBaits) markedly increases the sensitivity of high‑throughput sequencing for detecting epizootic and zoonotic viruses, including SARS‑CoV‑2, in complex clinical and environmental samples.",
+            "citedEvidence": "The authors developed a VirBaits panel and supplemented it with a SARS‑CoV‑2 predesigned bait set, then compared generic high‑throughput sequencing without enrichment to sequencing after enrichment on libraries generated from complex samples, demonstrating improved detection sensitivity.",
+            "originStance": "none",
+            "summaryText": "This study presents a novel virus capture enrichment strategy that boosts the detection limits of high‑throughput sequencing for a broad panel of epizootic and zoonotic viruses. By applying biotinylated RNA baits (VirBaits) and a SARS‑CoV‑2 specific set, the authors show that enriched libraries yield higher sensitivity than unenriched sequencing in complex samples. The work focuses on diagnostic methodology rather than virus origin questions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.2807/1560-7917.es.2021.26.13.2100333",
+      "text": "Linked transmission chains of imported SARS-CoV-2 variant B.1.351 across mainland France, January 2021",
+      "provenance": [
+        {
+          "sourceId": "10.2807/1560-7917.es.2021.26.13.2100333",
+          "locator": "https://doi.org/10.2807/1560-7917.es.2021.26.13.2100333",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The study documents how five imported B.1.351 cases in France sparked 14 linked transmission chains, totaling 36 infections. Epidemiological patterns matched those seen before the variant’s emergence, and the absence of tertiary spread suggests that distancing and barrier measures were effective.",
+          "summaryMethod": "llm",
+          "venue": "Eurosurveillance",
+          "structured": {
+            "centralClaim": "Imported B.1.351 cases in France in January 2021 generated 14 transmission chains involving 36 cases, with epidemiological features similar to earlier reports and limited tertiary spread due to effective distancing measures.",
+            "citedEvidence": "Five imported cases were identified, leading to 14 transmission chains and a total of 36 cases; tertiary transmission outside the personal sphere was absent.",
+            "originStance": "none",
+            "summaryText": "The study documents how five imported B.1.351 cases in France sparked 14 linked transmission chains, totaling 36 infections. Epidemiological patterns matched those seen before the variant’s emergence, and the absence of tertiary spread suggests that distancing and barrier measures were effective."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1099/jmm.0.001346",
+      "text": "Development, deployment and in-field demonstration of mobile coronavirus SARS-CoV-2 Nucleic acid amplification test",
+      "provenance": [
+        {
+          "sourceId": "10.1099/jmm.0.001346",
+          "locator": "https://doi.org/10.1099/jmm.0.001346",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This paper reports the development and field validation of a mobile, open‑platform RT‑PCR laboratory for COVID‑19 diagnosis in remote Western Australia. By systematically comparing assay components, the authors established a portable setup that meets national testing standards, addressing capacity limits of existing point‑of‑care devices.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Teagan F. Paton",
+            "Ian Marr",
+            "Zoe O’Keefe",
+            "Timothy J. J. Inglis"
+          ],
+          "venue": "Journal of Medical Microbiology",
+          "structured": {
+            "centralClaim": "The study demonstrates that an open‑platform, portable molecular diagnostics laboratory can be rapidly assembled and validated for SARS‑CoV‑2 RT‑PCR testing in remote regions, meeting national standards.",
+            "citedEvidence": "The authors compared, selected, and validated components of a SARS‑CoV‑2 RT‑PCR assay, identifying the optimal combination of PCR equipment, reagents, and consumables required for operation in regional laboratories.",
+            "originStance": "none",
+            "summaryText": "This paper reports the development and field validation of a mobile, open‑platform RT‑PCR laboratory for COVID‑19 diagnosis in remote Western Australia. By systematically comparing assay components, the authors established a portable setup that meets national testing standards, addressing capacity limits of existing point‑of‑care devices."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1002/advs.202001474",
+      "text": "Coronavirus in Continuous Flux: From SARS‐CoV to SARS‐CoV‐2",
+      "provenance": [
+        {
+          "sourceId": "10.1002/advs.202001474",
+          "locator": "https://doi.org/10.1002/advs.202001474",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This review compiles current knowledge on SARS‑CoV‑2’s genetic relatedness, clinical presentation, and immune response, emphasizing severe respiratory disease and cytokine dysregulation. It aims to inform strategies for prevention, diagnosis, and treatment, without addressing the virus’s origin.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Yetian Dong",
+            "Tong Dai",
+            "Jun Liu",
+            "Long Zhang",
+            "Fangfang Zhou"
+          ],
+          "venue": "Advanced Science",
+          "structured": {
+            "centralClaim": "The paper summarizes recent literature on the biology, clinical manifestations, and immunology of SARS‑CoV‑2 to aid prevention, diagnosis, and treatment.",
+            "citedEvidence": "It notes sequence identities of 79% with SARS‑CoV and 96% with bat coronavirus RaTG13, and describes severe respiratory illnesses and cytokine storms associated with infection.",
+            "originStance": "none",
+            "summaryText": "This review compiles current knowledge on SARS‑CoV‑2’s genetic relatedness, clinical presentation, and immune response, emphasizing severe respiratory disease and cytokine dysregulation. It aims to inform strategies for prevention, diagnosis, and treatment, without addressing the virus’s origin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/rforhn",
+      "text": "Psychoneuroimmunology in SARS-CoV-2 infection: A Molecular Approach",
+      "provenance": [
+        {
+          "sourceId": "10.32388/rforhn",
+          "locator": "https://doi.org/10.32388/rforhn",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article reviews the field of psychoneuroimmunology in the context of SARS‑CoV‑2, outlining how psychological stress can impair immune function and how the virus may target the central nervous system. It draws parallels with past pandemics and chronic diseases to illustrate the broader connections between mental health and infectious disease outcomes. No discussion of the virus’s origin is provided.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Marcos Altable"
+          ],
+          "structured": {
+            "centralClaim": "The paper discusses how SARS‑CoV‑2 infection involves interactions between psychological states, the nervous system, and the immune response, emphasizing the vulnerability of the central nervous system and the impact of stress on immunity.",
+            "citedEvidence": "It notes that macrophages protect against pathogens but can be weakened by negative challenges, that emotional states such as anxiety or stress can dampen immune responses, and that viruses—including coronaviruses—can affect the brain, with historical examples from influenza pandemics and links between chronic illnesses and mental disorders.",
+            "originStance": "none",
+            "summaryText": "The article reviews the field of psychoneuroimmunology in the context of SARS‑CoV‑2, outlining how psychological stress can impair immune function and how the virus may target the central nervous system. It draws parallels with past pandemics and chronic diseases to illustrate the broader connections between mental health and infectious disease outcomes. No discussion of the virus’s origin is provided."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.64898/2026.05.21.726772",
+      "text": "Predicting Influenza Virus Host Tropism and Zoonotic Spillover Risk from Protein Sequences",
+      "provenance": [
+        {
+          "sourceId": "10.64898/2026.05.21.726772",
+          "locator": "https://doi.org/10.64898/2026.05.21.726772",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This paper develops computational models that use influenza protein sequences to forecast which strains are likely to infect new host species, addressing the challenge of non-binary zoonotic potential. By focusing on avian H5N1 spillovers, it underscores the economic and public health stakes of early prediction and proactive mitigation. The work does not discuss SARS-CoV-2 or any virus origin debate.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Alexandra K. Longest",
+            "Taylor M. Grace",
+            "Minh Tran",
+            "Blake Northrop",
+            "Ashlyn Donohue",
+            "Ahmad Said",
+            "Stephanie L. Guertin",
+            "Brian E. Root"
+          ],
+          "structured": {
+            "centralClaim": "The study presents computational methods to predict influenza virus host tropism and zoonotic spillover risk from protein sequences, aiming to improve proactive surveillance and intervention.",
+            "citedEvidence": "It highlights the limitations of traditional reactive surveillance and the need for efficient predictive tools, noting recent H5N1 spillovers into poultry and cattle as examples of high economic and health impact.",
+            "originStance": "none",
+            "summaryText": "This paper develops computational models that use influenza protein sequences to forecast which strains are likely to infect new host species, addressing the challenge of non-binary zoonotic potential. By focusing on avian H5N1 spillovers, it underscores the economic and public health stakes of early prediction and proactive mitigation. The work does not discuss SARS-CoV-2 or any virus origin debate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1002/pdi3.22",
+      "text": "Maternal SARS‐CoV‐2 infection: The potential vertical transmission of SARS‐CoV‐2 and impact on neonates: A review",
+      "provenance": [
+        {
+          "sourceId": "10.1002/pdi3.22",
+          "locator": "https://doi.org/10.1002/pdi3.22",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The review discusses how SARS‑CoV‑2 infection in pregnant women can lead to adverse pregnancy outcomes such as abortion, intrauterine growth restriction, and prematurity. It highlights evidence of potential vertical transmission from maternal RNA presence and notes that newborn outcomes differ between symptomatic and asymptomatic mothers, with contact transmission during delivery and after birth also considered.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Wei Xia",
+            "Zhoujie Peng"
+          ],
+          "venue": "Pediatric Discovery",
+          "structured": {
+            "centralClaim": "Maternal SARS‑CoV‑2 infection increases the risk of vertical transmission and can adversely affect pregnancy and neonatal outcomes.",
+            "citedEvidence": "Meta‑analyses indicate differing newborn outcomes between symptomatic and asymptomatic pregnant women, while case reports show SARS‑CoV‑2 RNA in maternal samples suggesting possible intrauterine transmission; contact transmission during delivery and postnatal periods are also discussed.",
+            "originStance": "none",
+            "summaryText": "The review discusses how SARS‑CoV‑2 infection in pregnant women can lead to adverse pregnancy outcomes such as abortion, intrauterine growth restriction, and prematurity. It highlights evidence of potential vertical transmission from maternal RNA presence and notes that newborn outcomes differ between symptomatic and asymptomatic mothers, with contact transmission during delivery and after birth also considered."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/fm.2024.37201",
+      "text": "Alternative therapies for viral infections caused by SARS-Cov-2",
+      "provenance": [
+        {
+          "sourceId": "10.1590/fm.2024.37201",
+          "locator": "https://doi.org/10.1590/fm.2024.37201",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This review examines the potential benefits and drawbacks of alternative treatments for COVID‑19, drawing on a broad literature analysis that includes bibliographic and bibliosemantic methods. It highlights herbal medicine and acupuncture among other therapies, and stresses the importance of patient–provider communication in decision‑making. The paper does not address the origin of SARS‑CoV‑2.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Josif Risto",
+            "Arjan Hamiti",
+            "Enilda Rrapaj"
+          ],
+          "venue": "Fisioterapia em Movimento",
+          "structured": {
+            "centralClaim": "The paper argues that alternative therapies, such as herbal medicine and acupuncture, offer distinct advantages and disadvantages compared to conventional medical approaches for treating SARS‑CoV‑2 infections and emphasizes the need for collaborative communication between patients and healthcare providers.",
+            "citedEvidence": "The study employed literature analysis methods, including bibliographic and bibliosemantic approaches, and applied theoretical, systematic, and statistical methods such as analysis, synthesis, generalization, interpretation, classification, and meta‑analysis to explore alternative treatments and their statistical trends in incidence.",
+            "originStance": "none",
+            "summaryText": "This review examines the potential benefits and drawbacks of alternative treatments for COVID‑19, drawing on a broad literature analysis that includes bibliographic and bibliosemantic methods. It highlights herbal medicine and acupuncture among other therapies, and stresses the importance of patient–provider communication in decision‑making. The paper does not address the origin of SARS‑CoV‑2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1371/journal.pcbi.1009997",
+      "text": "Modeling within-host and aerosol dynamics of SARS-CoV-2: The relationship with infectiousness",
+      "provenance": [
+        {
+          "sourceId": "10.1371/journal.pcbi.1009997",
+          "locator": "https://doi.org/10.1371/journal.pcbi.1009997",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This paper models how SARS‑CoV‑2 viral dynamics in the upper respiratory tract and aerosols relate to transmission in golden hamsters. It shows that early infectious virus shedding drives transmission, whereas late‑stage high RNA levels do not, and that infectiousness scales with viral RNA density in a time‑dependent way, informing intervention design.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Nora Heitzman-Breen",
+            "Stanca M. Ciupe"
+          ],
+          "venue": "PLOS Computational Biology",
+          "structured": {
+            "centralClaim": "The study demonstrates that early infectious virus shedding in the upper respiratory tract of golden hamsters correlates with transmission events, while late infection viral RNA levels poorly predict transmission, and that infectiousness increases density‑dependently with viral RNA in a time‑dependent ratio.",
+            "citedEvidence": "Using a within‑host and aerosol mathematical model applied to golden hamster data, the authors found that infectious virus shedding early in infection correlates with transmission events, that shedding of infectious virus diminishes late in the infection, and that high viral RNA levels late in the infection are a poor indicator of transmission.",
+            "originStance": "none",
+            "summaryText": "This paper models how SARS‑CoV‑2 viral dynamics in the upper respiratory tract and aerosols relate to transmission in golden hamsters. It shows that early infectious virus shedding drives transmission, whereas late‑stage high RNA levels do not, and that infectiousness scales with viral RNA density in a time‑dependent way, informing intervention design."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.03.06.641801",
+      "text": "DMBT1 promotes SARS-CoV-2 infection and its SRCR-derived peptide inhibits SARS-CoV-2 infection",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.03.06.641801",
+          "locator": "https://doi.org/10.1101/2025.03.06.641801",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study identifies DMBT1 as a host factor that enhances SARS‑CoV‑2 entry and demonstrates that a peptide derived from its SRCR domain can inhibit infection. The findings suggest DMBT1 as a potential antiviral target and provide a basis for therapeutic development.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Chenxi Zhu",
+            "Ziqiao Wang",
+            "Zhendong Pan",
+            "Xinjia Mai",
+            "Yiyun Chen",
+            "Wen Zhang",
+            "Ping Zhao",
+            "Hailin Tang",
+            "Rong Zhang",
+            "Dapeng Zhou"
+          ],
+          "structured": {
+            "centralClaim": "DMBT1, a mucosal protein, promotes SARS‑CoV‑2 infection and a specific SRCR‑derived peptide can inhibit the virus.",
+            "citedEvidence": "Overexpression of DMBT1 in 293T cells increased ACE2‑dependent infection, while the CQGRVEVLYRGSWGTV peptide blocked infection in vitro and reduced viral replication in hamsters; single‑cell sequencing showed high DMBT1 expression in airway submucosal glands.",
+            "originStance": "none",
+            "summaryText": "The study identifies DMBT1 as a host factor that enhances SARS‑CoV‑2 entry and demonstrates that a peptide derived from its SRCR domain can inhibit infection. The findings suggest DMBT1 as a potential antiviral target and provide a basis for therapeutic development."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2020.03.27.012906",
+      "text": "RNA genome conservation and secondary structure in SARS-CoV-2 and SARS-related viruses",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2020.03.27.012906",
+          "locator": "https://doi.org/10.1101/2020.03.27.012906",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This paper compiles and validates conserved RNA regions in SARS‑CoV‑2, showing that many are structurally stable and could serve as targets for therapeutics and diagnostics. It does not address the virus’s origin, focusing instead on genomic conservation and structure. The authors provide a curated list of 30 conserved regions enriched for known RNA structures and predict additional stable secondary structures across the genome.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ramya Rangan",
+            "Ivan N. Zheludev",
+            "Rhiju Das"
+          ],
+          "structured": {
+            "centralClaim": "The study identifies and confirms highly conserved RNA genome regions in SARS-CoV-2 and related betacoronaviruses, many of which form stable secondary structures, providing targets for antiviral and diagnostic development.",
+            "citedEvidence": "Using sequence alignments across betacoronaviruses, 79 conserved regions of at least 15 nucleotides were found; 739 SARS-CoV-2 sequences confirmed conservation of most, yielding a curated list of 30 SARS‑related‑conserved regions enriched for known RNA structures and predicting additional stable secondary structures.",
+            "originStance": "none",
+            "summaryText": "This paper compiles and validates conserved RNA regions in SARS‑CoV‑2, showing that many are structurally stable and could serve as targets for therapeutics and diagnostics. It does not address the virus’s origin, focusing instead on genomic conservation and structure. The authors provide a curated list of 30 conserved regions enriched for known RNA structures and predict additional stable secondary structures across the genome."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1017/ash.2023.391",
+      "text": "Association between stopping universal SARS-CoV-2 admission testing and hospital-onset SARS-CoV-2 in England and Scotland",
+      "provenance": [
+        {
+          "sourceId": "10.1017/ash.2023.391",
+          "locator": "https://doi.org/10.1017/ash.2023.391",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "This observational analysis examined national data to determine whether the removal of mandatory admission testing in UK hospitals led to more infections acquired during hospital stays. By comparing hospital-onset cases to community-onset cases over time, the authors found a correlation between the policy change and increased nosocomial infection rates. The paper does not discuss the origin of SARS-CoV-2.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Theodore Pak",
+            "Chanu Rhee",
+            "Michael Klompasl"
+          ],
+          "venue": "Antimicrobial Stewardship &amp; Healthcare Epidemiology",
+          "structured": {
+            "centralClaim": "Stopping universal SARS-CoV-2 admission testing in England and Scotland was associated with an increase in hospital-onset SARS-CoV-2 infection rates.",
+            "citedEvidence": "The study used public NHS England and Public Health Scotland data on hospital-onset infections (diagnosed >7 days after admission) from July 2021 to December 2022, calculating the weekly ratio of hospital-onset to community-onset admissions to assess the impact of the policy change.",
+            "originStance": "none",
+            "summaryText": "This observational analysis examined national data to determine whether the removal of mandatory admission testing in UK hospitals led to more infections acquired during hospital stays. By comparing hospital-onset cases to community-onset cases over time, the authors found a correlation between the policy change and increased nosocomial infection rates. The paper does not discuss the origin of SARS-CoV-2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.7554/elife.64496",
+      "text": "Neutralizing SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.7554/elife.64496",
+          "locator": "https://doi.org/10.7554/elife.64496",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The paper investigates how SARS-CoV-2 can escape neutralizing antibodies by employing hybrid virus experiments. It identifies specific viral changes that allow the virus to evade antibody-mediated immunity, providing insights into potential challenges for vaccine and therapeutic design.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Eric Poeschla"
+          ],
+          "venue": "eLife",
+          "structured": {
+            "centralClaim": "Hybrid virus experiments reveal mechanisms by which SARS-CoV-2 can evade neutralizing antibodies.",
+            "citedEvidence": "The study uses engineered hybrid viruses to demonstrate how viral mutations enable escape from antibody neutralization.",
+            "originStance": "none",
+            "summaryText": "The paper investigates how SARS-CoV-2 can escape neutralizing antibodies by employing hybrid virus experiments. It identifies specific viral changes that allow the virus to evade antibody-mediated immunity, providing insights into potential challenges for vaccine and therapeutic design."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/0wl8dr",
+      "text": "A Comparison of Performance for Different SARS-Cov-2 Sequencing Protocols",
+      "provenance": [
+        {
+          "sourceId": "10.32388/0wl8dr",
+          "locator": "https://doi.org/10.32388/0wl8dr",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This paper evaluates different SARS-CoV-2 sequencing methods, finding that some alternative protocols produce superior genome assemblies compared to commonly endorsed ones. The improved performance could reduce costs and expand global sequencing capacity, aiding variant detection and phylogenetic analysis.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Juanjo Bermúdez"
+          ],
+          "structured": {
+            "centralClaim": "The study demonstrates that less-used SARS-CoV-2 sequencing protocols yield higher-quality genome assemblies than some widely promoted protocols, potentially enabling cheaper and more scalable sequencing efforts worldwide.",
+            "citedEvidence": "The authors performed a comprehensive comparison of assembly quality across various sequencing protocols, showing that certain alternative protocols significantly outperform those actively promoted by high-level administrations.",
+            "originStance": "none",
+            "summaryText": "This paper evaluates different SARS-CoV-2 sequencing methods, finding that some alternative protocols produce superior genome assemblies compared to commonly endorsed ones. The improved performance could reduce costs and expand global sequencing capacity, aiding variant detection and phylogenetic analysis."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/1519-6984.262008",
+      "text": "Potential histopathological and immunological effects of SARS-CoV-2 on the liver",
+      "provenance": [
+        {
+          "sourceId": "10.1590/1519-6984.262008",
+          "locator": "https://doi.org/10.1590/1519-6984.262008",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This review focuses on the liver as an affected organ in COVID-19, emphasizing the scarcity of data on histopathological and immunological changes. It calls for clinicians to differentiate between underlying liver conditions, drug-induced injury, direct viral damage, and immune-mediated inflammation. The paper does not address the origin of SARS-CoV-2.",
+          "summaryMethod": "llm",
+          "authors": [
+            "M. M. Alnamshan"
+          ],
+          "venue": "Brazilian Journal of Biology",
+          "structured": {
+            "centralClaim": "The paper argues that liver impairment is a recognized but poorly understood complication of SARS-CoV-2 infection, requiring detailed histopathological and immunological investigation to discern its causes.",
+            "citedEvidence": "It notes limited evidence linking liver impairment to severe COVID-19, highlights potential causes such as pre-existing liver disease, COVID-19 therapies, direct viral effects, or immune-mediated inflammation, and reviews recent studies to summarize histopathological changes.",
+            "originStance": "none",
+            "summaryText": "This review focuses on the liver as an affected organ in COVID-19, emphasizing the scarcity of data on histopathological and immunological changes. It calls for clinicians to differentiate between underlying liver conditions, drug-induced injury, direct viral damage, and immune-mediated inflammation. The paper does not address the origin of SARS-CoV-2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2021.01.27.428384",
+      "text": "SARS-CoV-2 emerging complexity",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2021.01.27.428384",
+          "locator": "https://doi.org/10.1101/2021.01.27.428384",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This paper treats SARS‑CoV‑2 as a complex dynamic system, mapping its global infection patterns and uncovering structural features such as clusters and bifurcations. By applying entropy analysis, the authors identify phase transitions in the virus’s behavior, offering quantitative measures of its adaptive dynamics. The work focuses on epidemiological patterning rather than the virus’s origin.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Francesca Bertacchini",
+            "Eleonora Bilotta",
+            "Pietro Salvatore Pantano"
+          ],
+          "structured": {
+            "centralClaim": "The study demonstrates that SARS-CoV-2 infection dynamics can be characterized as a complex spatial–temporal system, revealing global patterns, cluster formation, bifurcations, and phase transitions through quantitative analysis.",
+            "citedEvidence": "The authors present 4‑3 and 2‑D space‑time patterns of infected individuals worldwide, identify cluster formation and bifurcations by slicing these patterns, and use entropy‑based morphogenesis analysis to detect virus phase transitions typical of adaptive biological systems.",
+            "originStance": "none",
+            "summaryText": "This paper treats SARS‑CoV‑2 as a complex dynamic system, mapping its global infection patterns and uncovering structural features such as clusters and bifurcations. By applying entropy analysis, the authors identify phase transitions in the virus’s behavior, offering quantitative measures of its adaptive dynamics. The work focuses on epidemiological patterning rather than the virus’s origin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/pc6z8q.2",
+      "text": "Omicron Variant Could be an Antigenic Shift of SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.32388/pc6z8q.2",
+          "locator": "https://doi.org/10.32388/pc6z8q.2",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This short review discusses how the Omicron variant has diverged from earlier strains through numerous spike protein mutations, particularly in the receptor‑binding domain, N‑terminal domain, and S1/S2 cleavage site. These changes reduce the effectiveness of existing antibodies, thereby lowering vaccine potency and contributing to breakthrough infections. The focus is on the mutational landscape and its impact on immune evasion rather than on the virus’s origin.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Anju Kaushal"
+          ],
+          "structured": {
+            "centralClaim": "Omicron represents an antigenic shift of SARS‑CoV‑2 characterized by extensive mutations in the RBD, NTD, and S1/S2 regions that diminish antibody efficacy.",
+            "citedEvidence": "The review highlights that Omicron evolved separately from BA.1, accumulating heavy mutations in key spike protein domains, leading to antibody resistance in vaccinated and breakthrough cases.",
+            "originStance": "none",
+            "summaryText": "This short review discusses how the Omicron variant has diverged from earlier strains through numerous spike protein mutations, particularly in the receptor‑binding domain, N‑terminal domain, and S1/S2 cleavage site. These changes reduce the effectiveness of existing antibodies, thereby lowering vaccine potency and contributing to breakthrough infections. The focus is on the mutational landscape and its impact on immune evasion rather than on the virus’s origin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1111/risa.14291",
+      "text": "Use of a risk assessment tool to determine the origin of severe acute respiratory syndrome coronavirus 2 (SARS‐CoV‐2)",
+      "provenance": [
+        {
+          "sourceId": "10.1111/risa.14291",
+          "locator": "https://doi.org/10.1111/risa.14291",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Using a risk‑analysis framework, the authors evaluated published evidence on SARS‑CoV‑2 and found a high score favoring an unnatural origin. While the tool does not prove a laboratory source, it argues that such a possibility remains plausible and should not be overlooked. The study highlights the need for further investigation into the virus’s origins.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Xin Chen",
+            "Fatema Kalyar",
+            "Abrar Ahmad Chughtai",
+            "Chandini Raina MacIntyre"
+          ],
+          "venue": "Risk Analysis",
+          "structured": {
+            "centralClaim": "The modified Grunow–Finke assessment tool (mGFT) applied to SARS‑CoV‑2 data yields a score indicating a higher likelihood of an unnatural, laboratory origin than a natural one.",
+            "citedEvidence": "The mGFT scored 41 out of 60 points (68%) with 100% inter‑rater reliability, suggesting a greater probability of an unnatural origin; the authors note that this assessment cannot prove the origin but shows the laboratory hypothesis cannot be dismissed.",
+            "originStance": "lab",
+            "summaryText": "Using a risk‑analysis framework, the authors evaluated published evidence on SARS‑CoV‑2 and found a high score favoring an unnatural origin. While the tool does not prove a laboratory source, it argues that such a possibility remains plausible and should not be overlooked. The study highlights the need for further investigation into the virus’s origins."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2020.06.20.163162",
+      "text": "An Analysis of SARS-CoV-2 Using ViReport",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2020.06.20.163162",
+          "locator": "https://doi.org/10.1101/2020.06.20.163162",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "This paper reports on a large-scale phylogenetic investigation of SARS-CoV-2 genomes using the ViReport software, aiming to understand the virus’s evolution and transmission patterns. It focuses on methodological application and data analysis rather than on the virus’s origin.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Miranda Song",
+            "Niema Moshiri"
+          ],
+          "structured": {
+            "centralClaim": "The study presents a comprehensive phylogenetic analysis of over 4,000 full-genome SARS-CoV-2 sequences using the ViReport tool to trace viral evolution and spread.",
+            "citedEvidence": "The authors applied ViReport, an automated workflow for phylogenetic analyses, to generate detailed molecular epidemiological reports from the genome data.",
+            "originStance": "none",
+            "summaryText": "This paper reports on a large-scale phylogenetic investigation of SARS-CoV-2 genomes using the ViReport software, aiming to understand the virus’s evolution and transmission patterns. It focuses on methodological application and data analysis rather than on the virus’s origin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1099/acmi.0.000257",
+      "text": "Performance comparison of micro-neutralization assays based on surrogate SARS-CoV-2 and WT SARS-CoV-2 in assessing virus-neutralizing capacity of anti-SARS-CoV-2 antibodies",
+      "provenance": [
+        {
+          "sourceId": "10.1099/acmi.0.000257",
+          "locator": "https://doi.org/10.1099/acmi.0.000257",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "The paper evaluates surrogate neutralization assays against the gold-standard wild-type virus assay, showing substantial agreement, particularly for samples with high antibody titers. This suggests that commercial surrogate tests can be used outside high-containment labs to gauge neutralizing antibody levels.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Inna Sekirov",
+            "Martin Petric",
+            "Erin Carruthers",
+            "David Lawrence",
+            "Tamara Pidduck",
+            "Jesse Kustra",
+            "Jonathan Laley",
+            "Min-Kuang Lee",
+            "Navdeep Chahil",
+            "Annie Mak",
+            "Paul N. Levett",
+            "Emelissa Mendoza",
+            "Heidi Wood",
+            "Mike Drebot",
+            "Mel Krajden",
+            "Muhammad Morshed"
+          ],
+          "venue": "Access Microbiology",
+          "structured": {
+            "centralClaim": "Commercial surrogate SARS-CoV-2 neutralization assays can reliably assess anti-SARS-CoV-2 antibody neutralizing capacity with 75% overall concordance to wild-type virus assays, especially 80% concordance for high antibody levels.",
+            "citedEvidence": "The study compared neutralization results from wild-type SARS-CoV-2 and surrogate markers using characterized sera, finding 75% overall concordance and 80% concordance for high antibody samples.",
+            "originStance": "none",
+            "summaryText": "The paper evaluates surrogate neutralization assays against the gold-standard wild-type virus assay, showing substantial agreement, particularly for samples with high antibody titers. This suggests that commercial surrogate tests can be used outside high-containment labs to gauge neutralizing antibody levels."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1371/journal.pone.0263251",
+      "text": "Reconstruction of the unbinding pathways of noncovalent SARS-CoV and SARS-CoV-2 3CLpro inhibitors using unbiased molecular dynamics simulations",
+      "provenance": [
+        {
+          "sourceId": "10.1371/journal.pone.0263251",
+          "locator": "https://doi.org/10.1371/journal.pone.0263251",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "Using unbiased molecular dynamics, the authors mapped the unbinding pathways of several noncovalent 3CLpro inhibitors for SARS-CoV and SARS-CoV-2. They found that water infiltration at key residues (N142, G143, H163) progressively weakens binding, highlighting common vulnerabilities in these inhibitors that could guide future drug design.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Fereshteh Noroozi Tiyoula",
+            "Hassan Aryapour"
+          ],
+          "venue": "PLOS ONE",
+          "structured": {
+            "centralClaim": "The study demonstrates that water-mediated disruption of key interactions in the 3CLpro binding pocket leads to unbinding of noncovalent SARS-CoV and SARS-CoV-2 inhibitors, identifying common weak points for drug design.",
+            "citedEvidence": "Unbiased molecular dynamics simulations of inhibitors 3V3M, 4MDS, 6W63, and 5RF7 revealed that water molecules entered the free binding S regions, weakening protein‑inhibitor interactions at residues N142, G143, and H163.",
+            "originStance": "none",
+            "summaryText": "Using unbiased molecular dynamics, the authors mapped the unbinding pathways of several noncovalent 3CLpro inhibitors for SARS-CoV and SARS-CoV-2. They found that water infiltration at key residues (N142, G143, H163) progressively weakens binding, highlighting common vulnerabilities in these inhibitors that could guide future drug design."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/s0104-12902023210899pt",
+      "text": "Teologia-política e pandemia Sars-Cov-2/Covid-19: questões à Saúde Coletiva",
+      "provenance": [
+        {
+          "sourceId": "10.1590/s0104-12902023210899pt",
+          "locator": "https://doi.org/10.1590/s0104-12902023210899pt",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper explores the role of theology‑politics in Brazil, drawing on key thinkers and analyzing how evangelical movements during COVID‑19 revealed conflicting political stances. It shows that the pandemic exposed societal contradictions and the resurgence of theological‑political debates, underscoring the field’s relevance to public health and collective well‑being.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Luís Henrique da Costa Leão"
+          ],
+          "venue": "Saúde e Sociedade",
+          "structured": {
+            "centralClaim": "The essay argues that theology‑politics is a significant area of political philosophy that has become relevant in Brazil’s sociopolitical context and intersects with public health, especially during the COVID‑19 pandemic.",
+            "citedEvidence": "It examines theological‑political thought from Augustine, Agamben, Marx, Dussel, and Santos, and describes how evangelical groups in Brazil manifested divergent conservative/anti‑democratic and progressive theological‑political lines during the pandemic, highlighting societal contradictions.",
+            "originStance": "none",
+            "summaryText": "The paper explores the role of theology‑politics in Brazil, drawing on key thinkers and analyzing how evangelical movements during COVID‑19 revealed conflicting political stances. It shows that the pandemic exposed societal contradictions and the resurgence of theological‑political debates, underscoring the field’s relevance to public health and collective well‑being."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1371/journal.pone.0309557",
+      "text": "Emergence of crucial evidence catalyzing the origin tracing of SARS-CoV-2",
+      "provenance": [
+        {
+          "sourceId": "10.1371/journal.pone.0309557",
+          "locator": "https://doi.org/10.1371/journal.pone.0309557",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en"
+          },
+          "languageSource": "declared",
+          "summary": "By integrating new bat coronavirus genomes, the authors show that several strains from Laos, Vietnam, and Yunnan share most of the key genetic features of SARS‑CoV‑2, including the furin cleavage site. This genetic proximity and shared markers strengthen the case for a natural, zoonotic origin of the pandemic virus.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Shunmei Chen",
+            "Cihan Ruan",
+            "Yutong Guo",
+            "Jia Chang",
+            "Haohao Yan",
+            "Liang Chen",
+            "Yongzhong Duan",
+            "Guangyou Duan",
+            "Jinlong Bei",
+            "Xin Li",
+            "Shan Gao"
+          ],
+          "venue": "PLOS ONE",
+          "structured": {
+            "centralClaim": "The discovery of multiple bat Sarbecovirus strains closely related to SARS‑CoV‑2, sharing key genomic features including the furin cleavage site, supports a natural zoonotic origin of the virus.",
+            "citedEvidence": "The study identifies three bat strains—BANAL‑20‑52, Rp22DB159, and S18CXBatR24—as close relatives of SARS‑CoV‑2 and reports that seven of nine critical genomic markers (RC0‑7 and ORF8) found in wild‑type SARS‑CoV‑2 are present in these strains from Laos, Vietnam, and Yunnan.",
+            "originStance": "zoonotic",
+            "summaryText": "By integrating new bat coronavirus genomes, the authors show that several strains from Laos, Vietnam, and Yunnan share most of the key genetic features of SARS‑CoV‑2, including the furin cleavage site. This genetic proximity and shared markers strengthen the case for a natural, zoonotic origin of the pandemic virus."
+          }
+        }
+      ]
+    }
+  ],
+  "citationGraph": {
+    "10.14202/vetworld.2021.190-199": [
+      "10.1016/j.tmaid.2020.101567",
+      "10.1080/00480169.1979.34595",
+      "10.1038/nrmicro2147",
+      "10.1093/nsr/nwaa036",
+      "10.1128/jvi.00566-10",
+      "10.1007/s00281-017-0629-x",
+      "10.1038/s41579-018-0118-9",
+      "10.1016/s2542-5196(19)30243-8",
+      "10.3904/kjim.2018.031",
+      "10.1016/j.jhin.2016.10.008",
+      "10.1016/s0140-6736(15)60454-8",
+      "10.1056/nejmra032498",
+      "10.1056/nejmoa1211721",
+      "10.1056/nejmoa2001017",
+      "10.1101/2020.02.03.20020248",
+      "10.1002/jmv.25682",
+      "10.1101/2020.01.26.920249",
+      "10.1007/s11684-020-0773-x",
+      "10.1126/science.1087139",
+      "10.1371/journal.ppat.1006698",
+      "10.1111/j.1440-1843.2007.01102.x",
+      "10.1056/nejmoa1401505",
+      "10.3201/eid1911.131172",
+      "10.1056/nejmsr1408795",
+      "10.3201/eid2208.152015",
+      "10.1056/nejmoa1408636",
+      "10.1016/s1473-3099(15)70090-3",
+      "10.1080/22221751.2020.1719902",
+      "10.1016/s0140-6736(20)30183-5",
+      "10.1002/jmv.25678",
+      "10.1016/s0140-6736(20)30566-3",
+      "10.1056/nejme2001126",
+      "10.15620/cdc:82532",
+      "10.1001/jama.2020.3786",
+      "10.1080/22221751.2020.1732837",
+      "10.1056/nejmc2001737",
+      "10.1016/s1473-3099(20)30232-2",
+      "10.1056/nejmc2001468",
+      "10.1016/s2213-2600(20)30079-5",
+      "10.1016/s1473-3099(20)30086-4",
+      "10.1001/jama.2020.1585",
+      "10.3181/00379727-139-36224",
+      "10.1016/j.virol.2006.02.041",
+      "10.1016/j.tim.2016.03.003",
+      "10.1128/jvi.79.18.11892-11900.2005",
+      "10.1128/jvi.79.4.2001-2009.2005",
+      "10.1128/jvi.79.4.2620-2625.2005",
+      "10.3201/eid0703.017312",
+      "10.1099/0022-1317-81-8-1927",
+      "10.1126/science.1118391",
+      "10.1073/pnas.0506735102",
+      "10.3390/v8080230",
+      "10.1128/jvi.01498-14",
+      "10.26719/2013.19.supp1.s12",
+      "10.1016/s1473-3099(13)70164-6",
+      "10.1128/cmr.00102-14",
+      "10.3201/eid2007.140571",
+      "10.3201/eid2006.140299",
+      "10.1128/mbio.01430-14",
+      "10.1016/j.chom.2014.08.009",
+      "10.1038/nature12328",
+      "10.1146/annurev-virology-101416-041718",
+      "10.1038/nature12711",
+      "10.1038/nm.3985",
+      "10.1073/pnas.1517719113",
+      "10.1038/s41586-020-2169-0"
+    ],
+    "10.1371/journal.pone.0301195": [
+      "10.1016/b978-0-323-85156-5.00037-7",
+      "10.1038/s41564-020-0771-4",
+      "10.1140/epjp/s13360-023-03719-6",
+      "10.1007/s11033-020-05879-5",
+      "10.3390/v2081803",
+      "10.1038/s41586-020-2180-5",
+      "10.1093/gbe/evac018",
+      "10.1038/s41467-022-31749-8",
+      "10.1073/pnas.2010146117",
+      "10.1186/s40779-020-00240-0",
+      "10.1038/s41586-020-2012-7",
+      "10.1038/s41586-020-2313-x",
+      "10.1016/j.envres.2022.113047",
+      "10.1038/s41586-022-04532-4",
+      "10.1186/s12862-020-01732-2",
+      "10.1093/ve/vew007",
+      "10.1093/ve/vey016",
+      "10.1093/molbev/mss084",
+      "10.1016/s0169-5347(03)00216-7",
+      "10.1093/ve/veaa061",
+      "10.1111/2041-210x.12466",
+      "10.1016/j.coviro.2017.10.008",
+      "10.1038/nrmicro.2017.45",
+      "10.1038/s41467-022-30163-4",
+      "10.1002/jmv.27331",
+      "10.1093/genetics/155.3.1429",
+      "10.1093/molbev/msi103",
+      "10.1186/1471-2148-7-214",
+      "10.1093/sysbio/syt014",
+      "10.1371/journal.pone.0260635",
+      "10.1186/1471-2180-6-88",
+      "10.1371/journal.ppat.1009620",
+      "10.1126/science.abp8715",
+      "10.1126/science.abp8337",
+      "10.1016/s0140-6736(20)30183-5",
+      "10.1093/bioinformatics/btac287",
+      "10.1016/j.envres.2022.114131",
+      "10.15252/embr.202256055",
+      "10.1007/978-3-642-59789-3_5",
+      "10.1111/j.1463-6409.2004.00141.x",
+      "10.1093/ve/veac113",
+      "10.1016/b978-0-12-800098-4.00003-9",
+      "10.1016/j.coviro.2015.01.005",
+      "10.1093/nar/gkh340",
+      "10.1093/molbev/msab120",
+      "10.1093/oxfordjournals.molbev.a026334",
+      "10.1093/sysbio/syy032",
+      "10.1093/sysbio/syv083",
+      "10.1080/01621459.1995.10476572",
+      "10.1093/bioinformatics/13.3.235",
+      "10.1093/molbev/msaa015",
+      "10.1089/106652701446170"
+    ],
+    "10.1101/2020.08.10.245290": [
+      "10.1093/bioinformatics/btu170",
+      "10.1093/molbev/msy096",
+      "10.1038/s41586-020-2169-0",
+      "10.1093/bioinformatics/btv033",
+      "10.1093/bioinformatics/btp324",
+      "10.1186/s12859-017-1911-6",
+      "10.3390/v11110979",
+      "10.1371/journal.ppat.1008421",
+      "10.1128/jvi.73.1.152-160.1999",
+      "10.1038/s41586-020-2008-3",
+      "10.1038/s41586-020-2313-x",
+      "10.1016/j.cub.2020.03.022",
+      "10.1038/s41586-020-2012-7"
+    ],
+    "10.1002/bies.202000240": [
+      "10.1002/bies.202000091",
+      "10.1038/s41591-020-0820-9",
+      "10.1038/s41586-020-2012-7",
+      "10.1128/jvi.00411-20",
+      "10.1007/s12250-016-3713-9",
+      "10.3201/eid2006.131022",
+      "10.3390/v11040379",
+      "10.1080/22221751.2020.1725399",
+      "10.1126/science.369.6503.487",
+      "10.3390/v11110979",
+      "10.1155/2020/4389089",
+      "10.1186/s12985-019-1182-0",
+      "10.1371/journal.ppat.1006698",
+      "10.3390/v11030210",
+      "10.1038/nature12711",
+      "10.1128/jvi.01394-09",
+      "10.1038/nm.3985",
+      "10.1016/j.virol.2017.12.009",
+      "10.1073/pnas.1601512113",
+      "10.1128/mbio.00064-14",
+      "10.1128/mbio.00221-18",
+      "10.1038/s41422-020-0305-x",
+      "10.1080/17460441.2019.1581171",
+      "10.1128/jvi.00948-15",
+      "10.1128/jvi.74.3.1393-1406.2000",
+      "10.1007/978-1-4939-2438-7",
+      "10.1073/pnas.0808116105",
+      "10.1073/pnas.1517719113",
+      "10.1002/jmv.25731",
+      "10.1038/s41586-020-2169-0",
+      "10.1038/s41586-020-2313-x",
+      "10.1016/j.cub.2020.03.022",
+      "10.1016/j.antiviral.2020.104742",
+      "10.1038/s41564-020-0688-y",
+      "10.1007/s12250-020-00212-7",
+      "10.1080/22221751.2020.1756700",
+      "10.1016/j.molcel.2020.04.022",
+      "10.3390/ijms20133193",
+      "10.1128/jvi.03079-15",
+      "10.1093/nar/gkf469",
+      "10.1128/jvi.00790-20",
+      "10.1016/j.cub.2020.05.023",
+      "10.1006/viro.1999.9716",
+      "10.1016/j.coviro.2018.12.007",
+      "10.1128/jvi.00127-20",
+      "10.1038/s41579-018-0118-9",
+      "10.1038/d41586-020-00660-x",
+      "10.1016/j.virusres.2014.05.026",
+      "10.3390/v11100972",
+      "10.1126/science.abb2507",
+      "10.1038/ncomms12626",
+      "10.1038/s41587-019-0225-9",
+      "10.1038/s41426-018-0155-5",
+      "10.3390/v10040185",
+      "10.1038/s41586-020-2179-y",
+      "10.1371/journal.pone.0011184",
+      "10.1038/d41586-019-03863-z",
+      "10.1056/nejmoa032565",
+      "10.1038/nature.2017.21487",
+      "10.3201/eid2612.201664",
+      "10.1016/s0140-6736(20)30418-9",
+      "10.1038/s41586-020-2294-9"
+    ],
+    "10.12688/f1000research.72956.3": [
+      "10.1038/s41591-020-0820-9",
+      "10.1371/journal.pbio.3001115",
+      "10.1038/s41564-020-0771-4",
+      "10.1007/s00705-020-04750-z",
+      "10.3201/eid2612.202308",
+      "10.1016/j.jbc.2021.100435",
+      "10.1038/s41586-020-2012-7",
+      "10.1038/s41586-020-2951-z",
+      "10.1016/j.meegid.2020.104285",
+      "10.1007/s10311-020-01151-1",
+      "10.1002/bies.202100015",
+      "10.1073/pnas.0809524106",
+      "10.1073/pnas.2536857100",
+      "10.1128/jvi.77.15.8181-8186.2003",
+      "10.1016/j.virusres.2005.11.018",
+      "10.1002/9780471729259.mc16j01s19",
+      "10.1007/bf00332994",
+      "10.1016/j.cell.2021.06.008",
+      "10.1101/gr.229202",
+      "10.1016/j.virol.2017.07.019",
+      "10.1016/j.antiviral.2020.104742",
+      "10.1371/journal.ppat.1009246",
+      "10.1016/j.isci.2021.102170",
+      "10.1016/0196-8858(91)90017-d",
+      "10.1093/nar/gkp495",
+      "10.1128/aem.68.5.2095-2100.2002",
+      "10.1186/s12951-021-00806-7",
+      "10.1371/journal.ppat.1005215",
+      "10.1002/jmv.26545"
+    ],
+    "10.1101/2020.05.05.078956": [
+      "10.3390/diseases4030026",
+      "10.3181/00379727-121-30734",
+      "10.1038/nm1024",
+      "10.1128/jvi.79.2.884-895.2005",
+      "10.1136/bmj.326.7394.850",
+      "10.1056/nejmoa1211721",
+      "10.1186/s12889-018-5484-8",
+      "10.1056/nejmoa2001017",
+      "10.1002/jmv.25731",
+      "10.1101/2020.02.25.20027953",
+      "10.1016/s0140-6736(20)30183-5",
+      "10.1002/ppul.24718",
+      "10.15585/mmwr.mm6914e4",
+      "10.1038/s41564-020-0695-z",
+      "10.1101/2020.03.30.015347",
+      "10.1038/s41579-018-0118-9",
+      "10.1007/978-1-4939-2438-7_1",
+      "10.1073/pnas.0508200103",
+      "10.1038/nrmicro2090",
+      "10.1089/vim.2012.0076",
+      "10.1038/ncomms8712",
+      "10.3390/pathogens9030186",
+      "10.1093/nsr/nwaa036",
+      "10.1073/pnas.1707304114",
+      "10.1016/j.jim.2007.11.009",
+      "10.1016/j.antiviral.2020.104759",
+      "10.1371/journal.pone.0148611",
+      "10.1016/j.virol.2005.04.010",
+      "10.1099/vir.0.81662-0"
+    ],
+    "10.1590/s0104-59702025000100061en": [
+      "10.1038/s41591-020-0820-9",
+      "10.1038/s41564-020-0771-4",
+      "10.1016/j.envres.2021.112141",
+      "10.1146/annurev-virology-093022-013037",
+      "10.1016/j.cell.2021.08.017",
+      "10.1038/s41586-020-2169-0",
+      "10.1038/d41586-022-03611-w",
+      "10.1016/s2542-5196(24)00021-4",
+      "10.18520/cs/v122/i3/247-250",
+      "10.1038/s41893-019-0293-3",
+      "10.1007/s10311-021-01211-0",
+      "10.32991/2237-2717.2024v14i1.p48-76",
+      "10.1038/s41586-020-2313-x"
+    ],
+    "10.1101/2020.03.16.993816": [
+      "10.1016/j.tim.2014.08.001",
+      "10.1016/j.coviro.2011.10.012",
+      "10.1093/bioinformatics/btp348",
+      "10.1016/j.prrv.2004.07.009",
+      "10.1126/science.1087139",
+      "10.1038/nmeth.1923",
+      "10.1093/bioinformatics/btv033",
+      "10.1126/science.1116480",
+      "10.1126/science.1118391",
+      "10.1128/jvi.73.1.152-160.1999",
+      "10.1016/j.micinf.2013.06.003",
+      "10.1016/s0065-3527(06)66005-3",
+      "10.1093/molbev/msu300",
+      "10.1038/nm1143",
+      "10.3978/j.issn.2072-1439.2013.06.02",
+      "10.1093/bioinformatics/btp033",
+      "10.1074/jbc.m111.325803",
+      "10.1007/s11427-020-1637-5",
+      "10.1098/rstb.2004.1491",
+      "10.1056/nejmoa2001017"
+    ],
+    "10.1590/s0104-59702025000100061": [
+      "10.1038/s41591-020-0820-9",
+      "10.1038/s41564-020-0771-4",
+      "10.1016/j.envres.2021.112141",
+      "10.1146/annurev-virology-093022-013037",
+      "10.1016/j.cell.2021.08.017",
+      "10.1038/s41586-020-2169-0",
+      "10.1038/d41586-022-03611-w",
+      "10.1016/s2542-5196(24)00021-4",
+      "10.18520/cs/v122/i3/247-250",
+      "10.1038/s41893-019-0293-3",
+      "10.1007/s10311-021-01211-0",
+      "10.32991/2237-2717.2024v14i1.p48-76",
+      "10.1038/s41586-020-2313-x"
+    ],
+    "10.12688/f1000research.73170.3": [
+      "10.1056/nejmcp2009575",
+      "10.7759/cureus.8184",
+      "10.1001/jama.2020.12839",
+      "10.1136/postgradmedj-2020-138577",
+      "10.1007/s12016-021-08848-3",
+      "10.1038/d41586-021-03686-x",
+      "10.1152/ajpcell.00224.2020",
+      "10.1016/j.isci.2020.101631",
+      "10.3389/fphar.2020.578599",
+      "10.3390/medicina57090928",
+      "10.1080/14756366.2021.1937144",
+      "10.1016/j.tim.2020.05.009",
+      "10.1111/cmi.12372",
+      "10.5501/wjv.v2.i2.32",
+      "10.15252/embj.201488104",
+      "10.1016/j.virol.2008.01.018",
+      "10.1371/journal.pbio.0060226",
+      "10.1155/2013/738794",
+      "10.1371/journal.pbio.0050220",
+      "10.1083/jcb.126.6.1353",
+      "10.1371/journal.pbio.3000715",
+      "10.1128/mbio.00524-13",
+      "10.1016/j.virol.2017.07.019",
+      "10.1126/science.abd3629",
+      "10.1128/jvi.00403-11",
+      "10.1016/j.chom.2020.11.003",
+      "10.1128/mbio.00801-13",
+      "10.1128/jvi.02501-05",
+      "10.1038/s41467-020-19619-7",
+      "10.1111/j.1462-5822.2010.01437.x",
+      "10.3389/fmicb.2021.780768",
+      "10.3390/ijms23042100",
+      "10.1074/jbc.m117.795286",
+      "10.1128/jvi.78.11.5619-5632.2004",
+      "10.1128/jvi.01826-09",
+      "10.3390/v13091798",
+      "10.3390/v4113245",
+      "10.1016/j.cub.2007.12.038",
+      "10.1096/fj.202002151r",
+      "10.1038/s41556-021-00798-4",
+      "10.1016/j.devcel.2021.06.003",
+      "10.1016/j.cub.2011.11.057",
+      "10.4049/jimmunol.1303196",
+      "10.1113/jp272703",
+      "10.15252/emmm.202013001",
+      "10.1016/j.isci.2021.103471",
+      "10.3389/fimmu.2022.946731",
+      "10.1152/ajpcell.00426.2020",
+      "10.1002/jlb.3ma0322-279rrr",
+      "10.1016/j.cmet.2020.07.007",
+      "10.14670/hh-18-354",
+      "10.1038/nm1267",
+      "10.2337/db08-0949",
+      "10.1002/hipo.450040105",
+      "10.3390/vaccines9010036",
+      "10.1371/journal.pone.0039739",
+      "10.1083/jcb.201603105",
+      "10.1016/j.cub.2010.05.066",
+      "10.1002/ana.26350",
+      "10.1002/embj.201385902",
+      "10.1038/icb.2013.7",
+      "10.1371/journal.pone.0052830",
+      "10.1016/bs.aivir.2016.08.001",
+      "10.1002/jbio.202100305",
+      "10.1038/s41467-020-18202-4",
+      "10.14348/molcells.2018.0438",
+      "10.1093/nar/gkaa1100",
+      "10.1126/science.abi5224",
+      "10.1016/j.cels.2020.06.008",
+      "10.12688/f1000research.52540.3",
+      "10.1038/s41586-020-2286-9",
+      "10.1126/science.abe9403",
+      "10.3390/ijms22179233",
+      "10.1021/acsinfecdis.0c00500",
+      "10.1038/s41423-020-0485-9",
+      "10.1038/s41598-020-79552-z",
+      "10.1038/s41586-021-03510-6",
+      "10.3390/v4123440",
+      "10.3390/ijms22158180",
+      "10.1016/s1016-8478(23)12878-0",
+      "10.1016/j.tcb.2020.01.008",
+      "10.1134/s0026898419060077",
+      "10.1096/fj.12-215798",
+      "10.1096/fj.202001300r",
+      "10.1016/j.jbc.2021.101164",
+      "10.1016/j.redox.2021.102078",
+      "10.1016/j.bbrc.2017.11.055",
+      "10.1038/s41580-021-00332-2",
+      "10.1126/science.abe0763",
+      "10.1523/jneurosci.1517-09.2010",
+      "10.1038/cr.2008.15",
+      "10.1128/jvi.01933-17",
+      "10.1016/j.bbrc.2008.02.023",
+      "10.1128/jvi.00253-07",
+      "10.3390/biology10090852",
+      "10.1016/j.tcb.2015.10.010",
+      "10.1099/vir.0.82856-0",
+      "10.1101/2020.05.09.086249",
+      "10.1016/j.biomaterials.2015.10.075",
+      "10.1101/2020.09.16.20190694",
+      "10.1038/s41392-020-00426-x",
+      "10.1111/febs.16096",
+      "10.1038/s41586-021-03925-1",
+      "10.1038/s41467-023-43666-5",
+      "10.1126/science.283.5407.1476",
+      "10.1128/jvi.07207-11",
+      "10.1136/bmjresp-2020-000806"
+    ],
+    "10.1093/pcmedi/pbaa032": [
+      "10.1038/s41591-020-0949-6",
+      "10.1093/pcmedi/pbaa018",
+      "10.1038/s41591-020-0965-6",
+      "10.1016/j.ijid.2020.05.030",
+      "10.1038/s41586-020-2554-8",
+      "10.1371/journal.pone.0236464",
+      "10.1001/jamanetworkopen.2020.10182"
+    ],
+    "10.1186/s13104-021-05561-4": [
+      "10.1051/matecconf/20164908001",
+      "10.1093/bioinformatics/btu123",
+      "10.3390/v12020244"
+    ],
+    "10.1101/2020.12.03.410233": [
+      "10.1038/s41591-020-0820-9",
+      "10.1016/j.tig.2013.05.007",
+      "10.1093/nar/gkm929",
+      "10.1371/journal.pone.0009989",
+      "10.1093/sysbio/syp103",
+      "10.1093/nar/gkr735",
+      "10.1093/nar/gks485",
+      "10.1101/2020.03.30.015008",
+      "10.1534/genetics.105.048975",
+      "10.1093/oxfordjournals.molbev.a026334",
+      "10.1016/j.tim.2015.12.003",
+      "10.1093/bioinformatics/bti020",
+      "10.1016/s0092-8674(00)00175-6",
+      "10.1093/nar/gkn180",
+      "10.1186/1471-2105-5-113",
+      "10.1186/1745-6150-2-36",
+      "10.1016/j.virusres.2007.02.017",
+      "10.1128/jvi.01394-09",
+      "10.1093/nar/gki352",
+      "10.1186/s40779-020-00240-0",
+      "10.1093/molbev/msj030",
+      "10.1017/cbo9780511974076",
+      "10.1371/journal.ppat.1006698",
+      "10.1093/bioinformatics/btl452",
+      "10.1093/molbev/msl163",
+      "10.1002/jmv.25754",
+      "10.1146/annurev.micro.55.1.709",
+      "10.1093/molbev/msy096",
+      "10.1038/s41586-020-2169-0",
+      "10.1128/jvi.01048-15",
+      "10.1016/s0012-365x(98)00073-9",
+      "10.1007/s003570000013",
+      "10.1080/10635150252899725",
+      "10.1101/2020.03.20.000885",
+      "10.3390/v11110979",
+      "10.1128/jvi.73.1.152-160.1999",
+      "10.1073/pnas.0605402103",
+      "10.1016/s0140-6736(20)30251-8",
+      "10.1090/dimacs/037/11",
+      "10.1007/978-3-642-59789-3_5",
+      "10.1089/106652701446170",
+      "10.1089/106652704773416966",
+      "10.1111/j.1463-6409.2004.00141.x",
+      "10.1186/1471-2148-3-2",
+      "10.1212/wnl.0000000000001905",
+      "10.1016/j.meegid.2014.12.022",
+      "10.1074/jbc.m600697200",
+      "10.1038/s41564-020-0770-5",
+      "10.1371/journal.pcbi.1004095",
+      "10.1128/jvi.01266-07",
+      "10.2807/1560-7917.es.2017.22.13.30494",
+      "10.1093/bioinformatics/btl446",
+      "10.1128/jvi.78.1.76-82.2004",
+      "10.1016/j.meegid.2007.07.004",
+      "10.1186/s12862-018-1163-8",
+      "10.1038/s41423-020-0400-4",
+      "10.1128/mmbr.69.4.635-664.2005",
+      "10.3390/v2081803",
+      "10.1101/2020.02.17.951335",
+      "10.3201/eid1006.030852",
+      "10.1007/s10930-020-09901-4",
+      "10.3389/fmicb.2019.00184",
+      "10.1186/1471-2180-6-88",
+      "10.1016/j.cub.2020.03.063",
+      "10.1101/2020.05.24.111823",
+      "10.1038/s41586-020-2012-7"
+    ],
+    "10.12688/f1000research.72956.5": [
+      "10.1038/s41591-020-0820-9",
+      "10.1371/journal.pbio.3001115",
+      "10.1038/s41564-020-0771-4",
+      "10.1007/s00705-020-04750-z",
+      "10.3201/eid2612.202308",
+      "10.1016/j.jbc.2021.100435",
+      "10.1038/s41586-020-2012-7",
+      "10.1038/s41586-020-2951-z",
+      "10.1038/s41586-022-04532-4",
+      "10.1016/j.meegid.2020.104285",
+      "10.1007/s10311-020-01151-1",
+      "10.1002/bies.202100015",
+      "10.1093/ve/veac046",
+      "10.1016/j.cell.2022.02.014",
+      "10.1038/s42003-022-03421-w",
+      "10.1073/pnas.0809524106",
+      "10.1073/pnas.2536857100",
+      "10.1128/jvi.77.15.8181-8186.2003",
+      "10.1016/j.virusres.2005.11.018",
+      "10.1002/9780471729259.mc16j01s19",
+      "10.1128/jvi.76.21.11065-11078.2002",
+      "10.1007/bf00332994",
+      "10.1038/s41586-020-2294-9",
+      "10.1016/j.cell.2021.06.008",
+      "10.1073/pnas.2105968118",
+      "10.1073/pnas.2113065118",
+      "10.1128/spectrum.00313-21",
+      "10.1101/gr.229202",
+      "10.1016/j.virol.2017.07.019",
+      "10.1016/j.antiviral.2020.104742",
+      "10.1371/journal.ppat.1009246",
+      "10.1016/j.isci.2021.102170",
+      "10.1016/0196-8858(91)90017-d",
+      "10.1016/j.cell.2020.05.042",
+      "10.1093/nar/gkp495",
+      "10.1128/aem.68.5.2095-2100.2002",
+      "10.1186/s12951-021-00806-7",
+      "10.1128/jvi.79.18.11892-11900.2005",
+      "10.1073/pnas.0409608102",
+      "10.1371/journal.ppat.1005215",
+      "10.1007/s12250-021-00369-9",
+      "10.1002/jmv.26545",
+      "10.12688/f1000research.72956.4"
+    ],
+    "10.14293/s2199-1006.1.sor-.ppdo2zu.v1": [],
+    "10.1186/s12859-020-03935-2": [
+      "10.1128/mmbr.69.4.635-664.2005",
+      "10.1056/nejmoa2001017",
+      "10.1001/jama.2020.2565",
+      "10.1016/j.jfma.2013.11.006",
+      "10.1016/j.cell.2020.02.058",
+      "10.1093/gerona/glaa094",
+      "10.1016/s1473-3099(20)30243-7",
+      "10.1016/b978-0-12-809633-8.21501-x",
+      "10.1016/j.cell.2020.06.035",
+      "10.1038/s41586-020-2012-7",
+      "10.1016/j.cell.2020.02.052",
+      "10.1101/2020.06.17.156455",
+      "10.1126/science.abc1669",
+      "10.1371/journal.pone.0008729",
+      "10.1074/mcp.m400112-mcp200",
+      "10.1080/22221751.2020.1738277",
+      "10.1038/s41586-020-2286-9",
+      "10.1126/science.abe9403",
+      "10.1038/s41586-020-2332-7",
+      "10.1016/j.cell.2020.06.034",
+      "10.1016/j.molcel.2020.08.006",
+      "10.1016/j.cell.2020.05.032",
+      "10.1101/2020.05.02.20088666",
+      "10.1371/journal.pone.0069374",
+      "10.1093/nar/gkx1037",
+      "10.1093/bioinformatics/btv557",
+      "10.1093/nar/gky1038",
+      "10.1093/nar/gky1049",
+      "10.1093/database/baaa021"
+    ],
+    "10.1172/jci203781": [
+      "10.1158/1078-0432.ccr-21-0079",
+      "10.1038/s41467-025-66018-x",
+      "10.3389/fmed.2022.1054557",
+      "10.1016/j.eclinm.2023.102369",
+      "10.1172/jci195784",
+      "10.1038/s41541-017-0033-5",
+      "10.1080/21645515.2021.1873056",
+      "10.1038/s41586-023-06487-6",
+      "10.1016/j.immuni.2024.02.016",
+      "10.1016/j.isci.2024.111557",
+      "10.1126/sciimmunol.add4853",
+      "10.1016/j.isci.2025.112721",
+      "10.1016/j.molmed.2023.01.003",
+      "10.1038/s41591-024-03278-y",
+      "10.1038/s41467-023-37559-w",
+      "10.1038/s41586-025-08910-6",
+      "10.1007/s00281-024-01003-y",
+      "10.1016/j.pharmthera.2014.09.010",
+      "10.1016/j.xcrm.2025.102505",
+      "10.1128/mbio.02437-25"
+    ],
+    "10.1101/2025.05.19.25327215": [
+      "10.1016/s0140-6736(20)30185-9",
+      "10.1056/nejmoa2001017",
+      "10.1038/s41586-022-04460-3",
+      "10.1056/nejme2028079",
+      "10.1016/j.cmi.2021.05.001",
+      "10.1038/s41467-020-18450-4",
+      "10.1038/s41586-020-2196-x",
+      "10.1001/jama.2021.18919",
+      "10.1038/s41564-021-00974-0",
+      "10.1371/journal.pone.0245532",
+      "10.1016/j.immuni.2021.01.008",
+      "10.1038/s41598-020-77125-8",
+      "10.1016/j.cell.2020.09.038",
+      "10.1016/j.xcrm.2022.100793",
+      "10.1056/nejmoa2101544",
+      "10.1172/jci.insight.151849",
+      "10.1016/j.ebiom.2022.103967",
+      "10.1038/s41590-021-00902-8",
+      "10.1016/j.xcrm.2021.100354",
+      "10.3389/fimmu.2022.869990",
+      "10.1172/jci159500",
+      "10.1016/j.cell.2020.08.017",
+      "10.1038/s41586-020-2550-z",
+      "10.1016/j.cell.2020.05.015",
+      "10.3390/pathogens12070862",
+      "10.1016/j.cell.2022.01.015",
+      "10.1038/s41591-024-02962-3",
+      "10.3390/jcm11123535",
+      "10.3389/fimmu.2022.858399",
+      "10.1038/s41598-024-58597-4",
+      "10.1002/ana.26343",
+      "10.1182/blood.2022016175",
+      "10.3390/vaccines11091464",
+      "10.1111/ajt.16768",
+      "10.3389/fimmu.2023.1131604",
+      "10.1038/s41590-020-0782-6",
+      "10.1038/s41591-021-01386-7",
+      "10.1016/j.celrep.2021.108728",
+      "10.1038/s41598-023-47130-8",
+      "10.1016/j.cca.2020.05.019",
+      "10.1007/s40121-024-01090-2",
+      "10.1007/s10096-024-04852-5",
+      "10.4049/jimmunol.1500918",
+      "10.1016/j.jcv.2022.105098",
+      "10.1038/s41586-020-2814-7",
+      "10.1189/jlb.0603252",
+      "10.1128/jcm.02199-21",
+      "10.1002/jmv.29365",
+      "10.3389/fimmu.2018.02367",
+      "10.1038/s41590-021-01122-w",
+      "10.3389/fimmu.2021.688436",
+      "10.1016/j.jinf.2023.05.014"
+    ],
+    "10.1371/journal.pone.0251913": [
+      "10.1016/j.antiviral.2013.10.013",
+      "10.1007/978-981-15-4814-7_12",
+      "10.1098/rstb.2004.1490",
+      "10.1016/j.sjbs.2017.06.001",
+      "10.1126/science.1085953",
+      "10.1038/s41586-020-2180-5",
+      "10.1038/s41586-020-2179-y",
+      "10.3389/fmicb.2019.00569",
+      "10.1161/circresaha.120.317015",
+      "10.1016/j.cell.2020.02.052",
+      "10.1073/pnas.0809524106",
+      "10.1038/s41594-019-0233-y",
+      "10.3390/v4040557",
+      "10.1007/s13238-016-0352-8",
+      "10.1371/journal.ppat.1007236",
+      "10.1038/s41422-020-0305-x",
+      "10.1038/s41467-020-20542-0",
+      "10.1016/s0140-6736(20)31022-9",
+      "10.1016/j.ebiom.2020.102768",
+      "10.1038/s41589-019-0245-2",
+      "10.1039/c4cc08565e",
+      "10.1021/acsnano.0c02857",
+      "10.1016/j.cell.2020.03.045",
+      "10.1126/science.1116480",
+      "10.1038/cr.2013.92",
+      "10.1093/nar/gky427",
+      "10.1093/nar/gkw385",
+      "10.1016/j.bmc.2017.06.052",
+      "10.1093/bioinformatics/btp033",
+      "10.1093/nar/gky357",
+      "10.1016/j.jmb.2007.05.022",
+      "10.1093/bioinformatics/btw514",
+      "10.1002/jcc.20084",
+      "10.1039/c3mb25484d",
+      "10.1016/j.softx.2015.06.001",
+      "10.1080/07391102.2020.1844060",
+      "10.1080/07391102.2020.1764392",
+      "10.1093/bioinformatics/btm474",
+      "10.3390/molecules25102293"
+    ],
+    "10.1017/dmp.2020.300": [
+      "10.1016/s0140-6736(20)30183-5",
+      "10.1016/j.tmaid.2020.101566",
+      "10.1023/a:1017919924342",
+      "10.1126/science.1118391",
+      "10.1016/s0140-6736(19)33221-0",
+      "10.1016/s1473-3099(20)30129-8"
+    ],
+    "10.14293/s2199-1006.1.sor-.pp4vz1s.v1": [],
+    "10.1186/s40168-020-00973-z": [
+      "10.3390/v10070373",
+      "10.1002/jmv.25748",
+      "10.1038/s41598-018-31496-1",
+      "10.1086/375357",
+      "10.3389/fmicb.2018.02924",
+      "10.20506/rst.35.1.2419",
+      "10.1371/journal.pone.0027805",
+      "10.3201/eid2506.190286",
+      "10.3389/fmicb.2019.02394",
+      "10.1128/jcm.00486-15",
+      "10.1186/gb-2011-12-8-r73",
+      "10.1128/mbio.00942-15",
+      "10.1101/gr.191049.115",
+      "10.1128/mbio.01491-15",
+      "10.1038/s41587-018-0006-x",
+      "10.1093/nar/5.5.1627",
+      "10.1021/bi00034a013",
+      "10.1038/s41586-020-2012-7",
+      "10.1093/nar/gkq901",
+      "10.1016/j.antiviral.2018.12.005",
+      "10.3390/v12040448",
+      "10.3390/v11010053",
+      "10.1016/s2666-5247(20)30089-6",
+      "10.1099/jgv.0.000698",
+      "10.3390/v13010069",
+      "10.1186/s12859-015-0503-6",
+      "10.1093/nar/25.17.3389",
+      "10.1111/tbed.12623",
+      "10.1056/nejmoa1415627",
+      "10.1038/nmeth.1419",
+      "10.1371/journal.ppat.1006750",
+      "10.1016/bs.aivir.2017.08.003",
+      "10.1111/tbed.13065",
+      "10.1371/journal.pntd.0006075",
+      "10.1038/srep27211",
+      "10.1128/jcm.00466-19"
+    ],
+    "10.2807/1560-7917.es.2021.26.13.2100333": [
+      "10.1093/cid/ciaa424",
+      "10.1056/nejmoa2002032",
+      "10.7326/m20-0504",
+      "10.1093/cid/ciaa790",
+      "10.3201/eid2607.200764",
+      "10.1093/cid/ciaa390",
+      "10.1093/cid/ciaa316",
+      "10.2807/1560-7917.es2014.19.25.20839",
+      "10.1016/j.ijid.2020.05.036",
+      "10.1016/j.ijid.2020.10.016",
+      "10.3390/ijerph17197175"
+    ],
+    "10.1099/jmm.0.001346": [
+      "10.1371/journal.pone.0025526",
+      "10.4269/ajtmh.15-0878",
+      "10.1099/jmm.0.000194",
+      "10.1128/jcm.01254-08",
+      "10.3201/eid2407.171978",
+      "10.1017/dmp.2019.128",
+      "10.1099/jmm.0.000714",
+      "10.1128/jcm.00512-20",
+      "10.1128/jcm.00599-20",
+      "10.3390/genes11060664"
+    ],
+    "10.1002/advs.202001474": [
+      "10.1038/s41579-020-0332-0",
+      "10.1164/rccm.202003-0693le",
+      "10.1038/s41564-020-0695-z",
+      "10.1038/s41591-020-0771-1",
+      "10.1093/nsr/nwaa036",
+      "10.1016/j.chom.2020.02.001",
+      "10.1148/radiol.2020200274",
+      "10.1038/s41586-020-2008-3",
+      "10.1038/s41564-020-0688-y",
+      "10.1128/jvi.00127-20",
+      "10.1126/science.abb2507",
+      "10.1038/s41586-020-2012-7",
+      "10.1016/j.cub.2020.03.022",
+      "10.1016/s0140-6736(20)30251-8",
+      "10.1128/jvi.01052-08",
+      "10.1016/j.cell.2020.02.058",
+      "10.1073/pnas.0400576101",
+      "10.1016/j.cell.2020.02.052",
+      "10.1038/s41467-020-15562-9",
+      "10.1016/j.tips.2004.04.001",
+      "10.1038/s41586-020-2180-5",
+      "10.1080/22221751.2020.1729069",
+      "10.1126/science.abb2762",
+      "10.1136/gutjnl-2020-320832",
+      "10.18332/tid/119324",
+      "10.1016/j.chom.2016.01.007",
+      "10.1146/annurev-virology-100114-055218",
+      "10.1371/journal.pbio.0060226",
+      "10.1146/annurev.micro.60.080805.142157",
+      "10.1146/annurev-micro-020518-115759",
+      "10.1007/s00108-019-00671-5",
+      "10.1001/jama.2020.2648",
+      "10.1016/s0140-6736(20)30183-5",
+      "10.1016/s0140-6736(20)30211-7",
+      "10.1001/jama.2020.1585",
+      "10.1097/cm9.0000000000000744",
+      "10.1016/s1473-3099(20)30086-4",
+      "10.1148/radiol.2020200463",
+      "10.1148/radiol.2020200230",
+      "10.1093/ajcp/aqaa062",
+      "10.1016/s2213-2600(20)30076-x",
+      "10.1038/s41379-020-0536-x",
+      "10.1007/s00281-017-0629-x",
+      "10.1111/j.1440-1843.2006.00942.x",
+      "10.1111/bjh.16659",
+      "10.1016/j.cell.2020.04.026",
+      "10.1016/j.ebiom.2020.102763",
+      "10.1093/nsr/nwaa041",
+      "10.1038/s41423-020-0402-2",
+      "10.1038/s41591-020-0819-2",
+      "10.1002/jmv.25685",
+      "10.1126/science.1132505",
+      "10.1128/jvi.01700-12",
+      "10.1371/journal.ppat.1002433",
+      "10.1128/mmbr.00015-08",
+      "10.1371/journal.pone.0062416",
+      "10.1073/pnas.0504754102",
+      "10.1128/jvi.79.7.4550-4551.2005",
+      "10.1128/jvi.79.24.15199-15208.2005",
+      "10.1073/pnas.1603435113",
+      "10.1074/jbc.m704870200",
+      "10.1007/s13238-014-0026-3",
+      "10.1128/jvi.02220-08",
+      "10.1128/mbio.01658-17",
+      "10.1371/journal.ppat.1006195",
+      "10.1371/journal.ppat.1002294",
+      "10.1371/journal.ppat.1002059",
+      "10.1038/ni.1979",
+      "10.1016/j.bbagrm.2013.02.005",
+      "10.1073/pnas.1811675115",
+      "10.1128/jvi.01782-06",
+      "10.3390/diseases4030026",
+      "10.1074/jbc.m109.008227",
+      "10.1038/cmi.2013.61",
+      "10.1038/emi.2016.33",
+      "10.1128/jvi.00367-09",
+      "10.1128/jvi.01012-07",
+      "10.1093/infdis/jiv380",
+      "10.1042/bj20050698",
+      "10.1016/j.virusres.2007.03.015",
+      "10.1056/nejmoa2001282",
+      "10.1016/j.jgg.2020.02.001",
+      "10.1126/science.abb3405",
+      "10.1126/science.abb4489",
+      "10.1016/j.csbj.2020.03.025",
+      "10.1038/s41422-020-0282-0",
+      "10.1056/nejmoa2001191",
+      "10.1056/nejmoa2007016",
+      "10.1074/jbc.c300520200",
+      "10.1126/science.abb7269",
+      "10.1016/j.cell.2020.04.031",
+      "10.1038/s41422-020-0305-x",
+      "10.12688/f1000research.22211.2",
+      "10.1038/s41467-020-16048-4",
+      "10.1016/j.kint.2018.01.029",
+      "10.1038/s41422-020-0290-0",
+      "10.1016/j.drudis.2020.01.015",
+      "10.1186/1743-422x-2-69",
+      "10.1073/pnas.2005615117",
+      "10.1111/j.1365-2249.2010.04115.x",
+      "10.1016/s0140-6736(20)30304-4",
+      "10.1016/s0140-6736(20)30628-0",
+      "10.1038/s41577-020-0308-3",
+      "10.14336/ad.2020.0228",
+      "10.1371/journal.pmed.0030343",
+      "10.1073/pnas.2004168117",
+      "10.1146/annurev-virology-110615-042301",
+      "10.1586/erv.09.43",
+      "10.1016/j.idc.2019.07.001",
+      "10.1016/j.cell.2020.04.042",
+      "10.1016/j.cell.2020.03.035",
+      "10.1056/nejmc2001737"
+    ],
+    "10.32388/rforhn": [],
+    "10.64898/2026.05.21.726772": [
+      "10.1080/10408410701647560",
+      "10.2217/fvl.14.30",
+      "10.1016/j.nmni.2023.101122",
+      "10.12703/r/11-2",
+      "10.1016/j.coviro.2023.101346)",
+      "10.1126/science.abc3189",
+      "10.20506/rst.36.2.2669",
+      "10.7554/elife.03883",
+      "10.1016/j.chom.2010.05.009",
+      "10.1016/j.tmaid.2023.102638",
+      "10.1093/nargab/lqab004",
+      "10.5808/gi.2020.18.1.e5",
+      "10.1186/s40246-025-00812-y",
+      "10.1101/2025.02.25.639900",
+      "10.3390/atmos14030471",
+      "10.3390/ijms18061135",
+      "10.1128/jvi.03146-14",
+      "10.1128/jvi.72.9.7367-7373.1998",
+      "10.1007/bf01719674",
+      "10.1126/science.ade2574",
+      "10.1016/j.epidem.2021.100523",
+      "10.2478/bsrj-2021-0015",
+      "10.3390/v15091959",
+      "10.1111/irv.12075",
+      "10.1101/2021.07.09.450648",
+      "10.1111/cts.70172",
+      "10.3390/technologies13030088",
+      "10.1186/1755-8794-7-s3-s1",
+      "10.1016/j.prevetmed.2024.106351",
+      "10.1016/s2666-5247(23)00173-8",
+      "10.3390/ijms18122706",
+      "10.1038/nature08182",
+      "10.1126/science.1176225",
+      "10.3390/v15040980",
+      "10.1093/infdis/135.4.681",
+      "10.3390/v10090497",
+      "10.1007/s10096-025-05147-z",
+      "10.1007/978-3-7091-6534-8_11",
+      "10.1111/apm.13178",
+      "10.1080/22221751.2023.2249554",
+      "10.3201/eid1412.080470",
+      "10.1101/2024.04.30.24306585",
+      "10.1007/s12250-015-3580-9",
+      "10.1101/cshperspect.a038331",
+      "10.3201/eid3007.240508",
+      "10.1177/10406387241300464",
+      "10.3201/eid2401.171240",
+      "10.1126/science.1102287",
+      "10.1093/cid/cix668",
+      "10.1093/infdis/jiy595",
+      "10.3201/eid1105.050007",
+      "10.1371/journal.ppat.1004395"
+    ],
+    "10.1002/pdi3.22": [
+      "10.1542/peds.2020-0702",
+      "10.1186/s41182-021-00365-5",
+      "10.1016/j.jri.2020.103122",
+      "10.1111/aji.13339",
+      "10.3389/fimmu.2022.910138",
+      "10.3390/ijerph182212011",
+      "10.1111/aji.13332",
+      "10.1016/j.ajog.2020.03.021",
+      "10.1007/s00431-020-03684-7",
+      "10.1136/bmj.321.7258.424",
+      "10.1093/ajcp/aqaa089",
+      "10.1128/jvi.01368-21",
+      "10.48550/arxiv.2004.06361",
+      "10.1016/j.jri.2023.103958",
+      "10.3390/v13081670",
+      "10.1111/j.1600-0897.2010.00836.x",
+      "10.1097/aog.0000000000004320",
+      "10.5858/arpa.2022-0029-sa",
+      "10.15585/mmwr.mm7047e1",
+      "10.1001/jamanetworkopen.2022.5345",
+      "10.1038/s41372-022-01446-x",
+      "10.1001/jamapediatrics.2021.0038",
+      "10.3389/fmed.2022.1099408",
+      "10.1016/j.ajogmf.2020.100133",
+      "10.1503/cmaj.200821",
+      "10.1016/j.ajpath.2021.05.009",
+      "10.1111/j.1600-0897.2007.00531.x",
+      "10.3389/fmed.2023.1127529",
+      "10.1016/j.jstrokecerebrovasdis.2022.106922",
+      "10.1002/jmv.26622",
+      "10.1016/j.ajog.2021.07.029",
+      "10.1038/nri.2017.64",
+      "10.1002/jmv.27128",
+      "10.1016/j.ijid.2022.10.045",
+      "10.1016/j.jiac.2022.06.004",
+      "10.1093/cid/ciaa375",
+      "10.1016/j.ajog.2020.04.013",
+      "10.1111/aogs.13867",
+      "10.1111/nyas.14477",
+      "10.3233/npm-210775",
+      "10.3389/fped.2020.597699",
+      "10.1111/mcn.13010",
+      "10.1016/j.pedneo.2020.10.001",
+      "10.1503/cmaj.202604",
+      "10.1038/s41598-022-14112-1",
+      "10.1016/j.ejogrb.2022.07.010",
+      "10.1001/jama.2022.5906",
+      "10.1016/j.cmi.2020.10.007",
+      "10.3389/fped.2021.674899",
+      "10.1038/s41390-020-1096-y",
+      "10.1016/j.puhe.2022.10.015",
+      "10.3390/ijerph18158182",
+      "10.1111/aogs.14231",
+      "10.1186/s12884-021-04050-7",
+      "10.1016/j.ajog.2020.12.1198",
+      "10.15585/mmwr.mm7024e2"
+    ],
+    "10.1590/fm.2024.37201": [
+      "10.1073/pnas.2103272118",
+      "10.1002/jmv.27661",
+      "10.4014/jmb.2110.10029",
+      "10.1016/j.scitotenv.2021.150873",
+      "10.1007/s15010-021-01714-6",
+      "10.1136/bmj.o2625",
+      "10.2989/16085906.2022.2106066",
+      "10.3390/antibiotics11111614",
+      "10.1016/j.sapharm.2021.05.004",
+      "10.3390/healthcare10091678",
+      "10.1016/j.phymed.2022.154136",
+      "10.1007/s40520-020-01669-y",
+      "10.1016/j.biopha.2022.112787",
+      "10.1021/acsabm.2c00143",
+      "10.3390/ijerph19158905",
+      "10.3390/cells11121897",
+      "10.3390/nu12092550",
+      "10.3390/nu14194217",
+      "10.3390/nu12123760",
+      "10.1038/s41430-021-00993-4",
+      "10.3390/nu14081625",
+      "10.3390/nu11123034",
+      "10.1111/joim.13536",
+      "10.1016/j.maturitas.2020.08.003",
+      "10.1080/14787210.2022.2035217",
+      "10.1007/s11154-021-09679-5",
+      "10.1007/s11154-021-09707-4",
+      "10.1186/s40001-022-00694-z",
+      "10.1080/10408398.2022.2119932",
+      "10.1016/j.vacun.2021.08.003",
+      "10.1016/j.jiph.2022.09.011",
+      "10.1017/s0029665122002646",
+      "10.1017/s0007114522003075",
+      "10.1024/0300-9831/a000694"
+    ],
+    "10.1371/journal.pcbi.1009997": [
+      "10.3201/eid2609.201435",
+      "10.7326/m20-5008",
+      "10.1073/pnas.2018995118",
+      "10.1111/ina.12751",
+      "10.1016/j.envint.2020.106326",
+      "10.1001/jamainternmed.2020.5225",
+      "10.1016/j.jaerosci.2020.105693",
+      "10.1056/nejmc2004973",
+      "10.3201/eid1003.030683",
+      "10.1099/jgv.0.001481",
+      "10.1371/journal.pbio.3001128",
+      "10.3390/v13061141",
+      "10.1016/j.mbs.2020.108438",
+      "10.1016/j.arcontrol.2020.09.006",
+      "10.1371/journal.ppat.1009753",
+      "10.1371/journal.pcbi.1008785",
+      "10.3390/v13081635",
+      "10.3390/v13030457",
+      "10.3390/v13122546",
+      "10.7554/elife.63537",
+      "10.1128/mbio.02527-21",
+      "10.1038/s41586-020-2342-5",
+      "10.1371/journal.pcbi.1001081",
+      "10.1016/j.scr.2018.10.006",
+      "10.1038/s41392-021-00552-0",
+      "10.1038/s41586-020-2700-3",
+      "10.1038/s41586-020-2196-x",
+      "10.1016/j.jinf.2020.03.063",
+      "10.1093/cid/ciaa638",
+      "10.12688/wellcomeopenres.16002.2",
+      "10.1038/s41467-020-20568-4"
+    ],
+    "10.1101/2025.03.06.641801": [
+      "10.1016/j.cell.2020.02.052",
+      "10.1038/s41423-020-0400-4",
+      "10.1016/j.antiviral.2020.104792",
+      "10.1016/j.cell.2020.09.033",
+      "10.1007/s11427-021-1990-5",
+      "10.1038/s41392-020-00426-x",
+      "10.1038/s41422-021-00595-6",
+      "10.1016/j.cell.2023.06.005",
+      "10.1038/ng0997-32",
+      "10.1038/sj.onc.1203071",
+      "10.1152/ajplung.00365.2004",
+      "10.1152/ajplung.00057.2003",
+      "10.1089/088922203763315704",
+      "10.1089/aid.2006.22.508",
+      "10.4049/jimmunol.179.5.3126",
+      "10.1128/jvi.00744-09",
+      "10.4049/jimmunol.181.3.2065",
+      "10.1128/iai.00435-12",
+      "10.1007/s10719-006-9020-1",
+      "10.1074/jbc.m111.231100",
+      "10.1128/iai.66.1.115-121.1998",
+      "10.1128/iai.00825-12",
+      "10.1371/journal.ppat.1006392",
+      "10.1038/s41598-019-49543-w",
+      "10.1074/jbc.m406095200",
+      "10.1074/jbc.m900581200",
+      "10.1016/j.cell.2020.04.035",
+      "10.3390/cancers13061250",
+      "10.1080/14787210.2021.1850263",
+      "10.1111/j.1600-0722.2011.00879.x",
+      "10.1016/j.jare.2023.08.005",
+      "10.1126/sciadv.aaw8357",
+      "10.1101/2025.02.04.636569",
+      "10.1038/s41467-021-21213-4",
+      "10.1186/s40659-024-00508-y",
+      "10.1006/meth.2001.1262",
+      "10.1038/s41556-021-00796-6",
+      "10.1038/s41588-022-01243-4",
+      "10.1354/vp.45-4-551",
+      "10.1080/22221751.2020.1833687",
+      "10.1515/bc.2008.135",
+      "10.1038/s41421-022-00428-9"
+    ],
+    "10.1101/2020.03.27.012906": [
+      "10.1007/978-1-4939-2438-7_1",
+      "10.1016/j.chembiol.2016.05.021",
+      "10.1016/j.antiviral.2007.12.008",
+      "10.1146/annurev-neuro-070918-050501",
+      "10.1016/j.virusres.2015.02.025",
+      "10.1128/jvi.79.10.6312-6324.2005",
+      "10.2741/3046",
+      "10.1261/rna.2816711",
+      "10.1016/j.virol.2010.02.007",
+      "10.1002/jmv.25700",
+      "10.1038/s41564-020-0695-z",
+      "10.1016/j.virusres.2014.10.001",
+      "10.1093/nar/gkx1038",
+      "10.1093/bioinformatics/btt509",
+      "10.1016/j.virol.2014.11.001",
+      "10.1002/gch2.1018",
+      "10.1093/bioinformatics/btl246",
+      "10.1186/1471-2105-11-586",
+      "10.1093/nar/21.25.5838",
+      "10.1142/9789814295291_0009",
+      "10.1101/789404",
+      "10.1016/j.jmb.2008.01.068",
+      "10.1261/rna.261807",
+      "10.1101/2020.03.13.991083",
+      "10.1128/jvi.78.2.669-682.2004",
+      "10.1128/jvi.00803-06",
+      "10.1371/journal.pbio.0030005",
+      "10.1099/0022-1317-79-4-715",
+      "10.1128/jvi.06265-11",
+      "10.1101/717801",
+      "10.1038/s41467-019-13494-7",
+      "10.1093/nar/gkh340",
+      "10.1093/bioinformatics/17.3.282",
+      "10.1038/msb.2011.75",
+      "10.1093/bioinformatics/bts578",
+      "10.1016/j.jmb.2004.07.018",
+      "10.1038/nmeth.4066",
+      "10.1093/bioinformatics/btp163",
+      "10.1093/bioinformatics/btk014",
+      "10.1093/bioinformatics/bts199"
+    ],
+    "10.1017/ash.2023.391": [],
+    "10.7554/elife.64496": [
+      "10.1016/j.jaci.2020.10.040",
+      "10.1056/nejmoa2029849",
+      "10.1056/nejmoa2022483",
+      "10.1093/infdis/jiaa659",
+      "10.1038/s41586-020-2456-9",
+      "10.1126/science.abc7520",
+      "10.1038/s41586-020-2814-7",
+      "10.1038/s41564-020-00813-8",
+      "10.1056/nejmoa2031304",
+      "10.1056/nejmoa2027906",
+      "10.1126/scitranslmed.abf1555",
+      "10.7554/elife.61312",
+      "10.1056/nejmc2032195",
+      "10.1126/science.abd2321"
+    ],
+    "10.32388/0wl8dr": [
+      "10.1093/bib/bbx037",
+      "10.1534/g3.114.015784",
+      "10.1038/nmeth.3069",
+      "10.1101/2020.09.04.283077",
+      "10.1093/nar/gkq1019",
+      "10.1089/cmb.2012.0021",
+      "10.1101/gr.213959.116",
+      "10.1101/gr.215087.116",
+      "10.1101/2021.02.02.429443"
+    ],
+    "10.1590/1519-6984.262008": [
+      "10.2353/ajpath.2006.051296",
+      "10.1038/s41598-018-37071-y",
+      "10.1080/17474124.2020.1794812",
+      "10.1016/j.clinre.2020.05.002",
+      "10.1177/2050640620924157",
+      "10.1002/jmv.25948",
+      "10.1016/s2468-1253(20)30084-4",
+      "10.1177/1066896920935195",
+      "10.1002/hep.31480",
+      "10.1016/j.jacc.2020.04.031",
+      "10.3389/fimmu.2019.02694",
+      "10.1001/jama.2021.7489",
+      "10.1016/s0140-6736(20)31305-2",
+      "10.1016/j.jhep.2020.04.006",
+      "10.1126/science.abd2985",
+      "10.1002/hep.20111",
+      "10.1016/j.amjms.2021.11.001",
+      "10.3390/jcm9020575",
+      "10.3748/wjg.v26.i48.7693",
+      "10.1111/his.14160",
+      "10.1159/000511325",
+      "10.1053/j.gastro.2019.11.312",
+      "10.1093/infdis/jiaa578",
+      "10.1016/j.cgh.2020.04.002",
+      "10.1016/j.prp.2021.153451",
+      "10.14218/jcth.2020.00018",
+      "10.1016/j.jcmgh.2020.09.015",
+      "10.1016/j.aohep.2020.09.001",
+      "10.1111/apt.15813",
+      "10.1007/s10238-020-00648-x",
+      "10.1038/s41586-020-2286-9",
+      "10.1136/gut.2004.053850",
+      "10.1002/path.1570",
+      "10.1002/jmv.26169",
+      "10.1001/archophthalmol.2011.321",
+      "10.1056/nejmc2001899",
+      "10.1016/j.cell.2020.02.052",
+      "10.1097/mcc.0b013e32835ec9e6",
+      "10.1016/j.jhep.2020.03.044",
+      "10.1136/gutjnl-2020-320926",
+      "10.1038/nri.2017.11",
+      "10.3390/jcm9051420",
+      "10.1111/apt.15916",
+      "10.1038/s41379-020-00649-x",
+      "10.5858/arpa.2020-0186-sa",
+      "10.7326/m20-2566",
+      "10.1002/hep.31301",
+      "10.1038/s41392-020-00355-9",
+      "10.1002/jmv.25973",
+      "10.1016/j.immuni.2020.06.017",
+      "10.1016/j.jhep.2020.09.024",
+      "10.1073/pnas.2002589117",
+      "10.1016/j.jhep.2021.04.050",
+      "10.1053/j.gastro.2016.09.048",
+      "10.1038/ncomms3823",
+      "10.1016/s0140-6736(20)30628-0",
+      "10.1016/j.dld.2020.09.010",
+      "10.1111/liv.15061",
+      "10.1016/j.jhep.2020.05.013",
+      "10.1111/liv.14516",
+      "10.1111/liv.14730",
+      "10.4254/wjh.v13.i5.522",
+      "10.1172/jci137647",
+      "10.1111/liv.14500",
+      "10.1093/ajcp/aqaa124",
+      "10.3390/microorganisms8081106",
+      "10.1159/000512008",
+      "10.3904/kjim.2017.317",
+      "10.1111/liv.14601",
+      "10.1111/liv.14984",
+      "10.1111/liv.14470",
+      "10.1016/j.anai.2020.11.003",
+      "10.1038/s41379-020-0536-x",
+      "10.1001/jama.2020.1585",
+      "10.1038/s41422-020-0282-0",
+      "10.1186/s40779-020-00256-6",
+      "10.34133/2020/2402961",
+      "10.1016/j.jhep.2020.05.002",
+      "10.1016/j.aohep.2020.08.064",
+      "10.1038/s41586-020-2008-3",
+      "10.3748/wjg.v26.i19.2286",
+      "10.1111/liv.14449",
+      "10.1038/s41368-020-0074-x",
+      "10.1111/liv.14435",
+      "10.1016/s2213-2600(20)30076-x",
+      "10.1136/gutjnl-2020-322072",
+      "10.3748/wjg.v26.i32.4753",
+      "10.1016/j.dld.2021.06.014",
+      "10.1038/nm.4451",
+      "10.1016/s2468-1253(20)30057-1",
+      "10.1111/liv.14455",
+      "10.1007/s13238-020-00718-6",
+      "10.1038/s41392-020-00373-7",
+      "10.1002/jmv.26085",
+      "10.1056/nejmoa2001017",
+      "10.1007/s11684-020-0754-0"
+    ],
+    "10.1101/2021.01.27.428384": [
+      "10.1016/j.biosystems.2005.02.001",
+      "10.1007/978-94-009-2653-0_47",
+      "10.1038/nature01254",
+      "10.1016/s0140-6736(20)30154-9",
+      "10.1126/science.abb3221",
+      "10.1093/oso/9780199211128.001.0001",
+      "10.1098/rspa.1927.0118",
+      "10.1007/s11071-020-05743-y",
+      "10.1515/9780691185118",
+      "10.24097/wolfram.04123.data",
+      "10.1007/s10462-018-9656-9",
+      "10.1142/s0218127411028672",
+      "10.1098/rsta.2019.0443",
+      "10.1142/s0218127407017161",
+      "10.1371/journal.pone.0240777",
+      "10.1201/b15326",
+      "10.1111/j.1467-9868.2005.00519.x",
+      "10.1016/j.plrev.2016.08.002",
+      "10.1073/pnas.2004999117"
+    ],
+    "10.32388/pc6z8q.2": [],
+    "10.1111/risa.14291": [
+      "10.3389/fimmu.2020.552909",
+      "10.1136/postgradmedj-2020-138386",
+      "10.1172/jci161167",
+      "10.1093/eurheartjsupp/suac123",
+      "10.1038/s41586-021-03553-9",
+      "10.1093/cid/ciab519",
+      "10.1128/jvi.00365-23",
+      "10.1038/s41591-020-0820-9",
+      "10.1016/s2666-5247(23)00319-1",
+      "10.1093/jtm/taaa008",
+      "10.1007/s10654-020-00716-2",
+      "10.1128/aem.02750-20",
+      "10.7205/milmed-d-17-00090",
+      "10.1111/risa.13255",
+      "10.1111/risa.13472",
+      "10.1016/j.puhe.2023.08.032",
+      "10.1038/s41598-021-94011-z",
+      "10.1016/j.virol.2006.02.003",
+      "10.1016/s1473-3099(21)00170-5",
+      "10.1038/nature12711",
+      "10.1111/bjd.19804",
+      "10.1177/1535676016683194",
+      "10.1046/j.1469-0691.2002.00524.x",
+      "10.3390/pathogens9060480",
+      "10.1038/s41467-022-33911-8",
+      "10.1002/jmv.25682",
+      "10.1007/s12250-020-00206-5",
+      "10.1111/tbed.13872",
+      "10.1016/j.bpa.2020.12.003",
+      "10.1016/j.jneuroim.2020.577436",
+      "10.2196/18939",
+      "10.1038/s41586-020-2169-0",
+      "10.1038/s41467-020-17687-3",
+      "10.1056/nejmoa2001316",
+      "10.1016/j.clinimag.2020.02.008",
+      "10.31646/gbio.108",
+      "10.1038/s41586-023-06043-2",
+      "10.1016/j.rinp.2022.105224",
+      "10.1007/s10669-017-9667-0",
+      "10.1016/j.sste.2021.100417",
+      "10.1128/mbio.02979-21",
+      "10.1093/gbe/evab196",
+      "10.12688/f1000research.28393.1",
+      "10.1038/s41564-021-00908-w",
+      "10.1038/s41598-021-92388-5",
+      "10.1038/s41586-020-2895-3",
+      "10.1016/j.bbrc.2020.10.087",
+      "10.1093/jtm/taaa030",
+      "10.1128/mbio.01013-15",
+      "10.1038/s41586-022-05542-y",
+      "10.1371/journal.pone.0252273",
+      "10.1007/s12250-018-0012-7",
+      "10.1016/s2666-5247(21)00174-9",
+      "10.1016/j.scitotenv.2021.145260",
+      "10.1007/s11845-020-02484-0",
+      "10.1126/science.abp8715",
+      "10.1186/s41256-020-00135-6"
+    ],
+    "10.1101/2020.06.20.163162": [
+      "10.1093/bib/bbv099",
+      "10.1093/nar/gkn180",
+      "10.1016/s1473-3099(20)30120-1",
+      "10.1186/1471-2148-7-214",
+      "10.1093/nar/gkh340",
+      "10.1093/molbev/mst012",
+      "10.1093/molbev/mst010",
+      "10.1093/molbev/msy016",
+      "10.1093/nar/gkz239",
+      "10.1093/bioinformatics/bty191",
+      "10.1371/journal.pone.0182238",
+      "10.1101/383190",
+      "10.1016/j.softx.2020.100436",
+      "10.1101/2020.04.20.052068",
+      "10.1371/journal.pone.0009490",
+      "10.1093/bioinformatics/btu033",
+      "10.1093/molbev/msr121",
+      "10.1093/sysbio/syv068",
+      "10.1093/bioinformatics/btx155",
+      "10.3390/v2081803",
+      "10.1056/nejmoa2001017"
+    ],
+    "10.1099/acmi.0.000257": [
+      "10.1016/j.jiph.2020.06.005",
+      "10.1503/cmaj.201588",
+      "10.1016/j.tvjl.2012.08.019",
+      "10.1016/j.vaccine.2005.04.011",
+      "10.1503/cmaj.100910",
+      "10.1016/j.diagmicrobio.2020.115294",
+      "10.1128/jcm.02005-20",
+      "10.1080/22221751.2020.1835448",
+      "10.1016/j.it.2020.03.007",
+      "10.1038/s41467-020-16638-2",
+      "10.1016/j.immuni.2020.04.023",
+      "10.1016/j.xcrm.2020.100126",
+      "10.1172/jci.insight.142362"
+    ],
+    "10.1371/journal.pone.0263251": [
+      "10.1016/s0140-6736(20)30557-2",
+      "10.1016/j.tim.2016.03.003",
+      "10.1016/j.jpha.2020.03.009",
+      "10.1021/acsnano.0c07383",
+      "10.7150/ijbs.45053",
+      "10.1074/jbc.m310875200",
+      "10.1126/science.1085658",
+      "10.1073/pnas.1835675100",
+      "10.1021/jm301580n",
+      "10.4155/fmc.10.21",
+      "10.1002/wcms.31",
+      "10.1093/bioinformatics/btaa565",
+      "10.1038/srep11539",
+      "10.1126/sciadv.1700014",
+      "10.1073/pnas.1424461112",
+      "10.1039/c5cp06257h",
+      "10.1063/1.5108638",
+      "10.1021/ci400766b",
+      "10.1007/978-1-4939-8630-9_17",
+      "10.1016/j.bmcl.2013.08.112",
+      "10.1186/1756-0500-5-367",
+      "10.1016/j.softx.2015.06.001",
+      "10.1002/jcc.20290",
+      "10.1063/1.445869",
+      "10.1002/(sici)1096-987x(199709)18:12<1463::aid-jcc4>3.0.co;2-h",
+      "10.1063/1.464397",
+      "10.1063/1.2408420",
+      "10.1063/1.328693",
+      "10.1109/mcse.2007.55"
+    ],
+    "10.1590/s0104-12902023210899pt": [
+      "10.1111/j.1468-0378.2006.00241.x",
+      "10.1590/s0103-73312020300205"
+    ],
+    "10.1371/journal.pone.0309557": [
+      "10.3389/fmicb.2021.614494",
+      "10.1038/s41586-020-2012-7",
+      "10.1038/s41586-022-04532-4",
+      "10.1016/j.envres.2021.112173",
+      "10.3389/fgene.2021.641445",
+      "10.3389/fgene.2022.904513",
+      "10.1128/jvi.01048-15",
+      "10.1038/s41467-023-39835-1",
+      "10.1016/j.virol.2016.10.017",
+      "10.1128/jvi.73.1.152-160.1999",
+      "10.1016/j.antiviral.2017.11.001",
+      "10.3389/fgene.2022.875406",
+      "10.1128/jvi.01394-09",
+      "10.1038/s41598-018-33487-8",
+      "10.1016/s0140-6736(20)31757-8",
+      "10.1038/s41586-020-2169-0",
+      "10.1016/j.cub.2020.05.023",
+      "10.1093/nar/gkad958",
+      "10.1080/14728222.2024.2362675",
+      "10.3390/biom13050787",
+      "10.3390/v14051029",
+      "10.1016/j.csbj.2022.04.010",
+      "10.3390/biom11070979",
+      "10.1126/science.abp8715"
+    ]
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "language-family",
+      "value": "anglophone",
+      "justification": "the anglophone peer-reviewed literature is the baseline corpus a scoping review is expected to cover (PRISMA-ScR item 8: information sources)."
+    },
+    {
+      "dimension": "language-family",
+      "value": "non-anglophone",
+      "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025)."
+    },
+    {
+      "dimension": "geographic-locus",
+      "value": "east-asia",
+      "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute."
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "10.14202/vetworld.2021.190-199": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1371/journal.pone.0301195": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2020.08.10.245290": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1002/bies.202000240": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.12688/f1000research.72956.3": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2020.05.05.078956": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/s0104-59702025000100061en": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2020.03.16.993816": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/s0104-59702025000100061": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.12688/f1000research.73170.3": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1093/pcmedi/pbaa032": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s13104-021-05561-4": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2020.12.03.410233": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.12688/f1000research.72956.5": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.ppdo2zu.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12859-020-03935-2": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1172/jci203781": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.05.19.25327215": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1371/journal.pone.0251913": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1017/dmp.2020.300": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.pp4vz1s.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s40168-020-00973-z": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.2807/1560-7917.es.2021.26.13.2100333": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1099/jmm.0.001346": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1002/advs.202001474": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/rforhn": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.64898/2026.05.21.726772": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1002/pdi3.22": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/fm.2024.37201": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1371/journal.pcbi.1009997": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.03.06.641801": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2020.03.27.012906": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1017/ash.2023.391": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.7554/elife.64496": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/0wl8dr": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/1519-6984.262008": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2021.01.27.428384": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/pc6z8q.2": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1111/risa.14291": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2020.06.20.163162": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1099/acmi.0.000257": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1371/journal.pone.0263251": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/s0104-12902023210899pt": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1371/journal.pone.0309557": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      }
+    },
+    "reader-b": {
+      "10.14202/vetworld.2021.190-199": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1371/journal.pone.0301195": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2020.08.10.245290": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1002/bies.202000240": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.12688/f1000research.72956.3": {
+        "lean": "contradicts",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2020.05.05.078956": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/s0104-59702025000100061en": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2020.03.16.993816": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/s0104-59702025000100061": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.12688/f1000research.73170.3": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1093/pcmedi/pbaa032": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s13104-021-05561-4": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2020.12.03.410233": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.12688/f1000research.72956.5": {
+        "lean": "contradicts",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.ppdo2zu.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12859-020-03935-2": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1172/jci203781": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.05.19.25327215": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1371/journal.pone.0251913": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1017/dmp.2020.300": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.pp4vz1s.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s40168-020-00973-z": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.2807/1560-7917.es.2021.26.13.2100333": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1099/jmm.0.001346": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1002/advs.202001474": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/rforhn": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.64898/2026.05.21.726772": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1002/pdi3.22": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/fm.2024.37201": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1371/journal.pcbi.1009997": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.03.06.641801": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2020.03.27.012906": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1017/ash.2023.391": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.7554/elife.64496": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/0wl8dr": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/1519-6984.262008": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2021.01.27.428384": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/pc6z8q.2": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1111/risa.14291": {
+        "lean": "contradicts",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2020.06.20.163162": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1099/acmi.0.000257": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1371/journal.pone.0263251": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/s0104-12902023210899pt": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1371/journal.pone.0309557": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      }
+    }
+  },
+  "derived": {
+    "convergenceMap": {
+      "verdicts": [
+        {
+          "claimId": "10.14202/vetworld.2021.190-199",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.1371/journal.pone.0301195",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.1101/2020.08.10.245290",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1002/bies.202000240",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.12688/f1000research.72956.3",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "contradicts"
+          }
+        },
+        {
+          "claimId": "10.1101/2020.05.05.078956",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/s0104-59702025000100061en",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2020.03.16.993816",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.1590/s0104-59702025000100061",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.12688/f1000research.73170.3",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1093/pcmedi/pbaa032",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s13104-021-05561-4",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2020.12.03.410233",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.12688/f1000research.72956.5",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "contradicts"
+          }
+        },
+        {
+          "claimId": "10.14293/s2199-1006.1.sor-.ppdo2zu.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12859-020-03935-2",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1172/jci203781",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.05.19.25327215",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1371/journal.pone.0251913",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1017/dmp.2020.300",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/s2199-1006.1.sor-.pp4vz1s.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s40168-020-00973-z",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.2807/1560-7917.es.2021.26.13.2100333",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1099/jmm.0.001346",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1002/advs.202001474",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.32388/rforhn",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.64898/2026.05.21.726772",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1002/pdi3.22",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/fm.2024.37201",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1371/journal.pcbi.1009997",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.03.06.641801",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2020.03.27.012906",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1017/ash.2023.391",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.7554/elife.64496",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.32388/0wl8dr",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/1519-6984.262008",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2021.01.27.428384",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.32388/pc6z8q.2",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1111/risa.14291",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "contradicts"
+          }
+        },
+        {
+          "claimId": "10.1101/2020.06.20.163162",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1099/acmi.0.000257",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1371/journal.pone.0263251",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/s0104-12902023210899pt",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1371/journal.pone.0309557",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "supports"
+          }
+        }
+      ]
+    },
+    "coverageAudit": {
+      "findings": [
+        {
+          "dimension": "language-family",
+          "value": "anglophone",
+          "observedSources": 44,
+          "expected": true,
+          "isEmptyChair": false,
+          "justification": "the anglophone peer-reviewed literature is the baseline corpus a scoping review is expected to cover (PRISMA-ScR item 8: information sources)."
+        },
+        {
+          "dimension": "language-family",
+          "value": "non-anglophone",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025)."
+        },
+        {
+          "dimension": "geographic-locus",
+          "value": "east-asia",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute."
+        }
+      ],
+      "emptyChairs": [
+        {
+          "dimension": "language-family",
+          "value": "non-anglophone",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025)."
+        },
+        {
+          "dimension": "geographic-locus",
+          "value": "east-asia",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute."
+        }
+      ]
+    },
+    "reliabilityProfiles": [
+      {
+        "claimId": "10.14202/vetworld.2021.190-199",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1371/journal.pone.0301195",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1101/2020.08.10.245290",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1002/bies.202000240",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.12688/f1000research.72956.3",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1101/2020.05.05.078956",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/s0104-59702025000100061en",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2020.03.16.993816",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1590/s0104-59702025000100061",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.12688/f1000research.73170.3",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1093/pcmedi/pbaa032",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s13104-021-05561-4",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2020.12.03.410233",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.12688/f1000research.72956.5",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.14293/s2199-1006.1.sor-.ppdo2zu.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12859-020-03935-2",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1172/jci203781",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.05.19.25327215",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1371/journal.pone.0251913",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1017/dmp.2020.300",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/s2199-1006.1.sor-.pp4vz1s.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s40168-020-00973-z",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.2807/1560-7917.es.2021.26.13.2100333",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1099/jmm.0.001346",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1002/advs.202001474",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/rforhn",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.64898/2026.05.21.726772",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1002/pdi3.22",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/fm.2024.37201",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1371/journal.pcbi.1009997",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.03.06.641801",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2020.03.27.012906",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1017/ash.2023.391",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.7554/elife.64496",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/0wl8dr",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/1519-6984.262008",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2021.01.27.428384",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/pc6z8q.2",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1111/risa.14291",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1101/2020.06.20.163162",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1099/acmi.0.000257",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1371/journal.pone.0263251",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/s0104-12902023210899pt",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1371/journal.pone.0309557",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      }
+    ]
+  }
+}

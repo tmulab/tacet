@@ -7,3 +7,13 @@ dist/
 # Harvested corpus: third-party content in bulk is never versioned (DIAMOND).
 # The curated, open-license replay fixture lives in fixtures/ and IS versioned.
 corpus/
+
+# Step-0 investigation protocols (the researcher's working drafts). Pre-registration
+# is meant to be public eventually, but a not-yet-released question is the
+# researcher's to publish — keep these local until they choose to commit one.
+protocols/
+
+# Anchor PDFs for step-0 (--anchor). Local by default: these may be in-press or
+# third-party texts the researcher is not ready to publish in a public repo.
+# Drop the line (or force-add a specific file) to ship one as a demo fixture.
+fixtures/anchors/*.pdf

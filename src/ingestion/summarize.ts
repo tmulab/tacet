@@ -1,8 +1,10 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { isAbsolute, resolve } from "node:path";
 import type { Claim, OriginStance, StructuredSummary } from "../domain/types.js";
-import { configFromEnv, extractFirstJSON, fetchLLM } from "./llm.js";
+import { configFromEnv, extractFirstJSON } from "./llm.js";
 import type { LlmTransport } from "./llm.js";
+import { Cascade } from "../llm/cascade.js";
+import { FREE_MODELS, openRouterTransport, specFor } from "../llm/openrouter.js";
 
 /**
  * LLM summarizer (Phase 5a). Replaces the truncated-stub summary with a real,
@@ -143,10 +145,23 @@ async function main(): Promise<void> {
   const inPath = isAbsolute(arg) ? arg : resolve(process.cwd(), arg);
 
   const corpus = JSON.parse(readFileSync(inPath, "utf8")) as Corpus;
-  const transport: LlmTransport = (system, user) =>
-    fetchLLM(config.baseUrl, config.apiKey, config.model, system, user, { temperature: 0 });
 
-  console.log(`summarizing ${corpus.claims.length} claims via ${config.model}…`);
+  // Summarize is a single-role task (no independence rule) → a plain cascade:
+  // the configured summary model leads, then the rest of FREE_MODELS. `validate`
+  // makes a 200 that does not parse into a structured summary count as a failure
+  // and fall through to the next model. A full miss → summarizeClaim keeps the
+  // deterministic truncated-stub (unchanged).
+  const lead = specFor(config.model, config.baseUrl);
+  const models = [lead, ...FREE_MODELS.filter((m) => m.id !== lead.id)];
+  const cascade = new Cascade(models, openRouterTransport(config.apiKey), {
+    validate: (c) => parseStructured(extractFirstJSON(c)) !== null,
+  });
+  const transport: LlmTransport = async (system, user) => {
+    const o = await cascade.run(system, user);
+    return o.ok ? { ok: true, content: o.content, seconds: o.seconds } : { ok: false, error: o.error ?? "cascade exhausted", seconds: o.seconds };
+  };
+
+  console.log(`summarizing ${corpus.claims.length} claims via cascade [${models.map((m) => m.id).join(", ")}]…`);
   const { claims, fallbacks } = await summarizeCorpus(corpus.claims, transport, (done, total, claim) => {
     const method = claim.provenance[0]?.summaryMethod === "llm" ? "llm " : "STUB";
     console.log(`  [${String(done).padStart(2)}/${total}] ${method} ${claim.id}`);

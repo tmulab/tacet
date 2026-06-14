@@ -137,6 +137,25 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
     Dia 11 adaptado (serviço sem auth/CRUD): "roda de clone limpo e produz a
     saída esperada sobre fixtures".
 14. **Prioridade-mãe:** TEMPO DE TESTE acima de tudo.
+15. **Backend dos readers (live):** SOMENTE OpenRouter gratuito. Z.AI removido
+    (era reader A=glm-4.6 e o summarize). Par de readers de EMPRESAS DISTINTAS
+    (independência inegociável, decisão #6): A=`nvidia/nemotron-3-nano-30b-a3b:free`
+    (NVIDIA), B=`openai/gpt-oss-120b:free` (OpenAI); fallback=`google/gemma-4-26b-a4b-it:free`
+    (Google, 3ª empresa). Summarize=`openai/gpt-oss-20b:free`. Ordem da fila
+    rankeada por `bench/free-model-bench.mjs` sobre o prompt REAL do reader, com
+    gabarito = lean concordado pelos dois readers de produção. O fixture v0.1
+    congelado permanece atribuído a glm/minimax (proveniência histórica, NÃO
+    reescrever). `max_tokens` do read = 2048 (nemotron-nano volta vazio com pouco).
+16. **Cascata de modelos:** lib pura/portável em `src/llm/` — `cascade.ts`
+    (`Cascade`: ordem→retry/backoff 429→pula morto→`validate()`) e `slots.ts`
+    (`DistinctReaders`: slots por empresa distinta). Binding TACET em
+    `src/llm/openrouter.ts` (`FREE_MODELS`, `openRouterTransport`,
+    `resolveReaderSlots`). `summarize`=`Cascade`; `read`=`DistinctReaders([A,B],
+    pool)`. Usuário seleciona A/B/C via `READER_A_/B_/FALLBACK_MODEL` (distintos
+    por empresa, validado em runtime); o resto de FREE_MODELS vira cauda do pool.
+    Semântica cravada (substitui "no máx. 1 reserva"): se ambos os primários
+    falham, AMBOS os slots podem ser resgatados, desde que de empresas DISTINTAS;
+    senão degrada pra um-leitor (contestação não-medida), nunca converge falso.
 
 ---
 
@@ -159,3 +178,13 @@ docs/          ARCHITECTURE.md, GLOSSARY.md, the spec.
   `npm rebuild esbuild`. Verificação alternativa sem tsx: `tsc --outDir <tmp>
   --noEmit false` e rodar o `.js` emitido com `node` (imports já usam extensão
   `.js`, então o ESM do node resolve direto).
+
+- **TLS MITM no Windows (`UNABLE_TO_VERIFY_LEAF_SIGNATURE`) em qualquer `fetch`.**
+  Sintoma: proxy/antivírus intercepta o TLS; `fetchLLM` (summarize/read/protocol/
+  llm:check) quebra; replay/offline não é afetado. **Fix (confirmado 2026-06-14,
+  node v22.17):** rodar com `node --use-system-ca dist/<script>.js …` — o Node
+  passa a confiar no cert store do Windows, que já tem o root CA do interceptador
+  (flag disponível em node ≥22.15). Resolve TLS **e** o hang do tsx/esbuild de uma
+  vez (roda o `dist/` compilado direto, sem tsx). É o caminho live padrão nesta
+  máquina. NÃO usar `NODE_TLS_REJECT_UNAUTHORIZED=0` (inseguro) a não ser pra
+  diagnóstico rápido. Alternativa sem a flag: `NODE_EXTRA_CA_CERTS=<ca.pem>`.

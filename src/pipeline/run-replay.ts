@@ -106,11 +106,13 @@ function printProfiles(profiles: readonly ReliabilityProfile[]): void {
 }
 
 /** Default replay fixture: the FROZEN real SAGO-origin read (Phase 5c), the
- * judge's offline path. Pass a path as the first CLI arg to run another. */
+ * judge's offline path. v0.2 is the free-OpenRouter read (nemotron-nano +
+ * gpt-oss-120b); v0.1 (glm/minimax) is kept as historical provenance. Pass a
+ * path as the first CLI arg to run another. */
 function resolveFixturePath(): string {
   const arg = process.argv[2];
   if (arg) return isAbsolute(arg) ? arg : resolve(process.cwd(), arg);
-  return fileURLToPath(new URL("../../fixtures/replay/sago-origin-v0.1.json", import.meta.url));
+  return fileURLToPath(new URL("../../fixtures/replay/sago-origin-v0.2.json", import.meta.url));
 }
 
 async function main(): Promise<void> {

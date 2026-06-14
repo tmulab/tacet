@@ -59,23 +59,40 @@ export class LlmReader implements Reader {
    * timeout, invalid JSON, lean outside the enum). Public so the prep
    * orchestrator can try a fallback reader on the claims this one failed. */
   async judge(claim: Claim): Promise<ReaderJudgement | null> {
-    const prov = claim.provenance[0];
     const result = await this.transport(buildReaderSystem(this.referenceHypothesis), buildReaderUserContent(claim));
     if (!result.ok) return null; // HTTP / timeout → fallback
-
-    const json = extractFirstJSON(result.content);
-    const lean = parseLean(json?.["lean"]);
-    if (lean === null) return null; // invalid JSON or lean outside enum → fallback
-
-    return {
-      readerId: this.id,
-      readerModel: this.model,
-      claimId: claim.id,
-      lean,
-      citedSources: prov?.sourceId !== undefined ? [prov.sourceId] : [],
-      rationale: String(json?.["rationale"] ?? "").trim(),
-    };
+    return judgementFromContent(result.content, { readerId: this.id, model: this.model, claim });
   }
+}
+
+/**
+ * Parse one model response into a ReaderJudgement, or null on fallback (invalid
+ * JSON, or a lean outside the enum). Pure — no transport, no model call — so the
+ * cascade/slots path (read.ts) and the single-model LlmReader share ONE parser.
+ */
+export function judgementFromContent(
+  content: string,
+  ctx: { readonly readerId: string; readonly model: string; readonly claim: Claim },
+): ReaderJudgement | null {
+  const json = extractFirstJSON(content);
+  const lean = parseLean(json?.["lean"]);
+  if (lean === null) return null; // invalid JSON or lean outside enum → fallback
+  const prov = ctx.claim.provenance[0];
+  return {
+    readerId: ctx.readerId,
+    readerModel: ctx.model,
+    claimId: ctx.claim.id,
+    lean,
+    citedSources: prov?.sourceId !== undefined ? [prov.sourceId] : [],
+    rationale: String(json?.["rationale"] ?? "").trim(),
+  };
+}
+
+/** The cascade's semantic gate: does this content parse to a valid lean? A 200
+ * that fails this (empty body, prose, lean outside the enum) is treated as a
+ * failure so the cascade falls through to the next model. */
+export function isValidLeanContent(content: string): boolean {
+  return parseLean(extractFirstJSON(content)?.["lean"]) !== null;
 }
 
 /**
@@ -120,7 +137,7 @@ export function buildReaderSystem(referenceHypothesis: string): string {
   ].join("\n");
 }
 
-function buildReaderUserContent(claim: Claim): string {
+export function buildReaderUserContent(claim: Claim): string {
   const s = claim.provenance[0]?.structured;
   const lines = [`CLAIM: ${claim.text}`];
   if (s !== undefined) {

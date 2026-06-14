@@ -1,26 +1,35 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { isAbsolute, resolve } from "node:path";
 import type { Claim, Lean, ReaderJudgement } from "../domain/types.js";
-import { fetchLLM, readerConfigFromEnv } from "./llm.js";
-import type { LlmTransport, SummaryLlmConfig } from "./llm.js";
-import { LlmReader } from "../readers/llm-reader.js";
+import { DistinctReaders } from "../llm/slots.js";
+import type { SlotFill } from "../llm/slots.js";
+import type { CascadeOptions, ModelTransport } from "../llm/cascade.js";
+import { openRouterTransport, resolveReaderSlots } from "../llm/openrouter.js";
+import type { ResolvedSlots } from "../llm/openrouter.js";
+import {
+  buildReaderSystem,
+  buildReaderUserContent,
+  isValidLeanContent,
+  judgementFromContent,
+} from "../readers/llm-reader.js";
 
 /**
- * Reader prep script (Phase 5b). Runs TWO independent LlmReaders (different
- * companies) over the SAME summarized corpus and saves each reader's leans into
- * the corpus. Replay then reads the saved leans offline — the only LLM-touching
- * path here. Mirrors the 5a summarize prep.
+ * Reader prep script (Phase 5b). Runs TWO independent reader slots over the SAME
+ * summarized corpus and saves each slot's lean. Replay then reads the saved
+ * leans offline. The only LLM-touching path here.
  *
- * Reader A defaults to GLM (Z.AI), reader B to MiniMax (via OpenRouter). A THIRD
- * reader (Gemma, via OpenRouter) is a FALLBACK only: it runs solely to fill a
- * slot whose primary FAILED on a claim (technical error), so the claim recovers
- * two leans and contestation stays measurable. The fallback is NEVER a
- * tiebreaker — it does not arbitrate genuine A-vs-B disagreement; that crux
- * stands. Each saved lean records the MODEL that produced it (readerModel), so a
- * mixed pair (e.g. GLM-vs-Gemma) is auditable.
+ * The two slots (A, B) are FREE OpenRouter models from DIFFERENT companies
+ * (independence is the signal, decision #6). When a slot's primary FAILS
+ * technically, it is rescued from an ordered RESERVE POOL — but only by a model
+ * whose company is not already held by the other live slot. BOTH slots may be
+ * rescued, as long as they land on DISTINCT companies; a model never "agrees
+ * with itself". A slot with no eligible rescue stays null → the run degrades to
+ * one reader (contestation reports not-measured), never a fabricated agreement.
  *
- * Configurable by env (READER_A_ / READER_B_ / READER_FALLBACK_ vars); keys only
- * in .env. temperature 0.
+ * The whole policy lives in the pure `DistinctReaders` (src/llm/slots.ts);
+ * here we only build the prompt, parse the lean, and stamp the producing model.
+ * Configurable by env (READER_A_/B_/FALLBACK_MODEL pick A/B/C; the rest of
+ * FREE_MODELS tails the pool); keys only in .env.
  *
  * Usage: npm run read -- corpus/<corpus>.summarized.json
  */
@@ -29,8 +38,6 @@ interface Corpus {
   readonly case: string;
   readonly claims: readonly Claim[];
   readonly citationGraph?: Readonly<Record<string, readonly string[]>>;
-  /** The SHARED reference hypothesis both readers are anchored to (Phase 5c).
-   * Per-case, carried by the corpus — NOT hardcoded here, so it varies by case. */
   readonly referenceHypothesis?: string;
 }
 
@@ -40,88 +47,62 @@ interface SavedLean {
   readonly model: string;
 }
 
-function transportFor(cfg: SummaryLlmConfig): LlmTransport {
-  // max_tokens 1024 (was 512): reader B (M2.7) was truncating (~30% finish:length)
-  // at 512, which silently dropped its lean and masked the measurement.
-  return (system, user) =>
-    fetchLLM(cfg.baseUrl, cfg.apiKey, cfg.model, system, user, { temperature: 0, max_tokens: 1024 });
+export interface ReadOutcome {
+  readonly slotA: ReaderJudgement | null;
+  readonly slotB: ReaderJudgement | null;
+  /** how many of the two slots were filled by a POOL (rescue) model. */
+  readonly rescued: number;
+  /** true when NEITHER slot kept its own primary (both primaries failed). */
+  readonly bothPrimariesFailed: boolean;
 }
 
-/** Re-stamp a fallback judgement onto the slot it is filling (keep its model). */
-function reslot(judgement: ReaderJudgement, slot: string): ReaderJudgement {
-  return { ...judgement, readerId: slot };
+function toJudgement(fill: SlotFill | null, readerId: string, claim: Claim): ReaderJudgement | null {
+  if (fill === null) return null;
+  // `validate: isValidLeanContent` already guaranteed the content parses; this
+  // re-parse just shapes it into a ReaderJudgement (and is null-safe anyway).
+  return judgementFromContent(fill.content, { readerId, model: fill.model, claim });
 }
 
 /**
- * Produce the two slot leans for one claim. Each primary judges; if a primary
- * FAILS (returns null), the fallback tries to fill that slot.
- *
- * The fallback fills AT MOST ONE slot per claim (it judges at most once). When
- * BOTH primaries fail we deliberately do NOT fill both slots with the fallback:
- * one model at temperature 0 "agreeing" with itself is an artefactual
- * convergence, not two independent doubts. Instead we degrade to one reader
- * (fill one slot, leave the other null) — exactly how a genuine one-reader claim
- * already behaves, so contestation reports not-measured. `bothPrimariesFailed`
- * is surfaced so the run can count it.
+ * Produce the two slot leans for one claim via the distinct-company allocator.
+ * `transport` and `opts` are injected so tests drive it with stubs (no network).
  */
-export async function readWithFallback(
+export async function readClaim(
   claim: Claim,
-  readerA: LlmReader,
-  readerB: LlmReader,
-  fallback: LlmReader,
-): Promise<{
-  slotA: ReaderJudgement | null;
-  slotB: ReaderJudgement | null;
-  fallbackInvoked: boolean;
-  bothPrimariesFailed: boolean;
-}> {
-  let slotA = await readerA.judge(claim);
-  let slotB = await readerB.judge(claim);
-  const bothPrimariesFailed = slotA === null && slotB === null;
-  let fallbackInvoked = false;
-
-  // At most ONE fallback judge() per claim: fill slot A if it failed, otherwise
-  // slot B. The `else if` is what guards against Gemma-vs-Gemma when both fail.
-  if (slotA === null) {
-    fallbackInvoked = true;
-    const f = await fallback.judge(claim);
-    slotA = f === null ? null : reslot(f, readerA.id);
-  } else if (slotB === null) {
-    fallbackInvoked = true;
-    const f = await fallback.judge(claim);
-    slotB = f === null ? null : reslot(f, readerB.id);
-  }
-  return { slotA, slotB, fallbackInvoked, bothPrimariesFailed };
+  referenceHypothesis: string,
+  slots: ResolvedSlots,
+  transport: ModelTransport,
+  opts: CascadeOptions = {},
+): Promise<ReadOutcome> {
+  const system = buildReaderSystem(referenceHypothesis);
+  const user = buildReaderUserContent(claim);
+  const allocator = new DistinctReaders([slots.a, slots.b], slots.pool, transport, { ...opts, validate: isValidLeanContent });
+  const [fillA, fillB] = await allocator.allocate(system, user);
+  const a = fillA ?? null;
+  const b = fillB ?? null;
+  return {
+    slotA: toJudgement(a, "reader-a", claim),
+    slotB: toJudgement(b, "reader-b", claim),
+    rescued: [a, b].filter((f) => f?.fromPool === true).length,
+    bothPrimariesFailed: (a === null || a.fromPool) && (b === null || b.fromPool),
+  };
 }
 
 async function main(): Promise<void> {
   const arg = process.argv[2];
   if (arg === undefined) throw new Error("usage: npm run read -- <corpus.summarized.json>");
 
-  const a = readerConfigFromEnv(
-    "READER_A",
-    { base: "https://api.z.ai/api/coding/paas/v4", model: "glm-4.6" },
-    ["SUMMARY_API_KEY", "ZAI_API_KEY"],
-  );
-  const b = readerConfigFromEnv(
-    "READER_B",
-    { base: "https://openrouter.ai/api/v1", model: "minimax/minimax-m2.7" },
-    ["OPENROUTER_API_KEY"],
-  );
-  const fb = readerConfigFromEnv(
-    "READER_FALLBACK",
-    { base: "https://openrouter.ai/api/v1", model: "google/gemma-4-31b-it:free" },
-    ["OPENROUTER_API_KEY"],
-  );
-  if (a === null || b === null || fb === null) {
-    throw new Error("set READER_A / READER_B / READER_FALLBACK keys to read (see .env.example)");
+  const apiKey =
+    process.env["OPENROUTER_API_KEY"] ?? process.env["READER_A_API_KEY"] ?? process.env["SUMMARY_API_KEY"];
+  if (apiKey === undefined || apiKey.length === 0) {
+    throw new Error("set OPENROUTER_API_KEY to read (see .env.example)");
   }
+  const slots = resolveReaderSlots();
+  const transport = openRouterTransport(apiKey);
 
   const inPath = isAbsolute(arg) ? arg : resolve(process.cwd(), arg);
   const corpus = JSON.parse(readFileSync(inPath, "utf8")) as Corpus;
 
-  // The shared anchor both readers read against. Without it there is no honest
-  // lean to emit (5b's flat-convergence cause), so we refuse rather than guess.
   const hyp = corpus.referenceHypothesis;
   if (hyp === undefined || hyp.trim().length === 0) {
     throw new Error(
@@ -130,42 +111,38 @@ async function main(): Promise<void> {
     );
   }
 
-  const readerA = new LlmReader("reader-a", transportFor(a), a.model, hyp);
-  const readerB = new LlmReader("reader-b", transportFor(b), b.model, hyp);
-  const fallback = new LlmReader("reader-fallback", transportFor(fb), fb.model, hyp);
-
   const readersA: Record<string, SavedLean> = {};
   const readersB: Record<string, SavedLean> = {};
   let twoPrimaries = 0;
-  let fallbackUsed = 0;
+  let rescuedRuns = 0;
   let oneReader = 0;
   let dropped = 0;
   let bothFailed = 0;
 
-  console.log(`reading ${corpus.claims.length} claims — A=${a.model}  B=${b.model}  fallback=${fb.model}…`);
+  console.log(
+    `reading ${corpus.claims.length} claims — A=${slots.a.id}  B=${slots.b.id}  ` +
+      `reserve=[${slots.pool.map((m) => m.id).join(", ")}]…`,
+  );
   let done = 0;
   for (const claim of corpus.claims) {
-    const { slotA, slotB, bothPrimariesFailed } = await readWithFallback(claim, readerA, readerB, fallback);
+    const { slotA, slotB, rescued, bothPrimariesFailed } = await readClaim(claim, hyp, slots, transport);
     if (bothPrimariesFailed) bothFailed += 1;
     if (slotA !== null) readersA[claim.id] = { lean: slotA.lean, model: slotA.readerModel };
     if (slotB !== null) readersB[claim.id] = { lean: slotB.lean, model: slotB.readerModel };
 
-    const usedFb = slotA?.readerModel === fb.model || slotB?.readerModel === fb.model;
-    if (slotA !== null && slotB !== null) {
-      if (usedFb) fallbackUsed += 1;
-      else twoPrimaries += 1;
-    } else if (slotA !== null || slotB !== null) {
-      oneReader += 1;
-    } else {
-      dropped += 1;
-    }
+    const filled = (slotA !== null ? 1 : 0) + (slotB !== null ? 1 : 0);
+    let tag: string;
+    if (filled === 2) {
+      if (rescued === 0) { twoPrimaries += 1; tag = "two-prim"; }
+      else { rescuedRuns += 1; tag = "rescued "; }
+    } else if (filled === 1) { oneReader += 1; tag = "one-only"; }
+    else { dropped += 1; tag = "dropped "; }
     done += 1;
-    const tag = slotA && slotB ? (usedFb ? "fallback" : "two-prim") : slotA || slotB ? "one-only" : "dropped ";
     console.log(`  [${String(done).padStart(2)}/${corpus.claims.length}] ${tag}`);
   }
 
   console.log(
-    `done: ${twoPrimaries} two-primaries, ${fallbackUsed} fallback-used, ${oneReader} one-reader, ` +
+    `done: ${twoPrimaries} two-primaries, ${rescuedRuns} rescued, ${oneReader} one-reader, ` +
       `${bothFailed} both-primaries-failed` + (dropped > 0 ? `, ${dropped} dropped` : ""),
   );
 

@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { isAbsolute, resolve, dirname } from "node:path";
 import type { ExpectedCategory } from "../domain/coverage.js";
 import type { Claim } from "../domain/types.js";
-import { computeReplay } from "./replay.js";
+import { computeReplay, modelOf } from "./replay.js";
 import type { ReplayFixture, SavedLean } from "./replay.js";
 
 /**
@@ -44,11 +44,20 @@ const SAGO_EXPECTED_COVERAGE: readonly ExpectedCategory[] = [
   },
 ];
 
-const READER_MODELS = {
-  "reader-a": "z-ai/glm-4.6",
-  "reader-b": "minimax/minimax-m2.7",
-  fallback: "google/gemma-4-31b-it:free",
-};
+/** Derive the producing models per reader FROM the corpus leans, never hardcoded
+ * — a slot that used a single model reports that id; a slot rescued from the pool
+ * reports the distinct set actually used, so the attribution always matches the
+ * frozen leans (no drift between the summary and the per-claim `model`). */
+function readerModelsFrom(
+  readers: Readonly<Record<string, Readonly<Record<string, SavedLean>>>>,
+): Record<string, string | readonly string[]> {
+  const out: Record<string, string | readonly string[]> = {};
+  for (const [readerId, leans] of Object.entries(readers)) {
+    const models = [...new Set(Object.values(leans).map((l) => modelOf(l)))];
+    out[readerId] = models.length === 1 ? (models[0] ?? "unknown") : models;
+  }
+  return out;
+}
 
 /** Claims whose LLM summary fell back to a truncated stub (summaryMethod other
  * than "llm"). They are listed explicitly so no truncated-stub is left silent. */
@@ -90,7 +99,7 @@ async function main(): Promise<void> {
       corpus: "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
       referenceHypothesis:
         "Paraphrased from the WHO Scientific Advisory Group for the Origins of Novel Pathogens (SAGO) report, 2025 — CC BY-NC-SA 3.0 IGO. Attribution: World Health Organization.",
-      readerModels: READER_MODELS,
+      readerModels: readerModelsFrom(input.readers),
     },
     notes: {
       nonLlmSummaries: nonLlm,

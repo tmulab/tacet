@@ -91,8 +91,8 @@ export interface SummaryLlmConfig {
  * the prep script then refuses to run, and offline paths are unaffected.
  *
  * Defaults to OpenRouter with a free open-weights model. Point SUMMARY_BASE +
- * SUMMARY_API_KEY at a local/Z.AI endpoint (same OpenAI-compatible shape) to use
- * that instead — selection is purely by env. Key is NEVER in the repo.
+ * SUMMARY_API_KEY at another OpenAI-compatible endpoint (e.g. a local vLLM) to
+ * use that instead — selection is purely by env. Key is NEVER in the repo.
  */
 export function configFromEnv(env: NodeJS.ProcessEnv = process.env): SummaryLlmConfig | null {
   const apiKey = env["SUMMARY_API_KEY"] ?? env["OPENROUTER_API_KEY"];
@@ -107,7 +107,7 @@ export function configFromEnv(env: NodeJS.ProcessEnv = process.env): SummaryLlmC
 /**
  * Resolves one reader's LLM config from env, e.g. prefix "READER_A" reads
  * READER_A_BASE / READER_A_MODEL / READER_A_API_KEY. `fallbackKeys` lets a
- * reader reuse an existing key (e.g. READER_A reuses the Z.AI/summary key).
+ * reader reuse an existing key (e.g. READER_A reuses the OpenRouter/summary key).
  * Returns null when no key resolves. Keys are NEVER in the repo.
  */
 export function readerConfigFromEnv(
