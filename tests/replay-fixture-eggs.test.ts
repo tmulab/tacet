@@ -81,6 +81,10 @@ describe("frozen eggs-cardiovascular fixture (v0.1, free OpenRouter, CC-BY)", ()
     expect(present.some((f) => f.dimension === "genre" && f.value === "article")).toBe(true);
   });
 
+  it("the relevance gate ABSTAINS (not-assessed): the eggs ruler is Portuguese (lexical gate is EN-only)", () => {
+    expect((fixture as unknown as { relevanceGate?: { status: string } }).relevanceGate?.status).toBe("not-assessed");
+  });
+
   it("declares the limit — coherence, not truth — in the source note", () => {
     expect(fixture.source.referenceHypothesis.toLowerCase()).toContain("coherence, not truth");
   });

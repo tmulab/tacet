@@ -1,10 +1,60 @@
 {
-  "schema": "tacet/replay-fixture@0.1.1",
+  "schema": "tacet/replay-fixture@0.2.0",
   "case": "lhc-anchored-ingested",
   "version": "0.1",
   "frozenFrom": "corpus/lhc-anchored-ingested.summarized.read.json",
   "referenceHypothesis": "Current safety assessments argue that any microscopic black holes possibly produced at the LHC would decay instantaneously via Hawking radiation, and that analogous high-energy collisions occur routinely in cosmic rays without hazardous consequences. Nevertheless, the argument relies on assumptions about higher-dimensional gravity and the validity of semiclassical gravity at TeV scales, leaving open the possibility that unknown physics could alter black hole stability or growth.",
   "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "aligned",
+    "alignedFraction": 0.967,
+    "ruleTerms": [
+      "current",
+      "safety",
+      "assessments",
+      "argue",
+      "microscopic",
+      "black",
+      "holes",
+      "possibly",
+      "produced",
+      "would",
+      "decay",
+      "instantaneously",
+      "hawking",
+      "radiation",
+      "analogous",
+      "high",
+      "energy",
+      "collisions",
+      "occur",
+      "routinely",
+      "cosmic",
+      "rays",
+      "hazardous",
+      "consequences",
+      "nevertheless",
+      "argument",
+      "relies",
+      "assumptions",
+      "higher",
+      "dimensional",
+      "gravity",
+      "validity",
+      "semiclassical",
+      "scales",
+      "leaving",
+      "open",
+      "possibility",
+      "unknown",
+      "physics",
+      "could",
+      "alter",
+      "hole",
+      "stability",
+      "growth"
+    ]
+  },
   "source": {
     "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
     "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
@@ -2521,116 +2571,118 @@
         {
           "dimension": "tradition",
           "value": "High-energy physics safety assessment",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "The debate centers on whether theoretical safety arguments (Hawking radiation, cosmic ray bounds) sufficiently address LHC black hole risks."
+          "justification": "The debate centers on whether theoretical safety arguments (Hawking radiation, cosmic ray bounds) sufficiently address LHC black hole risks.",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "tradition",
           "value": "Particle phenomenology of extra dimensions",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Many discussions invoke models with large or warped extra dimensions that could lower the Planck scale and allow TeV black hole formation."
+          "justification": "Many discussions invoke models with large or warped extra dimensions that could lower the Planck scale and allow TeV black hole formation.",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "en",
+          "justification": "The majority of LHC safety papers, experimental searches, and theoretical works are published in English.",
+          "measurability": "measured",
           "observedSources": 5,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "The majority of LHC safety papers, experimental searches, and theoretical works are published in English."
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "pt",
+          "justification": "The original question is in Portuguese; Portuguese-language technical reports and safety assessments from Brazilian institutions are relevant.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "The original question is in Portuguese; Portuguese-language technical reports and safety assessments from Brazilian institutions are relevant."
+          "isEmptyChair": true
         },
         {
           "dimension": "language",
           "value": "es",
+          "justification": "Spanish-speaking contributions from IBERO-American collaborations and safety discussions add linguistic coverage.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Spanish-speaking contributions from IBERO-American collaborations and safety discussions add linguistic coverage."
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "article",
+          "justification": "Peer-reviewed journal articles constitute the core evidence for experimental limits and theoretical arguments.",
+          "measurability": "measured",
           "observedSources": 18,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "Peer-reviewed journal articles constitute the core evidence for experimental limits and theoretical arguments."
+          "isEmptyChair": false
         },
         {
           "dimension": "genre",
           "value": "report",
+          "justification": "Official safety reports (e.g., LSAG, CERN safety documents) provide the consolidated basis for risk assessment.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Official safety reports (e.g., LSAG, CERN safety documents) provide the consolidated basis for risk assessment."
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "chapter",
+          "justification": "Comprehensive treatments of black hole production in high-energy collisions appear in edited volumes and monographs on beyond-the-Standard-Model physics.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Comprehensive treatments of black hole production in high-energy collisions appear in edited volumes and monographs on beyond-the-Standard-Model physics."
+          "isEmptyChair": true
         }
       ],
       "emptyChairs": [
         {
-          "dimension": "tradition",
-          "value": "High-energy physics safety assessment",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "The debate centers on whether theoretical safety arguments (Hawking radiation, cosmic ray bounds) sufficiently address LHC black hole risks."
-        },
-        {
-          "dimension": "tradition",
-          "value": "Particle phenomenology of extra dimensions",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Many discussions invoke models with large or warped extra dimensions that could lower the Planck scale and allow TeV black hole formation."
-        },
-        {
           "dimension": "language",
           "value": "pt",
+          "justification": "The original question is in Portuguese; Portuguese-language technical reports and safety assessments from Brazilian institutions are relevant.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "The original question is in Portuguese; Portuguese-language technical reports and safety assessments from Brazilian institutions are relevant."
+          "isEmptyChair": true
         },
         {
           "dimension": "language",
           "value": "es",
+          "justification": "Spanish-speaking contributions from IBERO-American collaborations and safety discussions add linguistic coverage.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Spanish-speaking contributions from IBERO-American collaborations and safety discussions add linguistic coverage."
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "report",
+          "justification": "Official safety reports (e.g., LSAG, CERN safety documents) provide the consolidated basis for risk assessment.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Official safety reports (e.g., LSAG, CERN safety documents) provide the consolidated basis for risk assessment."
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "chapter",
+          "justification": "Comprehensive treatments of black hole production in high-energy collisions appear in edited volumes and monographs on beyond-the-Standard-Model physics.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Comprehensive treatments of black hole production in high-energy collisions appear in edited volumes and monographs on beyond-the-Standard-Model physics."
+          "isEmptyChair": true
+        }
+      ],
+      "notMeasured": [
+        {
+          "dimension": "tradition",
+          "value": "High-energy physics safety assessment",
+          "justification": "The debate centers on whether theoretical safety arguments (Hawking radiation, cosmic ray bounds) sufficiently address LHC black hole risks.",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "Particle phenomenology of extra dimensions",
+          "justification": "Many discussions invoke models with large or warped extra dimensions that could lower the Planck scale and allow TeV black hole formation.",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         }
       ]
     },

@@ -6,6 +6,7 @@ import type { Claim } from "../domain/types.js";
 import { computeReplay, modelOf } from "./replay.js";
 import type { ReplayFixture, SavedLean } from "./replay.js";
 import { diagnoseAbstention } from "../domain/abstention-diagnosis.js";
+import { assessRelevance } from "../domain/relevance-gate.js";
 import { redactClaim } from "./redact.js";
 
 /**
@@ -93,6 +94,12 @@ async function main(): Promise<void> {
   // curated SAGO baseline for the COVID case.
   const expectedCoverage = corpus.expectedCoverage ?? SAGO_EXPECTED_COVERAGE;
 
+  // Relevance gate — measured on the FULL claims (before redaction) against the
+  // ACCEPTED ruler (referenceHypothesis), never the query. A warning of corpus↔
+  // ruler drift, not a block. Stored compactly (status + fraction + ruler terms).
+  const rel = assessRelevance(corpus.referenceHypothesis ?? "", corpus.claims);
+  const relevanceGate = { status: rel.status, alignedFraction: Number(rel.alignedFraction.toFixed(3)), ruleTerms: rel.ruleTerms };
+
   // REDACT non-redistributable sources BEFORE anything is baked: the public
   // fixture carries only the verifiable shell (id/DOI/sha256/tags) + the leans;
   // never the text or summary. Redaction preserves the fields computeReplay uses
@@ -116,12 +123,13 @@ async function main(): Promise<void> {
 
   const nonLlm = nonLlmSummaryIds(corpus.claims);
   const frozen = {
-    schema: "tacet/replay-fixture@0.1.1",
+    schema: "tacet/replay-fixture@0.2.0",
     case: input.case,
     version,
     frozenFrom: arg,
     referenceHypothesis: corpus.referenceHypothesis,
     abstentionDiagnosis,
+    relevanceGate,
     source: {
       corpus: "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
       referenceHypothesis:

@@ -1,9 +1,99 @@
 {
-  "schema": "tacet/replay-fixture@0.1",
+  "schema": "tacet/replay-fixture@0.2.0",
   "case": "eggs-cv",
   "version": "0.1",
   "frozenFrom": "corpus/eggs-cv.summarized.read.json",
   "referenceHypothesis": "Meta-análises recentes de coortes prospectivas em populações ocidentais sugerem que consumo moderado de ovos (em torno de 1 por dia) não está consistentemente associado a aumento de risco cardiovascular na população adulta geral; o efeito sobre lipídios séricos existe mas é modesto e atenuado por substituições dietéticas. As Dietary Guidelines for Americans (2015 em diante) e a AHA (2020) refletem esse afrouxamento em relação ao teto rígido de 300 mg/dia de colesterol dietético. A posição acima repousa sobre (a) heterogeneidade entre subpopulações — diabéticos, portadores de ApoE4 e hiper-respondedores ao colesterol dietético apresentam respostas medidas distintas; (b) endpoints substitutos (LDL, colesterol sérico) versus desfechos duros (MACE, mortalidade), com a maior parte do otimismo recente apoiada em endpoints substitutos e meta-análises observacionais; (c) viés de financiamento documentado da indústria do ovo na ciência nutricional; (d) efeito de substituição — o que o ovo substitui no prato determina parte importante do impacto.",
+  "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "not-assessed",
+    "alignedFraction": 0.138,
+    "ruleTerms": [
+      "meta",
+      "analises",
+      "recentes",
+      "coortes",
+      "prospectivas",
+      "populacoes",
+      "ocidentais",
+      "sugerem",
+      "consumo",
+      "moderado",
+      "ovos",
+      "torno",
+      "esta",
+      "consistentemente",
+      "associado",
+      "aumento",
+      "risco",
+      "cardiovascular",
+      "populacao",
+      "adulta",
+      "geral",
+      "efeito",
+      "lipidios",
+      "sericos",
+      "existe",
+      "modesto",
+      "atenuado",
+      "substituicoes",
+      "dieteticas",
+      "dietary",
+      "guidelines",
+      "americans",
+      "2015",
+      "diante",
+      "2020",
+      "refletem",
+      "esse",
+      "afrouxamento",
+      "relacao",
+      "teto",
+      "rigido",
+      "colesterol",
+      "dietetico",
+      "posicao",
+      "acima",
+      "repousa",
+      "heterogeneidade",
+      "subpopulacoes",
+      "diabeticos",
+      "portadores",
+      "apoe4",
+      "hiper",
+      "respondedores",
+      "apresentam",
+      "respostas",
+      "medidas",
+      "distintas",
+      "endpoints",
+      "substitutos",
+      "serico",
+      "versus",
+      "desfechos",
+      "duros",
+      "mace",
+      "mortalidade",
+      "maior",
+      "parte",
+      "otimismo",
+      "recente",
+      "apoiada",
+      "observacionais",
+      "vies",
+      "financiamento",
+      "documentado",
+      "industria",
+      "ciencia",
+      "nutricional",
+      "substituicao",
+      "substitui",
+      "prato",
+      "determina",
+      "importante",
+      "impacto"
+    ]
+  },
   "source": {
     "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
     "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
@@ -2495,70 +2585,71 @@
         {
           "dimension": "language",
           "value": "en",
+          "justification": "the bulk of cardiovascular-nutrition meta-analyses and the DGAC/AHA evidence base is published in English.",
+          "measurability": "measured",
           "observedSources": 14,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "the bulk of cardiovascular-nutrition meta-analyses and the DGAC/AHA evidence base is published in English."
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "pt",
+          "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population."
+          "isEmptyChair": true
         },
         {
           "dimension": "language",
           "value": "es",
+          "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance."
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "article",
+          "justification": "primary literature — prospective-cohort meta-analyses and systematic reviews are journal-article in Crossref.",
+          "measurability": "measured",
           "observedSources": 15,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "primary literature — prospective-cohort meta-analyses and systematic reviews are journal-article in Crossref."
+          "isEmptyChair": false
         },
         {
           "dimension": "genre",
           "value": "report",
+          "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles."
+          "isEmptyChair": true
         }
       ],
       "emptyChairs": [
         {
           "dimension": "language",
           "value": "pt",
+          "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population."
+          "isEmptyChair": true
         },
         {
           "dimension": "language",
           "value": "es",
+          "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance."
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "report",
+          "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles.",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles."
+          "isEmptyChair": true
         }
-      ]
+      ],
+      "notMeasured": []
     },
     "reliabilityProfiles": [
       {

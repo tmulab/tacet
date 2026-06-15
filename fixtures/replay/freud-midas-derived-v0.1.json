@@ -1,0 +1,2031 @@
+{
+  "schema": "tacet/replay-fixture@0.2.0",
+  "case": "freud-midas-derived",
+  "version": "0.1",
+  "frozenFrom": "corpus/freud-midas.summarized.read.json",
+  "referenceHypothesis": "Freud's clinical practice operated within and through capitalist logics, transforming the analytic session into a commodified exchange where fees and libidinal economy followed the same recalcitrant structures he identified in sexuality. Yet this very entanglement may constitute a subversive torsion: by making money speak as sexuality does, and by exposing how the poor capitalize their symptoms, Freud's work also reveals capitalism's psychic limits rather than merely confirming them.",
+  "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "mixed",
+    "alignedFraction": 0.476,
+    "ruleTerms": [
+      "freud",
+      "clinical",
+      "practice",
+      "operated",
+      "through",
+      "capitalist",
+      "logics",
+      "transforming",
+      "analytic",
+      "session",
+      "commodified",
+      "exchange",
+      "where",
+      "fees",
+      "libidinal",
+      "economy",
+      "followed",
+      "same",
+      "recalcitrant",
+      "structures",
+      "identified",
+      "sexuality",
+      "very",
+      "entanglement",
+      "constitute",
+      "subversive",
+      "torsion",
+      "making",
+      "money",
+      "speak",
+      "does",
+      "exposing",
+      "poor",
+      "capitalize",
+      "symptoms",
+      "work",
+      "reveals",
+      "capitalism",
+      "psychic",
+      "limits",
+      "rather",
+      "merely",
+      "confirming",
+      "them"
+    ]
+  },
+  "source": {
+    "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
+    "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
+    "readerModels": {
+      "reader-a": [
+        "nvidia/nemotron-3-nano-30b-a3b:free",
+        "nvidia/nemotron-3-super-120b-a12b:free"
+      ],
+      "reader-b": "openai/gpt-oss-120b:free"
+    }
+  },
+  "notes": {
+    "nonLlmSummaries": [],
+    "nonLlmReason": "These records' LLM summary fell back to a truncated abstract stub. They are off-topic to origin and both readers independently judged them 'insufficient', so a real summary changes no lean and no signal. Kept as LABELLED non-summaries (summaryMethod: 'truncated-stub'), never as a fabricated summary.",
+    "oneReaderClaims": 0
+  },
+  "claims": [
+    {
+      "id": "10.13169/worlrevipoliecon.12.4.0493",
+      "text": "Ricardo’s Labor Theory of Value Is Alive And Well in Contemporary Capitalism",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.12.4.0493",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.12.4.0493",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article argues that Ricardo’s theory of value continues to explain relative price changes in modern economies, demonstrating that deviations arise from capital, profit rates, and wages. It validates this claim by applying the theory to US and Chinese economic data, finding strong empirical confirmation.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Lefteris Tsoulfidis"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "Ricardo’s labor theory of value remains valid in contemporary capitalism, as shown by empirical testing of price deviations using US and Chinese input‑output data.",
+            "citedEvidence": "The paper derives theoretical statements about price deviations from labor times using Ricardo’s examples and tests these statements with input‑output data from the United States and China, finding overwhelming support.",
+            "originStance": "none",
+            "summaryText": "The article argues that Ricardo’s theory of value continues to explain relative price changes in modern economies, demonstrating that deviations arise from capital, profit rates, and wages. It validates this claim by applying the theory to US and Chinese economic data, finding strong empirical confirmation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.3.3.0288",
+      "text": "From the Crisis of Surplus Value to the Crisis of the Euro",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.3.3.0288",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.3.3.0288",
+          "date": "2012",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The author argues that Marx's falling profit rate law, often dismissed as inconsistent or disproven, is actually supported by empirical evidence and can illuminate the dynamics of recent financial crises. By linking this theory to the 2007 crisis and the eurozone turmoil, the paper offers a Marxist interpretation of contemporary economic turmoil. No discussion of SARS‑CoV‑2 origins is provided.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Guglielmo Carchedi"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "Marx's law of the tendential fall in the rate of profit is empirically valid and helps explain the 2007 financial crisis and the euro crisis.",
+            "citedEvidence": "The paper presents empirical material that supports the validity of Marx's law and sketches the basic lines of Marx's crisis analysis, then relates these to the current financial turmoil and the euro crisis.",
+            "originStance": "none",
+            "summaryText": "The author argues that Marx's falling profit rate law, often dismissed as inconsistent or disproven, is actually supported by empirical evidence and can illuminate the dynamics of recent financial crises. By linking this theory to the 2007 crisis and the eurozone turmoil, the paper offers a Marxist interpretation of contemporary economic turmoil. No discussion of SARS‑CoV‑2 origins is provided."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.11.3.0377",
+      "text": "Labor Productivity and Marxist Theory of Labor Value",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.11.3.0377",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.11.3.0377",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article demonstrates that, when economists measure productivity, they implicitly rely on a Marxist definition of value as the reciprocal of a basket of merchandise, linking productivity to real wages. It concludes that non‑Marxist economists continue to use this framework without recognizing its origins.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Alejandro Valle Baeza",
+            "Blanca Gloria Martínez González"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that the productivity defined rigorously within Marxist theory of value is the concept economists actually employ in most productivity analyses, even though most non‑Marxist economists reject Marxian value theory.",
+            "citedEvidence": "It cites the use of labor productivity rather than multifactor productivity to analyze country productivity changes, real wage relationships, and cross‑country comparisons, stating that this use is legitimized by the Marxist theory of value.",
+            "originStance": "none",
+            "summaryText": "The article demonstrates that, when economists measure productivity, they implicitly rely on a Marxist definition of value as the reciprocal of a basket of merchandise, linking productivity to real wages. It concludes that non‑Marxist economists continue to use this framework without recognizing its origins."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.3.3.0313",
+      "text": "Explaining Levels of Inequality in OECD Nations by Using Rates of Surplus Value and Profit to Wage Ratios",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.3.3.0313",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.3.3.0313",
+          "date": "2012",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article connects two Marxist economic metrics—surplus value and the profit‑to‑wage ratio—to observed inequality trends in OECD economies. Using empirical analysis, it finds that these metrics are strong predictors of inequality over recent decades. The work offers a novel quantitative bridge between Marxist theory and measurable economic disparity.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Thomas E. Lambert"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper shows that surplus value (S/V) and the profit‑to‑wage ratio predict inequality levels in OECD countries over recent decades.",
+            "citedEvidence": "It argues that these Marxist variables have long been linked to unemployment, poverty and inequality, but this study provides the first explicit empirical link, demonstrating their predictive power for inequality across OECD nations.",
+            "originStance": "none",
+            "summaryText": "The article connects two Marxist economic metrics—surplus value and the profit‑to‑wage ratio—to observed inequality trends in OECD economies. Using empirical analysis, it finds that these metrics are strong predictors of inequality over recent decades. The work offers a novel quantitative bridge between Marxist theory and measurable economic disparity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.12.4.0452",
+      "text": "What Does the Labor Theory of Value Do?",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.12.4.0452",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.12.4.0452",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The author responds to Camarinha Lopes and Laibman by asking what the labor theory of value can explain that other frameworks cannot. The paper examines their contributions and proposes that the theory’s distinctive explanatory power lies in its ability to account for specific capitalist economic phenomena. It concludes by outlining this answer within the symposium’s context.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Fred Moseley"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper contends that the labor theory of value uniquely explains certain phenomena of capitalist economies that other theories, particularly Sraffian theory, cannot.",
+            "citedEvidence": "It draws on the two symposium articles by Camarinha Lopes and David Laibman, using their questions to frame the discussion of the theory’s explanatory limits.",
+            "originStance": "none",
+            "summaryText": "The author responds to Camarinha Lopes and Laibman by asking what the labor theory of value can explain that other frameworks cannot. The paper examines their contributions and proposes that the theory’s distinctive explanatory power lies in its ability to account for specific capitalist economic phenomena. It concludes by outlining this answer within the symposium’s context."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/2236-9996.2025-6461280-en",
+      "text": "Gig economy, surveillance capitalism, and labor relations in Brazil",
+      "provenance": [
+        {
+          "sourceId": "10.1590/2236-9996.2025-6461280-en",
+          "locator": "https://doi.org/10.1590/2236-9996.2025-6461280-en",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper investigates how the rise of app‑based work in Brazil reflects broader shifts in labor relations under surveillance capitalism. It examines technological changes and regulatory challenges associated with the gig economy, using the growth of income‑generating apps as empirical evidence. The analysis aims to contribute to discussions on labor policy and worker protections in this emerging sector.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Vanessa LACERDA",
+            "Rejane PREVOT",
+            "Renan MOURA"
+          ],
+          "venue": "Cadernos Metrópole",
+          "structured": {
+            "centralClaim": "The study analyzes the gig economy's impact on labor relations in Brazil, examining technological changes and regulatory implications.",
+            "citedEvidence": "It cites the recent surge in app‑based income generation and the resulting debate on the gig economy as evidence of new work forms and their labor‑relation implications.",
+            "originStance": "none",
+            "summaryText": "The paper investigates how the rise of app‑based work in Brazil reflects broader shifts in labor relations under surveillance capitalism. It examines technological changes and regulatory challenges associated with the gig economy, using the growth of income‑generating apps as empirical evidence. The analysis aims to contribute to discussions on labor policy and worker protections in this emerging sector."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/2236-9996.2025-6461280-pt",
+      "text": "Gig economy, capitalismo de vigilância e as relações de trabalho no Brasil",
+      "provenance": [
+        {
+          "sourceId": "10.1590/2236-9996.2025-6461280-pt",
+          "locator": "https://doi.org/10.1590/2236-9996.2025-6461280-pt",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper investigates how the gig economy is reshaping work relations in Brazil, focusing on technological changes and regulatory developments. It highlights the rapid growth of app‑based income generation and discusses the resulting challenges for labor regulation. The analysis aims to contribute to debates on surveillance capitalism and labor rights in the Brazilian context.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Vanessa LACERDA",
+            "Rejane PREVOT",
+            "Renan MOURA"
+          ],
+          "venue": "Cadernos Metrópole",
+          "structured": {
+            "centralClaim": "Thestudy analyzes the gig economy's impact on labor relations in Brazil, examining its evolution, technological changes, and regulatory challenges.",
+            "citedEvidence": "It cites the expressive increase in app usage for income generation as evidence of the growth of gig work and its implications for labor relations.",
+            "originStance": "none",
+            "summaryText": "The paper investigates how the gig economy is reshaping work relations in Brazil, focusing on technological changes and regulatory developments. It highlights the rapid growth of app‑based income generation and discusses the resulting challenges for labor regulation. The analysis aims to contribute to debates on surveillance capitalism and labor rights in the Brazilian context."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.12.4.0472",
+      "text": "Value Production, Measurement, and Distribution under Digital Capitalism",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.12.4.0472",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.12.4.0472",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper examines how Western Marxist concepts such as immaterial, audience, and prosumer labor explain value creation in Web 2.0 platforms. It contends that digital capitalism's unique cost structure and the merging of labor and leisure make the classical law of value obsolete. The analysis highlights the novel character of contemporary capitalist production.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Xu Wei"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "Digital capitalism fundamentally alters value creation by blurring paid and unpaid labor, rendering the traditional law of value ineffective.",
+            "citedEvidence": "The authors argue that the special cost structure of digital production, the increasing fuzziness of production and living time, and the collapse of the boundary between paid and unpaid labor undermine the applicability of Marx's value law.",
+            "originStance": "none",
+            "summaryText": "The paper examines how Western Marxist concepts such as immaterial, audience, and prosumer labor explain value creation in Web 2.0 platforms. It contends that digital capitalism's unique cost structure and the merging of labor and leisure make the classical law of value obsolete. The analysis highlights the novel character of contemporary capitalist production."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.10.1.0095",
+      "text": "The Value Theory of Labor Based on Marginalist Principles",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.10.1.0095",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.10.1.0095",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The authors argue that labor theory of value can be framed using marginalist principles, emphasizing the proportional relationship between labor input and output. They incorporate money as a central element and contrast this with Marxist dialectical perspectives. The work focuses on theoretical synthesis rather than empirical or epidemiological topics.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Romar Correa"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper develops a marginalist-based labor theory of value that links labor power to output and integrates money as an integral component of the theory, engaging with Hiroshi Onishi's proportionality argument.",
+            "citedEvidence": "It cites Onishi's derivation of a proportionality between labor power and output and builds on his marginalist treatment while employing a dialectical approach to Marx's theory of value.",
+            "originStance": "none",
+            "summaryText": "The authors argue that labor theory of value can be framed using marginalist principles, emphasizing the proportional relationship between labor input and output. They incorporate money as a central element and contrast this with Marxist dialectical perspectives. The work focuses on theoretical synthesis rather than empirical or epidemiological topics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.5.2.0231",
+      "text": "The Labor Theory of Value: A Marginal Analysis",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.5.2.0231",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.5.2.0231",
+          "date": "2014",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article argues that viewing labor value as marginal labor value resolves contradictions in classical and Marxian labor theories and demonstrates that a capitalist system cannot be Pareto‑optimal, implying exploitation is inherent. It contends that only through collective, democratic management of capital can society reach a Pareto‑optimal state without exploitation.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Klaus Hagendorf"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The marginal approach reinterprets the labor theory of value by equating labor value with marginal labor value, showing that under perfect competition prices reflect marginal labor values, yet capitalism cannot achieve Pareto‑optimality without exploitation, requiring democratic control of capital to attain a non‑exploitative optimum.",
+            "citedEvidence": "It invokes the concepts of marginal productivity of labor, Pareto‑optimality, and the necessity of socially necessary capital accumulation and democratic organization of capital as evidence supporting its argument.",
+            "originStance": "none",
+            "summaryText": "The article argues that viewing labor value as marginal labor value resolves contradictions in classical and Marxian labor theories and demonstrates that a capitalist system cannot be Pareto‑optimal, implying exploitation is inherent. It contends that only through collective, democratic management of capital can society reach a Pareto‑optimal state without exploitation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571981-3125",
+      "text": "“Trabalho produtivo e excedente”, segundo Paul Singer: um comentário",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571981-3125",
+          "locator": "https://doi.org/10.1590/0101-31571981-3125",
+          "date": "1981",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The author responds to Peter Singer's piece on productive and surplus labor, aiming to clarify Marx's distinction and challenge Singer's notion of a contradiction. By analyzing Marx's broader oeuvre, the paper argues that Singer's interpretation misrepresents the original text. The discussion is framed as a scholarly critique rather than a contribution to the SARS‑CoV‑2 origin debate.",
+          "summaryMethod": "llm",
+          "authors": [
+            "JOÃO HERALDO LIMA"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The paper expands on Marx's treatment of productive and unproductive labor and seeks to rebut Singer's claim of an internal contradiction in Marx's theory.",
+            "citedEvidence": "It references Singer's article \"Trabalho produtivo e excedente\" and Marx's writings on productive versus unproductive labor to support its argument.",
+            "originStance": "none",
+            "summaryText": "The author responds to Peter Singer's piece on productive and surplus labor, aiming to clarify Marx's distinction and challenge Singer's notion of a contradiction. By analyzing Marx's broader oeuvre, the paper argues that Singer's interpretation misrepresents the original text. The discussion is framed as a scholarly critique rather than a contribution to the SARS‑CoV‑2 origin debate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.10.1.0085",
+      "text": "A Proof of Labor Theory of Value Based on Marginalist Principle",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.10.1.0085",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.10.1.0085",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The authors develop a mathematical proof of the labor theory of value by linking labor input to output through a conditional proportionality. They argue that marginalist principles do not undermine this theory and can be used to rebut anti‑Marxist critiques. The work frames its analysis within a natural‑resources theory of value to address objections to Marxian economics.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Hiroshi Onishi"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper proves the labor theory of value mathematically by demonstrating a conditional proportionality between labor input and product amounts, showing that marginalist principles do not disturb the labor theory of value.",
+            "citedEvidence": "It assumes a natural‑resources theory of value and establishes a historically conditional proportionality between labor input and output quantities, using this to counter anti‑Marxist criticism.",
+            "originStance": "none",
+            "summaryText": "The authors develop a mathematical proof of the labor theory of value by linking labor input to output through a conditional proportionality. They argue that marginalist principles do not undermine this theory and can be used to rebut anti‑Marxist critiques. The work frames its analysis within a natural‑resources theory of value to address objections to Marxian economics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1017/elo.2023.2",
+      "text": "Value extraction and institutions in digital capitalism: Towards a law and political economy synthesis for competition law",
+      "provenance": [
+        {
+          "sourceId": "10.1017/elo.2023.2",
+          "locator": "https://doi.org/10.1017/elo.2023.2",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study adopts a Law and Political Economy approach to examine how digital capitalism alters value creation and competition, focusing on financialisation, labour extraction, and platform‑based ecosystems. It highlights these trends as critical for rethinking competition policy in the digital age.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ioannis Lianos"
+          ],
+          "venue": "European Law Open",
+          "structured": {
+            "centralClaim": "The paper argues that the transformation of value generation and capture under digital capitalism creates new competitive dynamics that challenge the existing competition law framework.",
+            "citedEvidence": "It points to the financialisation of the digital economy, the extraction of value through non‑traditional labour arrangements, and the rise of multi‑sided platform value chains that form digital ecosystems as key developments reshaping competition.",
+            "originStance": "none",
+            "summaryText": "The study adopts a Law and Political Economy approach to examine how digital capitalism alters value creation and competition, focusing on financialisation, labour extraction, and platform‑based ecosystems. It highlights these trends as critical for rethinking competition policy in the digital age."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.11.2.0270",
+      "text": "Review of Classical Political Economics and Modern\n                        Capitalism: Theories of Value, Competition, Trade and Long Cycles\n                    by Lefteris Tsoulfidis and Persefoni Tsaliki",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.11.2.0270",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.11.2.0270",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The authors assess how the reviewed work integrates classical political economic theory with modern capitalist dynamics, emphasizing its empirical grounding and breadth of coverage. They conclude with a critical appraisal and suggestions for future research directions.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ozan Mutlu"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The review critically evaluates the book's comprehensive treatment of classical political economics topics, arguing that it derives the laws of motion of modern capitalism from empirical data and econometric analysis.",
+            "citedEvidence": "It cites the book's use of refined economic data, input–output and econometric methods to support its claims, and notes that it covers value theory, economic reproduction, true competition, and long economic cycles.",
+            "originStance": "none",
+            "summaryText": "The authors assess how the reviewed work integrates classical political economic theory with modern capitalist dynamics, emphasizing its empirical grounding and breadth of coverage. They conclude with a critical appraisal and suggestions for future research directions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.14.1.0063",
+      "text": "The Labor Theory of Value and the Problem of Joint Production",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.14.1.0063",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.14.1.0063",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article reviews definitions of joint production and Sraffa's approach, critiques Morishima's demonstration of negative labor values as absurd, and presents a matrix‑based method that yields positive labor values in a realistic model. It concludes that the labor theory of value can remain compatible with joint production when such calculations are applied.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Christian Flamant"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that Morishima's claim that the labor theory of value is incompatible with joint production because it would generate negative labor values is mistaken, and that positive labor values can be obtained in realistic joint production models.",
+            "citedEvidence": "It references Morishima's critique and Sraffa's theory of production prices, and uses statistical methods and simple matrix calculations to show that positive labor values are possible.",
+            "originStance": "none",
+            "summaryText": "The article reviews definitions of joint production and Sraffa's approach, critiques Morishima's demonstration of negative labor values as absurd, and presents a matrix‑based method that yields positive labor values in a realistic model. It concludes that the labor theory of value can remain compatible with joint production when such calculations are applied."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1002/ccr3.1554",
+      "text": "Labor may mask a symptom of the rupture of ovarian endometrial cyst: a case report",
+      "provenance": [
+        {
+          "sourceId": "10.1002/ccr3.1554",
+          "locator": "https://doi.org/10.1002/ccr3.1554",
+          "date": "2018",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study reports a case in which labor concealed the rupture of an ovarian endometrial cyst, highlighting that childbirth can both mask and predispose to cyst rupture. It emphasizes the need for clinicians to remain vigilant for this complication during delivery.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Tamina Kino",
+            "Soichiro Obata",
+            "Nana Osanai",
+            "Ayasa Hashimoto",
+            "Yukiko Okada",
+            "Shigeru Aoki",
+            "Etsuko Miyagi"
+          ],
+          "venue": "Clinical Case Reports",
+          "structured": {
+            "centralClaim": "Labor may mask the symptoms of rupture of an ovarian endometrial cyst, and delivery is a risk factor for such rupture, so clinicians should consider cyst rupture during delivery.",
+            "citedEvidence": "The case report describes a patient whose labor concealed rupture symptoms and notes that delivery itself increases the risk of cyst rupture.",
+            "originStance": "none",
+            "summaryText": "The study reports a case in which labor concealed the rupture of an ovarian endometrial cyst, highlighting that childbirth can both mask and predispose to cyst rupture. It emphasizes the need for clinicians to remain vigilant for this complication during delivery."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1002/jclp.23552",
+      "text": "A symptom network model of misophonia: From heightened sensory sensitivity to clinical comorbidity",
+      "provenance": [
+        {
+          "sourceId": "10.1002/jclp.23552",
+          "locator": "https://doi.org/10.1002/jclp.23552",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers investigated how overlapping personality and sensory traits might generate misophonia by clustering participants based on symptom reports. Their analysis revealed a small, highly severe subgroup showing clinical symptoms, while the broader sample showed varied levels of sensory sensitivity and anxiety.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Nora Andermane",
+            "Mathilde Bauer",
+            "Julia Simner",
+            "Jamie Ward"
+          ],
+          "venue": "Journal of Clinical Psychology",
+          "structured": {
+            "centralClaim": "Misophonia emerges from interactions among transdiagnostic traits such as sensory sensitivity and anxiety, producing distinct severity subgroups within affected individuals.",
+            "citedEvidence": "The study used a large sample of 1,430 participants and a subset of 419 who completed sensory sensitivity and comorbidity measures, identifying three groups including a severe misophonia subgroup with clinical symptoms limited to that group.",
+            "originStance": "none",
+            "summaryText": "The researchers investigated how overlapping personality and sensory traits might generate misophonia by clustering participants based on symptom reports. Their analysis revealed a small, highly severe subgroup showing clinical symptoms, while the broader sample showed varied levels of sensory sensitivity and anxiety."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1111/irel.12393",
+      "text": "Deepening Our Understanding of Labor Action: Examining How Workers Organize Different Types of Strikes in the United States",
+      "provenance": [
+        {
+          "sourceId": "10.1111/irel.12393",
+          "locator": "https://doi.org/10.1111/irel.12393",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "Using fieldwork from the Starbucks Workers United campaign and a national strike database, the study shows that strike organization varies and that effectiveness is judged by multiple criteria, not just material gains. It contends that workers with limited power can still leverage industrial action in varied ways, reshaping conventional understandings of labor stoppages.",
+          "summaryMethod": "llm",
+          "authors": [
+            "John Kallas"
+          ],
+          "venue": "Industrial Relations: A Journal of Economy and Society",
+          "structured": {
+            "centralClaim": "Thepaper argues that workers organize strikes in diverse ways and that union activists evaluate strike effectiveness using indicators beyond immediate material outcomes, challenging conventional views of strikes as solely indefinite conflicts aimed at bargaining impasses.",
+            "citedEvidence": "It draws on qualitative fieldwork of the Starbucks Workers United campaign and a comprehensive database of U.S. strike activity, analyzing multiple strike types and how limited structural power resources affect outcomes.",
+            "originStance": "none",
+            "summaryText": "Using fieldwork from the Starbucks Workers United campaign and a national strike database, the study shows that strike organization varies and that effectiveness is judged by multiple criteria, not just material gains. It contends that workers with limited power can still leverage industrial action in varied ways, reshaping conventional understandings of labor stoppages."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1111/pcn.13869",
+      "text": "Plasma circulating microRNAs and symptoms of depression: Results from a population‐based study",
+      "provenance": [
+        {
+          "sourceId": "10.1111/pcn.13869",
+          "locator": "https://doi.org/10.1111/pcn.13869",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers examined a broad panel of circulating miRNAs in a large sample and found that specific miRNAs correlate with depression scores after controlling for key covariates. Their findings suggest that miRNA profiles could serve as biomarkers for depressive symptoms in the general population.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Midas M. Kuilman",
+            "Tim Finke",
+            "M. Arfan Ikram",
+            "Annemarie I. Luik",
+            "Alexander Neumann",
+            "Charlotte A.M. Cecil",
+            "Mohsen Ghanbari"
+          ],
+          "venue": "Psychiatry and Clinical Neurosciences",
+          "structured": {
+            "centralClaim": "Plasma circulating microRNAs are associated with depressive symptoms in a large population-based cohort of middle-aged and older adults.",
+            "citedEvidence": "The study measured 591 plasma miRNAs in 2,703 participants of the Rotterdam Study and used negative-binomial regression models adjusting for age, sex, BMI and other confounders to link 38 miRNAs with depressive symptom scores.",
+            "originStance": "none",
+            "summaryText": "The researchers examined a broad panel of circulating miRNAs in a large sample and found that specific miRNAs correlate with depression scores after controlling for key covariates. Their findings suggest that miRNA profiles could serve as biomarkers for depressive symptoms in the general population."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1155/ije/6945239",
+      "text": "Diagnostic Value and Clinical Validation of Acute Thyrotoxic Myopathy Symptom Score in Acute Thyrotoxic Myopathy",
+      "provenance": [
+        {
+          "sourceId": "10.1155/ije/6945239",
+          "locator": "https://doi.org/10.1155/ije/6945239",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study develops a symptom rating scale, the ATMSS, to improve early detection of acute thyrotoxic myopathy. Using ROC analysis on a cohort of patients with ATM and Graves’ disease, the authors demonstrate that the score distinguishes ATM from GD. These findings suggest the scale could support clinical diagnosis of ATM.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Yun Zhang",
+            "Chunjiao Wu",
+            "Tingliang Wang",
+            "Xuelan Chen",
+            "Qiaoli Li",
+            "Xinghuan Liang",
+            "Haiyan Yang",
+            "Zhenxing Huang",
+            "Li Li",
+            "Jing Xian",
+            "Jia Zhou",
+            "Yingfen Qin",
+            "Decheng Lu",
+            "Zuojie Luo"
+          ],
+          "venue": "International Journal of Endocrinology",
+          "structured": {
+            "centralClaim": "The Acute Thyrotoxic Myopathy Symptom Score (ATMSS) can reliably differentiate patients with acute thyrotoxic myopathy from those with Graves’ disease, aiding early diagnosis.",
+            "citedEvidence": "The authors constructed an ATM reference cohort from literature, derived the ATMSS through multidisciplinary consensus, enrolled 38 ATM and 40 Graves’ disease patients, and evaluated its diagnostic performance using ROC curve analysis.",
+            "originStance": "none",
+            "summaryText": "The study develops a symptom rating scale, the ATMSS, to improve early detection of acute thyrotoxic myopathy. Using ROC analysis on a cohort of patients with ATM and Graves’ disease, the authors demonstrate that the score distinguishes ATM from GD. These findings suggest the scale could support clinical diagnosis of ATM."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1192/bjp.2024.129",
+      "text": "Associations of psychotic symptom dimensions with clinical and developmental variables in twin and general clinical samples",
+      "provenance": [
+        {
+          "sourceId": "10.1192/bjp.2024.129",
+          "locator": "https://doi.org/10.1192/bjp.2024.129",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers used a common set of symptom dimension definitions to explore links between these dimensions and various clinical and developmental factors in both twin and general clinical populations. They applied mixed‑effects logistic regression to a large sample of 875 probands and examined intra‑pair correlations among 96 MZ twin pairs with psychosis, aiming to clarify the clinical correlates and heritability of symptom dimensions.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Alastair G. Cardno",
+            "Judith Allardyce",
+            "Steven C. Bakker",
+            "Timothea Toulopoulou",
+            "Eugenia Kravariti",
+            "Marco M. Picchioni",
+            "Fergus Kane",
+            "Frühling V. Rijsdijk",
+            "Tariq Mahmood",
+            "Soumaya Nasser el din",
+            "Deline du Toit",
+            "Lisa A. Jones",
+            "Diego Quattrone",
+            "James T. R. Walters",
+            "Sophie E. Legge",
+            "Peter A. Holmans",
+            "Robin M. Murray",
+            "Evangelos Vassos"
+          ],
+          "venue": "The British Journal of Psychiatry",
+          "structured": {
+            "centralClaim": "The study investigates how psychotic symptom dimensions relate to clinical and developmental variables and examines their familial aggregation using twin and general psychosis samples.",
+            "citedEvidence": "Symptom dimension scores and related variables were derived from the Operational Criteria Checklist and analyzed with logistic regression in generalized linear mixed models across 875 probands, and correlations of dimensions were assessed within 96 monozygotic twin pairs concordant for psychosis.",
+            "originStance": "none",
+            "summaryText": "The researchers used a common set of symptom dimension definitions to explore links between these dimensions and various clinical and developmental factors in both twin and general clinical populations. They applied mixed‑effects logistic regression to a large sample of 875 probands and examined intra‑pair correlations among 96 MZ twin pairs with psychosis, aiming to clarify the clinical correlates and heritability of symptom dimensions."
+          }
+        }
+      ]
+    }
+  ],
+  "citationGraph": {
+    "10.13169/worlrevipoliecon.12.4.0493": [
+      "10.1177/0486613420962862",
+      "10.7312/semm90706",
+      "10.1093/acprof:oso/9780199390632.001.0001",
+      "10.1007/978-1-349-16723-4_4",
+      "10.1111/roie.12178",
+      "10.1093/cje/bex060",
+      "10.1080/02692170802407668",
+      "10.3280/spe2013-002005",
+      "10.2298/pan1501015t",
+      "10.4324/9781351239424",
+      "10.1093/cje/26.3.359",
+      "10.1080/09535310701698548",
+      "10.1080/09538259.2016.1260804"
+    ],
+    "10.13169/worlrevipoliecon.3.3.0288": [
+      "10.1163/ej.9789004189942.i-303",
+      "10.1163/156920699100414481"
+    ],
+    "10.13169/worlrevipoliecon.11.3.0377": [
+      "10.1177/048661349903100105",
+      "10.1016/s0486-6134(99)80004-7",
+      "10.1007/978-1-349-12353-7",
+      "10.2307/2296064",
+      "10.2307/2534294"
+    ],
+    "10.13169/worlrevipoliecon.3.3.0313": [
+      "10.1177/048661348601800402",
+      "10.1086/341329",
+      "10.5040/9798400617362",
+      "10.1093/oxfordjournals.cje.a035483",
+      "10.1257/jel.39.3.771",
+      "10.1017/cbo9780511895678",
+      "10.1111/1475-6765.00404",
+      "10.1093/019924183x.001.0001",
+      "10.7208/chicago/9780226261843.001.0001",
+      "10.1177/048661349702900201",
+      "10.1177/048661349903100204",
+      "10.1111/1475-6765.00073",
+      "10.1080/00213624.2007.11507000",
+      "10.2753/jei0021-3624440112",
+      "10.1017/cbo9780511528330",
+      "10.1209/epl/i2004-10330-3",
+      "10.1177/0486613406296898",
+      "10.1086/260370",
+      "10.1177/0486613403257802"
+    ],
+    "10.13169/worlrevipoliecon.12.4.0452": [
+      "10.1504/ijpee.2013.058261",
+      "10.1017/cbo9780511625770",
+      "10.1177/0486613410377615",
+      "10.1177/0486613414557919",
+      "10.1080/08911916.2015.1060828",
+      "10.1163/9789004301931",
+      "10.1177/0486613420957148",
+      "10.2307/1058537",
+      "10.1007/978-1-349-05040-6",
+      "10.1073/pnas.67.1.423",
+      "10.2307/1058538"
+    ],
+    "10.1590/2236-9996.2025-6461280-en": [],
+    "10.1590/2236-9996.2025-6461280-pt": [],
+    "10.13169/worlrevipoliecon.12.4.0472": [
+      "10.1080/01972243.2012.669449",
+      "10.1177/0486613413487154",
+      "10.1080/01972241003712215",
+      "10.31269/triplec.v10i2.434",
+      "10.1215/01642472-18-2_63-33",
+      "10.1163/156920607x171681"
+    ],
+    "10.13169/worlrevipoliecon.10.1.0095": [
+      "10.1163/9789004453524",
+      "10.14452/mr-070-01-2018-05_1",
+      "10.1093/cje/bex070",
+      "10.3386/w25230",
+      "10.13169/worlrevipoliecon.10.1.0085",
+      "10.26587/marx.12.3.201508.012",
+      "10.2139/ssrn.3118286"
+    ],
+    "10.13169/worlrevipoliecon.5.2.0231": [
+      "10.2307/1909321",
+      "10.1515/9783112351369",
+      "10.1016/0014-2921(89)90092-5",
+      "10.2753/pet1061-19911904050668",
+      "10.2307/1913933",
+      "10.1007/978-1-349-05040-6"
+    ],
+    "10.1590/0101-31571981-3125": [],
+    "10.13169/worlrevipoliecon.10.1.0085": [
+      "10.13169/worlrevipoliecon.5.2.0231",
+      "10.1007/bf02480895"
+    ],
+    "10.1017/elo.2023.2": [],
+    "10.13169/worlrevipoliecon.11.2.0270": [
+      "10.1007/978-3-030-17967-0"
+    ],
+    "10.13169/worlrevipoliecon.14.1.0063": [
+      "10.2307/1911999",
+      "10.1016/0270-0255(82)90027-6",
+      "10.2307/2232223"
+    ],
+    "10.1002/ccr3.1554": [
+      "10.1016/j.fertnstert.2009.02.092",
+      "10.1111/j.1479-828x.2011.01380.x",
+      "10.1111/j.1479-828x.2006.00515.x",
+      "10.1155/2016/3012802",
+      "10.1016/s0301-2115(97)00152-8",
+      "10.1016/0020-7292(92)90382-s",
+      "10.1016/j.tjog.2014.04.018",
+      "10.1016/j.fertnstert.2015.08.030"
+    ],
+    "10.1002/jclp.23552": [
+      "10.3389/fnins.2022.900065",
+      "10.1016/j.isci.2023.106299",
+      "10.1007/s10803-006-0073-6",
+      "10.1023/a:1005653411471",
+      "10.1111/j.2517-6161.1995.tb02031.x",
+      "10.1002/wps.20375",
+      "10.1016/j.cortex.2011.11.013",
+      "10.3389/fnins.2018.00036",
+      "10.3389/fpsyg.2020.519681",
+      "10.2147/ndt.s81438",
+      "10.1016/j.jocrd.2018.06.004",
+      "10.1136/bmjopen-2020-041290",
+      "10.3389/fpsyg.2014.00781",
+      "10.1177/2515245919876960",
+      "10.3389/fpsyg.2017.01975",
+      "10.5406/amerjpsyc.130.4.0431",
+      "10.3389/fnhum.2013.00296",
+      "10.3389/fpsyt.2019.00765",
+      "10.3758/s13428-017-0862-1",
+      "10.18637/jss.v048.i04",
+      "10.1111/j.1475-1313.2008.00578.x",
+      "10.1155/2017/2723715",
+      "10.1037/1040-3590.10.3.206",
+      "10.1016/j.concog.2019.03.003",
+      "10.1007/s00127-016-1319-z",
+      "10.1093/biostatistics/kxm045",
+      "10.1016/j.biopsycho.2014.11.004",
+      "10.1016/j.biopsycho.2015.12.003",
+      "10.1002/jclp.23196",
+      "10.1098/rsos.140535",
+      "10.1046/j.1526-4610.2003.03110.x",
+      "10.1093/schbul/sbw049",
+      "10.1371/journal.pone.0231390",
+      "10.1016/j.patrec.2009.09.011",
+      "10.3389/fpsyt.2022.1012424",
+      "10.1375/audi.24.2.74.31105",
+      "10.1080/00273171.2019.1614898",
+      "10.1177/0333102419847749",
+      "10.1016/0020-0190(89)90102-6",
+      "10.1016/j.cub.2016.12.048",
+      "10.1038/s41598-019-57204-1",
+      "10.1001/archneur.1989.00520460125024",
+      "10.1002/bies.202000099",
+      "10.1371/journal.pone.0048230",
+      "10.1037/0022-3514.41.2.397",
+      "10.1038/s43586-022-00177-9",
+      "10.3389/fnins.2022.832516",
+      "10.1111/acps.12469",
+      "10.1007/s10803-022-05623-x",
+      "10.3389/fpsyg.2022.808379",
+      "10.31234/osf.io/5eb39",
+      "10.1016/j.jpsychires.2015.06.005",
+      "10.1007/s10803-012-1608-7",
+      "10.1002/jclp.22500",
+      "10.1371/journal.pone.0054706",
+      "10.1038/s41598-019-44084-8",
+      "10.3389/fnins.2022.841816",
+      "10.1037/1040-3590.19.2.176",
+      "10.1038/srep41155",
+      "10.1080/01621459.1963.10500845",
+      "10.1093/brain/107.4.989",
+      "10.1002/jclp.22098",
+      "10.1145/235968.233324"
+    ],
+    "10.1111/irel.12393": [
+      "10.1177/0019793918790946",
+      "10.4324/9781003431022",
+      "10.15173/glj.v9i2.3571",
+      "10.1086/298367",
+      "10.7591/9781501722578",
+      "10.1177/001979391306600502",
+      "10.1177/0959680112452693",
+      "10.1086/209902",
+      "10.1080/09585192.2013.775956",
+      "10.5040/9781472545244",
+      "10.2307/258557",
+      "10.4324/9781315692968-18",
+      "10.1177/1094428112452151",
+      "10.3998/mpub.11621094",
+      "10.1111/j.1467-8543.2011.00853.x",
+      "10.4324/9781003431022-3",
+      "10.1177/0010414012463894",
+      "10.1177/001979391406700104",
+      "10.1016/s0742-6186(05)14002-5",
+      "10.1177/0143831x16684963",
+      "10.1111/1468-4446.13069",
+      "10.1111/bjir.12188",
+      "10.1093/ser/mwae056",
+      "10.4324/9781003431022-4",
+      "10.1111/bjir.12709",
+      "10.1111/bjir.12845",
+      "10.1177/0019793918820008",
+      "10.4324/9780203213940",
+      "10.4135/9781446268247.n17",
+      "10.1177/0022185616634337",
+      "10.1177/10957960221144972",
+      "10.3828/hsir.1998.5.4",
+      "10.1086/722743",
+      "10.1093/acprof:oso/9780190624712.001.0001",
+      "10.2307/800649",
+      "10.4324/9781003431022-6",
+      "10.1111/bjir.12824",
+      "10.7591/9780801470752",
+      "10.1177/1024258916655741",
+      "10.1111/irj.12356",
+      "10.15173/glj.v5i3.2278",
+      "10.4324/9781003431022-5",
+      "10.2307/2095284",
+      "10.1108/s0163‐786x20210000044005",
+      "10.1353/sof.2006.0140",
+      "10.1146/annurev‐soc‐073018‐022559",
+      "10.15173/glj.v9i2.3569",
+      "10.1017/cbo9780511615702",
+      "10.4324/9781003431022-7",
+      "10.2307/2392360",
+      "10.1177/1024258916658804",
+      "10.1086/210397"
+    ],
+    "10.1111/pcn.13869": [
+      "10.1007/s00109-021-02052-8",
+      "10.3389/fphar.2023.1129186",
+      "10.3390/ijms23094555",
+      "10.3390/ijms232113530",
+      "10.3390/ijms23031294",
+      "10.1503/jpn.130169",
+      "10.1080/14728222.2017.1328501",
+      "10.1042/bsr20190186",
+      "10.1038/npp.2016.175",
+      "10.1038/tp.2016.131",
+      "10.1016/j.jad.2016.04.021",
+      "10.1517/13543784.2014.997873",
+      "10.1038/nrn3879",
+      "10.1375/13690520460741435",
+      "10.1007/s10654-020-00640-5",
+      "10.1186/s12896-018-0421-6",
+      "10.1016/j.celrep.2019.11.078",
+      "10.1002/alz.12752",
+      "10.1177/014662167700100306",
+      "10.1017/s0033291796003510",
+      "10.1093/nar/gkab1079",
+      "10.1093/nar/gkz757",
+      "10.1093/nar/gkac1000",
+      "10.1093/nar/gkab808",
+      "10.1038/s41588-018-0090-3",
+      "10.1038/s41467-018-03819-3",
+      "10.1038/s41593-018-0326-7",
+      "10.1371/journal.pcbi.1004219",
+      "10.1038/s41467-017-01261-5",
+      "10.1126/science.aaz1776",
+      "10.3389/fneur.2021.626066",
+      "10.1016/j.mad.2020.111352",
+      "10.1016/j.comppsych.2016.05.006",
+      "10.1038/s41531-023-00451-x",
+      "10.1097/wnr.0000000000001484",
+      "10.1002/humu.24481",
+      "10.1176/appi.ajp.2015.14030273",
+      "10.1038/s41392-021-00805-y",
+      "10.1016/j.euroneuro.2020.06.011",
+      "10.1016/j.jad.2019.10.038",
+      "10.1038/s41525-019-0113-8",
+      "10.1016/j.jad.2022.08.034",
+      "10.1111/cns.14143",
+      "10.1038/s41562-021-01094-9",
+      "10.1001/archneurol.2007.3",
+      "10.1038/s41467-018-04930-1",
+      "10.1038/s41467-018-03242-8",
+      "10.1038/s41467-019-13585-5",
+      "10.1371/journal.pone.0121975",
+      "10.2217/bmm-2016-0076",
+      "10.1016/j.comppsych.2012.06.006"
+    ],
+    "10.1155/ije/6945239": [
+      "10.1016/s0140-6736(66)90536-8",
+      "10.5603/ep.a2022.0004",
+      "10.1155/2013/369807",
+      "10.1007/s00455-003-0510-z",
+      "10.1155/2011/929523",
+      "10.1136/pgmj.61.717.619",
+      "10.1136/jnnp.21.4.270",
+      "10.1016/j.clinbiomech.2016.12.006",
+      "10.3109/09638289609166307",
+      "10.1016/j.neurol.2010.07.005",
+      "10.2169/internalmedicine.39.472",
+      "10.2169/internalmedicine.48.2202",
+      "10.7759/cureus.1716",
+      "10.4103/0973-0354.129731",
+      "10.1097/00004836-198410000-00009",
+      "10.1002/1531-8249(199909)46:3<434::aid-ana25>3.0.co;2-d",
+      "10.1016/0002-9343(74)90477-x",
+      "10.1136/pgmj.56.659.669",
+      "10.1179/acb.2006.007",
+      "10.1111/imj.1970.19.4.338",
+      "10.4103/0972-2327.150625",
+      "10.1530/edm-21-0175",
+      "10.1089/thy.2006.16.375",
+      "10.1136/jnnp.68.6.750",
+      "10.1111/j.1365-2265.2007.02909.x",
+      "10.1002/(sici)1097-0347(199603/04)18:2<138::aid-hed5>3.0.co;2-2",
+      "10.7705/biomedica.7009",
+      "10.1016/s0733-8619(03)00053-7",
+      "10.1016/s0140-6736(00)02601-5",
+      "10.1136/pgmj.44.511.385",
+      "10.1210/en.2008-0350",
+      "10.3389/fendo.2022.829411",
+      "10.1159/000528357",
+      "10.21203/rs.3.rs-4256735/v1"
+    ],
+    "10.1192/bjp.2024.129": [
+      "10.1017/s0033291709990651",
+      "10.1007/s00406-019-01068-z",
+      "10.1016/s0920-9964(98)00011-5",
+      "10.1002/ajmg.b.30756",
+      "10.1016/j.eurpsy.2008.04.003",
+      "10.1016/s0924-9338(02)00685-5",
+      "10.1192/bjp.177.1.38",
+      "10.1093/brain/aws138",
+      "10.1001/archpsyc.1991.01810320088015",
+      "10.1002/ajmg.b.31240",
+      "10.1017/s0033291700033808",
+      "10.1017/s0033291700037685",
+      "10.1016/j.schres.2008.01.023",
+      "10.1001/archpsyc.1990.01810180089012",
+      "10.1007/s00127-007-0179-y",
+      "10.1016/j.eclinm.2023.102199",
+      "10.1192/bjp.bp.105.017251",
+      "10.1016/j.schres.2021.08.008",
+      "10.1002/mpr.214",
+      "10.1176/appi.ajp.2012.12020218",
+      "10.1192/bjp.bp.107.046037",
+      "10.1192/bjp.bp.115.167239",
+      "10.1002/wps.20655",
+      "10.1001/archpsyc.56.2.162",
+      "10.1038/s41380-022-01850-x",
+      "10.1093/schbul/sbs096",
+      "10.1136/bmjopen-2020-042949",
+      "10.1001/archpsyc.64.12.1348",
+      "10.1016/s0006-3223(97)00341-7",
+      "10.1093/oxfordjournals.schbul.a033423",
+      "10.1002/ajmg.b.31145",
+      "10.1017/s0033291718002131",
+      "10.1001/jamapsychiatry.2021.1961",
+      "10.1176/appi.prcp.20200010",
+      "10.1192/bjp.2022.179",
+      "10.1001/jamapsychiatry.2022.2289",
+      "10.1016/j.schres.2017.06.038",
+      "10.1093/schbul/sbs050",
+      "10.1001/archpsyc.1995.03950170015003",
+      "10.1001/archgenpsychiatry.2010.99",
+      "10.1192/bjp.151.2.145"
+    ]
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "tradition",
+      "value": "Marxist/post-Marxist critique of psychoanalysis",
+      "justification": "The dispute directly engages Marx's analysis of capital and its application to psychoanalytic theory"
+    },
+    {
+      "dimension": "tradition",
+      "value": "French structural/post-structural readings",
+      "justification": "Deleuze and Guattari's Anti-Édipo represents a key tradition in this debate"
+    },
+    {
+      "dimension": "tradition",
+      "value": "Institutional/sociological history of psychoanalysis",
+      "justification": "The text emphasizes the institutional formation of progressive psychoanalysis across European centers"
+    },
+    {
+      "dimension": "language",
+      "value": "pt",
+      "justification": "The anchor text is in Portuguese and references Brazilian editions of key works"
+    },
+    {
+      "dimension": "language",
+      "value": "en",
+      "justification": "Core theoretical texts by Freud, Deleuze, Guattari, and Tomšič are in English"
+    },
+    {
+      "dimension": "language",
+      "value": "de",
+      "justification": "Freud's original German texts and contemporary German scholarship on this topic"
+    },
+    {
+      "dimension": "genre",
+      "value": "article",
+      "justification": "Theoretical interventions and critical analyses typically appear in journal format"
+    },
+    {
+      "dimension": "genre",
+      "value": "book",
+      "justification": "Monographs like The Capitalist Unconconscious and historical studies provide sustained argumentation"
+    },
+    {
+      "dimension": "genre",
+      "value": "chapter",
+      "justification": "Edited volumes on psychoanalysis and political economy often contain relevant contributions"
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "10.13169/worlrevipoliecon.12.4.0493": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.3.3.0288": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-super-120b-a12b:free"
+      },
+      "10.13169/worlrevipoliecon.11.3.0377": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.3.3.0313": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.12.4.0452": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/2236-9996.2025-6461280-en": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/2236-9996.2025-6461280-pt": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.12.4.0472": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.10.1.0095": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.5.2.0231": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571981-3125": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-super-120b-a12b:free"
+      },
+      "10.13169/worlrevipoliecon.10.1.0085": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1017/elo.2023.2": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.11.2.0270": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.14.1.0063": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1002/ccr3.1554": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1002/jclp.23552": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1111/irel.12393": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1111/pcn.13869": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1155/ije/6945239": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1192/bjp.2024.129": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      }
+    },
+    "reader-b": {
+      "10.13169/worlrevipoliecon.12.4.0493": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.3.3.0288": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.11.3.0377": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.3.3.0313": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.12.4.0452": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/2236-9996.2025-6461280-en": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/2236-9996.2025-6461280-pt": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.12.4.0472": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.10.1.0095": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.5.2.0231": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571981-3125": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.10.1.0085": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1017/elo.2023.2": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.11.2.0270": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.14.1.0063": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1002/ccr3.1554": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1002/jclp.23552": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1111/irel.12393": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1111/pcn.13869": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1155/ije/6945239": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1192/bjp.2024.129": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      }
+    }
+  },
+  "derived": {
+    "convergenceMap": {
+      "verdicts": [
+        {
+          "claimId": "10.13169/worlrevipoliecon.12.4.0493",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.3.3.0288",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.11.3.0377",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.3.3.0313",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.12.4.0452",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/2236-9996.2025-6461280-en",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/2236-9996.2025-6461280-pt",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.12.4.0472",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.10.1.0095",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.5.2.0231",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571981-3125",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.10.1.0085",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1017/elo.2023.2",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.11.2.0270",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.14.1.0063",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1002/ccr3.1554",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1002/jclp.23552",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1111/irel.12393",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1111/pcn.13869",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1155/ije/6945239",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1192/bjp.2024.129",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        }
+      ]
+    },
+    "coverageAudit": {
+      "findings": [
+        {
+          "dimension": "tradition",
+          "value": "Marxist/post-Marxist critique of psychoanalysis",
+          "justification": "The dispute directly engages Marx's analysis of capital and its application to psychoanalytic theory",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "French structural/post-structural readings",
+          "justification": "Deleuze and Guattari's Anti-Édipo represents a key tradition in this debate",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "Institutional/sociological history of psychoanalysis",
+          "justification": "The text emphasizes the institutional formation of progressive psychoanalysis across European centers",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "language",
+          "value": "pt",
+          "justification": "The anchor text is in Portuguese and references Brazilian editions of key works",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "language",
+          "value": "en",
+          "justification": "Core theoretical texts by Freud, Deleuze, Guattari, and Tomšič are in English",
+          "measurability": "measured",
+          "observedSources": 18,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "language",
+          "value": "de",
+          "justification": "Freud's original German texts and contemporary German scholarship on this topic",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "article",
+          "justification": "Theoretical interventions and critical analyses typically appear in journal format",
+          "measurability": "measured",
+          "observedSources": 21,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "genre",
+          "value": "book",
+          "justification": "Monographs like The Capitalist Unconconscious and historical studies provide sustained argumentation",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "chapter",
+          "justification": "Edited volumes on psychoanalysis and political economy often contain relevant contributions",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        }
+      ],
+      "emptyChairs": [
+        {
+          "dimension": "language",
+          "value": "pt",
+          "justification": "The anchor text is in Portuguese and references Brazilian editions of key works",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "language",
+          "value": "de",
+          "justification": "Freud's original German texts and contemporary German scholarship on this topic",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "book",
+          "justification": "Monographs like The Capitalist Unconconscious and historical studies provide sustained argumentation",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "chapter",
+          "justification": "Edited volumes on psychoanalysis and political economy often contain relevant contributions",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        }
+      ],
+      "notMeasured": [
+        {
+          "dimension": "tradition",
+          "value": "Marxist/post-Marxist critique of psychoanalysis",
+          "justification": "The dispute directly engages Marx's analysis of capital and its application to psychoanalytic theory",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "French structural/post-structural readings",
+          "justification": "Deleuze and Guattari's Anti-Édipo represents a key tradition in this debate",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "Institutional/sociological history of psychoanalysis",
+          "justification": "The text emphasizes the institutional formation of progressive psychoanalysis across European centers",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        }
+      ]
+    },
+    "reliabilityProfiles": [
+      {
+        "claimId": "10.13169/worlrevipoliecon.12.4.0493",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.3.3.0288",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.11.3.0377",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.3.3.0313",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.12.4.0452",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/2236-9996.2025-6461280-en",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/2236-9996.2025-6461280-pt",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.12.4.0472",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.10.1.0095",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.5.2.0231",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571981-3125",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.10.1.0085",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1017/elo.2023.2",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.11.2.0270",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.14.1.0063",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1002/ccr3.1554",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1002/jclp.23552",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1111/irel.12393",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1111/pcn.13869",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1155/ije/6945239",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1192/bjp.2024.129",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      }
+    ]
+  }
+}

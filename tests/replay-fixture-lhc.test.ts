@@ -78,8 +78,12 @@ describe("frozen LHC-origin fixture (v0.1, free OpenRouter, CC-BY)", () => {
     expect(fixture.source.referenceHypothesis.toLowerCase()).toContain("coherence, not truth");
   });
 
-  it("the abstention is diagnosed 'adjacent' (schema 0.1.1): the corpus does not bear on the question", () => {
-    expect((fixture as unknown as { schema: string }).schema).toBe("tacet/replay-fixture@0.1.1");
+  it("the abstention is diagnosed 'adjacent' (schema 0.2.0): the corpus does not bear on the question", () => {
+    expect((fixture as unknown as { schema: string }).schema).toBe("tacet/replay-fixture@0.2.0");
     expect((fixture as unknown as { abstentionDiagnosis: unknown }).abstentionDiagnosis).toBe("adjacent");
+  });
+
+  it("the relevance gate is 'aligned' (EN ruler; the corpus IS lexically black-hole literature — the gap is licensing, not topic)", () => {
+    expect((fixture as unknown as { relevanceGate?: { status: string } }).relevanceGate?.status).toBe("aligned");
   });
 });

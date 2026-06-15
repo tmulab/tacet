@@ -1,9 +1,46 @@
 {
-  "schema": "tacet/replay-fixture@0.1",
+  "schema": "tacet/replay-fixture@0.2.0",
   "case": "sago-origin",
   "version": "0.2",
   "frozenFrom": "corpus/sars-cov-2-origin-zoonotic-spillover-lab.summarized.read.json",
   "referenceHypothesis": "A origem zoonótica natural por spillover (de animais selvagens, diretamente ou via hospedeiro intermediário) é a hipótese atualmente mais sustentada pela evidência científica disponível; porém a questão permanece inconclusiva. A hipótese de um acidente laboratorial ou relacionado a pesquisa não pode ser descartada nem provada, por falta de dados disponibilizados.",
+  "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "not-assessed",
+    "alignedFraction": 0.068,
+    "ruleTerms": [
+      "origem",
+      "zoonotica",
+      "natural",
+      "spillover",
+      "animais",
+      "selvagens",
+      "diretamente",
+      "hospedeiro",
+      "intermediario",
+      "hipotese",
+      "atualmente",
+      "sustentada",
+      "pela",
+      "evidencia",
+      "cientifica",
+      "disponivel",
+      "porem",
+      "questao",
+      "permanece",
+      "inconclusiva",
+      "acidente",
+      "laboratorial",
+      "relacionado",
+      "pesquisa",
+      "pode",
+      "descartada",
+      "provada",
+      "falta",
+      "dados",
+      "disponibilizados"
+    ]
+  },
   "source": {
     "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
     "referenceHypothesis": "Paraphrased from the WHO Scientific Advisory Group for the Origins of Novel Pathogens (SAGO) report, 2025 — CC BY-NC-SA 3.0 IGO. Attribution: World Health Organization.",
@@ -3531,44 +3568,46 @@
         {
           "dimension": "language-family",
           "value": "anglophone",
+          "justification": "the anglophone peer-reviewed literature is the baseline corpus a scoping review is expected to cover (PRISMA-ScR item 8: information sources).",
+          "measurability": "measured",
           "observedSources": 44,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "the anglophone peer-reviewed literature is the baseline corpus a scoping review is expected to cover (PRISMA-ScR item 8: information sources)."
+          "isEmptyChair": false
         },
         {
           "dimension": "language-family",
           "value": "non-anglophone",
+          "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025).",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025)."
+          "isEmptyChair": true
         },
         {
           "dimension": "geographic-locus",
           "value": "east-asia",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute."
+          "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute.",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         }
       ],
       "emptyChairs": [
         {
           "dimension": "language-family",
           "value": "non-anglophone",
+          "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025).",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "the dispute concerns events centered in China; non-anglophone (esp. Chinese-language) primary sources are pertinent per the WHO-convened SAGO study of origins (2025)."
-        },
+          "isEmptyChair": true
+        }
+      ],
+      "notMeasured": [
         {
           "dimension": "geographic-locus",
           "value": "east-asia",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute."
+          "justification": "first-wave epidemiology and origins evidence is concentrated in East Asia; sources from that locus are pertinent to the dispute.",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         }
       ]
     },

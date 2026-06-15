@@ -64,8 +64,8 @@ describe.each([
     expect(fx.source.anchor?.file).toMatch(/\.pdf$/);
   });
 
-  it("schema 0.1.1 with abstention diagnosis computed", () => {
-    expect(fx.schema).toBe("tacet/replay-fixture@0.1.1");
+  it("schema 0.2.0 with abstention diagnosis computed", () => {
+    expect(fx.schema).toBe("tacet/replay-fixture@0.2.0");
     expect(fx.abstentionDiagnosis).toBe("adjacent");
   });
 });

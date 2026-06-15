@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { isAbsolute, resolve } from "node:path";
 import type { ClaimSignal, ConvergenceMap } from "../domain/convergence.js";
-import type { CoverageAudit } from "../domain/coverage.js";
+import type { MeasuredCoverageAudit } from "../domain/coverage.js";
 import { shouldAbstain } from "../domain/reliability.js";
 import type { AxisValue, ReliabilityProfile } from "../domain/convergence.js";
 import type { Claim } from "../domain/types.js";
@@ -55,10 +55,11 @@ function printMap(
   );
 }
 
-function printCoverage(audit: CoverageAudit): void {
+function printCoverage(audit: MeasuredCoverageAudit): void {
   console.log("\nTACET — coverage audit (the empty chair)");
-  console.log("Observed-vs-expected coverage of the evidence base. DESCRIPTIVE");
-  console.log("only: reports the measured gap, never interprets what it means.\n");
+  console.log("Observed-vs-expected coverage. DESCRIPTIVE only. A dimension with no");
+  console.log("metadata is NOT-MEASURED (never a guessed empty chair); a measured");
+  console.log("dimension with zero observed IS an empty chair.\n");
 
   if (audit.findings.length === 0) {
     console.log("  (no expected coverage categories declared for this fixture)");
@@ -68,16 +69,23 @@ function printCoverage(audit: CoverageAudit): void {
   const width = Math.max(...audit.findings.map((f) => label(f.dimension, f.value).length));
   for (const f of audit.findings) {
     const pad = label(f.dimension, f.value).padEnd(width);
-    const flag = f.isEmptyChair ? "  ← empty chair" : "";
-    console.log(`  ${pad}  observed: ${f.observedSources}  (expected)${flag}`);
+    if (f.measurability === "not-measured") {
+      console.log(`  ${pad}  not-measured (no metadata — needs content inference)`);
+    } else {
+      const flag = f.isEmptyChair ? "  ← empty chair" : "";
+      console.log(`  ${pad}  observed: ${f.observedSources}  (expected)${flag}`);
+    }
   }
 
   if (audit.emptyChairs.length > 0) {
-    console.log("\nempty chairs (expected categories with zero observed sources):");
+    console.log("\nempty chairs (MEASURED categories with zero observed sources):");
     for (const f of audit.emptyChairs) {
       console.log(`  ● ${f.value} [${f.dimension}] — 0 observed`);
       console.log(`    expected because: ${f.justification}`);
     }
+  }
+  if (audit.notMeasured.length > 0) {
+    console.log(`\nnot-measured (${audit.notMeasured.length}): ${audit.notMeasured.map((f) => `${f.dimension}=${f.value}`).join(", ")}`);
   }
 }
 
@@ -133,6 +141,9 @@ const CASES: Readonly<Record<string, string>> = {
   "lhc-comparison": "fixtures/replay/lhc-anchored-comparison-v0.1.json", // cross-anchor meta-artifact
   "lhc-anchored-ingested": "fixtures/replay/lhc-anchored-ingested-v0.1.json", // adjacent CC-BY + redacted closed-argument claims
   eggs: "fixtures/replay/eggs-cv-v0.1.json",
+  "freud-derived": "fixtures/replay/freud-midas-derived-v0.1.json", // drifted ingestion (measured)
+  "freud-focused": "fixtures/replay/freud-midas-focused-v0.1.json", // corrected query — still polit-econ
+  "freud-contrast": "fixtures/replay/freud-contrast-v0.1.json", // derived vs focused, nature named
 };
 
 /** Resolve the fixture: a known case key, else a path, else the COVID default.
@@ -158,11 +169,33 @@ function printComparison(raw: { caseA: string; caseB: string; categories: Record
   console.log(`  (${raw.claims.length} claims judged in both regimes)`);
 }
 
+interface FreudContrast {
+  readonly derived: { readonly relevanceGate: { readonly status: string }; readonly structure: Record<string, number> };
+  readonly focused: { readonly relevanceGate: { readonly status: string }; readonly structure: Record<string, number> };
+  readonly difference: { readonly nature: string; readonly derived: string; readonly focused: string; readonly proves: string };
+}
+
+function printFreudContrast(c: FreudContrast): void {
+  const line = (s: { relevanceGate: { status: string }; structure: Record<string, number> }): string =>
+    `gate=${s.relevanceGate.status}  rc=${s.structure["robustCore"]} lc=${s.structure["liveCrux"]} un=${s.structure["unsupported"]}`;
+  console.log("\nTACET — Freud contrast (derived vs focused). COHERENCE, not truth.\n");
+  console.log(`  derived  ${line(c.derived)}`);
+  console.log(`  focused  ${line(c.focused)}\n`);
+  console.log(`  nature: ${c.difference.nature}`);
+  console.log(`  · derived: ${c.difference.derived}`);
+  console.log(`  · focused: ${c.difference.focused}`);
+  console.log(`  · proves:  ${c.difference.proves}`);
+}
+
 async function main(): Promise<void> {
   const path = resolveFixturePath();
   const raw = JSON.parse(readFileSync(path, "utf8")) as Record<string, unknown>;
   if (raw["schemaName"] === "tacet/anchor-comparison@0.1") {
     printComparison(raw as unknown as { caseA: string; caseB: string; categories: Record<string, number>; claims: unknown[] });
+    return;
+  }
+  if (raw["schemaName"] === "tacet/freud-contrast@0.1") {
+    printFreudContrast(raw as unknown as FreudContrast);
     return;
   }
   const fixture = raw as unknown as ReplayFixture;

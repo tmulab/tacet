@@ -1,7 +1,7 @@
 import { buildConvergenceMap } from "../domain/convergence.js";
 import type { ConvergenceMap } from "../domain/convergence.js";
-import { auditCoverage } from "../domain/coverage.js";
-import type { CoverageAudit, ExpectedCategory } from "../domain/coverage.js";
+import { auditCoverageMeasured } from "../domain/coverage.js";
+import type { ExpectedCategory, MeasuredCoverageAudit } from "../domain/coverage.js";
 import type { AbstentionDiagnosis } from "../domain/abstention-diagnosis.js";
 import { buildReliabilityProfile } from "../domain/reliability.js";
 import type { CitationGraph } from "../domain/reliability.js";
@@ -38,7 +38,7 @@ export interface ReplayFixture {
 export interface ReplayResult {
   readonly readerIds: readonly string[];
   readonly map: ConvergenceMap;
-  readonly coverage: CoverageAudit;
+  readonly coverage: MeasuredCoverageAudit;
   readonly profiles: readonly ReliabilityProfile[];
   readonly oneReaderCount: number;
 }
@@ -80,7 +80,7 @@ export async function computeReplay(fixture: ReplayFixture): Promise<ReplayResul
   const interB = judgementsB.filter(inBoth);
   const map: ConvergenceMap = interA.length > 0 ? buildConvergenceMap(interA, interB) : { verdicts: [] };
 
-  const coverage = auditCoverage(fixture.claims, fixture.expectedCoverage ?? []);
+  const coverage = auditCoverageMeasured(fixture.claims, fixture.expectedCoverage ?? []);
 
   const signalByClaim = new Map(map.verdicts.map((v) => [v.claimId, v.signal]));
   const allJudgements = [...judgementsA, ...judgementsB];

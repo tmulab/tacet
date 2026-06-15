@@ -1,0 +1,2482 @@
+{
+  "schema": "tacet/replay-fixture@0.2.0",
+  "case": "freud-midas-focused",
+  "version": "0.1",
+  "frozenFrom": "corpus/freud-midas-focused.summarized.read.json",
+  "referenceHypothesis": "Freud's clinical practice operated within and through capitalist logics, transforming the analytic session into a commodified exchange where fees and libidinal economy followed the same recalcitrant structures he identified in sexuality. Yet this very entanglement may constitute a subversive torsion: by making money speak as sexuality does, and by exposing how the poor capitalize their symptoms, Freud's work also reveals capitalism's psychic limits rather than merely confirming them.",
+  "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "aligned",
+    "alignedFraction": 0.8,
+    "ruleTerms": [
+      "freud",
+      "clinical",
+      "practice",
+      "operated",
+      "through",
+      "capitalist",
+      "logics",
+      "transforming",
+      "analytic",
+      "session",
+      "commodified",
+      "exchange",
+      "where",
+      "fees",
+      "libidinal",
+      "economy",
+      "followed",
+      "same",
+      "recalcitrant",
+      "structures",
+      "identified",
+      "sexuality",
+      "very",
+      "entanglement",
+      "constitute",
+      "subversive",
+      "torsion",
+      "making",
+      "money",
+      "speak",
+      "does",
+      "exposing",
+      "poor",
+      "capitalize",
+      "symptoms",
+      "work",
+      "reveals",
+      "capitalism",
+      "psychic",
+      "limits",
+      "rather",
+      "merely",
+      "confirming",
+      "them"
+    ]
+  },
+  "source": {
+    "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
+    "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
+    "readerModels": {
+      "reader-a": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "reader-b": "openai/gpt-oss-120b:free"
+    }
+  },
+  "notes": {
+    "nonLlmSummaries": [],
+    "nonLlmReason": "These records' LLM summary fell back to a truncated abstract stub. They are off-topic to origin and both readers independently judged them 'insufficient', so a real summary changes no lean and no signal. Kept as LABELLED non-summaries (summaryMethod: 'truncated-stub'), never as a fabricated summary.",
+    "oneReaderClaims": 0
+  },
+  "claims": [
+    {
+      "id": "10.1590/0103-6564e230163",
+      "text": "A economia libidinal da governança algorítmica",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0103-6564e230163",
+          "locator": "https://doi.org/10.1590/0103-6564e230163",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study investigates how algorithmic governance harnesses users' desire and fantasy through psychoanalytic concepts, mapping specific platform behaviors to partial drives. It suggests that these libidinal mechanisms enable platforms to shape and sustain user engagement. The analysis is theoretical, based on literature review rather than empirical data.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Julio Cesar Lemes de Castro"
+          ],
+          "venue": "Psicologia USP",
+          "structured": {
+            "centralClaim": "The paper argues that algorithmic platform governance operates through a libidinal economy that psychically mobilizes users by linking platform mechanisms to Freudian and Lacanian concepts such as object a, desire, fantasy, pulsion, and jouissance.",
+            "citedEvidence": "It draws on psychoanalytic formulations of Freud and Lacan, associating platform features with partial drives—oral, anal, scopophilic, and invocative—corresponding to expression, accumulation, visibility, and normativity.",
+            "originStance": "none",
+            "summaryText": "The study investigates how algorithmic governance harnesses users' desire and fantasy through psychoanalytic concepts, mapping specific platform behaviors to partial drives. It suggests that these libidinal mechanisms enable platforms to shape and sustain user engagement. The analysis is theoretical, based on literature review rather than empirical data."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1080/03056247908703398",
+      "text": "Capitalist organization of production through non‐capitalist relations: women's role in a pilot resettlement in Upper Volta",
+      "provenance": [
+        {
+          "sourceId": "10.1080/03056247908703398",
+          "locator": "https://doi.org/10.1080/03056247908703398",
+          "date": "1979",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study examines a resettlement pilot in Upper Volta and shows that its profitability relies on a specific family arrangement, which places extra responsibilities on women. It highlights the women's dissatisfaction with missing basic amenities and their willingness to abandon the scheme. The analysis frames the project as a capitalist venture rather than a purely social or humanitarian initiative.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Anna Conti"
+          ],
+          "venue": "Review of African Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that pilot resettlement schemes in Upper Volta function as capitalist enterprises that depend on a nuclear family structure, imposing disproportionate burdens on women due to inadequate facilities.",
+            "citedEvidence": "It cites women's resistance to leaving, the lack of essential facilities such as markets, land, wells, and grain mills, and references The Economist (April 1979) describing 'invisible women'.",
+            "originStance": "none",
+            "summaryText": "The study examines a resettlement pilot in Upper Volta and shows that its profitability relies on a specific family arrangement, which places extra responsibilities on women. It highlights the women's dissatisfaction with missing basic amenities and their willingness to abandon the scheme. The analysis frames the project as a capitalist venture rather than a purely social or humanitarian initiative."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1080/03056247808703370",
+      "text": "The incorporation of Northern Nigeria into the world capitalist economy",
+      "provenance": [
+        {
+          "sourceId": "10.1080/03056247808703370",
+          "locator": "https://doi.org/10.1080/03056247808703370",
+          "date": "1978",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study reinterprets the historical integration of Northern Nigeria into global capitalism, emphasizing the role of a merchant class that failed to spark independent capitalist growth. It frames colonial rule as a pivotal shift toward peripheral capitalism, where surplus was transformed into marketable goods for value extraction. This analysis challenges earlier narratives that celebrate African entrepreneurship in the region.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Bob Shenton",
+            "Bill Freund"
+          ],
+          "venue": "Review of African Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that Northern Nigeria's incorporation into the world capitalist economy was driven by a merchant bourgeoisie that could not initiate autonomous capitalist development, with colonialism marking a transition to peripheral capitalism.",
+            "citedEvidence": "It cites the social relations of production and the extraction of surplus from producers in nineteenth‑century Hausaland and colonial Northern Nigeria, describing how surplus was converted into cash and commodities for surplus value extraction.",
+            "originStance": "none",
+            "summaryText": "The study reinterprets the historical integration of Northern Nigeria into global capitalism, emphasizing the role of a merchant class that failed to spark independent capitalist growth. It frames colonial rule as a pivotal shift toward peripheral capitalism, where surplus was transformed into marketable goods for value extraction. This analysis challenges earlier narratives that celebrate African entrepreneurship in the region."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.10.2.0171",
+      "text": "“Creating Wealth” through Debt: The West's Finance-Capitalist Road",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.10.2.0171",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.10.2.0171",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The author contends that China’s policy challenge is to curb housing price inflation by collecting the rental value of land for the state, thereby reducing debt accumulation. They criticize Western business schools for promoting financial engineering that exacerbates debt burdens, and they propose a low‑cost, efficient economy that taxes economic rents to avoid a neo‑rentier disease.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Michael Hudson"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "To prevent a debt‑driven “neo‑rentier disease” and lower housing costs, China should tax rising land values and other economic rents rather than letting them accrue to banks or private owners.",
+            "citedEvidence": "The paper invokes Marx’s analysis in Capital Volumes II and III, which show that debt grows exponentially and burdens the economy with carrying charges, and it argues that taxing land‑price increases can capture rental value for the government instead of channeling it to mortgage interest.",
+            "originStance": "none",
+            "summaryText": "The author contends that China’s policy challenge is to curb housing price inflation by collecting the rental value of land for the state, thereby reducing debt accumulation. They criticize Western business schools for promoting financial engineering that exacerbates debt burdens, and they propose a low‑cost, efficient economy that taxes economic rents to avoid a neo‑rentier disease."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1332/giej7083",
+      "text": "The centrality of disablement subjectivation to the reproduction of capitalist social relations: considerations for Critical and Global Political Economy",
+      "provenance": [
+        {
+          "sourceId": "10.1332/giej7083",
+          "locator": "https://doi.org/10.1332/giej7083",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article proposes a framework for integrating disability politics into Global Political Economy by treating diverse impaired identities as a shared subject of disablement. It critiques existing identity models and suggests this relational concept can strengthen anti‑capitalist activism. The discussion focuses on theoretical composition rather than on the origins of SARS‑CoV‑2.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ioana Cerasella Chis"
+          ],
+          "venue": "Global Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that disability constitutes a common socio‑political condition under capitalism, using the concept of 'subjects of disablement' to unify various impaired groups.",
+            "citedEvidence": "It draws on the social model of disability, Moran's cultural‑materialist approach to identity, and Autonomist Marxism's class composition thesis to frame this analysis.",
+            "originStance": "none",
+            "summaryText": "The article proposes a framework for integrating disability politics into Global Political Economy by treating diverse impaired identities as a shared subject of disablement. It critiques existing identity models and suggests this relational concept can strengthen anti‑capitalist activism. The discussion focuses on theoretical composition rather than on the origins of SARS‑CoV‑2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1080/03056248208703487",
+      "text": "Whose state? State and capitalist development in Nigeria",
+      "provenance": [
+        {
+          "sourceId": "10.1080/03056248208703487",
+          "locator": "https://doi.org/10.1080/03056248208703487",
+          "date": "1982",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper argues that the Nigerian state is best understood as a mechanism that facilitates capital accumulation rather than as a simple instrument of foreign domination or a vehicle for a domestic bourgeoisie. It critiques both neo‑colonial and nationalist explanations of underdevelopment, insisting that a deeper analysis of class struggle is needed to understand the state's role. The discussion focuses on the state's economic function, not on the origins of SARS‑CoV‑2.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Björn Beckman"
+          ],
+          "venue": "Review of African Political Economy",
+          "structured": {
+            "centralClaim": "The Nigerian state functions primarily as an instrument for promoting accumulation for capital in general, and simplistic explanations that attribute underdevelopment solely to foreign neo‑colonial capital or to a national bourgeoisie using state power are only partial truths.",
+            "citedEvidence": "The author applies concepts from their earlier contributions (Nos.19 and 22) to analyze the Nigerian state, rejecting both the view that underdevelopment stems from international capital via a neo‑colonial state and the view that a national bourgeoisie can use state power against imperialism to foster development, and instead emphasizes the role of class struggle in shaping the state's character.",
+            "originStance": "none",
+            "summaryText": "The paper argues that the Nigerian state is best understood as a mechanism that facilitates capital accumulation rather than as a simple instrument of foreign domination or a vehicle for a domestic bourgeoisie. It critiques both neo‑colonial and nationalist explanations of underdevelopment, insisting that a deeper analysis of class struggle is needed to understand the state's role. The discussion focuses on the state's economic function, not on the origins of SARS‑CoV‑2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571983-2005",
+      "text": "A crise da economia capitalista",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571983-2005",
+          "locator": "https://doi.org/10.1590/0101-31571983-2005",
+          "date": "1983",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article analyzes how post‑war market integration has led to a globally interconnected yet institutionally weak economic order, highlighting asymmetries, openness, and Japan’s role as sources of tension. It contends that the weakening of nation‑state coordination cannot be replaced by transnational corporations, leaving the system in disarray.",
+          "summaryMethod": "llm",
+          "authors": [
+            "CELSO FURTADO"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that the post‑World War II rapid integration of national markets has produced a complex but institutionally fragmented global economic system whose asymmetries and excessive openness generate current tensions, and that the weakening of the nation‑state as a coordinator cannot be remedied by transnational corporations.",
+            "citedEvidence": "It cites the asymmetric nature of market integration, the excessive openness of many national economies, the behavior of the Japanese economy, and the decline of the state‑nation’s coordinating role as key drivers of the observed economic cacophony, and notes the lack of evidence that transnational firms can create the needed institutional framework.",
+            "originStance": "none",
+            "summaryText": "The article analyzes how post‑war market integration has led to a globally interconnected yet institutionally weak economic order, highlighting asymmetries, openness, and Japan’s role as sources of tension. It contends that the weakening of nation‑state coordination cannot be replaced by transnational corporations, leaving the system in disarray."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1080/03056248008703440",
+      "text": "Imperialism and capitalist transformation: critique of a Kenyan debate",
+      "provenance": [
+        {
+          "sourceId": "10.1080/03056248008703440",
+          "locator": "https://doi.org/10.1080/03056248008703440",
+          "date": "1980",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "Beckman critiques the way the Kenyan dependency debate has been framed, pointing out that both opposing sides miss the mark: critics wrongly focus on the state as a tool of factional interests, and defenders fail to embed their analysis in the dynamics of capital accumulation, imperialism, and class formation. He contends that only by examining the issue through the lens of capital accumulation can the state's connection to underlying class forces be clarified.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Björn Beckman"
+          ],
+          "venue": "Review of African Political Economy",
+          "structured": {
+            "centralClaim": "Beckman argues that both critics and defenders of dependency theory misframe the Kenyan debate, and only by analyzing it through the general requirements of capital accumulation can the state's relation to underlying class forces be properly understood.",
+            "citedEvidence": "He notes that critics fail to transcend the problematic identification of contradictions and overemphasize the state as a factional instrument, while defenders cannot situate their analysis within the logic of capital accumulation, imperialism, and class formation, and thus only a capital‑accumulation framework adequately explains the state‑class relation.",
+            "originStance": "none",
+            "summaryText": "Beckman critiques the way the Kenyan dependency debate has been framed, pointing out that both opposing sides miss the mark: critics wrongly focus on the state as a tool of factional interests, and defenders fail to embed their analysis in the dynamics of capital accumulation, imperialism, and class formation. He contends that only by examining the issue through the lens of capital accumulation can the state's connection to underlying class forces be clarified."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1080/03056248308703549",
+      "text": "Capitalist development and women's work: a Nigerian case study",
+      "provenance": [
+        {
+          "sourceId": "10.1080/03056248308703549",
+          "locator": "https://doi.org/10.1080/03056248308703549",
+          "date": "1983",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper argues that women's wage jobs in Nigeria perpetuate gender hierarchies rather than empower them. It shows that historical, cultural, and industrial contexts shape women's integration into the labor market, producing patterns distinct from those observed in Asian and Latin American factories. The analysis highlights the complex interplay of cultural attitudes and economic conditions in sustaining women's subordinate position.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Carolyne Dennis"
+          ],
+          "venue": "Review of African Political Economy",
+          "structured": {
+            "centralClaim": "Wage employment for women in Nigeria does not liberate them but instead reproduces and reinforces gender subordination.",
+            "citedEvidence": "The study of women workers in a Nigerian textile factory provides evidence that such jobs reproduce gender subordination.",
+            "originStance": "none",
+            "summaryText": "The paper argues that women's wage jobs in Nigeria perpetuate gender hierarchies rather than empower them. It shows that historical, cultural, and industrial contexts shape women's integration into the labor market, producing patterns distinct from those observed in Asian and Latin American factories. The analysis highlights the complex interplay of cultural attitudes and economic conditions in sustaining women's subordinate position."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.10.2.0191",
+      "text": "Towards a Theoretical Framework for Understanding Capitalist Violence against Child Labor",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.10.2.0191",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.10.2.0191",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The authors develop a theory linking capitalist accumulation to the coercive conditions faced by child laborers, arguing that the market's logic interacts with children's vulnerable status to create violence. They stress that empirical research is needed to test this framework. The work aims to fill a gap in scholarship that has largely focused on the economic dimensions of child labor rather than its violent extra-economic effects.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Raju Das",
+            "Ashley Chen"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "Capitalist structures generate a pool of child workers who lack the freedom to enter or exit labor contracts, producing violence against children as laborers.",
+            "citedEvidence": "The paper points out that 150–200 million children work worldwide and that violence against child workers is understudied, highlighting the need for a theoretical framework to address this neglected aspect.",
+            "originStance": "none",
+            "summaryText": "The authors develop a theory linking capitalist accumulation to the coercive conditions faced by child laborers, arguing that the market's logic interacts with children's vulnerable status to create violence. They stress that empirical research is needed to test this framework. The work aims to fill a gap in scholarship that has largely focused on the economic dimensions of child labor rather than its violent extra-economic effects."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.6.4.0498",
+      "text": "Geopolitical Economy and Competing Capitalist Blocs in the EU Post-Crisis Financial Regulation: Two Cases from the Reform of the Banking Sector",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.6.4.0498",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.6.4.0498",
+          "date": "2015",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The author applies a geopolitical‑economic framework to evaluate how competing bloc perspectives explain the EU's inadequate regulatory reaction to the 2007/08 financial crisis, focusing on banking sector reforms. The analysis draws on Desai's theory and recent Neo‑Gramscian literature to highlight the relevance of bloc competition in regulatory outcomes.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Giuseppe Montalbano"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that the concept of competing geopolitical blocs, as developed by Desai, is useful for analyzing the shortcomings of the EU's post‑crisis banking regulatory response.",
+            "citedEvidence": "It tests this approach by examining two pieces of legislation: the implementation of Basel III capital requirements and the ongoing structural reform of banks within the EU.",
+            "originStance": "none",
+            "summaryText": "The author applies a geopolitical‑economic framework to evaluate how competing bloc perspectives explain the EU's inadequate regulatory reaction to the 2007/08 financial crisis, focusing on banking sector reforms. The analysis draws on Desai's theory and recent Neo‑Gramscian literature to highlight the relevance of bloc competition in regulatory outcomes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/1809-43412023v20d911",
+      "text": "Repair cafés in the Netherlands: Capitalist abstinence as a challenge to a linear capitalist economy",
+      "provenance": [
+        {
+          "sourceId": "10.1590/1809-43412023v20d911",
+          "locator": "https://doi.org/10.1590/1809-43412023v20d911",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper examines how repair cafés function as grassroots initiatives that oppose linear consumption patterns and promote circularity. It argues that these cafés, through volunteer repair and anti‑payment practices, question the underlying logic of capitalist production. However, the study emphasizes their limited economic impact while highlighting their role in fostering sustainable lifestyles.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Freek Colombijn",
+            "Precious Egboko"
+          ],
+          "venue": "Vibrant: Virtual Brazilian Anthropology",
+          "structured": {
+            "centralClaim": "Repair cafés in the Netherlands challenge the linear capitalist economy by extending product lifespans, rejecting payment, and criticizing producers' design that hinders repair.",
+            "citedEvidence": "The abstract notes that repair cafés motivate sustainable behavior, extend object lifecycles, refuse payment, and critique producers who frustrate repair through impractical design, thereby contesting the capitalist mode of production.",
+            "originStance": "none",
+            "summaryText": "The paper examines how repair cafés function as grassroots initiatives that oppose linear consumption patterns and promote circularity. It argues that these cafés, through volunteer repair and anti‑payment practices, question the underlying logic of capitalist production. However, the study emphasizes their limited economic impact while highlighting their role in fostering sustainable lifestyles."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.9.2.0164",
+      "text": "The Revolution of Capitalist Relations Induced by the Technological Revolution of Electronics",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.9.2.0164",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.9.2.0164",
+          "date": "2018",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The author contends that advances in electronics constitute a labor‑replacing technological revolution that undermines capitalism and paves the way toward socialism, framing contemporary imperialism, globalization, and financialization as characteristics of this new stage. Activists are urged to engage with this transformation.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Bruce E. Parry"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that capitalism is undergoing a dialectical transition to socialism driven by the technological revolution of electronics, which destabilizes capitalism and creates a period of social revolution.",
+            "citedEvidence": "It cites the scientific and technical revolution, describes electronics as a labor‑replacing technology, and identifies imperialism, globalization, and financialization as features of the current period.",
+            "originStance": "none",
+            "summaryText": "The author contends that advances in electronics constitute a labor‑replacing technological revolution that undermines capitalism and paves the way toward socialism, framing contemporary imperialism, globalization, and financialization as characteristics of this new stage. Activists are urged to engage with this transformation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.9.2.0211",
+      "text": "Capitalist Development and Agrarian Change on the Latin American Periphery",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.9.2.0211",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.9.2.0211",
+          "date": "2018",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article argues that under neoliberal capitalism, control over patents and intellectual property functions as a tool of imperialist domination, influencing how agriculture is organized and contested in Latin America. It links this shift to broader changes in extractive capitalism and geoeconomic strategies across the region.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Raúl Delgado Wise",
+            "Henry Veltmeyer"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "Intellectual property and patent ownership have become central elements of imperialist domination within neoliberal capitalism, reshaping agricultural development and geoeconomic dynamics in Latin America.",
+            "citedEvidence": "The paper describes a new phase of productive forces where patents are a key component of the imperialist system and discusses the evolving extractive capitalism geoeconomics in Latin America.",
+            "originStance": "none",
+            "summaryText": "The article argues that under neoliberal capitalism, control over patents and intellectual property functions as a tool of imperialist domination, influencing how agriculture is organized and contested in Latin America. It links this shift to broader changes in extractive capitalism and geoeconomic strategies across the region."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/workorgalaboglob.1.2.0015",
+      "text": "Capitalist flattening or flattening capitalism? class forces and political choices in the global knowledge economy",
+      "provenance": [
+        {
+          "sourceId": "10.13169/workorgalaboglob.1.2.0015",
+          "locator": "https://doi.org/10.13169/workorgalaboglob.1.2.0015",
+          "date": "2007",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper argues that the drivers of the global knowledge economy remain rooted in capitalist dynamics, and that existing class structures are being contested worldwide. It calls for the Left to build movements that can supplant capitalist logic with a progressive, socialist alternative.",
+          "summaryMethod": "llm",
+          "authors": [
+            "David Coates"
+          ],
+          "venue": "Work Organisation, Labour and Globalisation",
+          "structured": {
+            "centralClaim": "Capitalist logics continue to shape the global knowledge economy, and class forces determine its development, requiring the Left to replace that logic with a progressive socialist one.",
+            "citedEvidence": "The abstract points to the standardisation of industrial conditions and thickening trade flows as contexts in which longstanding class compacts in core capitalist societies are being challenged.",
+            "originStance": "none",
+            "summaryText": "The paper argues that the drivers of the global knowledge economy remain rooted in capitalist dynamics, and that existing class structures are being contested worldwide. It calls for the Left to build movements that can supplant capitalist logic with a progressive, socialist alternative."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.7.3.0350",
+      "text": "Transformations in Argentina's Capitalist Development since the Neoliberal Age: Limits and Possibilities of a Peripheral Development Strategy",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.7.3.0350",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.7.3.0350",
+          "date": "2016",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study examines how Argentina's economy shifted under different state interventions, linking class formation and political conflict to broader global capitalist trends. It evaluates the strengths and constraints of this peripheral development strategy, suggesting it offers a distinct but contested pathway for capitalist reproduction in the country.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Mariano Féliz"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that Argentina's capitalist development has transformed from a neoliberal mode (1975–2001) to a neodevelopmentalist mode (2002–2015), creating a new peripheral participation pattern that both reproduces historical uneven development and raises limits to sustainable capitalist reproduction.",
+            "citedEvidence": "It points to the transition between the neoliberal era (1975–2001) and the neodevelopmentalist period (2002–2015) as the empirical basis for this transformation.",
+            "originStance": "none",
+            "summaryText": "The study examines how Argentina's economy shifted under different state interventions, linking class formation and political conflict to broader global capitalist trends. It evaluates the strengths and constraints of this peripheral development strategy, suggesting it offers a distinct but contested pathway for capitalist reproduction in the country."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.4.3.0357",
+      "text": "Towards a New Distributive Principle of Wealth Beyond the Capitalist Market, the State and Labor",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.4.3.0357",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.4.3.0357",
+          "date": "2013",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper argues that existing economic theories fail to address widespread poverty because they rely on a distribution principle tied to work, which is invalidated by technological progress. It calls for a novel wealth‑distribution framework that goes beyond market mechanisms, state intervention, and labor relations to achieve a poverty‑free global economy.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Luis J. Alvarez Lozano"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "A new distributive principle of wealth that transcends the capitalist market, the state, and labor is required to eliminate global poverty and unemployment.",
+            "citedEvidence": "The abstract cites high unemployment and declining working‑class incomes affecting billions, leading to pauperization, and notes that technological development undermines the principle 'to each according to his work'.",
+            "originStance": "none",
+            "summaryText": "The paper argues that existing economic theories fail to address widespread poverty because they rely on a distribution principle tied to work, which is invalidated by technological progress. It calls for a novel wealth‑distribution framework that goes beyond market mechanisms, state intervention, and labor relations to achieve a poverty‑free global economy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/1415-4714.e230747",
+      "text": "O projeto negativo da ciência natural de Freud: descentramento em psicanálise entre consciência epistemológica e ontologia inconsciente",
+      "provenance": [
+        {
+          "sourceId": "10.1590/1415-4714.e230747",
+          "locator": "https://doi.org/10.1590/1415-4714.e230747",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article reviews the epistemological and ontological implications of Freud's psychoanalytic unconscious, claiming it makes scientific knowledge of subjectivity fundamentally incomplete and decentralized. It further links this perspective to contemporary theories of nature, describing both as possessing an autotransformative negativity arising from decentralization. The work positions this shift as a move from methodological to ontological negativity.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Eduardo Zaidhaft",
+            "Monah Winograd"
+          ],
+          "venue": "Revista Latinoamericana de Psicopatologia Fundamental",
+          "structured": {
+            "centralClaim": "The paper argues that Freud's hypothesis of the unconscious renders scientific knowledge of subjectivity inherently lacunar and decentralized, shifting from methodological/epistemological negativity to ontological negativity and linking this to contemporary theories of nature as autotransformative.",
+            "citedEvidence": "It cites Freud's concept of the unconscious and the resulting gaps and decentralization in scientific understanding of subjectivity, and connects these ideas to modern theories of nature that share this self‑transforming negativity.",
+            "originStance": "none",
+            "summaryText": "The article reviews the epistemological and ontological implications of Freud's psychoanalytic unconscious, claiming it makes scientific knowledge of subjectivity fundamentally incomplete and decentralized. It further links this perspective to contemporary theories of nature, describing both as possessing an autotransformative negativity arising from decentralization. The work positions this shift as a move from methodological to ontological negativity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1111/sjpe.12339",
+      "text": "Aristotle vs. Plato: The classical origins of capitalist &amp; socialist political economies*",
+      "provenance": [
+        {
+          "sourceId": "10.1111/sjpe.12339",
+          "locator": "https://doi.org/10.1111/sjpe.12339",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The author uses Plato's and Aristotle's visions of justice and class structure to illustrate how different economic arrangements could give rise to capitalist and socialist systems. By comparing their class hierarchies and governance mechanisms, the paper suggests these ancient models provide a framework for understanding modern political economies.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Theocharis Grigoriadis"
+          ],
+          "venue": "Scottish Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that the equilibrium solutions of Plato's and Aristotle's economic models offer analytical insight into the origins of capitalist and socialist political economies.",
+            "citedEvidence": "It contrasts the three‑class societies described in Plato's Republic (guardians, auxiliaries, producers) with Aristotle's Politics (rich, middle, poor), showing how each system's structure influences ruling coalitions and efficiency, and notes that the Aristotelian middle class is better off, supporting the claim of distinct economic origins.",
+            "originStance": "none",
+            "summaryText": "The author uses Plato's and Aristotle's visions of justice and class structure to illustrate how different economic arrangements could give rise to capitalist and socialist systems. By comparing their class hierarchies and governance mechanisms, the paper suggests these ancient models provide a framework for understanding modern political economies."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571992-0570",
+      "text": "Comercialização agrícola e desenvolvimento capitalista no Brasil",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571992-0570",
+          "locator": "https://doi.org/10.1590/0101-31571992-0570",
+          "date": "1992",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article proposes an alternative interpretation of Brazil's agricultural commercialization within its capitalist development, emphasizing the role of capital circulation and concentration. It contends that this process subordinates circulation activities and elevates the financial value of different capital types involved in production and distribution. The analysis contrasts this view with the functionalist approach of neoclassical economics.",
+          "summaryMethod": "llm",
+          "authors": [
+            "RENATO SÉRGIO MALUF"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "Agricultural commercialization in Brazil is best understood as a capital‑circulation activity whose form and effects are shaped by the country's capitalist development and the concentration of capital, rather than as a neutral functional process.",
+            "citedEvidence": "The author argues that the form of agricultural circulation depends on the social organization of production and the development of capital concentration, which are driven by Brazil's economic modernization, and concludes that circulation activities become increasingly subordinated while various forms of capital—cooperatives, commercial, agroindustrial, and entrepreneurial—gain financial value.",
+            "originStance": "none",
+            "summaryText": "The article proposes an alternative interpretation of Brazil's agricultural commercialization within its capitalist development, emphasizing the role of capital circulation and concentration. It contends that this process subordinates circulation activities and elevates the financial value of different capital types involved in production and distribution. The analysis contrasts this view with the functionalist approach of neoclassical economics."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1002/aps.70050",
+      "text": "From the Unconscious to the Algorithm: Platform Mediation, Psychic Economy, and Psychoanalytic Practice",
+      "provenance": [
+        {
+          "sourceId": "10.1002/aps.70050",
+          "locator": "https://doi.org/10.1002/aps.70050",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The article argues that platform algorithms are not autonomous causes of new psychic structures but rather amplify existing psycho‑drives, functioning as an 'algorithmic Other' that influences desire. It situates this analysis within a Freudian‑Lacanian framework, examining how curation, ranking, personalization, and engagement metrics affect subjectivity.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Mariana Salles Kehl",
+            "Heloisa Caldas"
+          ],
+          "venue": "International Journal of Applied Psychoanalytic Studies",
+          "structured": {
+            "centralClaim": "Platform algorithms act as socio‑technical operators that reorganize, accelerate, and intensify pre‑existing drive circuits, occupying a fantasmatic 'algorithmic Other' that reshapes desire and subjectivity.",
+            "citedEvidence": "The paper references algorithmic systems of curation, ranking, personalization, and engagement metrics that structure visibility across social media, dating apps, streaming services, and search environments.",
+            "originStance": "none",
+            "summaryText": "The article argues that platform algorithms are not autonomous causes of new psychic structures but rather amplify existing psycho‑drives, functioning as an 'algorithmic Other' that influences desire. It situates this analysis within a Freudian‑Lacanian framework, examining how curation, ranking, personalization, and engagement metrics affect subjectivity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571984-3063",
+      "text": "Marx e os fundamentos da dinâmica econômica capitalista",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571984-3063",
+          "locator": "https://doi.org/10.1590/0101-31571984-3063",
+          "date": "1984",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article maps Marx's concepts of competition and the law of motion onto the foundations of capitalist dynamics, arguing that existing notions of competition are too general to form a concrete dynamic theory. It highlights the need to incorporate the plurality of capitals to achieve more specific economic determinations.",
+          "summaryMethod": "llm",
+          "authors": [
+            "MÁRIO LUIZ POSSAS"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "Marx's laws of motion are effective at the level of capital generally, but a full theory of capitalist dynamics must account for competition and the plurality of capitals to yield concrete determinations.",
+            "citedEvidence": "The paper cites four notions of competition in Capital, emphasizing the law of motion whereby capital seeks excess profit through new production methods and products, leading to relative surplus value, and argues that these general competitive characteristics are insufficient for a dynamic theory.",
+            "originStance": "none",
+            "summaryText": "The article maps Marx's concepts of competition and the law of motion onto the foundations of capitalist dynamics, arguing that existing notions of competition are too general to form a concrete dynamic theory. It highlights the need to incorporate the plurality of capitals to achieve more specific economic determinations."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571982-1005",
+      "text": "As classes capitalistas nas sociedades contemporâneas (notas preliminares)",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571982-1005",
+          "locator": "https://doi.org/10.1590/0101-31571982-1005",
+          "date": "1982",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article investigates how the rise of service industries influences class dynamics in modern capitalist societies, focusing on employment trends in the United States and Latin America. It also evaluates the relevance of the Law of Value amid these economic changes. The study offers preliminary insights rather than a definitive theory.",
+          "summaryMethod": "llm",
+          "authors": [
+            "F. H. CARDOSO"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that the expansion of the service sector shapes class formation in contemporary societies, using employment patterns in the United States and Latin America as a case study and examining the continued validity of the Law of Value.",
+            "citedEvidence": "It draws on detailed analysis of service‑sector growth and its employment effects in the US and Latin America, and discusses how this challenges or supports the applicability of the Law of Value in modern societies.",
+            "originStance": "none",
+            "summaryText": "The article investigates how the rise of service industries influences class dynamics in modern capitalist societies, focusing on employment trends in the United States and Latin America. It also evaluates the relevance of the Law of Value amid these economic changes. The study offers preliminary insights rather than a definitive theory."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.13169/worlrevipoliecon.10.4.0449",
+      "text": "Present and Future in the Mirror of the Past: Capitalist Dynamics, Digital Technology and Industry in the Fifth Kondratiev",
+      "provenance": [
+        {
+          "sourceId": "10.13169/worlrevipoliecon.10.4.0449",
+          "locator": "https://doi.org/10.13169/worlrevipoliecon.10.4.0449",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper argues that global capitalism entered a prolonged downturn after 2008 because the preceding Kondratiev wave was weakened by institutional flaws and uneven digital adoption, which caused capital excess and a lingering recession. It contends that further digitization, especially artificial intelligence, is essential for any recovery and will profoundly affect social relations.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Miguel Ángel Rivera Ríos",
+            "José Benjamín Lujano López",
+            "Josué García Veiga"
+          ],
+          "venue": "World Review of Political Economy",
+          "structured": {
+            "centralClaim": "The Fifth Kondratiev upswing was inherently unstable due to institutional weaknesses, leading to excess capital, a financial crisis, and a prolonged recession, with recovery contingent on deeper digitization via AI.",
+            "citedEvidence": "The authors cite the 2008 financial crisis, the uneven spread of digital technology even in the US, limited productivity gains, and the accumulation of excess capital after 2000 as evidence of the upswing's instability.",
+            "originStance": "none",
+            "summaryText": "The paper argues that global capitalism entered a prolonged downturn after 2008 because the preceding Kondratiev wave was weakened by institutional flaws and uneven digital adoption, which caused capital excess and a lingering recession. It contends that further digitization, especially artificial intelligence, is essential for any recovery and will profoundly affect social relations."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31572020-3092",
+      "text": "Coalitions for development: a new-developmentalist interpretation for the abandonment of industrial capitalist from PT political coalition",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31572020-3092",
+          "locator": "https://doi.org/10.1590/0101-31572020-3092",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study links the dissolution of the PT coalition to the economic infeasibility of sustaining industrial capitalism under the observed profit‑rate constraints and development‑stagnation dynamics. By integrating a developmental‑state framework with class‑interest analysis, it offers a novel explanation for why industrial capitalists withdrew from the dominant coalition. The paper supports this with theoretical discussion and empirical observations of policy outcomes.",
+          "summaryMethod": "llm",
+          "authors": [
+            "TIAGO COUTO PORTO"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that the PT political coalition's abandonment of industrial capitalists is driven by an unsatisfactory profit rate and a development‑stagnation dichotomy, framed within a new‑developmentalist interpretation of the coalition's class alliances.",
+            "citedEvidence": "It invokes the new‑developmentalist claim of an inadequate profit rate and draws on Furtado’s development‑stagnation dichotomy, supporting the argument with empirical evidence of macroeconomic, industrial and social policies linked to class interests.",
+            "originStance": "none",
+            "summaryText": "The study links the dissolution of the PT coalition to the economic infeasibility of sustaining industrial capitalism under the observed profit‑rate constraints and development‑stagnation dynamics. By integrating a developmental‑state framework with class‑interest analysis, it offers a novel explanation for why industrial capitalists withdrew from the dominant coalition. The paper supports this with theoretical discussion and empirical observations of policy outcomes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1080/03056244.2012.761963",
+      "text": "God and Caesar in the Democratic Republic of Congo: negotiating church–state relations through the management of school fees in Kinshasa's Catholic schools",
+      "provenance": [
+        {
+          "sourceId": "10.1080/03056244.2012.761963",
+          "locator": "https://doi.org/10.1080/03056244.2012.761963",
+          "date": "2013",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper contends that governance in the DRC is characterized by informal, roundabout negotiations rather than explicit state policies, with the church playing a pivotal role in service delivery. It analyzes a specific church‑led attempt to change school‑fee structures in Kinshasa, showing how local dynamics determine outcomes. This case reveals the broader implications for state‑church relations and policy formation in African service sectors.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Kristof Titeca",
+            "Tom De Herdt",
+            "Inge Wagemakers"
+          ],
+          "venue": "Review of African Political Economy",
+          "structured": {
+            "centralClaim": "State reconstruction and service delivery in the DRC involve negotiated power relations between state and non‑state actors, especially the Catholic Church, shaping policies such as school‑fee management.",
+            "citedEvidence": "The article discusses a failed Catholic Church effort to reform school fees in Kinshasa, using this case to illustrate the political capabilities of the involved actors and the local‑level governance that shapes such arrangements.",
+            "originStance": "none",
+            "summaryText": "The paper contends that governance in the DRC is characterized by informal, roundabout negotiations rather than explicit state policies, with the church playing a pivotal role in service delivery. It analyzes a specific church‑led attempt to change school‑fee structures in Kinshasa, showing how local dynamics determine outcomes. This case reveals the broader implications for state‑church relations and policy formation in African service sectors."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571983-3017",
+      "text": "Instabilidade capitalista e demanda efetiva (a razão de Kalecki)",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571983-3017",
+          "locator": "https://doi.org/10.1590/0101-31571983-3017",
+          "date": "1983",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The article examines Kalecki’s contribution to effective‑demand theory and its implications for understanding capitalist instability. It emphasizes the need to reinterpret economic time and to integrate the effective‑demand principle into a broader theory of instability. By doing so, it aims to clarify the complex interplay between cycles, trends, and fluctuations in capitalism.",
+          "summaryMethod": "llm",
+          "authors": [
+            "JOSÉ CARLOS DE SOUZA BRAGA"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "Kalecki argued that effective demand determines economic cycles but its limits expose a deeper antinomy of capitalism's tendency, requiring a reformulation of economic time and a re‑evaluation of the effective‑demand principle within a theory of instability.",
+            "citedEvidence": "The paper notes that Kalecki identified simultaneous determination of cycles and trends, highlighted the antinomia of tendency in capitalism, and called for a critique of economic temporality and a re‑assessment of the effective‑demand principle in relation to capital and capitalist calculation.",
+            "originStance": "none",
+            "summaryText": "The article examines Kalecki’s contribution to effective‑demand theory and its implications for understanding capitalist instability. It emphasizes the need to reinterpret economic time and to integrate the effective‑demand principle into a broader theory of instability. By doing so, it aims to clarify the complex interplay between cycles, trends, and fluctuations in capitalism."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571981-3017",
+      "text": "Espaços e limites da empresa capitalista na agricultura",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571981-3017",
+          "locator": "https://doi.org/10.1590/0101-31571981-3017",
+          "date": "1981",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper examines how capitalist structures shape agricultural production, using comparative insights from developed economies and Brazil to outline development trends. It emphasizes the role of sustainability concerns and policy frameworks in shaping these trends. The analysis is focused on economic theory rather than on the origins of SARS‑CoV‑2.",
+          "summaryMethod": "llm",
+          "authors": [
+            "ANTONIO CARLOS KFOURI AIDAR",
+            "ROBERTO MARIO PEROSA JUNIOR"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The study seeks to improve understanding of the U.S. agricultural sector by establishing theories on the development trends of agricultural production within a capitalist economy, based on sustainability discussions in developed economies and Brazil.",
+            "citedEvidence": "It draws on debates about the sustainability of capitalist enterprises in agriculture and on governmental policies observed in developed countries and Brazil.",
+            "originStance": "none",
+            "summaryText": "The paper examines how capitalist structures shape agricultural production, using comparative insights from developed economies and Brazil to outline development trends. It emphasizes the role of sustainability concerns and policy frameworks in shaping these trends. The analysis is focused on economic theory rather than on the origins of SARS‑CoV‑2."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1590/0101-31571983-4057",
+      "text": "As finanças internacionais e o Estado nos países capitalistas avançados e nos menos desenvolvidos",
+      "provenance": [
+        {
+          "sourceId": "10.1590/0101-31571983-4057",
+          "locator": "https://doi.org/10.1590/0101-31571983-4057",
+          "date": "1983",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The author examines how recent global financial expansions are not independent of state intervention, highlighting the United States' pivotal role. They also contend that foreign debt has empowered national governments and their allied elites, challenging narratives of either full development or total loss of sovereignty.",
+          "summaryMethod": "llm",
+          "authors": [
+            "JEFF FRIEDEN"
+          ],
+          "venue": "Brazilian Journal of Political Economy",
+          "structured": {
+            "centralClaim": "The paper argues that contemporary international finance is shaped by state power, especially the United States, and that external debt reinforces national states and their supporting elites rather than indicating economic autonomy.",
+            "citedEvidence": "It points to the post‑20‑year financial boom, the role of state policy in forming euro‑markets, and the way external debt has strengthened national states and their supported elites.",
+            "originStance": "none",
+            "summaryText": "The author examines how recent global financial expansions are not independent of state intervention, highlighting the United States' pivotal role. They also contend that foreign debt has empowered national governments and their allied elites, challenging narratives of either full development or total loss of sovereignty."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.56403/nejesh.v2i3.124",
+      "text": "Analysis Of Quality Of Service Using The Swot Method At Pertamina Of Ihc Dental And Oral Poly Clinic In Jakarta",
+      "provenance": [
+        {
+          "sourceId": "10.56403/nejesh.v2i3.124",
+          "locator": "https://doi.org/10.56403/nejesh.v2i3.124",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The research uses a SWOT framework to assess service quality at a Jakarta dental clinic, mapping internal strengths and weaknesses against external opportunities and threats. It proposes strategic actions including service standard implementation, equipment upgrades, enhanced competitiveness, and digitalization to improve patient care. These findings aim to guide the clinic in strengthening its service delivery.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Syamsurizal"
+          ],
+          "venue": "Neo Journal of economy and social humanities",
+          "structured": {
+            "centralClaim": "The study applies a qualitative SWOT analysis to evaluate and strategize the quality of service at the Pertamina IHC Dental and Oral Poly Clinic in Jakarta.",
+            "citedEvidence": "The authors conducted a SWOT analysis, identifying four strategy categories—SO, WO, ST, and WT—based on strengths, weaknesses, opportunities, and threats, and described specific strategic actions such as implementing service standards, completing medical equipment, improving competitiveness, and digitalizing operations.",
+            "originStance": "none",
+            "summaryText": "The research uses a SWOT framework to assess service quality at a Jakarta dental clinic, mapping internal strengths and weaknesses against external opportunities and threats. It proposes strategic actions including service standard implementation, equipment upgrades, enhanced competitiveness, and digitalization to improve patient care. These findings aim to guide the clinic in strengthening its service delivery."
+          }
+        }
+      ]
+    }
+  ],
+  "citationGraph": {
+    "10.1590/0103-6564e230163": [],
+    "10.1080/03056247908703398": [
+      "10.1080/03085147200000005"
+    ],
+    "10.1080/03056247808703370": [
+      "10.1525/9780520337138",
+      "10.1017/cbo9780511759536"
+    ],
+    "10.13169/worlrevipoliecon.10.2.0171": [
+      "10.4159/9780674274051",
+      "10.1177/194277860800100215",
+      "10.1093/cje/bep024"
+    ],
+    "10.1332/giej7083": [],
+    "10.1080/03056248208703487": [],
+    "10.1590/0101-31571983-2005": [],
+    "10.1080/03056248008703440": [
+      "10.1080/03056247708703308"
+    ],
+    "10.1080/03056248308703549": [
+      "10.1086/493883",
+      "10.2307/1159606",
+      "10.3998/mpub.11394926"
+    ],
+    "10.13169/worlrevipoliecon.10.2.0191": [
+      "10.1093/acprof:oso/9780195670820.001.0001",
+      "10.1163/156920603770678319",
+      "10.1596/1813-9450-2027",
+      "10.21648/arthavij/2010/v52/i4/115318",
+      "10.1080/09614520802030466",
+      "10.1163/9789004386617_004",
+      "10.1163/ej.9789004202474.i-314",
+      "10.1017/cbo9781139171076",
+      "10.1080/14733280902798852",
+      "10.2307/2233961",
+      "10.1093/past/126.1.115",
+      "10.1080/00472336.2013.801163",
+      "10.1177/194277861400700109",
+      "10.1163/9789004337473",
+      "10.1257/0895330053147895",
+      "10.1002/ajim.4700260609",
+      "10.1163/156920608x357729",
+      "10.1002/jid.1852",
+      "10.1016/s0033-3506(00)00367-x",
+      "10.1080/01436597.2013.800738",
+      "10.1097/00004479-200304000-00010",
+      "10.1016/j.worlddev.2005.07.012",
+      "10.1080/09718923.2006.11892550",
+      "10.2139/ssrn.2919755",
+      "10.1016/0014-4983(82)90042-0",
+      "10.1146/annurev.anthro.25.1.237",
+      "10.1016/j.chiabu.2012.11.006",
+      "10.1590/s1413-81232006000200022",
+      "10.1179/oeh.2010.16.2.150",
+      "10.1080/14672715.1998.10411029",
+      "10.1179/2046905513y.0000000099",
+      "10.1016/j.chieco.2016.05.006",
+      "10.1177/0002716201575001012",
+      "10.1515/9780691225180"
+    ],
+    "10.13169/worlrevipoliecon.6.4.0498": [
+      "10.1111/j.1468-2346.2010.00903.x",
+      "10.1080/13563467.2012.662952",
+      "10.1080/13563460307171",
+      "10.4324/9780203486733",
+      "10.1080/08935696.2012.635038",
+      "10.1057/9780230584518",
+      "10.4324/9780203939338",
+      "10.1111/j.1468-2346.2010.00901.x",
+      "10.1080/07036337.2013.774780",
+      "10.1017/s0260210509008596",
+      "10.1111/j.1468-5965.2006.00671.x",
+      "10.2202/1469-3569.1185",
+      "10.1080/13501761003661950",
+      "10.4324/9780203855522",
+      "10.56021/9780801878848",
+      "10.1111/j.1468-2346.2008.00723.x",
+      "10.1057/palgrave.jird.1800010",
+      "10.1080/09644008.2012.742888"
+    ],
+    "10.1590/1809-43412023v20d911": [
+      "10.1007/s11625-006-0013-6",
+      "10.1080/13549839.2022.2041580",
+      "10.1177/1463499617735259",
+      "10.1362/026725707x196341",
+      "10.1177/0263276404046061",
+      "10.1016/j.omega.2015.05.015",
+      "10.1016/j.envsoft.2015.06.014",
+      "10.1016/j.jclepro.2015.09.007",
+      "10.1068/d418t",
+      "10.1016/j.jenvp.2017.05.006",
+      "10.1002/sd.271",
+      "10.1007/s43615-021-00128-8",
+      "10.1177/13591835211052463",
+      "10.1177/0263276409355999"
+    ],
+    "10.13169/worlrevipoliecon.9.2.0164": [
+      "10.1093/oso/9780199264315.001.0001",
+      "10.1163/156920609x436153",
+      "10.1017/cbo9781107590250",
+      "10.3386/w20935",
+      "10.1093/acprof:oso/9780199390632.001.0001"
+    ],
+    "10.13169/worlrevipoliecon.9.2.0211": [
+      "10.1111/j.1471-0366.2011.00339.x",
+      "10.1179/102452909x451378",
+      "10.1007/978-1-137-50572-9",
+      "10.3362/9781780449166",
+      "10.1111/joac.12164",
+      "10.35533/ecd.0407.gf",
+      "10.35533/ecd.0611.lge.ef",
+      "10.1093/oso/9780199283262.001.0001",
+      "10.1111/j.1467-7660.2008.00518.x",
+      "10.35533/ecd.0611.pl.go",
+      "10.1080/03066150.2016.1140647",
+      "10.1080/03066150.2015.1053875",
+      "10.35533/ecd.0611.rm",
+      "10.3917/pro.307.0061",
+      "10.1057/dev.2010.102",
+      "10.1093/jeg/3.2.199",
+      "10.1080/02255189.2013.764850",
+      "10.30875/e89f8212-en"
+    ],
+    "10.13169/workorgalaboglob.1.2.0015": [],
+    "10.13169/worlrevipoliecon.7.3.0350": [
+      "10.1163/156920606776690820",
+      "10.2307/3466046",
+      "10.1163/15692060260474350",
+      "10.1177/0486613406296929",
+      "10.1163/1569206x-12341246",
+      "10.1080/21598282.2014.954251",
+      "10.1177/0486613413518729",
+      "10.26512/ser_social.v12i26.12705"
+    ],
+    "10.13169/worlrevipoliecon.4.3.0357": [
+      "10.1080/21598282.2012.660058",
+      "10.1016/j.labeco.2010.01.004",
+      "10.1511/2009.78.230",
+      "10.1596/0-1952-1129-4"
+    ],
+    "10.1590/1415-4714.e230747": [
+      "10.59539/2175-2834-v20n1-324",
+      "10.1177/09593543241229047",
+      "10.1590/s1678-31662015000400004",
+      "10.1521/prev.2008.95.6.929",
+      "10.3917/rip.261.0321",
+      "10.1023/a:1004563122154",
+      "10.59539/2175-2834-v9n2-918",
+      "10.11606/issn.2318-8863.discurso.2007.38073",
+      "10.1111/j.1745-8315.2008.00107.x",
+      "10.1590/s1516-14982004000200002"
+    ],
+    "10.1111/sjpe.12339": [
+      "10.1163/20512996-12340074",
+      "10.1086/intejethi.34.3.2377310",
+      "10.4159/9780674982550",
+      "10.1016/j.jpubeco.2007.01.004",
+      "10.1086/670731",
+      "10.1086/501088",
+      "10.1016/0014-2921(94)90106-6",
+      "10.2307/3440311",
+      "10.1111/1467-8675.12121",
+      "10.2307/2952356",
+      "10.1017/9781108670012",
+      "10.2307/630632",
+      "10.1086/261013",
+      "10.1111/j.1468-0262.2006.00710.x",
+      "10.1016/j.geb.2012.03.005",
+      "10.1111/j.1468-0297.2007.02072.x",
+      "10.1080/09538259.2013.837321",
+      "10.4159/9780674042582",
+      "10.1017/s0266267100002455",
+      "10.1086/292819",
+      "10.1093/wber/lht023",
+      "10.4000/etudesplatoniciennes.281",
+      "10.1007/bf00433360",
+      "10.1177/009059177900700206",
+      "10.2307/2585578",
+      "10.1017/9781108161107",
+      "10.2307/2296698",
+      "10.2307/3003200",
+      "10.1017/s0022050700090288"
+    ],
+    "10.1590/0101-31571992-0570": [],
+    "10.1002/aps.70050": [
+      "10.2196/16021",
+      "10.1145/3442188.3445922",
+      "10.59927/sig.v12i2.87",
+      "10.1080/1369118x.2016.1154086",
+      "10.1590/1415‐4714.2020v23n3p534.6",
+      "10.5935/2175‐1390.v25e23986",
+      "10.2196/mental.7785",
+      "10.1057/s41286‐023‐00171‐w",
+      "10.1515/9780804797511",
+      "10.2196/12106",
+      "10.4324/9781351052061",
+      "10.1080/10253866.2024.2439846",
+      "10.2307/jj.38092608",
+      "10.1186/s40359‐023‐01483‐x",
+      "10.3389/fpubh.2021.793868",
+      "10.4324/9781003141686",
+      "10.3389/fpsyg.2020.01218",
+      "10.3389/fpsyt.2025.1558513",
+      "10.1017/s0140525x00005756",
+      "10.17852/1809-709x.2025v20n39p133-152",
+      "10.1177/0706743719828977"
+    ],
+    "10.1590/0101-31571984-3063": [
+      "10.2307/1882087",
+      "10.1093/oxfordjournals.cje.a035388"
+    ],
+    "10.1590/0101-31571982-1005": [],
+    "10.13169/worlrevipoliecon.10.4.0449": [
+      "10.1515/9781400865505",
+      "10.1016/j.strueco.2004.02.001",
+      "10.7551/mitpress/6986.003.0005",
+      "10.1016/s0486-6134(02)00178-x",
+      "10.1515/9781400873302",
+      "10.1093/0199247757.001.0001",
+      "10.1017/cbo9780511552229",
+      "10.1017/cbo9781139208772",
+      "10.1093/acprof:oso/9780195074772.001.0001",
+      "10.2307/j.ctv21hrgnz.6",
+      "10.1017/s0022050707000058",
+      "10.2307/j.ctt18fs4hp.6",
+      "10.4159/9780674369542",
+      "10.21272/mmi.2018.2-22",
+      "10.1515/9781400884605",
+      "10.1093/acprof:oso/9780199681167.001.0001"
+    ],
+    "10.1590/0101-31572020-3092": [
+      "10.1590/s0103-40142017.31890006",
+      "10.1177/0094582x15616120",
+      "10.1590/s0104-44782007000100003",
+      "10.1093/cje/ben060",
+      "10.1093/cje/bem042",
+      "10.1590/0101-31572020-3093",
+      "10.5433/2176-6665.1998v3n1p23",
+      "10.2307/1958056",
+      "10.1016/j.strueco.2012.01.002",
+      "10.1353/eca.0.0020",
+      "10.1590/0103-6351/3549",
+      "10.1590/0103-6564d20140012"
+    ],
+    "10.1080/03056244.2012.761963": [
+      "10.3917/polaf.111.0005",
+      "10.3406/polaf.1989.5294",
+      "10.1163/221185298x00020",
+      "10.1017/s0022278x97002504",
+      "10.1017/s0022278x00021200",
+      "10.1177/003231870705900106",
+      "10.1111/j.1467-7679.2012.00594.x",
+      "10.1017/s0022278x9800278x",
+      "10.1093/oxfordjournals.afraf.a098757",
+      "10.1002/jid.1482",
+      "10.1111/j.1467-7660.2010.01656.x",
+      "10.1057/palgrave.jird.1800120",
+      "10.1163/15700660260048465",
+      "10.1111/j.1467-7660.2010.01654.x",
+      "10.1080/07329113.1998.10756496",
+      "10.1111/j.1467-7660.2006.00497.x",
+      "10.1111/j.1573-7861.2011.01243.x",
+      "10.7208/chicago/9780226507149.001.0001",
+      "10.1162/isec.2007.31.3.74",
+      "10.1163/2031356x-02102004",
+      "10.5040/9781350223004",
+      "10.1353/jod.2004.0034",
+      "10.1111/j.1467-7660.2010.01655.x",
+      "10.1163/2031356x-02102003",
+      "10.1162/01636600260046253",
+      "10.1093/oxfordjournals.afraf.a007819",
+      "10.1017/s0010417500001729",
+      "10.1093/afraf/adr005",
+      "10.1093/oxfordjournals.afraf.a007739"
+    ],
+    "10.1590/0101-31571983-3017": [],
+    "10.1590/0101-31571981-3017": [],
+    "10.1590/0101-31571983-4057": [],
+    "10.56403/nejesh.v2i3.124": []
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "tradition",
+      "value": "Marxist/post-Marxist critique of psychoanalysis",
+      "justification": "The dispute directly engages Marx's analysis of capital and its application to psychoanalytic theory"
+    },
+    {
+      "dimension": "tradition",
+      "value": "French structural/post-structural readings",
+      "justification": "Deleuze and Guattari's Anti-Édipo represents a key tradition in this debate"
+    },
+    {
+      "dimension": "tradition",
+      "value": "Institutional/sociological history of psychoanalysis",
+      "justification": "The text emphasizes the institutional formation of progressive psychoanalysis across European centers"
+    },
+    {
+      "dimension": "language",
+      "value": "pt",
+      "justification": "The anchor text is in Portuguese and references Brazilian editions of key works"
+    },
+    {
+      "dimension": "language",
+      "value": "en",
+      "justification": "Core theoretical texts by Freud, Deleuze, Guattari, and Tomšič are in English"
+    },
+    {
+      "dimension": "language",
+      "value": "de",
+      "justification": "Freud's original German texts and contemporary German scholarship on this topic"
+    },
+    {
+      "dimension": "genre",
+      "value": "article",
+      "justification": "Theoretical interventions and critical analyses typically appear in journal format"
+    },
+    {
+      "dimension": "genre",
+      "value": "book",
+      "justification": "Monographs like The Capitalist Unconconscious and historical studies provide sustained argumentation"
+    },
+    {
+      "dimension": "genre",
+      "value": "chapter",
+      "justification": "Edited volumes on psychoanalysis and political economy often contain relevant contributions"
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "10.1590/0103-6564e230163": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1080/03056247908703398": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1080/03056247808703370": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.10.2.0171": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1332/giej7083": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1080/03056248208703487": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571983-2005": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1080/03056248008703440": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1080/03056248308703549": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.10.2.0191": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.6.4.0498": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/1809-43412023v20d911": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.9.2.0164": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.9.2.0211": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/workorgalaboglob.1.2.0015": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.7.3.0350": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.4.3.0357": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/1415-4714.e230747": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1111/sjpe.12339": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571992-0570": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1002/aps.70050": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571984-3063": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571982-1005": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.13169/worlrevipoliecon.10.4.0449": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31572020-3092": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1080/03056244.2012.761963": {
+        "lean": "supports",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571983-3017": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571981-3017": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1590/0101-31571983-4057": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.56403/nejesh.v2i3.124": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      }
+    },
+    "reader-b": {
+      "10.1590/0103-6564e230163": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1080/03056247908703398": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1080/03056247808703370": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.10.2.0171": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1332/giej7083": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1080/03056248208703487": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571983-2005": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1080/03056248008703440": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1080/03056248308703549": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.10.2.0191": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.6.4.0498": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/1809-43412023v20d911": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.9.2.0164": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.9.2.0211": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/workorgalaboglob.1.2.0015": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.7.3.0350": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.4.3.0357": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/1415-4714.e230747": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1111/sjpe.12339": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571992-0570": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1002/aps.70050": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571984-3063": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571982-1005": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.13169/worlrevipoliecon.10.4.0449": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31572020-3092": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1080/03056244.2012.761963": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571983-3017": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571981-3017": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1590/0101-31571983-4057": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.56403/nejesh.v2i3.124": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      }
+    }
+  },
+  "derived": {
+    "convergenceMap": {
+      "verdicts": [
+        {
+          "claimId": "10.1590/0103-6564e230163",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1080/03056247908703398",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1080/03056247808703370",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.10.2.0171",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1332/giej7083",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1080/03056248208703487",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571983-2005",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1080/03056248008703440",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1080/03056248308703549",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.10.2.0191",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.6.4.0498",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/1809-43412023v20d911",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.9.2.0164",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.9.2.0211",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/workorgalaboglob.1.2.0015",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.7.3.0350",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.4.3.0357",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/1415-4714.e230747",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1111/sjpe.12339",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571992-0570",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1002/aps.70050",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571984-3063",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571982-1005",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.13169/worlrevipoliecon.10.4.0449",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31572020-3092",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1080/03056244.2012.761963",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "supports",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571983-3017",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571981-3017",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1590/0101-31571983-4057",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.56403/nejesh.v2i3.124",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        }
+      ]
+    },
+    "coverageAudit": {
+      "findings": [
+        {
+          "dimension": "tradition",
+          "value": "Marxist/post-Marxist critique of psychoanalysis",
+          "justification": "The dispute directly engages Marx's analysis of capital and its application to psychoanalytic theory",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "French structural/post-structural readings",
+          "justification": "Deleuze and Guattari's Anti-Édipo represents a key tradition in this debate",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "Institutional/sociological history of psychoanalysis",
+          "justification": "The text emphasizes the institutional formation of progressive psychoanalysis across European centers",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "language",
+          "value": "pt",
+          "justification": "The anchor text is in Portuguese and references Brazilian editions of key works",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "language",
+          "value": "en",
+          "justification": "Core theoretical texts by Freud, Deleuze, Guattari, and Tomšič are in English",
+          "measurability": "measured",
+          "observedSources": 17,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "language",
+          "value": "de",
+          "justification": "Freud's original German texts and contemporary German scholarship on this topic",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "article",
+          "justification": "Theoretical interventions and critical analyses typically appear in journal format",
+          "measurability": "measured",
+          "observedSources": 30,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "genre",
+          "value": "book",
+          "justification": "Monographs like The Capitalist Unconconscious and historical studies provide sustained argumentation",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "chapter",
+          "justification": "Edited volumes on psychoanalysis and political economy often contain relevant contributions",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        }
+      ],
+      "emptyChairs": [
+        {
+          "dimension": "language",
+          "value": "pt",
+          "justification": "The anchor text is in Portuguese and references Brazilian editions of key works",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "language",
+          "value": "de",
+          "justification": "Freud's original German texts and contemporary German scholarship on this topic",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "book",
+          "justification": "Monographs like The Capitalist Unconconscious and historical studies provide sustained argumentation",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        },
+        {
+          "dimension": "genre",
+          "value": "chapter",
+          "justification": "Edited volumes on psychoanalysis and political economy often contain relevant contributions",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        }
+      ],
+      "notMeasured": [
+        {
+          "dimension": "tradition",
+          "value": "Marxist/post-Marxist critique of psychoanalysis",
+          "justification": "The dispute directly engages Marx's analysis of capital and its application to psychoanalytic theory",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "French structural/post-structural readings",
+          "justification": "Deleuze and Guattari's Anti-Édipo represents a key tradition in this debate",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "Institutional/sociological history of psychoanalysis",
+          "justification": "The text emphasizes the institutional formation of progressive psychoanalysis across European centers",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        }
+      ]
+    },
+    "reliabilityProfiles": [
+      {
+        "claimId": "10.1590/0103-6564e230163",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1080/03056247908703398",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1080/03056247808703370",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.10.2.0171",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1332/giej7083",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1080/03056248208703487",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571983-2005",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1080/03056248008703440",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1080/03056248308703549",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.10.2.0191",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.6.4.0498",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/1809-43412023v20d911",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.9.2.0164",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.9.2.0211",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/workorgalaboglob.1.2.0015",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.7.3.0350",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.4.3.0357",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/1415-4714.e230747",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1111/sjpe.12339",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571992-0570",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1002/aps.70050",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571984-3063",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571982-1005",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.13169/worlrevipoliecon.10.4.0449",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31572020-3092",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1080/03056244.2012.761963",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571983-3017",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571981-3017",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1590/0101-31571983-4057",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.56403/nejesh.v2i3.124",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      }
+    ]
+  }
+}

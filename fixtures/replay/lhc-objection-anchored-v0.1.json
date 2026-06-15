@@ -1,10 +1,53 @@
 {
-  "schema": "tacet/replay-fixture@0.1.1",
+  "schema": "tacet/replay-fixture@0.2.0",
   "case": "lhc-objection-anchored",
   "version": "0.1",
   "frozenFrom": "corpus/lhc-objection-anchored.summarized.read.json",
   "referenceHypothesis": "The safety analyses that assume semiclassical Hawking evaporation (canonical treatment) and thus conclude that microscopic black holes would decay instantly, are presented as the more widely accepted position in the literature. However, proponents of a microcanonical quantum treatment argue that suppressed Hawking radiation could allow longer-lived black holes, keeping the risk assessment open.",
   "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "aligned",
+    "alignedFraction": 0.857,
+    "ruleTerms": [
+      "safety",
+      "analyses",
+      "assume",
+      "semiclassical",
+      "hawking",
+      "evaporation",
+      "canonical",
+      "treatment",
+      "thus",
+      "conclude",
+      "microscopic",
+      "black",
+      "holes",
+      "would",
+      "decay",
+      "instantly",
+      "presented",
+      "more",
+      "widely",
+      "accepted",
+      "position",
+      "literature",
+      "however",
+      "proponents",
+      "microcanonical",
+      "quantum",
+      "argue",
+      "suppressed",
+      "radiation",
+      "could",
+      "allow",
+      "longer",
+      "lived",
+      "keeping",
+      "risk",
+      "assessment",
+      "open"
+    ]
+  },
   "source": {
     "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
     "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
@@ -2434,76 +2477,78 @@
         {
           "dimension": "tradition",
           "value": "high‑energy physics",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Core discipline discussing collider‑produced black holes and safety"
+          "justification": "Core discipline discussing collider‑produced black holes and safety",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "tradition",
           "value": "theoretical astrophysics",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Provides astrophysical constraints and comparative risk analysis"
+          "justification": "Provides astrophysical constraints and comparative risk analysis",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "en",
+          "justification": "Majority of technical literature is in English",
+          "measurability": "measured",
           "observedSources": 3,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "Majority of technical literature is in English"
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "de",
+          "justification": "Key contributions from German authors (e.g., Plaga) and local CERN discussions",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Key contributions from German authors (e.g., Plaga) and local CERN discussions"
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "article",
+          "justification": "Peer‑reviewed journal articles present detailed models and safety arguments",
+          "measurability": "measured",
           "observedSources": 17,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "Peer‑reviewed journal articles present detailed models and safety arguments"
+          "isEmptyChair": false
         },
         {
           "dimension": "genre",
           "value": "preprint",
+          "justification": "ArXiv preprints capture the most recent debates and responses",
+          "measurability": "measured",
           "observedSources": 11,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "ArXiv preprints capture the most recent debates and responses"
+          "isEmptyChair": false
         }
       ],
       "emptyChairs": [
         {
+          "dimension": "language",
+          "value": "de",
+          "justification": "Key contributions from German authors (e.g., Plaga) and local CERN discussions",
+          "measurability": "measured",
+          "observedSources": 0,
+          "isEmptyChair": true
+        }
+      ],
+      "notMeasured": [
+        {
           "dimension": "tradition",
           "value": "high‑energy physics",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Core discipline discussing collider‑produced black holes and safety"
+          "justification": "Core discipline discussing collider‑produced black holes and safety",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "tradition",
           "value": "theoretical astrophysics",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Provides astrophysical constraints and comparative risk analysis"
-        },
-        {
-          "dimension": "language",
-          "value": "de",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "Key contributions from German authors (e.g., Plaga) and local CERN discussions"
+          "justification": "Provides astrophysical constraints and comparative risk analysis",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         }
       ]
     },

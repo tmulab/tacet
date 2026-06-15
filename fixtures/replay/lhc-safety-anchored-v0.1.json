@@ -1,10 +1,57 @@
 {
-  "schema": "tacet/replay-fixture@0.1.1",
+  "schema": "tacet/replay-fixture@0.2.0",
   "case": "lhc-safety-anchored",
   "version": "0.1",
   "frozenFrom": "corpus/lhc-safety-anchored.summarized.read.json",
   "referenceHypothesis": "The authors argue that, based on well‑tested physical laws and astronomical observations, stable TeV‑scale black holes produced at the LHC would not accrete fast enough to threaten Earth within its natural lifetime. However, a counter‑position maintains that if such black holes were neutral and somehow avoided Hawking decay, their stability and accretion could remain uncertain, keeping the safety question open.",
   "abstentionDiagnosis": "adjacent",
+  "relevanceGate": {
+    "status": "aligned",
+    "alignedFraction": 0.893,
+    "ruleTerms": [
+      "authors",
+      "argue",
+      "based",
+      "well",
+      "tested",
+      "physical",
+      "laws",
+      "astronomical",
+      "observations",
+      "stable",
+      "scale",
+      "black",
+      "holes",
+      "produced",
+      "would",
+      "accrete",
+      "fast",
+      "enough",
+      "threaten",
+      "earth",
+      "natural",
+      "lifetime",
+      "however",
+      "counter",
+      "position",
+      "maintains",
+      "were",
+      "neutral",
+      "somehow",
+      "avoided",
+      "hawking",
+      "decay",
+      "stability",
+      "accretion",
+      "could",
+      "remain",
+      "uncertain",
+      "keeping",
+      "safety",
+      "question",
+      "open"
+    ]
+  },
   "source": {
     "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
     "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
@@ -2434,84 +2481,86 @@
         {
           "dimension": "tradition",
           "value": "high‑energy phenomenology",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated"
+          "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "tradition",
           "value": "astrophysical constraints",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios"
+          "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "en",
+          "justification": "dominant language of the technical literature",
+          "measurability": "measured",
           "observedSources": 3,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "dominant language of the technical literature"
+          "isEmptyChair": false
         },
         {
           "dimension": "language",
           "value": "pt",
+          "justification": "relevant for Brazilian research context of the question",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "relevant for Brazilian research context of the question"
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "article",
+          "justification": "primary venue for detailed theoretical and phenomenological analyses",
+          "measurability": "measured",
           "observedSources": 17,
-          "expected": true,
-          "isEmptyChair": false,
-          "justification": "primary venue for detailed theoretical and phenomenological analyses"
+          "isEmptyChair": false
         },
         {
           "dimension": "genre",
           "value": "chapter",
+          "justification": "book chapters often summarize broader safety assessments",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "book chapters often summarize broader safety assessments"
+          "isEmptyChair": true
         }
       ],
       "emptyChairs": [
         {
-          "dimension": "tradition",
-          "value": "high‑energy phenomenology",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated"
-        },
-        {
-          "dimension": "tradition",
-          "value": "astrophysical constraints",
-          "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios"
-        },
-        {
           "dimension": "language",
           "value": "pt",
+          "justification": "relevant for Brazilian research context of the question",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "relevant for Brazilian research context of the question"
+          "isEmptyChair": true
         },
         {
           "dimension": "genre",
           "value": "chapter",
+          "justification": "book chapters often summarize broader safety assessments",
+          "measurability": "measured",
           "observedSources": 0,
-          "expected": true,
-          "isEmptyChair": true,
-          "justification": "book chapters often summarize broader safety assessments"
+          "isEmptyChair": true
+        }
+      ],
+      "notMeasured": [
+        {
+          "dimension": "tradition",
+          "value": "high‑energy phenomenology",
+          "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
+        },
+        {
+          "dimension": "tradition",
+          "value": "astrophysical constraints",
+          "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios",
+          "measurability": "not-measured",
+          "observedSources": null,
+          "isEmptyChair": false
         }
       ]
     },

@@ -1,0 +1,150 @@
+{
+  "schemaName": "tacet/freud-contrast@0.1",
+  "case": "freud-midas",
+  "derived": {
+    "fixture": "freud-midas-derived-v0.1.json",
+    "relevanceGate": {
+      "status": "mixed",
+      "alignedFraction": 0.476,
+      "ruleTerms": [
+        "freud",
+        "clinical",
+        "practice",
+        "operated",
+        "through",
+        "capitalist",
+        "logics",
+        "transforming",
+        "analytic",
+        "session",
+        "commodified",
+        "exchange",
+        "where",
+        "fees",
+        "libidinal",
+        "economy",
+        "followed",
+        "same",
+        "recalcitrant",
+        "structures",
+        "identified",
+        "sexuality",
+        "very",
+        "entanglement",
+        "constitute",
+        "subversive",
+        "torsion",
+        "making",
+        "money",
+        "speak",
+        "does",
+        "exposing",
+        "poor",
+        "capitalize",
+        "symptoms",
+        "work",
+        "reveals",
+        "capitalism",
+        "psychic",
+        "limits",
+        "rather",
+        "merely",
+        "confirming",
+        "them"
+      ]
+    },
+    "structure": {
+      "robustCore": 0,
+      "liveCrux": 0,
+      "unsupported": 21
+    },
+    "emptyChairs": [
+      "language=pt",
+      "language=de",
+      "genre=book",
+      "genre=chapter"
+    ],
+    "notMeasured": [
+      "tradition=Marxist/post-Marxist critique of psychoanalysis",
+      "tradition=French structural/post-structural readings",
+      "tradition=Institutional/sociological history of psychoanalysis"
+    ],
+    "abstentionDiagnosis": "adjacent"
+  },
+  "focused": {
+    "fixture": "freud-midas-focused-v0.1.json",
+    "relevanceGate": {
+      "status": "aligned",
+      "alignedFraction": 0.8,
+      "ruleTerms": [
+        "freud",
+        "clinical",
+        "practice",
+        "operated",
+        "through",
+        "capitalist",
+        "logics",
+        "transforming",
+        "analytic",
+        "session",
+        "commodified",
+        "exchange",
+        "where",
+        "fees",
+        "libidinal",
+        "economy",
+        "followed",
+        "same",
+        "recalcitrant",
+        "structures",
+        "identified",
+        "sexuality",
+        "very",
+        "entanglement",
+        "constitute",
+        "subversive",
+        "torsion",
+        "making",
+        "money",
+        "speak",
+        "does",
+        "exposing",
+        "poor",
+        "capitalize",
+        "symptoms",
+        "work",
+        "reveals",
+        "capitalism",
+        "psychic",
+        "limits",
+        "rather",
+        "merely",
+        "confirming",
+        "them"
+      ]
+    },
+    "structure": {
+      "robustCore": 1,
+      "liveCrux": 0,
+      "unsupported": 29
+    },
+    "emptyChairs": [
+      "language=pt",
+      "language=de",
+      "genre=book",
+      "genre=chapter"
+    ],
+    "notMeasured": [
+      "tradition=Marxist/post-Marxist critique of psychoanalysis",
+      "tradition=French structural/post-structural readings",
+      "tradition=Institutional/sociological history of psychoanalysis"
+    ],
+    "abstentionDiagnosis": "adjacent"
+  },
+  "difference": {
+    "nature": "Lexical alignment is necessary but NOT sufficient for topical bearing. Coherence, not truth.",
+    "derived": "Semantic drift via homonymy: the original query trap terms (surplus value, abstract labour, Midas, Letter 79) pulled Marxist political economy. gate=mixed (lexically borderline); readers all-unsupported.",
+    "focused": "Trap-free, ruler-faithful query — yet STILL a political-economy CC-BY corpus, because the ruler itself is economically worded (logic of capital, libidinal economy, capitalist unconscious) and the open CC-BY literature for those terms is political economy. gate=aligned (lexically on-ruler) BUT readers still abstain (1 robust-core / 29 unsupported); the lone robust-core is a repair-cafe anthropology paper (capitalist abstinence), not Freud clinic — a spurious convergence.",
+    "proves": "The gate catches gross query drift (derived=mixed) and confirms lexical alignment (focused=aligned), but only the two undecided readers + the measured empty chair reveal that even a lexically-aligned corpus does not carry the thesis. The Freud-clinic-and-capital thesis (Tomsic book; Portuguese/German scholarship) is outside the CC-BY indexed-article perimeter — the THIRD instance of the meta-finding (after LHC) that book-bound / non-English theses are invisible to CC-BY. The same triple chair (pt/de/book) is empty in BOTH regimes."
+  }
+}

@@ -82,6 +82,10 @@ describe("frozen SAGO-origin fixture (v0.2, free OpenRouter)", () => {
     expect(verdict?.signal).toBe("robust-core");
   });
 
+  it("the relevance gate ABSTAINS (not-assessed): the ruler is Portuguese, the lexical gate is English-only", () => {
+    expect((fixture as unknown as { relevanceGate?: { status: string } }).relevanceGate?.status).toBe("not-assessed");
+  });
+
   it("the empty chair includes the non-anglophone corpus (0 observed against a cited expectation)", () => {
     const chair = fixture.derived.coverageAudit.emptyChairs.find((f) => f.value === "non-anglophone");
     expect(chair).toBeDefined();
