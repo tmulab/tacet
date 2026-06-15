@@ -1,0 +1,81 @@
+{
+  "schema": "tacet/uplift-comparison@0.1",
+  "case": "eggs",
+  "query": "Meta-análises recentes de coortes prospectivas em populações ocidentais sugerem que consumo moderado de ovos (em torno de 1 por dia) não está consistentemente associado a aumento de risco cardiovascular na população adulta geral; o efeito sobre lipídios séricos existe mas é modesto e atenuado por substituições dietéticas. As Dietary Guidelines for Americans (2015 em diante) e a AHA (2020) refletem esse afrouxamento em relação ao teto rígido de 300 mg/dia de colesterol dietético. A posição acima repousa sobre (a) heterogeneidade entre subpopulações — diabéticos, portadores de ApoE4 e hiper-respondedores ao colesterol dietético apresentam respostas medidas distintas; (b) endpoints substitutos (LDL, colesterol sérico) versus desfechos duros (MACE, mortalidade), com a maior parte do otimismo recente apoiada em endpoints substitutos e meta-análises observacionais; (c) viés de financiamento documentado da indústria do ovo na ciência nutricional; (d) efeito de substituição — o que o ovo substitui no prato determina parte importante do impacto.",
+  "baseline": {
+    "model": "perplexity/sonar-deep-research",
+    "queriedAt": "2026-06-15T18:47:34.327Z"
+  },
+  "asymmetry": "Deep-research reads everything (paywalled, books, non-CC-BY) WITHOUT verifiable provenance; TACET reads only CC-BY with DOI provenance and honest abstention. On COMPLETENESS, deep-research wins — and this comparison does NOT measure completeness. It measures verifiable fidelity, uncertainty preservation, load-bearing visibility, and hidden-dependency disclosure.",
+  "measurements": {
+    "verifiability": {
+      "tacet": {
+        "total": 29,
+        "resolved": 29,
+        "fraction": 1
+      },
+      "baseline": {
+        "total": 0,
+        "resolved": 0,
+        "fraction": 0
+      }
+    },
+    "uncertainty": {
+      "tacet": {
+        "unsupported": 27,
+        "emptyChairs": 3,
+        "notMeasured": 0,
+        "gateNotAssessed": 1,
+        "total": 31
+      },
+      "baseline": {
+        "hedges": 148,
+        "verdicts": 5
+      }
+    },
+    "hiddenDependency": {
+      "outOfCcby": [],
+      "idMatches": [],
+      "nameMentions": [],
+      "count": 0
+    }
+  },
+  "rubric": {
+    "schema": "tacet/uplift-rubric@0.1",
+    "dimensions": [
+      {
+        "key": "verifiability",
+        "title": "Verifiable fidelity",
+        "method": "deterministic",
+        "criterion": "Fraction of factual claims that trace to a cited source that RESOLVES (a DOI/URL that exists). Measured automatically on both outputs; the raw fractions are reported without adjectives."
+      },
+      {
+        "key": "uncertainty-preservation",
+        "title": "Uncertainty preservation",
+        "method": "semi-deterministic",
+        "criterion": "Does the output NAME what it does not know? TACET: explicit abstentions (unsupported, empty chair, not-assessed, not-measured). Baseline: hedge markers vs verdict markers (partially automated; the judge weighs the remainder)."
+      },
+      {
+        "key": "load-bearing-visibility",
+        "title": "Load-bearing evidence visibility",
+        "method": "judge",
+        "criterion": "Can the reader SEE which evidence carries the conclusion? Inspect each output: does it expose the specific sources its conclusion rests on, or assert conclusions without showing the load path? The judge rates each output.",
+        "judge": {
+          "verdict": null,
+          "notes": null
+        }
+      },
+      {
+        "key": "hidden-dependency-disclosure",
+        "title": "Hidden-dependency disclosure",
+        "method": "judge-with-signal",
+        "criterion": "Does the output WARN when a source it depends on is non-verifiable/paywalled/outside the open corpus? Deterministic signal: the baseline cites sources TACET marked out-of-CC-BY (e.g. the ingested safety preprints) — if so it leans on a non-verifiable source; did it disclose that? The judge weighs it.",
+        "judge": {
+          "verdict": null,
+          "notes": null
+        }
+      }
+    ]
+  },
+  "note": "The baseline is a REPRODUCIBLE REFERENCE POINT, not the SOTA ceiling; the judge runs their own per UPLIFT-PROTOCOL.md. Deterministic axes report raw numbers; judge axes are left blank — no winner is declared. Coherence, not truth."
+}

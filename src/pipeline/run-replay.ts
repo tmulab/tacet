@@ -147,6 +147,8 @@ const CASES: Readonly<Record<string, string>> = {
   "freud-derived": "fixtures/replay/freud-midas-derived-v0.1.json", // drifted ingestion (measured)
   "freud-focused": "fixtures/replay/freud-midas-focused-v0.1.json", // corrected query — still polit-econ
   "freud-contrast": "fixtures/replay/freud-contrast-v0.1.json", // derived vs focused, nature named
+  "uplift-lhc": "fixtures/comparison/lhc-uplift-v0.1.json", // TACET vs deep-research (hidden dependency)
+  "uplift-eggs": "fixtures/comparison/eggs-uplift-v0.1.json", // TACET vs deep-research (uncertainty/verifiability)
 };
 
 /** Resolve the fixture: a known case key, else a path, else the COVID default.
@@ -216,9 +218,46 @@ function printNarrative(fixturePath: string): void {
   );
 }
 
+interface UpliftComparison {
+  readonly case: string;
+  readonly query: string;
+  readonly baseline: { readonly model: string; readonly queriedAt: string };
+  readonly asymmetry: string;
+  readonly measurements: {
+    readonly verifiability: { readonly tacet: { readonly resolved: number; readonly total: number; readonly fraction: number }; readonly baseline: { readonly resolved: number; readonly total: number; readonly fraction: number } };
+    readonly uncertainty: { readonly tacet: { readonly total: number }; readonly baseline: { readonly hedges: number; readonly verdicts: number } };
+    readonly hiddenDependency: { readonly idMatches: readonly string[]; readonly nameMentions: readonly string[]; readonly count: number };
+  };
+  readonly rubric: { readonly dimensions: readonly { readonly key: string; readonly method: string; readonly criterion: string }[] };
+  readonly note: string;
+}
+
+/** Print the frozen uplift comparison (FASE C) — deterministic numbers, the
+ * signals, and the BLANK judge rubric. Offline; the baseline is NOT re-run. No
+ * winner is declared on the judge axes. Coherence, not truth. */
+function printUplift(c: UpliftComparison): void {
+  const m = c.measurements;
+  console.log(`\nTACET — uplift vs deep-research · case: ${c.case}`);
+  console.log("Honest by construction: this does NOT measure completeness (deep-research");
+  console.log("reads more). It measures verifiable fidelity, uncertainty preservation,");
+  console.log("load-bearing visibility, and hidden-dependency disclosure.\n");
+  console.log(`  baseline: ${c.baseline.model} (frozen ${c.baseline.queriedAt})\n`);
+  console.log("  DETERMINISTIC (raw numbers, no adjectives):");
+  console.log(`    verifiability      TACET ${m.verifiability.tacet.fraction} (${m.verifiability.tacet.resolved}/${m.verifiability.tacet.total})   baseline ${m.verifiability.baseline.fraction} (${m.verifiability.baseline.resolved}/${m.verifiability.baseline.total})`);
+  console.log(`    TACET abstentions  ${m.uncertainty.tacet.total}   |   baseline hedges ${m.uncertainty.baseline.hedges} / verdict-markers ${m.uncertainty.baseline.verdicts}`);
+  console.log(`    hidden-dependency  baseline cites ${m.hiddenDependency.count} source(s) TACET marked out-of-CC-BY: ${m.hiddenDependency.idMatches.join(", ") || "none"}` + (m.hiddenDependency.nameMentions.length > 0 ? ` (names: ${m.hiddenDependency.nameMentions.join(", ")})` : ""));
+  console.log("\n  JUDGE AXES (rubric provided; NO winner declared — the judge applies it):");
+  for (const d of c.rubric.dimensions) if (d.method.startsWith("judge")) console.log(`    • ${d.key}: ${d.criterion}`);
+  console.log(`\n  ${c.note}`);
+}
+
 async function main(): Promise<void> {
   const path = resolveFixturePath();
   const raw = JSON.parse(readFileSync(path, "utf8")) as Record<string, unknown>;
+  if (raw["schema"] === "tacet/uplift-comparison@0.1") {
+    printUplift(raw as unknown as UpliftComparison);
+    return;
+  }
   if (raw["schemaName"] === "tacet/anchor-comparison@0.1") {
     printComparison(raw as unknown as { caseA: string; caseB: string; categories: Record<string, number>; claims: unknown[] });
     return;
