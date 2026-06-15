@@ -107,6 +107,37 @@ describe("fetchCrossrefWorks — retry/backoff (injected fetch + sleep)", () => 
     await expect(run(fn, sleep, 3)).rejects.toThrow(/network error.*ECONNRESET/);
     warn.mockRestore();
   });
+
+  // PASSO 0 (A1 debt): a 200 with a non-JSON body (HTML error page / truncated
+  // JSON under load) must be TRANSIENT — the body parse is now inside the retry.
+  const htmlBody = (): Response => new Response("<html><body>503 from the edge</body></html>", { status: 200 });
+
+  it("(9) a 200 with a non-JSON body is transient: retried, then a valid page succeeds", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const { fn } = fetchSeq([htmlBody(), page(ONE_WORK)]);
+    const { sleep, waits } = sleepSpy();
+    const works = await run(fn, sleep);
+    expect(works).toHaveLength(1);
+    expect(waits).toHaveLength(1); // one retry after the unparseable body
+    warn.mockRestore();
+  });
+
+  it("(10) a non-JSON body forever → exhausts, error names the BODY parse (not status)", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const { fn } = fetchSeq([htmlBody()]);
+    const { sleep, waits } = sleepSpy();
+    await expect(run(fn, sleep, 3)).rejects.toThrow(/non-JSON body/);
+    expect(waits).toHaveLength(2);
+    warn.mockRestore();
+  });
+
+  it("(11) a 200 with valid JSON → zero retries (happy path unchanged)", async () => {
+    const { fn } = fetchSeq([page(ONE_WORK)]);
+    const { sleep, waits } = sleepSpy();
+    const works = await run(fn, sleep);
+    expect(works).toHaveLength(1);
+    expect(waits).toHaveLength(0);
+  });
 });
 
 describe("backoffDelay (deterministic jitter via injected rand)", () => {

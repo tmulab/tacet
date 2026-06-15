@@ -52,12 +52,23 @@ export interface RetryDeps {
   readonly nowMs?: () => number;
 }
 
+/** Per-attempt outcome of `consume`: a usable value, or a transient body failure
+ * (e.g. a 200 with a non-JSON body) that should be retried like a 5xx. */
+type Consumed<T> = { readonly kind: "ok"; readonly value: T } | { readonly kind: "transient"; readonly desc: string };
+
 /**
- * Fetch `url` with retry/backoff. Returns the first ok Response. Throws on a
- * permanent failure immediately, or after `maxAttempts` transient failures with
- * an error naming the attempt count and last status/error.
+ * The shared retry/backoff loop. Per attempt: a thrown fetch is transient; a
+ * non-ok status is classified (permanent → throw now, transient → retry, honoring
+ * Retry-After); an ok response is handed to `consume`, which may itself report a
+ * transient failure (the body). Throws on permanent, or after `maxAttempts` with
+ * an error naming the attempt count and last cause.
  */
-export async function fetchWithRetry(url: string, init: RequestInit, deps: RetryDeps): Promise<Response> {
+async function retryLoop<T>(
+  url: string,
+  init: RequestInit,
+  deps: RetryDeps,
+  consume: (res: Response) => Promise<Consumed<T>>,
+): Promise<T> {
   const log = deps.log ?? ((m: string) => console.warn(m));
   const rand = deps.rand ?? Math.random;
   const nowMs = deps.nowMs ?? Date.now;
@@ -65,6 +76,7 @@ export async function fetchWithRetry(url: string, init: RequestInit, deps: Retry
 
   for (let attempt = 1; attempt <= deps.maxAttempts; attempt++) {
     let res: Response | null = null;
+    let retryAfter: number | null = null;
     try {
       res = await deps.fetchFn(url, init);
     } catch (e: unknown) {
@@ -72,22 +84,43 @@ export async function fetchWithRetry(url: string, init: RequestInit, deps: Retry
     }
 
     if (res !== null) {
-      if (res.ok) return res;
-      if (classifyHttpFailure(res.status) === "permanent") {
-        throw new Error(`Crossref HTTP ${res.status} (permanent — not retried)`);
+      if (res.ok) {
+        const consumed = await consume(res);
+        if (consumed.kind === "ok") return consumed.value;
+        lastDesc = consumed.desc; // an ok status but an unusable body → transient
+      } else {
+        if (classifyHttpFailure(res.status) === "permanent") {
+          throw new Error(`Crossref HTTP ${res.status} (permanent — not retried)`);
+        }
+        lastDesc = `HTTP ${res.status}`;
+        retryAfter = parseRetryAfter(res.headers.get("retry-after"), nowMs());
       }
-      lastDesc = `HTTP ${res.status}`;
     }
 
     if (attempt >= deps.maxAttempts) {
       throw new Error(`Crossref unavailable after ${deps.maxAttempts} attempts (${lastDesc})`);
     }
 
-    const retryAfter = res !== null ? parseRetryAfter(res.headers.get("retry-after"), nowMs()) : null;
     const wait = retryAfter ?? backoffDelay(attempt, rand);
     log(`harvest: attempt ${attempt}/${deps.maxAttempts} failed (${lastDesc}); retrying in ${wait}ms`);
     await deps.sleep(wait);
   }
   // Unreachable: the loop returns or throws. Satisfies the type checker.
   throw new Error(`Crossref unavailable after ${deps.maxAttempts} attempts (${lastDesc})`);
+}
+
+/**
+ * Fetch `url` and parse its JSON body, with retry/backoff. A 200 whose body does
+ * NOT parse as JSON (an HTML error page, a truncated payload under load) is a
+ * TRANSIENT failure — retried like a 5xx — instead of throwing on the first try.
+ * Closes the A1 debt: the body parse is now inside the retry scope.
+ */
+export async function fetchJsonWithRetry<T>(url: string, init: RequestInit, deps: RetryDeps): Promise<T> {
+  return retryLoop<T>(url, init, deps, async (res) => {
+    try {
+      return { kind: "ok", value: (await res.json()) as T };
+    } catch (e: unknown) {
+      return { kind: "transient", desc: `non-JSON body: ${e instanceof Error ? e.message : String(e)}` };
+    }
+  });
 }

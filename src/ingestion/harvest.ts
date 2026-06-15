@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 import { ingestCrossref } from "./crossref.js";
 import type { CrossrefWork } from "./crossref.js";
-import { fetchWithRetry } from "./fetch-retry.js";
+import { fetchJsonWithRetry } from "./fetch-retry.js";
 
 /**
  * Harvest utility — the ONLY part of TACET that touches the network. It is a
@@ -102,8 +102,9 @@ export async function fetchCrossrefWorks(
 
   while (collected.length < limit) {
     const rows = Math.min(PAGE_ROWS, limit - collected.length);
-    const res = await fetchWithRetry(buildUrl(query, cursor, rows, license), { headers }, { fetchFn, sleep, maxAttempts });
-    const page = (await res.json()) as CrossrefPage;
+    // The body parse is INSIDE the retry: a 200 with a non-JSON body (HTML error
+    // page / truncated payload under load) is retried, not thrown (A1 debt closed).
+    const page = await fetchJsonWithRetry<CrossrefPage>(buildUrl(query, cursor, rows, license), { headers }, { fetchFn, sleep, maxAttempts });
     const items = page.message.items ?? [];
     if (items.length === 0) break;
     // Keep only records WITH an abstract — the rest are filtered at ingestion
