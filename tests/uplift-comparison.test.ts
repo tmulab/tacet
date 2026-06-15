@@ -15,7 +15,11 @@ interface Comparison {
   readonly query: string;
   readonly asymmetry: string;
   readonly measurements: {
-    readonly verifiability: { readonly tacet: { readonly fraction: number }; readonly baseline: { readonly fraction: number } };
+    readonly verifiability: {
+      readonly tacet: { readonly landing: { readonly fraction: number }; readonly registered: { readonly fraction: number } };
+      readonly baseline: { readonly landing: { readonly fraction: number }; readonly registered: { readonly fraction: number } };
+      readonly note: string;
+    };
     readonly uncertainty: { readonly tacet: { readonly total: number }; readonly baseline: { readonly hedges: number; readonly verdicts: number } };
     readonly hiddenDependency: { readonly idMatches: readonly string[]; readonly nameMentions: readonly string[]; readonly count: number };
   };
@@ -37,9 +41,12 @@ describe("frozen uplift comparisons — measurements present, NO winner declared
         expect(c.asymmetry.toLowerCase()).toContain("completeness");
       });
 
-      it("carries the deterministic measurements (verifiability + uncertainty + hidden-dep)", () => {
-        expect(c.measurements.verifiability.tacet.fraction).toBeGreaterThanOrEqual(0);
-        expect(c.measurements.verifiability.baseline.fraction).toBeGreaterThanOrEqual(0);
+      it("carries the deterministic measurements (two-layer verifiability + uncertainty + hidden-dep)", () => {
+        const v = c.measurements.verifiability;
+        expect(v.tacet.landing.fraction).toBeGreaterThanOrEqual(0);
+        expect(v.tacet.registered.fraction).toBeGreaterThanOrEqual(0);
+        expect(v.baseline.landing.fraction).toBeGreaterThanOrEqual(0);
+        expect(v.note.toLowerCase()).toContain("link rot");
         expect(c.measurements.uncertainty.tacet.total).toBeGreaterThan(0);
         expect(typeof c.measurements.hiddenDependency.count).toBe("number");
       });
@@ -60,18 +67,23 @@ describe("frozen uplift comparisons — measurements present, NO winner declared
     });
   }
 
-  it("LHC: TACET high verifiability; baseline cites BOTH out-of-CC-BY ingested papers", () => {
+  it("LHC: every TACET DOI is REGISTERED (1.00); the lone landing miss is named link-rot", () => {
     const c = load("lhc-uplift-v0.1.json");
-    expect(c.measurements.verifiability.tacet.fraction).toBeGreaterThanOrEqual(0.9);
+    expect(c.measurements.verifiability.tacet.registered.fraction).toBe(1);
+    expect(c.measurements.verifiability.tacet.landing.fraction).toBeGreaterThanOrEqual(0.9);
+    // landing < registered means the gap is rot, and the note names the rotted DOI
+    expect(c.measurements.verifiability.tacet.landing.fraction).toBeLessThan(c.measurements.verifiability.tacet.registered.fraction);
+    expect(c.measurements.verifiability.note).toContain("10.34257/gjsfrfvol24is2pg7");
     expect(c.measurements.hiddenDependency.idMatches).toContain("arxiv:0806.3381");
     expect(c.measurements.hiddenDependency.idMatches).toContain("arxiv:0808.1415");
     expect(c.measurements.hiddenDependency.nameMentions).toEqual(["Giddings", "Mangano"]);
   });
 
-  it("eggs: TACET verifiability 1.00; baseline cited nothing resolvable (0.00)", () => {
+  it("eggs: TACET verifiability 1.00 (both layers); baseline cited nothing resolvable (0.00)", () => {
     const c = load("eggs-uplift-v0.1.json");
-    expect(c.measurements.verifiability.tacet.fraction).toBe(1);
-    expect(c.measurements.verifiability.baseline.fraction).toBe(0);
+    expect(c.measurements.verifiability.tacet.landing.fraction).toBe(1);
+    expect(c.measurements.verifiability.tacet.registered.fraction).toBe(1);
+    expect(c.measurements.verifiability.baseline.landing.fraction).toBe(0);
     expect(c.measurements.hiddenDependency.count).toBe(0);
   });
 });

@@ -32,7 +32,7 @@ export const UPLIFT_RUBRIC: { readonly schema: string; readonly dimensions: read
       title: "Verifiable fidelity",
       method: "deterministic",
       criterion:
-        "Fraction of factual claims that trace to a cited source that RESOLVES (a DOI/URL that exists). Measured automatically on both outputs; the raw fractions are reported without adjectives.",
+        "Fraction of factual claims that trace to a cited source that RESOLVES. Reported in TWO layers without adjectives: 'landing' (the cited page is reachable) and 'registered' (the DOI exists in the global DOI system, bypassing publisher link rot). The gap between them is link rot, not fabrication.",
     },
     {
       key: "uncertainty-preservation",

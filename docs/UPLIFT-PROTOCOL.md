@@ -26,7 +26,7 @@ measures the four crit-1 axes where TACET's discipline is the advantage.
 
 | Dimension | Method | What it asks |
 |---|---|---|
-| **Verifiability** | deterministic | Fraction of cited sources that **resolve** (a DOI/URL that exists). |
+| **Verifiability** | deterministic | Fraction of cited sources that **resolve**, in two layers: **landing** (the page is reachable) and **registered** (the DOI exists in the DOI system, bypassing publisher link rot). |
 | **Uncertainty preservation** | semi-deterministic | Does the output **name what it does not know**? (TACET abstentions; baseline hedge vs verdict markers, EN+PT.) |
 | **Load-bearing visibility** | judge | Can you **see which evidence carries the conclusion**? |
 | **Hidden-dependency disclosure** | judge + deterministic signal | Does it **warn** when a load-bearing source is non-verifiable/paywalled? Signal: baseline cites sources TACET marked out-of-CC-BY. |
@@ -73,7 +73,12 @@ declares **no winner** on them.
   ingested as out-of-CC-BY** — alongside a **blog, a YouTube video, and Wikipedia**.
   Every cited URL resolves (verifiability 1.00), but the load-bearing sources are
   precisely the non-open ones TACET flags as the **empty chair**. Whether the
-  baseline *disclosed* that dependency is the judge's call.
+  baseline *disclosed* that dependency is the judge's call. TACET's own
+  verifiability is **registered 1.00 / landing 0.967** — every cited DOI is
+  registered; the single landing miss is **link rot** on one Global-Journals DOI
+  (`10.34257/gjsfrfvol24is2pg7`, page 404 but DOI registered), named in the
+  comparison's `verifiability.note`. That is the two layers doing their job:
+  existence vs link rot, kept distinct rather than blurred into one number.
 - **eggs.** The baseline produced fluent prose with **zero resolvable citations**
   (verifiability 0.00) while TACET traces every claim to a DOI (1.00). Both hedge
   heavily in prose; the difference is whether the hedging is **anchored**.

@@ -10,15 +10,30 @@
   "measurements": {
     "verifiability": {
       "tacet": {
-        "total": 29,
-        "resolved": 29,
-        "fraction": 1
+        "landing": {
+          "total": 29,
+          "resolved": 29,
+          "fraction": 1
+        },
+        "registered": {
+          "total": 29,
+          "resolved": 29,
+          "fraction": 1
+        }
       },
       "baseline": {
-        "total": 0,
-        "resolved": 0,
-        "fraction": 0
-      }
+        "landing": {
+          "total": 0,
+          "resolved": 0,
+          "fraction": 0
+        },
+        "registered": {
+          "total": 0,
+          "resolved": 0,
+          "fraction": 0
+        }
+      },
+      "note": "TWO layers: 'landing' = the cited page is reachable (<400); 'registered' = the DOI exists in the global DOI system (CSL content-negotiation), bypassing publisher link rot. Non-DOI citations have no registration layer (fall back to landing). No link-rot gap on the TACET side."
     },
     "uncertainty": {
       "tacet": {
@@ -47,7 +62,7 @@
         "key": "verifiability",
         "title": "Verifiable fidelity",
         "method": "deterministic",
-        "criterion": "Fraction of factual claims that trace to a cited source that RESOLVES (a DOI/URL that exists). Measured automatically on both outputs; the raw fractions are reported without adjectives."
+        "criterion": "Fraction of factual claims that trace to a cited source that RESOLVES. Reported in TWO layers without adjectives: 'landing' (the cited page is reachable) and 'registered' (the DOI exists in the global DOI system, bypassing publisher link rot). The gap between them is link rot, not fabrication."
       },
       {
         "key": "uncertainty-preservation",

@@ -218,13 +218,23 @@ function printNarrative(fixturePath: string): void {
   );
 }
 
+interface VerifLayer {
+  readonly resolved: number;
+  readonly total: number;
+  readonly fraction: number;
+}
+
 interface UpliftComparison {
   readonly case: string;
   readonly query: string;
   readonly baseline: { readonly model: string; readonly queriedAt: string };
   readonly asymmetry: string;
   readonly measurements: {
-    readonly verifiability: { readonly tacet: { readonly resolved: number; readonly total: number; readonly fraction: number }; readonly baseline: { readonly resolved: number; readonly total: number; readonly fraction: number } };
+    readonly verifiability: {
+      readonly tacet: { readonly landing: VerifLayer; readonly registered: VerifLayer };
+      readonly baseline: { readonly landing: VerifLayer; readonly registered: VerifLayer };
+      readonly note: string;
+    };
     readonly uncertainty: { readonly tacet: { readonly total: number }; readonly baseline: { readonly hedges: number; readonly verdicts: number } };
     readonly hiddenDependency: { readonly idMatches: readonly string[]; readonly nameMentions: readonly string[]; readonly count: number };
   };
@@ -242,8 +252,10 @@ function printUplift(c: UpliftComparison): void {
   console.log("reads more). It measures verifiable fidelity, uncertainty preservation,");
   console.log("load-bearing visibility, and hidden-dependency disclosure.\n");
   console.log(`  baseline: ${c.baseline.model} (frozen ${c.baseline.queriedAt})\n`);
+  const vl = (l: VerifLayer): string => `${l.fraction} (${l.resolved}/${l.total})`;
   console.log("  DETERMINISTIC (raw numbers, no adjectives):");
-  console.log(`    verifiability      TACET ${m.verifiability.tacet.fraction} (${m.verifiability.tacet.resolved}/${m.verifiability.tacet.total})   baseline ${m.verifiability.baseline.fraction} (${m.verifiability.baseline.resolved}/${m.verifiability.baseline.total})`);
+  console.log(`    verifiability      TACET   landing ${vl(m.verifiability.tacet.landing)}  registered ${vl(m.verifiability.tacet.registered)}`);
+  console.log(`                       baseline landing ${vl(m.verifiability.baseline.landing)}  registered ${vl(m.verifiability.baseline.registered)}`);
   console.log(`    TACET abstentions  ${m.uncertainty.tacet.total}   |   baseline hedges ${m.uncertainty.baseline.hedges} / verdict-markers ${m.uncertainty.baseline.verdicts}`);
   console.log(`    hidden-dependency  baseline cites ${m.hiddenDependency.count} source(s) TACET marked out-of-CC-BY: ${m.hiddenDependency.idMatches.join(", ") || "none"}` + (m.hiddenDependency.nameMentions.length > 0 ? ` (names: ${m.hiddenDependency.nameMentions.join(", ")})` : ""));
   console.log("\n  JUDGE AXES (rubric provided; NO winner declared — the judge applies it):");
