@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "Mutation testing restricted to the four epistemic-integrity files. Goal: prove the invariant tests KILL logic mutants (=== / !== / || / && / removed throw / === 0), not line coverage. StringLiteral mutations are excluded — prompt/error text is not an invariant.",
+  "packageManager": "npm",
+  "testRunner": "vitest",
+  "reporters": ["clear-text", "progress"],
+  "coverageAnalysis": "perTest",
+  "concurrency": 4,
+  "timeoutMS": 20000,
+  "mutate": [
+    "src/domain/convergence.ts",
+    "src/domain/coverage.ts",
+    "src/protocol/draft.ts",
+    "src/ingestion/fetch-retry.ts"
+  ],
+  "mutator": {
+    "excludedMutations": ["StringLiteral"]
+  }
+}

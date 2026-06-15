@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { classifyHttpFailure, parseRetryAfter } from "../src/ingestion/fetch-retry.js";
+import { backoffDelay, classifyHttpFailure, parseRetryAfter } from "../src/ingestion/fetch-retry.js";
 import { fetchCrossrefWorks } from "../src/ingestion/harvest.js";
 
 /**
@@ -88,6 +88,47 @@ describe("fetchCrossrefWorks — retry/backoff (injected fetch + sleep)", () => 
     await run(fn, sleep);
     expect(waits[0]).toBe(2000); // 2s from the header, not a jittered backoff
     warn.mockRestore();
+  });
+
+  it("(7) a THROWN network error is transient (retried), then succeeds", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const { fn } = fetchSeq([new Error("ECONNRESET"), new Error("ETIMEDOUT"), page(ONE_WORK)]);
+    const { sleep, waits } = sleepSpy();
+    const works = await run(fn, sleep);
+    expect(works).toHaveLength(1);
+    expect(waits).toHaveLength(2);
+    warn.mockRestore();
+  });
+
+  it("(8) exhausting on thrown network errors names the error (not 'no attempt')", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    const { fn } = fetchSeq([new Error("ECONNRESET")]);
+    const { sleep } = sleepSpy();
+    await expect(run(fn, sleep, 3)).rejects.toThrow(/network error.*ECONNRESET/);
+    warn.mockRestore();
+  });
+});
+
+describe("backoffDelay (deterministic jitter via injected rand)", () => {
+  it("is base·2^(n-1), jittered to 50–100%, capped at 30s", () => {
+    expect(backoffDelay(1, () => 0)).toBe(250); // raw 500 → 50%
+    expect(backoffDelay(1, () => 1)).toBe(500); // raw 500 → 100%
+    expect(backoffDelay(2, () => 0)).toBe(500); // raw 1000 → 50%
+    expect(backoffDelay(2, () => 1)).toBe(1000); // raw 1000 → 100%
+    expect(backoffDelay(20, () => 0)).toBe(15000); // raw capped at 30000 → 50%
+    expect(backoffDelay(20, () => 1)).toBe(30000); // capped → 100%
+  });
+});
+
+describe("parseRetryAfter — edge inputs", () => {
+  it("undefined → null (not a crash)", () => {
+    expect(parseRetryAfter(undefined, 0)).toBeNull();
+  });
+  it("trims surrounding whitespace before parsing", () => {
+    expect(parseRetryAfter("  2  ", 0)).toBe(2000);
+  });
+  it("digits-then-garbage is NOT seconds → null (the $ anchor matters)", () => {
+    expect(parseRetryAfter("12x", 0)).toBeNull(); // not /^\d+/ — must be /^\d+$/
   });
 });
 

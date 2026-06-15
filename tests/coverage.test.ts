@@ -80,6 +80,15 @@ describe("auditCoverage", () => {
     expect(audit.findings[0]?.justification).toBe(justification);
   });
 
+  it("(g) a claim whose provenance has NO tags is handled, not crashed (optional chaining)", () => {
+    // provenance without a `tags` object at all — auditCoverage must treat it as
+    // zero observed, never throw (kills the p.tags?.[dim] → p.tags[dim] mutant).
+    const tagless: Claim = { id: "c1", text: "t", provenance: [{ sourceId: "s1", locator: "l" }] };
+    const audit = auditCoverage([tagless], [cat("language-family", "anglophone", "baseline")]);
+    expect(audit.findings[0]?.observedSources).toBe(0);
+    expect(audit.findings[0]?.isEmptyChair).toBe(true);
+  });
+
   it("(f) counts the third language bucket 'unknown' when such a claim exists", () => {
     // The three-state language model adds an 'unknown' family. No producer emits
     // it yet, but the audit must count it correctly if/when one appears.
