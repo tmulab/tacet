@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TACET — research engine · The Machine Unconscious</title>
+  <meta name="description" content="TACET — two undecided readers read the same evidence; the map between them is the result. Live demo under construction; the method already runs offline." />
+  <meta name="theme-color" content="#0c0d10" />
+  <meta property="og:title" content="TACET — research engine" />
+  <meta property="og:description" content="Two undecided readers. One body of evidence. The map between them." />
+  <style>
+    :root{
+      --bg:#0c0d10; --ink:#eceae3; --muted:#8b8a84; --line:#23242a;
+      --gold:#d9b15c; --core:#7fb08a; --crux:#d98c5c; --chair:#7f8aa8;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{
+      background:
+        radial-gradient(1200px 600px at 50% -10%, #14161b 0%, var(--bg) 60%) fixed,
+        var(--bg);
+      color:var(--ink);
+      font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      display:flex; align-items:center; justify-content:center;
+      min-height:100%; padding:40px 22px; -webkit-font-smoothing:antialiased;
+    }
+    main{max-width:620px; width:100%; text-align:center; animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+    .over{font-size:11.5px; letter-spacing:.34em; text-transform:uppercase; color:var(--muted); margin:0 0 26px}
+    h1{
+      font-size:clamp(58px,16vw,116px); font-weight:300; letter-spacing:.16em;
+      margin:0 0 4px; padding-left:.16em; line-height:1;
+    }
+    .rule{width:54px; height:1px; background:var(--line); margin:26px auto}
+    .tagline{
+      font-family:Iowan Old Style,"Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+      font-size:clamp(18px,3.4vw,23px); font-style:italic; color:#cfcdc5;
+      margin:0 auto; max-width:30ch;
+    }
+    .signals{display:flex; gap:26px; justify-content:center; flex-wrap:wrap; margin:34px 0 40px; padding:0; list-style:none}
+    .signals li{font-size:13px; color:var(--muted); letter-spacing:.02em}
+    .signals b{display:block; font-size:19px; line-height:1; margin-bottom:7px}
+    .core{color:var(--core)} .crux{color:var(--crux)} .chair{color:var(--chair)}
+    .pulse{animation:breathe 3.6s ease-in-out infinite}
+    .card{
+      border:1px solid var(--line); border-radius:14px; padding:22px 22px 20px;
+      background:linear-gradient(#101216,#0d0f13); text-align:left;
+    }
+    .status{display:flex; align-items:center; gap:10px; font-size:14px; color:var(--ink); margin:0 0 12px; font-weight:500}
+    .dot{width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 0 rgba(217,177,92,.55); animation:ring 2.4s ease-out infinite}
+    .sub{font-size:13.5px; color:var(--muted); margin:0 0 12px}
+    code{
+      display:block; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:12.5px; color:#d7d5cd; background:#08090b; border:1px solid var(--line);
+      border-radius:9px; padding:11px 13px; overflow-x:auto; white-space:nowrap;
+    }
+    code .p{color:var(--gold)}
+    a{color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(217,177,92,.3)}
+    a:hover{border-bottom-color:var(--gold)}
+    footer{margin-top:30px; font-size:12px; color:var(--muted); line-height:1.7}
+    footer .note{font-family:Iowan Old Style,Palatino,Georgia,serif; font-style:italic; color:#6f6e69}
+    @keyframes rise{from{opacity:0; transform:translateY(14px)} to{opacity:1; transform:none}}
+    @keyframes breathe{0%,100%{opacity:.85} 50%{opacity:.4}}
+    @keyframes ring{0%{box-shadow:0 0 0 0 rgba(217,177,92,.5)} 70%{box-shadow:0 0 0 9px rgba(217,177,92,0)} 100%{box-shadow:0 0 0 0 rgba(217,177,92,0)}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="over">The Machine Unconscious · TMU</p>
+    <h1>TACET</h1>
+    <div class="rule"></div>
+    <p class="tagline">Two undecided readers. One body of evidence. The map between them.</p>
+
+    <ul class="signals pulse" aria-label="the three signals">
+      <li><b class="core">●</b> robust core</li>
+      <li><b class="crux">▲</b> live crux</li>
+      <li><b class="chair">○</b> empty chair</li>
+    </ul>
+
+    <div class="card">
+      <p class="status"><span class="dot" aria-hidden="true"></span> Live demo under construction</p>
+      <p class="sub">The method already runs — offline, deterministic, zero-GPU, no key:</p>
+      <code><span class="p">git clone</span> https://github.com/tmulab/tacet &amp;&amp; <span class="p">cd</span> tacet
+<span class="p">npm install</span> &amp;&amp; <span class="p">npm run</span> demo:replay</code>
+    </div>
+
+    <footer>
+      <div>tacet.tmulab.org · <a href="https://github.com/tmulab/tacet">github.com/tmulab/tacet</a></div>
+      <div class="note">tacet — the instrument rests; the score goes on.</div>
+    </footer>
+  </main>
+</body>
+</html>
