@@ -103,6 +103,15 @@ export interface GuardInput {
  * The full gate: secret FIRST (so an unauthenticated public can never exhaust
  * the limiter), then rate limit. The limiter is touched only by callers who
  * passed the secret.
+ *
+ * E3 TODO (deferred, noted at the user's request): a FAILED secret attempt is
+ * NOT rate-limited here — by design, the limiter throttles only callers who got
+ * in (spec: "the secret bars the public; the limit bars abuse by whoever
+ * passed"). The brute-force defense today is a single strong secret + the
+ * timing-safe compare. When the live route lands (E3), consider a SECOND,
+ * separate per-IP limiter on auth FAILURES (e.g. 10 wrong tries / 15 min → 429)
+ * so a leaked endpoint can't be hammered with guesses. Keep it separate from
+ * this post-auth limiter so a guesser can't consume the legitimate budget.
  */
 export function guardLive(input: GuardInput): GateDecision {
   const secret = checkSecret(input.expectedSecret, input.providedSecret);
