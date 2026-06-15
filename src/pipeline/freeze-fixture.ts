@@ -6,6 +6,7 @@ import type { Claim } from "../domain/types.js";
 import { computeReplay, modelOf } from "./replay.js";
 import type { ReplayFixture, SavedLean } from "./replay.js";
 import { diagnoseAbstention } from "../domain/abstention-diagnosis.js";
+import { redactClaim } from "./redact.js";
 
 /**
  * FREEZE the real Phase-5c read into a versioned, offline replay fixture — the
@@ -92,10 +93,16 @@ async function main(): Promise<void> {
   // curated SAGO baseline for the COVID case.
   const expectedCoverage = corpus.expectedCoverage ?? SAGO_EXPECTED_COVERAGE;
 
+  // REDACT non-redistributable sources BEFORE anything is baked: the public
+  // fixture carries only the verifiable shell (id/DOI/sha256/tags) + the leans;
+  // never the text or summary. Redaction preserves the fields computeReplay uses
+  // (tags, provenance ids), so the derived answer key is unchanged.
+  const claims = corpus.claims.map(redactClaim);
+
   // The replay INPUT (what computeReplay reads).
   const input: ReplayFixture = {
     case: caseName,
-    claims: corpus.claims,
+    claims,
     readers: corpus.readers as Readonly<Record<string, Readonly<Record<string, SavedLean>>>>,
     expectedCoverage,
     ...(corpus.citationGraph !== undefined ? { citationGraph: corpus.citationGraph } : {}),

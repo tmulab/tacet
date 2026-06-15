@@ -46,6 +46,18 @@ export interface Provenance {
    * structured fields are produced for the LlmReader (Phase 5b); the demo uses
    * `summary` (= `structured.summaryText`). */
   readonly structured?: StructuredSummary;
+  /** For a source read locally but NOT redistributed (e.g. an arXiv PDF): which
+   * file, by sha256, and a short locus. Provenance without the bytes — survives
+   * redaction so the public fixture can name + verify the source. */
+  readonly sourceAnchor?: SourceAnchor;
+}
+
+/** A pointer to a locally-read, non-redistributed source: the file, its sha256
+ * (verification), and a short human locus. The bytes are never published. */
+export interface SourceAnchor {
+  readonly file: string;
+  readonly sha256: string;
+  readonly locus?: string;
 }
 
 /** Where a paper stands on the SARS-CoV-2 origin question. "none" when the paper
@@ -71,6 +83,12 @@ export interface Claim {
   readonly id: string;
   readonly text: string;
   readonly provenance: readonly Provenance[];
+  /** Whether this claim's SOURCE may be redistributed. Absent/true = open (the
+   * CC-BY corpus). false = TACET read the source locally (e.g. an arXiv PDF) but
+   * the public fixture must carry only the JUDGMENT + provenance (DOI + sha256 +
+   * lean), never the text or summary — redacted at freeze. TACET reviews evidence,
+   * it does not redistribute it. */
+  readonly redistributable?: boolean;
 }
 
 /** A reader's stance on a single claim, produced from the evidence and held

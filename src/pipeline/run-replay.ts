@@ -131,6 +131,7 @@ const CASES: Readonly<Record<string, string>> = {
   "lhc-safety": "fixtures/replay/lhc-safety-anchored-v0.1.json", // anchored: Giddings-Mangano
   "lhc-objection": "fixtures/replay/lhc-objection-anchored-v0.1.json", // anchored: Plaga
   "lhc-comparison": "fixtures/replay/lhc-anchored-comparison-v0.1.json", // cross-anchor meta-artifact
+  "lhc-anchored-ingested": "fixtures/replay/lhc-anchored-ingested-v0.1.json", // adjacent CC-BY + redacted closed-argument claims
   eggs: "fixtures/replay/eggs-cv-v0.1.json",
 };
 
