@@ -22,6 +22,7 @@
     "summarize": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/summarize.ts",
     "read": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/read.ts",
     "freeze": "node --use-system-ca --import tsx src/pipeline/freeze-fixture.ts",
+    "compare-anchors": "node --import tsx src/pipeline/compare-anchors.ts",
     "mutation": "stryker run",
     "build:html": "node scripts/build-html.mjs",
     "llm:check": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/llm-check.ts"

@@ -1,0 +1,3053 @@
+{
+  "schema": "tacet/replay-fixture@0.1.1",
+  "case": "lhc-safety-anchored",
+  "version": "0.1",
+  "frozenFrom": "corpus/lhc-safety-anchored.summarized.read.json",
+  "referenceHypothesis": "The authors argue that, based on well‑tested physical laws and astronomical observations, stable TeV‑scale black holes produced at the LHC would not accrete fast enough to threaten Earth within its natural lifetime. However, a counter‑position maintains that if such black holes were neutral and somehow avoided Hawking decay, their stability and accretion could remain uncertain, keeping the safety question open.",
+  "abstentionDiagnosis": "adjacent",
+  "source": {
+    "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
+    "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
+    "readerModels": {
+      "reader-a": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "reader-b": "openai/gpt-oss-120b:free"
+    },
+    "anchor": {
+      "file": "0806.3381v2.pdf",
+      "sha256": "939f8daa4ce9a6e93712ddb4f21a3118fdc618dc4c7fd5eaea0171a74429e365",
+      "locus": "stability and accretion risk of hypothetical LHC‑produced micro‑black holes"
+    }
+  },
+  "notes": {
+    "nonLlmSummaries": [],
+    "nonLlmReason": "These records' LLM summary fell back to a truncated abstract stub. They are off-topic to origin and both readers independently judged them 'insufficient', so a real summary changes no lean and no signal. Kept as LABELLED non-summaries (summaryMethod: 'truncated-stub'), never as a fabricated summary.",
+    "oneReaderClaims": 0
+  },
+  "claims": [
+    {
+      "id": "10.1590/1806-9126-rbef-2025-0026",
+      "text": "Um jogo digital para explorar o aprendizado de buracos negros e da radiação Hawking",
+      "provenance": [
+        {
+          "sourceId": "10.1590/1806-9126-rbef-2025-0026",
+          "locator": "https://doi.org/10.1590/1806-9126-rbef-2025-0026",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study created a mobile puzzle game that leverages the device’s accelerometer to let students explore black holes and Hawking radiation. In a crossover experiment with 55 high‑school students, using the game before instruction led to greater engagement and better learning outcomes, as measured by knowledge tests and the MEEGA+ tool.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Adilson Vahldick",
+            "Luis Felipe da Silva",
+            "Vinicius Andre Guckert Marquez"
+          ],
+          "venue": "Revista Brasileira de Ensino de Física",
+          "structured": {
+            "centralClaim": "A mobile puzzle game using the accelerometer was developed to teach 10th‑grade students about black holes, Hawking radiation, and Stephen Hawking, and an experiment showed it improves engagement and knowledge when used before lectures.",
+            "citedEvidence": "Knowledge tests and the MEEGA+ instrument demonstrated the game's efficacy and user experience, revealing higher efficiency and increased motivation when the game preceded the theoretical lessons.",
+            "originStance": "none",
+            "summaryText": "The study created a mobile puzzle game that leverages the device’s accelerometer to let students explore black holes and Hawking radiation. In a crossover experiment with 55 high‑school students, using the game before instruction led to greater engagement and better learning outcomes, as measured by knowledge tests and the MEEGA+ tool."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2024/11/026",
+      "text": "Probing modified Hawking evaporation with gravitational waves from the primordial black hole dominated universe",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2024/11/026",
+          "locator": "https://doi.org/10.1088/1475-7516/2024/11/026",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study investigates how a proposed slowdown of Hawking evaporation influences the viability of primordial black‑hole reheating, finding that for suppression exponents greater than 2.5 the scenario becomes untenable and that the resulting gravitational‑wave spectrum would be shifted to higher frequencies with a distinct slope. These results link memory burden to both cosmological constraints and observable GW signals.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Shyam Balaji",
+            "Guillem Domènech",
+            "Gabriele Franciolini",
+            "Alexander Ganz",
+            "Jan Tränkle"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "Memory burden, a suppression of Hawking evaporation by negative powers of black‑hole entropy, can extend the PBH dominated era and thereby alter constraints from BBN and gravitational‑wave signatures.",
+            "citedEvidence": "The authors model the evaporation rate suppression as negative powers of the black‑hole entropy, show that this prolongs the PBH‑dominated phase, shrink the allowed PBH mass range before BBN, and predict GW frequencies above ~1 Hz with enhanced amplitude and a spectrum slope dependent on the model.",
+            "originStance": "none",
+            "summaryText": "The study investigates how a proposed slowdown of Hawking evaporation influences the viability of primordial black‑hole reheating, finding that for suppression exponents greater than 2.5 the scenario becomes untenable and that the resulting gravitational‑wave spectrum would be shifted to higher frequencies with a distinct slope. These results link memory burden to both cosmological constraints and observable GW signals."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2026/05/014",
+      "text": "5D rotating black holes as dark matter in dark dimension scenario: Hawking radiation versus the memory burden effect",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2026/05/014",
+          "locator": "https://doi.org/10.1088/1475-7516/2026/05/014",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper argues that in the dark dimension scenario, five‑dimensional rotating primordial black holes lose mass more slowly than four‑dimensional ones, so sufficiently massive ones could still exist today and serve as dark matter candidates. It also finds that a memory burden effect dramatically lengthens their lifetime, supporting their viability as dark matter.",
+          "summaryMethod": "llm",
+          "authors": [
+            "George K. Leontaris",
+            "George Prampromis"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "Five-dimensional primordial rotating black holes could make up all or a significant fraction of dark matter.",
+            "citedEvidence": "The analysis shows that mass loss of such black holes is much slower due to the fifth dimension, allowing those with initial masses ≳10^10 g to survive to the present, and the memory burden effect further extends their lifetime.",
+            "originStance": "none",
+            "summaryText": "The paper argues that in the dark dimension scenario, five‑dimensional rotating primordial black holes lose mass more slowly than four‑dimensional ones, so sufficiently massive ones could still exist today and serve as dark matter candidates. It also finds that a memory burden effect dramatically lengthens their lifetime, supporting their viability as dark matter."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2026/05/055",
+      "text": "Baryogenesis via asymmetric evaporation of primordial black holes",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2026/05/055",
+          "locator": "https://doi.org/10.1088/1475-7516/2026/05/055",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors propose a mechanism in which primordial black holes evaporate asymmetrically, generating a baryon asymmetry that matches observations. They incorporate gravitational effects, entropy dilution, and detailed evolution of PBH distributions to show that viable parameter spaces exist for several mass spectra.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Joaquim Iguaz Juan",
+            "Yuber F. Perez-Gonzalez",
+            "Jessica Turner"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "Baryogenesis can be realized through the asymmetric evaporation of light primordial black holes driven by a higher-dimension operator that creates a chemical potential at the horizon, producing a matter–antimatter asymmetry.",
+            "citedEvidence": "The paper invokes a higher-dimension operator coupling the Kretschmann scalar to a baryon-number-violating current, entropy dilution from evaporation, and chemical-potential-dependent greybody factors to model the evolution of PBH populations in an expanding universe.",
+            "originStance": "none",
+            "summaryText": "The authors propose a mechanism in which primordial black holes evaporate asymmetrically, generating a baryon asymmetry that matches observations. They incorporate gravitational effects, entropy dilution, and detailed evolution of PBH distributions to show that viable parameter spaces exist for several mass spectra."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2025/12/042",
+      "text": "Regular black holes from proper-time flow in quantum gravity and their quasinormal modes, shadow and Hawking radiation",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2025/12/042",
+          "locator": "https://doi.org/10.1088/1475-7516/2025/12/042",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study constructs regular black hole solutions that avoid singularities and are asymptotically Schwarzschild, then evaluates several physical observables. Results indicate that quantum corrections markedly alter the quasinormal mode structure and dramatically reduce Hawking radiation, while shadow and orbital properties stay compatible with current measurements. These findings suggest that the resolution of the singularity and its phenomenological signatures are robust across regularization choices.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Alfio M. Bonanno",
+            "Roman A. Konoplya",
+            "Giovanni Oglialoro",
+            "Andrea Spina"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "Regular, non‑singular black holes can be derived from a proper‑time renormalization‑group approach in asymptotically safe gravity, and their key observational quantities (quasinormal modes, Hawking radiation, shadows) differ significantly from classical predictions.",
+            "citedEvidence": "The authors compute the quasinormal mode spectrum, showing substantial deviations, and demonstrate that the Hawking radiation is strongly suppressed, leading to slower evaporation, while shadow and ISCO radii remain observationally consistent.",
+            "originStance": "none",
+            "summaryText": "The study constructs regular black hole solutions that avoid singularities and are asymptotically Schwarzschild, then evaluates several physical observables. Results indicate that quantum corrections markedly alter the quasinormal mode structure and dramatically reduce Hawking radiation, while shadow and orbital properties stay compatible with current measurements. These findings suggest that the resolution of the singularity and its phenomenological signatures are robust across regularization choices."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.3847/1538-4357/ac6d5c",
+      "text": "Analytical Model of Disk Evaporation and State Transitions in Accreting Black Holes",
+      "provenance": [
+        {
+          "sourceId": "10.3847/1538-4357/ac6d5c",
+          "locator": "https://doi.org/10.3847/1538-4357/ac6d5c",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors present a simplified, height‑integrated description of disk evaporation into a corona around a black hole, identifying a critical radius and a peak accretion rate that dictate whether the disk persists or is depleted. Their calculations show that these transitions are independent of black‑hole mass, implying similar behavior in both stellar‑mass and supermassive black hole systems. The work provides a framework for studying X‑ray state changes using analytical and numerical approaches.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Hyerin 혜린 Cho 조",
+            "Ramesh Narayan"
+          ],
+          "venue": "The Astrophysical Journal",
+          "structured": {
+            "centralClaim": "State transitions in black hole X-ray binaries are likely caused by gas evaporation from a thin accretion disk into a hot corona, and a height‑integrated analytical model predicts a break radius and a maximum coronal accretion rate that determine whether the disk survives or evaporates, leading to distinct hard or soft states.",
+            "citedEvidence": "The model describes gas evaporating from the disk for radii larger than a break radius r_b ∼ 10^3 (α/0.3)^{-2} and condensing for smaller radii, with the maximum coronal accretion rate reaching ≈0.02 (α/0.3)^3, which controls the transition between states.",
+            "originStance": "none",
+            "summaryText": "The authors present a simplified, height‑integrated description of disk evaporation into a corona around a black hole, identifying a critical radius and a peak accretion rate that dictate whether the disk persists or is depleted. Their calculations show that these transitions are independent of black‑hole mass, implying similar behavior in both stellar‑mass and supermassive black hole systems. The work provides a framework for studying X‑ray state changes using analytical and numerical approaches."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1155/2017/4817948",
+      "text": "Hawking Radiation-Quasinormal Modes Correspondence for Large AdS Black Holes",
+      "provenance": [
+        {
+          "sourceId": "10.1155/2017/4817948",
+          "locator": "https://doi.org/10.1155/2017/4817948",
+          "date": "2017",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The study examines how the non‑thermal Hawking radiation of large anti‑de Sitter black holes can be linked to their quasinormal modes through an effective temperature, demonstrating that the associated effective mass approximates the average mass across dimensions. Using known quasinormal mode frequencies, the author derives asymptotic frequency formulas and obtains expressions for the Bekenstein‑Hawking entropy and quantized horizon area that depend on the overtone number n.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Dao-Quan Sun",
+            "Zi-Liang Wang",
+            "Miao He",
+            "Xian-Ru Hu",
+            "Jian-Bo Deng"
+          ],
+          "venue": "Advances in High Energy Physics",
+          "structured": {
+            "centralClaim": "Thepaper reanalyzes the non‑thermal character of Hawking radiation for large AdS black holes by introducing an effective temperature, showing that the effective mass corresponds to the average mass and deriving formulas for entropy and horizon area quantization in terms of quasinormal mode overtone numbers.",
+            "citedEvidence": "It cites the correspondence between Hawking radiation spectra and quasinormal modes, the use of an effective temperature to characterize large AdS black holes, and the resulting asymptotic frequencies that lead to expressions for Bekenstein‑Hawking entropy and area quantization.",
+            "originStance": "none",
+            "summaryText": "The study examines how the non‑thermal Hawking radiation of large anti‑de Sitter black holes can be linked to their quasinormal modes through an effective temperature, demonstrating that the associated effective mass approximates the average mass across dimensions. Using known quasinormal mode frequencies, the author derives asymptotic frequency formulas and obtains expressions for the Bekenstein‑Hawking entropy and quantized horizon area that depend on the overtone number n."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/n8xf07",
+      "text": "Modified Hawking radiation of Schwarzschild-like black hole in bumblebee gravity model",
+      "provenance": [
+        {
+          "sourceId": "10.32388/n8xf07",
+          "locator": "https://doi.org/10.32388/n8xf07",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study investigates how the Hawking radiation of a Schwarzschild black hole changes when described by bumblebee gravity, a theory that modifies spacetime geometry. By applying the Generalized Uncertainty Principle within a tunneling framework, the authors obtain a corrected temperature and discuss its impact on the black hole’s entropy. The work connects modified gravity models with quantum effects near horizons.",
+          "summaryMethod": "llm",
+          "authors": [
+            "İzzet Sakalli",
+            "Esra Yörük"
+          ],
+          "structured": {
+            "centralClaim": "The paper derives a modified Hawking temperature and quantum‑corrected entropy for a Schwarzschild black hole in the bumblebee gravity model by applying the Generalized Uncertainty Principle to the tunneling calculation.",
+            "citedEvidence": "It uses Killing‑vector and Hamilton‑Jacobi approaches, adopts Painlevé‑Gullstrand, Eddington‑Finkelstein, and Kruskal‑Szekeres coordinates, and incorporates the GUP to compute the tunneling probability and resulting temperature.",
+            "originStance": "none",
+            "summaryText": "The study investigates how the Hawking radiation of a Schwarzschild black hole changes when described by bumblebee gravity, a theory that modifies spacetime geometry. By applying the Generalized Uncertainty Principle within a tunneling framework, the authors obtain a corrected temperature and discuss its impact on the black hole’s entropy. The work connects modified gravity models with quantum effects near horizons."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.34257/gjsfrfvol24is2pg7",
+      "text": "Exploring  Torus  Black-Holes  In  (1+3)-Dimensions:  A  Novel  Approach to Higher Genus Solution",
+      "provenance": [
+        {
+          "sourceId": "10.34257/gjsfrfvol24is2pg7",
+          "locator": "https://doi.org/10.34257/gjsfrfvol24is2pg7",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The authors develop a novel method for constructing a torus black-hole solution in four-dimensional spacetime by employing a particular metric ansatz and standard curvature calculations. They show that this approach not only yields a new solution but also opens avenues for exploring more complex, higher-genus black-hole geometries.",
+          "summaryMethod": "llm",
+          "authors": [
+            "E. García- Rodríguez",
+            "M. Medina",
+            "J. A. Nieto"
+          ],
+          "venue": "Global Journal of Human-Social Science",
+          "structured": {
+            "centralClaim": "The paper presents a new torus-shaped black-hole solution in (1+3)-dimensional vacuum general relativity derived via a specific metric ansatz and geometric calculations.",
+            "citedEvidence": "It derives the necessary Christoffel symbols and Riemann tensor, substitutes them into the Einstein field equations, and combines the resulting equations to obtain the solution, emphasizing that the coordinate transformation ansatz offers broad implications and could aid the search for higher-genus black-hole solutions.",
+            "originStance": "none",
+            "summaryText": "The authors develop a novel method for constructing a torus black-hole solution in four-dimensional spacetime by employing a particular metric ansatz and standard curvature calculations. They show that this approach not only yields a new solution but also opens avenues for exploring more complex, higher-genus black-hole geometries."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.3847/1538-4357/ad8ec0",
+      "text": "Formation of Sub-Chandrasekhar-mass Black Holes and Red Stragglers via Hawking Stars in Ultrafaint Dwarf Galaxies",
+      "provenance": [
+        {
+          "sourceId": "10.3847/1538-4357/ad8ec0",
+          "locator": "https://doi.org/10.3847/1538-4357/ad8ec0",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study proposes that stars captured by primordial black holes can undergo prolonged accretion, leading to the creation of low‑mass black holes and red straggler stars, particularly in low‑metallicity environments. By modeling accretion across a range of masses and metallicities, the authors demonstrate that this mechanism can operate within the Universe's age, though it relies on specific accretion assumptions.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Andrew D. Santarelli",
+            "Matthew E. Caplan",
+            "Earl P. Bellinger"
+          ],
+          "venue": "The Astrophysical Journal",
+          "structured": {
+            "centralClaim": "Hawking stars can form sub-Chandrasekhar-mass black holes and red straggler stars in ultrafaint dwarf galaxies.",
+            "citedEvidence": "The authors present stellar evolution models for Hawking stars of 0.5–1.4 M⊙, explore three accretion schemes, and show that a wide range of asteroid‑mass primordial black holes can accrete such stars within the age of the Universe, with the efficiency depending on accretion physics and metallicity.",
+            "originStance": "none",
+            "summaryText": "The study proposes that stars captured by primordial black holes can undergo prolonged accretion, leading to the creation of low‑mass black holes and red straggler stars, particularly in low‑metallicity environments. By modeling accretion across a range of masses and metallicities, the authors demonstrate that this mechanism can operate within the Universe's age, though it relies on specific accretion assumptions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/pr2199.001769.v1",
+      "text": "Unification by Generalising Proper Time Beyond the Extra Spatial Dimensions Paradigm",
+      "provenance": [
+        {
+          "sourceId": "10.14293/pr2199.001769.v1",
+          "locator": "https://doi.org/10.14293/pr2199.001769.v1",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors introduce a novel framework that extends proper time beyond traditional extra‑dimensional geometries, arguing that this generalisation better aligns with unification goals and can account for Standard Model particle properties. They claim the approach resolves shortcomings of previous geometric extensions and provides a more robust foundation for a unified theory.",
+          "summaryMethod": "llm",
+          "authors": [
+            "David Jackson"
+          ],
+          "structured": {
+            "centralClaim": "The paper proposes a new unified theory that generalises proper time intervals to higher-order forms, abandoning the quadratic geometric assumption of extra-dimensional models, and interprets residual components as the basis for matter structure, offering a more compelling conceptual framework and empirical coverage of Standard Model features.",
+            "citedEvidence": "It notes that extra-dimensional theories have been studied for about a century but lack clear empirical success or evidence for a geometric extension of 4‑dimensional spacetime, motivating the alternative approach.",
+            "originStance": "none",
+            "summaryText": "The authors introduce a novel framework that extends proper time beyond traditional extra‑dimensional geometries, arguing that this generalisation better aligns with unification goals and can account for Standard Model particle properties. They claim the approach resolves shortcomings of previous geometric extensions and provides a more robust foundation for a unified theory."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.3847/2515-5172/ac7331",
+      "text": "Note on Fundamental Physics Tests from Black Hole Imaging: Comment on “Hunting for Extra Dimensions in the Shadow of Sagittarius A*”",
+      "provenance": [
+        {
+          "sourceId": "10.3847/2515-5172/ac7331",
+          "locator": "https://doi.org/10.3847/2515-5172/ac7331",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors critique a preprint that claims to derive new constraints on extra dimensions from the shape of Sgr A*'s black hole shadow, arguing that current EHT observations lack the resolution and stability to support such conclusions. They emphasize that near‑term fundamental‑physics tests with Sgr A* will rely mainly on the shadow size rather than shape measurements.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Sunny Vagnozzi",
+            "Luca Visinelli"
+          ],
+          "venue": "Research Notes of the AAS",
+          "structured": {
+            "centralClaim": "The paper contends that recent attempts to set limits on extra dimensions using the deviation from circularity of Sgr A*'s shadow are unsupported because the necessary measurements are unavailable and the assumption of a ≤10% deviation is incorrect.",
+            "citedEvidence": "It points out that the deviation from circularity is quoted as ≲10% based on the supposed similarity of the two shadows, which the authors deem an incorrect assumption, and notes the sparse interferometric coverage and short variability timescale of Sgr A* that prevent such limits.",
+            "originStance": "none",
+            "summaryText": "The authors critique a preprint that claims to derive new constraints on extra dimensions from the shape of Sgr A*'s black hole shadow, arguing that current EHT observations lack the resolution and stability to support such conclusions. They emphasize that near‑term fundamental‑physics tests with Sgr A* will rely mainly on the shadow size rather than shape measurements."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/p2199-8442.1.sop-.pfvgys.v1",
+      "text": "Dark Matter and the Standard Model from Different Sectors of Extra Dimensions",
+      "provenance": [
+        {
+          "sourceId": "10.14293/p2199-8442.1.sop-.pfvgys.v1",
+          "locator": "https://doi.org/10.14293/p2199-8442.1.sop-.pfvgys.v1",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study extends extra‑dimensional theories by placing the Standard Model and a dark‑matter sector in distinct extra‑dimensional branches that interact only through gravity, potentially allowing a weak additional interaction. It links the resulting dark matter to dark quark nugget and primordial black‑hole scenarios, building on Kaluza’s original ideas and using a generalised proper‑time framework.",
+          "summaryMethod": "llm",
+          "authors": [
+            "David Jackson"
+          ],
+          "structured": {
+            "centralClaim": "The paper proposes that both dark matter and the Standard Model can be realized in separate sectors of extra dimensions, sharing a common 4‑dimensional spacetime root and interacting gravitationally, with possible weak mutual interactions.",
+            "citedEvidence": "It references the historical Kaluza programme, the concept of generalised proper time, and connects the resulting dark matter to 'dark quark nugget' and primordial black hole models via gravitational collapse.",
+            "originStance": "none",
+            "summaryText": "The study extends extra‑dimensional theories by placing the Standard Model and a dark‑matter sector in distinct extra‑dimensional branches that interact only through gravity, potentially allowing a weak additional interaction. It links the resulting dark matter to dark quark nugget and primordial black‑hole scenarios, building on Kaluza’s original ideas and using a generalised proper‑time framework."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/o9lksi.4",
+      "text": "Gravitation Due to Scalar Potentials and Black Holes",
+      "provenance": [
+        {
+          "sourceId": "10.32388/o9lksi.4",
+          "locator": "https://doi.org/10.32388/o9lksi.4",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors propose that the universe contains two scalar potentials that generate longitudinal waveforms and emerge from black holes, producing both transverse electromagnetic radiation and gravity. They argue this framework offers a simple explanation for dark matter and relates charge to a mechanical intermediate, while also deriving a critical MOND acceleration using the Rydberg constant.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Mark Titleman"
+          ],
+          "structured": {
+            "centralClaim": "The paper proposes that the universe contains two scalar potentials that generate longitudinal waveforms, which arise from black holes and produce both transverse electromagnetic radiation and gravity, offering a parsimonious framework for dark matter and linking charge to these potentials.",
+            "citedEvidence": "It references E.T. Whittaker’s scalar potentials, invokes black holes as the source of these potentials, and derives the critical MOND acceleration using the Rydberg constant. The argument also likens the universe to an atom, with charge acting as a mechanical intermediate in the scalar potentials.",
+            "originStance": "none",
+            "summaryText": "The authors propose that the universe contains two scalar potentials that generate longitudinal waveforms and emerge from black holes, producing both transverse electromagnetic radiation and gravity. They argue this framework offers a simple explanation for dark matter and relates charge to a mechanical intermediate, while also deriving a critical MOND acceleration using the Rydberg constant."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2025/05/039",
+      "text": "Black holes in a gravitational field: the non-linear static love number of Schwarzschild black holes vanishes",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2025/05/039",
+          "locator": "https://doi.org/10.1088/1475-7516/2025/05/039",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study proves that Schwarzschild black holes cannot acquire static tidal deformability under even‑parity tidal fields, regardless of perturbation order. It further reveals that this result follows from a hidden symmetry in the black‑hole geometry when written in Weyl coordinates. This work clarifies the gravitational response of black holes in tidal environments.",
+          "summaryMethod": "llm",
+          "authors": [
+            "A. Kehagias",
+            "A. Riotto"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "The static tidal Love number of Schwarzschild black holes in four-dimensional vacuum vanishes at any order for parity‑even external tidal forces.",
+            "citedEvidence": "The authors demonstrate this vanishing through a perturbative analysis and identify a non‑linear symmetry that becomes apparent when the black‑hole metric is expressed in axisymmetric static Weyl coordinates.",
+            "originStance": "none",
+            "summaryText": "The study proves that Schwarzschild black holes cannot acquire static tidal deformability under even‑parity tidal fields, regardless of perturbation order. It further reveals that this result follows from a hidden symmetry in the black‑hole geometry when written in Weyl coordinates. This work clarifies the gravitational response of black holes in tidal environments."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2023/01/035",
+      "text": "Quasinormal modes and Love numbers of Kerr black holes from AdS<sub>2</sub> black holes",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2023/01/035",
+          "locator": "https://doi.org/10.1088/1475-7516/2023/01/035",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors demonstrate a mapping between near-zone perturbations of Kerr black holes and AdS2 black holes, using this correspondence to compute quasinormal modes and tidal Love numbers. They employ AdS2/CFT1 duality and group theory to derive these quantities, highlighting a novel analytical method.",
+          "summaryMethod": "llm",
+          "authors": [
+            "A. Kehagias",
+            "D. Perrone",
+            "A. Riotto"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "Linearperturbations of any spin field in the near-zone limit of a Kerr black hole are equivalent to those of an AdS2 black hole sharing the same basic properties, allowing calculation of quasinormal modes and Love numbers via AdS2/CFT1 correspondence and group theory.",
+            "citedEvidence": "The paper invokes the identification of perturbations and the AdS2/CFT1 correspondence together with a group theoretical approach as the basis for computing the quasinormal mode spectrum and Love numbers.",
+            "originStance": "none",
+            "summaryText": "The authors demonstrate a mapping between near-zone perturbations of Kerr black holes and AdS2 black holes, using this correspondence to compute quasinormal modes and tidal Love numbers. They employ AdS2/CFT1 duality and group theory to derive these quantities, highlighting a novel analytical method."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.3847/1538-4357/ac5026",
+      "text": "Repeated Mergers, Mass-gap Black Holes, and Formation of Intermediate-mass Black Holes in Dense Massive Star Clusters",
+      "provenance": [
+        {
+          "sourceId": "10.3847/1538-4357/ac5026",
+          "locator": "https://doi.org/10.3847/1538-4357/ac5026",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper argues that dense star clusters provide the conditions needed for black hole mergers to retain products and build up larger black holes. It uses simulations to demonstrate that these mergers can fill the observed mass gap and create intermediate‑mass black holes.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Giacomo Fragione",
+            "Bence Kocsis",
+            "Frederic A. Rasio",
+            "Joseph Silk"
+          ],
+          "venue": "The Astrophysical Journal",
+          "structured": {
+            "centralClaim": "Repeated mergers of black holes in dense massive star clusters can produce both mass‑gap black holes and intermediate‑mass black holes.",
+            "citedEvidence": "The abstract cites theoretical predictions of a mass gap between ~50 and 100 solar masses, the detectability of such mergers through gravitational‑wave emission, and simulations that include full stellar evolution showing a massive stellar BH seed can grow to 10³–10⁴ solar masses in nuclear star clusters.",
+            "originStance": "none",
+            "summaryText": "The paper argues that dense star clusters provide the conditions needed for black hole mergers to retain products and build up larger black holes. It uses simulations to demonstrate that these mergers can fill the observed mass gap and create intermediate‑mass black holes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/pr2199.001572.v1",
+      "text": "Core Theory Paper Primordial Black Holes: Framework for a Unified Universe",
+      "provenance": [
+        {
+          "sourceId": "10.14293/pr2199.001572.v1",
+          "locator": "https://doi.org/10.14293/pr2199.001572.v1",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper introduces a unified cosmological framework in which primordial black holes formed during inflation act as seeds for early structure formation, addressing observed tensions in the standard ΛCDM model. It presents observational support from CMB measurements and Bayesian model comparison indicating a better fit to data, and discusses implications for the emergence of massive galaxies and quasars at high redshift.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Lyle Semple"
+          ],
+          "structured": {
+            "centralClaim": "Primordial black holes are proposed as the primary mechanism for cosmic structure formation, resolving tensions in ΛCDM and explaining early massive galaxies and quasars observed by JWST.",
+            "citedEvidence": "The model is supported by CMB data from the Atacama Cosmology Telescope and Bayesian analysis showing a superior fit compared to ΛCDM (ln(BPBH/ΛCDM)=6.8±1.2).",
+            "originStance": "none",
+            "summaryText": "The paper introduces a unified cosmological framework in which primordial black holes formed during inflation act as seeds for early structure formation, addressing observed tensions in the standard ΛCDM model. It presents observational support from CMB measurements and Bayesian model comparison indicating a better fit to data, and discusses implications for the emergence of massive galaxies and quasars at high redshift."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1475-7516/2022/09/017",
+      "text": "Inflation with two-form field: the production of primordial black holes and gravitational waves",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1475-7516/2022/09/017",
+          "locator": "https://doi.org/10.1088/1475-7516/2022/09/017",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors propose a cosmological model in which a two-form field, activated by the inflaton’s motion, produces enough primordial black holes to account for dark matter, and they compute the secondary gravitational waves generated by the induced curvature perturbations. They show that the predicted gravitational-wave spectra could be observable with upcoming space-based laser interferometers.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Tomohiro Fujita",
+            "Hiromasa Nakatsuka",
+            "Ippei Obata",
+            "Sam Young"
+          ],
+          "venue": "Journal of Cosmology and Astroparticle Physics",
+          "structured": {
+            "centralClaim": "The paper claims that the particle production of a two-form field during inflation can generate a sufficient abundance of primordial black holes to serve as dark matter, and that the associated gravitational waves are detectable with future space-based interferometers.",
+            "citedEvidence": "It cites the coupling of the antisymmetric tensor field to the inflaton’s kinetic term and the resulting curvature perturbations that lead to PBH formation, and it presents calculations of the resulting gravitational-wave power spectra.",
+            "originStance": "none",
+            "summaryText": "The authors propose a cosmological model in which a two-form field, activated by the inflaton’s motion, produces enough primordial black holes to account for dark matter, and they compute the secondary gravitational waves generated by the induced curvature perturbations. They show that the predicted gravitational-wave spectra could be observable with upcoming space-based laser interferometers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/pr2199.001601.v1",
+      "text": "Part 2: Observational Tests and Predictions - Primordial Black Holes: Framework for a Unified Universe",
+      "provenance": [
+        {
+          "sourceId": "10.14293/pr2199.001601.v1",
+          "locator": "https://doi.org/10.14293/pr2199.001601.v1",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper argues that a primordial black hole framework can explain the emergence of massive galaxies observed at very high redshift more effectively than standard dark matter models, and it outlines a suite of upcoming observations that will rigorously evaluate this hypothesis. It emphasizes that these tests span multiple messengers and timeframes, aiming to distinguish the PBH model from competing theories.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Lyle Semple"
+          ],
+          "structured": {
+            "centralClaim": "Primordial black holes constitute a viable dark matter alternative that better matches recent JWST observations of early massive galaxies at redshifts above 10 while remaining consistent with other cosmological constraints.",
+            "citedEvidence": "The authors present Bayesian analyses showing improved statistical fit to JWST data and enumerate observational signatures—such as high‑redshift galaxy counts, gravitational‑wave backgrounds, microlensing rates, X‑ray binary populations, and galactic dynamics—that future missions like JWST, LISA, Roman, and radio interferometers will test.",
+            "originStance": "none",
+            "summaryText": "The paper argues that a primordial black hole framework can explain the emergence of massive galaxies observed at very high redshift more effectively than standard dark matter models, and it outlines a suite of upcoming observations that will rigorously evaluate this hypothesis. It emphasizes that these tests span multiple messengers and timeframes, aiming to distinguish the PBH model from competing theories."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1155/2018/3601489",
+      "text": "Hawking Radiation of a Single-Partition Black Hole",
+      "provenance": [
+        {
+          "sourceId": "10.1155/2018/3601489",
+          "locator": "https://doi.org/10.1155/2018/3601489",
+          "date": "2018",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper introduces a novel area spectrum for black holes with a single partition and shows that, under this spectrum, the black hole's decay time remains approximately constant. It explains the underlying reason for this constancy, reinforcing the implications of the new spectrum.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Youngsub Yoon"
+          ],
+          "venue": "Advances in High Energy Physics",
+          "structured": {
+            "centralClaim": "The decay time of a single-partition black hole is roughly constant.",
+            "citedEvidence": "The authors present a new area spectrum that leads to a constant decay time for single-partition black holes, and they demonstrate why this constant decay time arises.",
+            "originStance": "none",
+            "summaryText": "The paper introduces a novel area spectrum for black holes with a single partition and shows that, under this spectrum, the black hole's decay time remains approximately constant. It explains the underlying reason for this constancy, reinforcing the implications of the new spectrum."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/q0dx82",
+      "text": "Correspondence Between Grey-Body Factors and Quasinormal Frequencies for Rotating Black Holes",
+      "provenance": [
+        {
+          "sourceId": "10.32388/q0dx82",
+          "locator": "https://doi.org/10.32388/q0dx82",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study establishes a spectral link between scattering (grey-body) factors and quasinormal mode frequencies for a broad class of rotating black holes, showing that this link persists beyond the simple, symmetric cases previously studied. The result is restricted to non-superradiant wave modes.",
+          "summaryMethod": "llm",
+          "authors": [
+            "R. A. Konoplya",
+            "Alexander Zhidenko"
+          ],
+          "structured": {
+            "centralClaim": "The correspondence between grey-body factors and quasinormal modes extends to general parametrized axially symmetric black holes, but only for non-superradiant waves.",
+            "citedEvidence": "The authors demonstrate that the previously known correspondence for spherically symmetric, asymptotically flat black holes also holds for general parametrized axially symmetric black holes, and they note that this holds for non-superradiant waves.",
+            "originStance": "none",
+            "summaryText": "The study establishes a spectral link between scattering (grey-body) factors and quasinormal mode frequencies for a broad class of rotating black holes, showing that this link persists beyond the simple, symmetric cases previously studied. The result is restricted to non-superradiant wave modes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/z1nixl.4",
+      "text": "Evidence-Based Cosmology — Black holes as rejuvenating systems of the universe",
+      "provenance": [
+        {
+          "sourceId": "10.32388/z1nixl.4",
+          "locator": "https://doi.org/10.32388/z1nixl.4",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The author argues that current cosmological claims about an expanding universe rely on unproven assumptions, pointing out that gravitational redshift and CMB observations do not constitute direct evidence of cosmic expansion. They contend that without direct observation or causal linkage, the expansion hypothesis remains speculative.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Amrit Šorli",
+            "Rado Gorjup",
+            "Štefan Čelan"
+          ],
+          "structured": {
+            "centralClaim": "The expansion of universal space has never been directly observed and cannot be proven by gravitational redshift or cosmological redshift, and the CMB does not establish a recombination period.",
+            "citedEvidence": "The paper cites the Mossbauer experiment confirming gravitational redshift, notes the absence of observed Doppler effect in expanding space, and references the discovery of CMB radiation as evidence that does not prove recombination.",
+            "originStance": "none",
+            "summaryText": "The author argues that current cosmological claims about an expanding universe rely on unproven assumptions, pointing out that gravitational redshift and CMB observations do not constitute direct evidence of cosmic expansion. They contend that without direct observation or causal linkage, the expansion hypothesis remains speculative."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/s2199-1006.1.sor-.ppg9mmi.v1",
+      "text": "Black Holes, Ergospheres, and Event Horizons: Analysis of the Most Common Misunderstandings in General Relativity",
+      "provenance": [
+        {
+          "sourceId": "10.14293/s2199-1006.1.sor-.ppg9mmi.v1",
+          "locator": "https://doi.org/10.14293/s2199-1006.1.sor-.ppg9mmi.v1",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors examine several frequently misunderstood concepts in general relativity, using illustrative examples and counterexamples to clarify them. They then present a unified definition of gravitational time dilation to address lingering doubts.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Alessandro Rovetta"
+          ],
+          "structured": {
+            "centralClaim": "The paper offers rational explanations to resolve common misunderstandings of concepts such as gravitational redshift, time dilation, ergospheres, horizons, and general covariance, and proposes a general definition of gravitational time dilation.",
+            "citedEvidence": "It supports its arguments with examples and counterexamples, and culminates in a proposed definition of gravitational time dilation.",
+            "originStance": "none",
+            "summaryText": "The authors examine several frequently misunderstood concepts in general relativity, using illustrative examples and counterexamples to clarify them. They then present a unified definition of gravitational time dilation to address lingering doubts."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/s2199-1006.1.sor-.ppwpd1c.v1",
+      "text": "Wormhole Stability of Charged Black Holes Under the Gravity of f(R)",
+      "provenance": [
+        {
+          "sourceId": "10.14293/s2199-1006.1.sor-.ppwpd1c.v1",
+          "locator": "https://doi.org/10.14293/s2199-1006.1.sor-.ppwpd1c.v1",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors propose that superradiation phenomena in Kerr‑Schild black holes can be linked to wormhole entropy in f(R) gravity, and through thermodynamic geometry they identify conditions under which such wormholes remain stable. The work focuses on gravitational and thermodynamic modeling rather than astrophysical or cosmological implications.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Wen-Xiang Chen",
+            "Yao-Guang Zheng"
+          ],
+          "structured": {
+            "centralClaim": "The paper derives a stability condition for wormholes in charged black holes under f(R) gravity by expressing their entropy algebraically and performing a thermodynamic geometric analysis.",
+            "citedEvidence": "It invokes superradiation as a higher‑dimensional action structure and uses the algebraic mapping of bounded fermions in Kerr‑Schild black holes to derive the entropy expression and stability condition.",
+            "originStance": "none",
+            "summaryText": "The authors propose that superradiation phenomena in Kerr‑Schild black holes can be linked to wormhole entropy in f(R) gravity, and through thermodynamic geometry they identify conditions under which such wormholes remain stable. The work focuses on gravitational and thermodynamic modeling rather than astrophysical or cosmological implications."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1088/1748-0221/17/05/p05042",
+      "text": "Beam delivery and final focus systems for multi-TeV advanced linear colliders",
+      "provenance": [
+        {
+          "sourceId": "10.1088/1748-0221/17/05/p05042",
+          "locator": "https://doi.org/10.1088/1748-0221/17/05/p05042",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper investigates how the Beam Delivery System (BDS) of a high‑energy linear collider must be designed to deliver focused beams at multi‑TeV energies. It emphasizes that the BDS length and required luminosity increase with energy, creating major design constraints, and it reviews the limitations of conventional quadrupole magnet approaches in this regime. The work outlines the technical challenges that must be addressed to realize advanced linear collider concepts at such high energies.",
+          "summaryMethod": "llm",
+          "authors": [
+            "G. White",
+            "S. Gessner",
+            "E. Adli",
+            "G.J. Cao",
+            "K. Sjobak",
+            "S. Barber",
+            "C. Schroeder",
+            "D. Terzani",
+            "J. van Tilborg",
+            "E. Esarey",
+            "C. Doss",
+            "M. Litos",
+            "I. Lobach",
+            "J. Power",
+            "C.A. Lindstrøm"
+          ],
+          "venue": "Journal of Instrumentation",
+          "structured": {
+            "centralClaim": "The Beam Delivery System is a critical component of high‑energy linear colliders and extending its quadrupole‑based design to multi‑TeV energies presents significant challenges related to length, luminosity, and beam focusing.",
+            "citedEvidence": "The abstract describes the BDS as including diagnostics for energy, emittance, and polarization and collimators for protection, notes that its length increases with collision energy while higher energies require higher luminosities, imposing design constraints, and states that it reviews traditional quadrupole magnet designs and examines the challenges of scaling them to the multi‑TeV regime.",
+            "originStance": "none",
+            "summaryText": "The paper investigates how the Beam Delivery System (BDS) of a high‑energy linear collider must be designed to deliver focused beams at multi‑TeV energies. It emphasizes that the BDS length and required luminosity increase with energy, creating major design constraints, and it reviews the limitations of conventional quadrupole magnet approaches in this regime. The work outlines the technical challenges that must be addressed to realize advanced linear collider concepts at such high energies."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1209/0295-5075/ad0e83",
+      "text": "An observer's perspective of the Unruh and Hawking effects—Using coherent signals to extract information from a black hole",
+      "provenance": [
+        {
+          "sourceId": "10.1209/0295-5075/ad0e83",
+          "locator": "https://doi.org/10.1209/0295-5075/ad0e83",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study examines how an accelerating observer detects quantum radiation when the underlying field is in the inertial vacuum. It shows that the observed frequency spectrum matches a Bose‑Einstein distribution whose temperature scales with the observer's acceleration, implying the Unruh and Hawking effects are generally present. This demonstrates that such effects arise for any incoherent incoming state.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Satish Ramakrishna"
+          ],
+          "venue": "Europhysics Letters",
+          "structured": {
+            "centralClaim": "The Unruh effect (and the related Hawking effect) is generic, appearing with any incoming incoherent state, as shown by computing the response of a non‑inertial observer to a single frequency mode and finding a Bose distribution with temperature proportional to acceleration.",
+            "citedEvidence": "The paper calculates the observer's response to a single frequency mode and deduces that the cumulative distribution of observed frequencies follows a Bose distribution with a temperature proportional to the acceleration.",
+            "originStance": "none",
+            "summaryText": "The study examines how an accelerating observer detects quantum radiation when the underlying field is in the inertial vacuum. It shows that the observed frequency spectrum matches a Bose‑Einstein distribution whose temperature scales with the observer's acceleration, implying the Unruh and Hawking effects are generally present. This demonstrates that such effects arise for any incoherent incoming state."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/pr2199.002904.v1",
+      "text": "Ramanujan–Regulated Spectral Geometry and Structural Regime Change in Black Holes, Dark Matter, and Dark Energy",
+      "provenance": [
+        {
+          "sourceId": "10.14293/pr2199.002904.v1",
+          "locator": "https://doi.org/10.14293/pr2199.002904.v1",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors argue that by applying a spectral‑geometric regulator, apparent deficits in these cosmic structures can be understood as limits of what can be observed, not as genuine absences. They connect this framework to earlier spectral‑Fourier extensions in quantum mechanics and illustrate how structural growth hitting information bounds forces exterior observables to saturate while interiors remain finite.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Savio Antonio Vogt"
+          ],
+          "structured": {
+            "centralClaim": "The paper introduces a refined Spectral–Geometric Additive–Multiplicative regulator that constrains inference in black holes, dark matter, and dark energy, showing that observed darkness and parameter dispersion result from regulated observability rather than intrinsic physical absence.",
+            "citedEvidence": "It references Ramanujan’s asymptotic growth laws and a previously derived spectral–geometric AM‑regulator obtained via Fourier–Riemann spectral control, and cites supporting literature [18][19].",
+            "originStance": "none",
+            "summaryText": "The authors argue that by applying a spectral‑geometric regulator, apparent deficits in these cosmic structures can be understood as limits of what can be observed, not as genuine absences. They connect this framework to earlier spectral‑Fourier extensions in quantum mechanics and illustrate how structural growth hitting information bounds forces exterior observables to saturate while interiors remain finite."
+          }
+        }
+      ]
+    }
+  ],
+  "citationGraph": {
+    "10.1590/1806-9126-rbef-2025-0026": [],
+    "10.1088/1475-7516/2024/11/026": [
+      "10.1093/mnras/152.1.75",
+      "10.1093/mnras/168.2.399",
+      "10.1038/253251a0",
+      "10.1088/1674-4527/10/6/001",
+      "10.1088/1361-6382/aaa7b4",
+      "10.1088/1361-6633/ac1e31",
+      "10.1088/1361-6471/abc534",
+      "10.1016/b978-0-32-395636-9.00012-8",
+      "10.3390/universe9050203",
+      "10.1038/248030a0",
+      "10.1103/physrevd.107.123525",
+      "10.1103/physrevlett.129.061302",
+      "10.1103/physrevd.105.103508",
+      "10.1103/physrevd.106.086001",
+      "10.1103/physrevd.110.015004",
+      "10.1016/s0370-2693(98)00466-3",
+      "10.1103/physrevd.102.103523",
+      "10.1103/physrevd.104.123507",
+      "10.1103/physrevd.110.036004",
+      "10.1093/mnras/stae1098",
+      "10.1086/154351",
+      "10.1038/261550a0",
+      "10.1103/physrevd.54.6040",
+      "10.1103/physrevd.66.023514",
+      "10.1103/physrevlett.103.111303",
+      "10.1103/physrevd.85.044055",
+      "10.1103/physrevd.108.063523",
+      "10.1103/physrevd.101.123533",
+      "10.1088/1475-7516/2021/03/053",
+      "10.1088/1475-7516/2021/11/e01",
+      "10.1016/j.physletb.2021.136722",
+      "10.1088/1475-7516/2022/10/013",
+      "10.1088/1475-7516/2022/10/089",
+      "10.1088/1475-7516/2024/06/021",
+      "10.1007/jhep07(2022)130",
+      "10.1007/jhep05(2023)169",
+      "10.3390/universe7110398",
+      "10.1007/s43673-023-00109-z",
+      "10.1103/physrevd.108.083527",
+      "10.1007/s41114-021-00032-5",
+      "10.1103/physrevd.106.103520",
+      "10.1007/jhep08(2019)001",
+      "10.1140/epjp/s13360-020-00564-9",
+      "10.1209/0295-5075/ad3b36",
+      "10.1038/298538a0",
+      "10.1143/ptp.68.1979",
+      "10.1103/physrevd.110.015005",
+      "10.1103/physrevlett.119.031103",
+      "10.1088/1475-7516/2019/10/077",
+      "10.1088/1475-7516/2023/05/013",
+      "10.1103/physrevd.97.081302",
+      "10.1103/physrevlett.126.041101",
+      "10.1103/physrevd.108.103543",
+      "10.1088/1475-7516/2020/05/003",
+      "10.1086/153853",
+      "10.1051/0004-6361/201833887",
+      "10.1103/physrevlett.82.4168",
+      "10.1103/physrevd.62.023506",
+      "10.1103/physrevd.70.043506",
+      "10.1088/1475-7516/2019/12/012",
+      "10.1103/physrevd.108.049901",
+      "10.1088/1475-7516/2019/10/071",
+      "10.1088/1361-6382/ad5488",
+      "10.1103/physrevd.88.124032",
+      "10.1007/jhep01(2021)097",
+      "10.1088/1475-7516/2023/07/068",
+      "10.1103/physrevd.83.044011",
+      "10.1093/ptep/ptab019",
+      "10.1103/physrevd.104.022004",
+      "10.1016/j.astropartphys.2005.01.005",
+      "10.1103/physrevd.103.123549",
+      "10.1088/1361-6382/aac608",
+      "10.1088/1475-7516/2016/10/034",
+      "10.1093/mnras/staa765",
+      "10.1038/329308a0",
+      "10.1016/j.physrep.2015.10.007",
+      "10.12942/lrr-2013-2",
+      "10.22323/1.335.0046",
+      "10.1007/978-981-19-3079-9_24-1",
+      "10.1088/1361-6382/ace493",
+      "10.1016/j.physletb.2024.138997",
+      "10.1103/physrevd.77.044009",
+      "10.1016/j.physletb.2016.04.041",
+      "10.1103/physrevd.104.066012",
+      "10.1103/physrevd.84.024028",
+      "10.1134/s0202289321040101",
+      "10.1088/1475-7516/2023/10/001",
+      "10.1103/physrevd.107.104021"
+    ],
+    "10.1088/1475-7516/2026/05/014": [
+      "10.1016/j.nuclphysb.2006.10.033",
+      "10.1002/prop.201900037",
+      "10.1016/j.physrep.2022.09.002",
+      "10.1016/j.physletb.2018.11.018",
+      "10.1007/jhep02(2023)022",
+      "10.1016/j.physletb.2019.134867",
+      "10.1016/0550-3213(87)90691-2",
+      "10.1140/epjc/s10052-023-12206-2",
+      "10.1016/s0370-2693(99)01019-9",
+      "10.1016/s0370-2693(99)01421-5",
+      "10.1146/annurev.nucl.53.041002.110503",
+      "10.1103/physrevlett.124.101101",
+      "10.1016/s0550-3213(97)00808-0",
+      "10.1002/prop.201000009",
+      "10.1103/physrevd.69.029901",
+      "10.1002/prop.70073",
+      "10.1002/prop.70015",
+      "10.1093/mnras/152.1.75",
+      "10.1017/s0074180900236267",
+      "10.1038/253251a0",
+      "10.1016/j.physletb.2020.135624",
+      "10.3847/2041-8213/aa5dab",
+      "10.1103/physrevd.106.086001",
+      "10.1016/j.dark.2024.101714",
+      "10.1103/physrevd.109.095008",
+      "10.1016/j.dark.2024.101681",
+      "10.1103/physrevd.107.123525",
+      "10.1146/annurev-nucl-050520-125911",
+      "10.1103/physrevd.103.103025",
+      "10.1103/physrevlett.123.251102",
+      "10.1103/physrevlett.11.237",
+      "10.1007/jhep11(2022)161",
+      "10.3389/fspas.2021.681084",
+      "10.1103/physrev.82.664",
+      "10.1088/1361-6633/ac1e31",
+      "10.1103/physrevd.95.083006",
+      "10.1088/0004-637x/786/2/158",
+      "10.1103/physrevd.97.023518",
+      "10.1016/s0370-2693(99)00795-9",
+      "10.1016/s0370-2693(98)00466-3",
+      "10.1007/bf02784569",
+      "10.1103/physrevd.66.024023",
+      "10.1103/physrevd.71.124039",
+      "10.1016/0003-4916(86)90186-7",
+      "10.1063/1.1705193",
+      "10.1063/1.1724257",
+      "10.1063/1.1705135",
+      "10.1103/physrevd.13.198",
+      "10.1086/152445",
+      "10.1103/physrevd.73.124022",
+      "10.1007/jhep06(2025)017",
+      "10.1007/jhep03(2021)085",
+      "10.1103/physrevd.102.103512"
+    ],
+    "10.1088/1475-7516/2026/05/055": [
+      "10.1051/0004-6361/201833910",
+      "10.1146/annurev.nucl.49.1.35",
+      "10.1103/revmodphys.76.1",
+      "10.1088/1367-2630/14/9/095012",
+      "10.1016/0370-2693(85)91028-7",
+      "10.1016/0370-2693(86)91126-3",
+      "10.1070/pu1991v034n05abeh002497",
+      "10.1038/248030a0",
+      "10.1086/154351",
+      "10.1103/physrevd.89.103501",
+      "10.1103/physrevd.104.103021",
+      "10.1103/physrevd.106.035019",
+      "10.1103/physrevd.103.043504",
+      "10.1103/physrevd.107.083507",
+      "10.1088/1475-7516/2023/02/062",
+      "10.1088/1475-7516/2021/08/021",
+      "10.1016/j.physletb.2024.138473",
+      "10.1088/1475-7516/2025/02/052",
+      "10.1016/j.physletb.2021.136454",
+      "10.1103/physrevd.90.083535",
+      "10.1093/ptep/ptx011",
+      "10.1103/physrevd.103.083504",
+      "10.1088/1475-7516/2022/03/013",
+      "10.1016/0370-2693(87)91369-4",
+      "10.1016/0550-3213(88)90134-4",
+      "10.1103/physrevlett.96.081301",
+      "10.1103/physrevd.105.015022",
+      "10.1103/physrevd.50.7173",
+      "10.1016/0550-3213(96)00174-5",
+      "10.1103/physrevd.54.6040",
+      "10.1016/j.dark.2017.09.007",
+      "10.1103/physrevd.111.063544",
+      "10.1007/jhep09(2021)033",
+      "10.1016/j.physletb.2021.136791",
+      "10.1103/physrevd.105.l021303",
+      "10.1007/jhep01(2024)133",
+      "10.1103/physrevd.110.015005",
+      "10.1103/physrevd.110.043514",
+      "10.1007/jhep09(2023)092",
+      "10.1016/0370-2693(89)90206-2",
+      "10.1103/physrevd.43.1106",
+      "10.1103/physrevd.104.123501",
+      "10.1103/physrevd.30.712",
+      "10.1103/physrevlett.122.101301",
+      "10.1103/physrevd.101.023513",
+      "10.1103/physrevd.109.123507",
+      "10.1103/physrevd.109.123030",
+      "10.1088/1475-7516/2026/02/006",
+      "10.1103/physrevd.97.023501",
+      "10.1088/1475-7516/2023/03/013",
+      "10.1088/1475-7516/2019/01/037",
+      "10.1088/1475-7516/2023/03/020",
+      "10.1103/physrevd.47.4244",
+      "10.1016/j.nuclphysb.2008.08.029",
+      "10.1103/physrevd.94.063530",
+      "10.1086/153853",
+      "10.1103/physrevlett.70.9",
+      "10.1016/s0370-1573(98)00044-1",
+      "10.1103/physrevd.58.107502",
+      "10.1140/epjc/s10052-016-3945-8",
+      "10.1103/physrevd.105.023503",
+      "10.1103/vnm4-7wdc",
+      "10.1007/bf02345020",
+      "10.1103/physrevd.13.198",
+      "10.1103/physrevd.16.2402",
+      "10.1103/physrevd.41.3052",
+      "10.1103/physrevd.44.376",
+      "10.1103/physrevd.110.056029",
+      "10.1103/physrevd.83.041501",
+      "10.1103/physrevlett.71.3743",
+      "10.1088/1475-7516/2013/09/028",
+      "10.1103/physrevd.111.083015",
+      "10.1007/jhep10(2021)081",
+      "10.1007/978-981-96-6170-1_3",
+      "10.1103/physrevd.105.015023",
+      "10.1103/physrevd.107.123537",
+      "10.1140/epjp/s13360-020-00564-9",
+      "10.1088/1475-7516/2020/08/045",
+      "10.1103/physrevd.108.015005",
+      "10.21468/scipostphys.13.4.100",
+      "10.1088/1475-7516/2020/08/014",
+      "10.1103/physrevd.100.063502",
+      "10.1088/1475-7516/2019/10/047",
+      "10.1103/physrevd.14.1509",
+      "10.1103/physrevd.71.124020",
+      "10.1103/physrevd.74.064005"
+    ],
+    "10.1088/1475-7516/2025/12/042": [
+      "10.1103/physrev.56.455",
+      "10.1007/bf01374951",
+      "10.1103/physrevd.57.971",
+      "10.1103/physrevlett.92.201301",
+      "10.12942/lrr-2006-5",
+      "10.1016/j.aop.2008.08.008",
+      "10.1007/jhep03(2018)118",
+      "10.1140/epjc/s10052-020-7798-9",
+      "10.1016/j.nuclphysb.2004.06.003",
+      "10.1016/s0370-2693(01)00273-8",
+      "10.1103/physrevd.64.105013",
+      "10.1103/physrevd.83.085009",
+      "10.1103/physrevd.86.105027",
+      "10.1016/j.physletb.2023.138311",
+      "10.1103/physrevd.108.026008",
+      "10.1016/s0375-9601(01)00642-9",
+      "10.1016/j.aop.2022.169090",
+      "10.1103/sht5-sf25",
+      "10.1103/physrev.82.664",
+      "10.1103/physrevd.56.5008",
+      "10.1007/jhep08(2025)173",
+      "10.1103/physrevd.62.043008",
+      "10.1103/physrevd.93.104022",
+      "10.1103/physrevd.92.084020",
+      "10.1103/revmodphys.83.793",
+      "10.1134/s0202289325700306",
+      "10.1088/0264-9381/26/16/163001",
+      "10.12942/lrr-1999-2",
+      "10.1103/physrevlett.116.061102",
+      "10.1103/physrevlett.119.161101",
+      "10.1103/physrevd.110.044040",
+      "10.1103/physrevd.103.084031",
+      "10.1103/physrevd.107.104016",
+      "10.1140/epjc/s10052-025-14883-7",
+      "10.1002/prop.202400187",
+      "10.1103/physrevd.109.064017",
+      "10.13140/rg.2.2.26785.01124",
+      "10.1103/physrevd.107.104050",
+      "10.1088/1475-7516/2022/10/091",
+      "10.1007/s10773-025-06053-y",
+      "10.1016/j.dark.2024.101657",
+      "10.1209/0295-5075/ad7885",
+      "10.1016/j.aop.2025.170046",
+      "10.1007/s10773-024-05847-w",
+      "10.1140/epjc/s10052-025-14589-w",
+      "10.1002/prop.202400132",
+      "10.1103/physrevd.111.104055",
+      "10.1002/prop.202400002",
+      "10.1016/j.aop.2025.170299",
+      "10.1098/rspa.1985.0119",
+      "10.1103/physrevd.13.198",
+      "10.4310/atmp.2010.v14.n3.a1",
+      "10.1142/s0217751x04018324",
+      "10.1103/physrevd.109.104028",
+      "10.1088/1475-7516/2024/09/068",
+      "10.1016/j.physletb.2025.139288",
+      "10.1088/1475-7516/2025/04/025",
+      "10.1088/1475-7516/2025/04/042",
+      "10.1140/epjc/s10052-025-14380-x",
+      "10.1007/s10714-018-2361-9",
+      "10.1088/0004-637x/731/2/121",
+      "10.3847/2041-8213/ab0ec7",
+      "10.1007/bf02732276",
+      "10.1103/physrevlett.132.031401",
+      "10.1103/pt9s-jqjz",
+      "10.1103/physrevd.111.103519",
+      "10.1016/0370-1573(74)90023-4",
+      "10.1016/j.physrep.2011.12.003",
+      "10.1088/1126-6708/2005/02/035",
+      "10.21468/scipostphys.12.1.001",
+      "10.1103/physrevd.110.084016",
+      "10.3389/fphy.2020.00269",
+      "10.1140/epjc/s10052-019-6990-2",
+      "10.1007/bf02710419",
+      "10.1103/physrevlett.96.031103",
+      "10.1007/bf00760226",
+      "10.1103/physrevd.98.126003",
+      "10.1088/1475-7516/2020/07/066",
+      "10.1103/physrevd.111.084031",
+      "10.1103/physrev.108.1063",
+      "10.53941/ijgtp.2025.100003",
+      "10.1086/184453",
+      "10.1103/physrevd.35.3621",
+      "10.1103/physrevd.68.024018",
+      "10.1103/physrevd.96.024011",
+      "10.1088/1361-6382/ab2e25",
+      "10.1103/physrevd.108.104054",
+      "10.1103/physrevd.47.5253",
+      "10.1103/physrevd.74.064017",
+      "10.1103/qv83-1jw3",
+      "10.1088/1475-7516/2025/06/057",
+      "10.1103/physrevd.110.024010",
+      "10.1016/j.physletb.2024.138879",
+      "10.1103/physrevd.90.044042",
+      "10.1103/physrevd.75.124017",
+      "10.1140/epjc/s10052-024-12990-5",
+      "10.1002/prop.202400036",
+      "10.1134/s020228932470018x",
+      "10.1140/epjc/s10052-025-14671-3",
+      "10.1142/s0217732324501086",
+      "10.1016/j.aop.2025.170238",
+      "10.1515/zna-2024-0153",
+      "10.1140/epjc/s10052-024-13206-6",
+      "10.1016/j.jheap.2024.10.015",
+      "10.1142/s0218271823420142",
+      "10.1103/physrevd.5.2419",
+      "10.1103/physrevd.5.2439",
+      "10.1103/physrevd.110.084070",
+      "10.1007/bf02345020",
+      "10.1103/physrevd.111.024009",
+      "10.1103/physrevd.111.024010",
+      "10.1103/4x1f-vctx",
+      "10.1103/physrevd.79.064016",
+      "10.1016/j.physletb.2019.05.043",
+      "10.1103/physrevd.103.104047",
+      "10.1088/1361-6382/acd97b",
+      "10.1086/508146",
+      "10.3847/2041-8213/adc90e",
+      "10.1088/1361-6382/ad0a52",
+      "10.1016/j.physletb.2017.06.015",
+      "10.1016/j.physletb.2023.137674",
+      "10.1103/physrevd.99.124042",
+      "10.1140/epjc/s10052-020-08639-8",
+      "10.1103/xhtc-9cf4"
+    ],
+    "10.3847/1538-4357/ac6d5c": [
+      "10.1086/187709",
+      "10.1051/0004-6361/202141186",
+      "10.1051/0004-6361/201322068",
+      "10.1086/170270",
+      "10.1016/j.newast.2007.10.004",
+      "10.1111/j.1365-2966.2009.14867.x",
+      "10.1093/mnras/staa1250",
+      "10.1086/154911",
+      "10.1086/379509",
+      "10.1086/169770",
+      "10.1007/s00159-007-0006-1",
+      "10.1086/304829",
+      "10.1086/172185",
+      "10.1086/156957",
+      "10.1086/186171",
+      "10.1086/173020",
+      "10.1088/0004-637x/738/1/84",
+      "10.1086/307137",
+      "10.1109/mcse.2007.55",
+      "10.1088/0004-637x/784/2/169",
+      "10.1051/0004-6361/201629153",
+      "10.3847/1538-4357/ac45f6",
+      "10.1051/0004-6361/201321685",
+      "10.1051/0004-6361/201220923",
+      "10.1017/s0022377818000399",
+      "10.1088/0004-637x/800/2/144",
+      "10.1016/s1387-6473(01)00112-9",
+      "10.1088/0004-637x/726/1/10",
+      "10.1051/0004-6361:20053207",
+      "10.1051/0004-6361:20065430",
+      "10.1086/341138",
+      "10.1086/341877",
+      "10.1016/j.isci.2021.103544",
+      "10.1086/522619",
+      "10.1086/312383",
+      "10.3847/1538-4357/833/1/35",
+      "10.3847/1538-4357/ab5790",
+      "10.1086/312553",
+      "10.1093/mnras/staa136",
+      "10.2277/0521826594",
+      "10.48550/arxiv.astro-ph/0007091",
+      "10.1051/0004-6361:20066203",
+      "10.1051/0004-6361:20041631",
+      "10.1051/0004-6361:20021075",
+      "10.1051/0004-6361:20011449",
+      "10.1051/0004-6361:20030320",
+      "10.1051/0004-6361:20053997",
+      "10.1038/nature04912",
+      "10.1086/588521",
+      "10.1086/338325",
+      "10.1086/187381",
+      "10.1086/176343",
+      "10.1093/mnras/sty2032",
+      "10.1111/j.1745-3933.2012.01224.x",
+      "10.1051/0004-6361/201732345",
+      "10.1086/521388",
+      "10.1093/pasj/61.2.403",
+      "10.1093/mnras/stx121",
+      "10.1086/312353",
+      "10.1086/307097",
+      "10.1086/154170",
+      "10.1146/annurev.astro.44.051905.092532",
+      "10.1007/s11214-013-0006-6",
+      "10.1086/167234",
+      "10.1046/j.1365-8711.1999.02752.x",
+      "10.48550/arxiv.astro-ph/0004158",
+      "10.1046/j.1365-8711.2000.03429.x",
+      "10.1007/bf00152423",
+      "10.1051/0004-6361:20020294",
+      "10.1086/174934",
+      "10.1086/591901",
+      "10.1146/annurev.astro.34.1.607",
+      "10.1109/mcse.2011.37",
+      "10.1086/422802",
+      "10.1146/annurev-astro-082812-141003"
+    ],
+    "10.1155/2017/4817948": [
+      "10.1007/bf02345020",
+      "10.1103/physrevlett.85.5042",
+      "10.1023/b:gerg.0000046850.67053.49",
+      "10.1142/9789812704030_0155",
+      "10.1016/j.physletb.2006.09.028",
+      "10.1142/s0217751x07036130",
+      "10.1007/s12043-008-0001-8",
+      "10.1142/s0218271808013947",
+      "10.1016/j.physletb.2008.07.017",
+      "10.1016/j.physletb.2009.02.022",
+      "10.1016/j.physletb.2008.01.015",
+      "10.1007/jhep08(2011)101",
+      "10.1155/2014/527874",
+      "10.1142/s0218271812420230",
+      "10.1007/jhep06(2013)008",
+      "10.1016/j.aop.2013.05.006",
+      "10.1023/a:1026753914838",
+      "10.1103/physrevlett.81.4293",
+      "10.1103/physrevlett.100.141301",
+      "10.1103/physrevd.86.024021",
+      "10.1016/j.physletb.2008.09.005",
+      "10.1007/bf01208266",
+      "10.1103/physrevd.62.024027",
+      "10.1023/a:1026654312961",
+      "10.4310/atmp.1998.v2.n2.a2",
+      "10.1016/s0370-2693(98)00377-3",
+      "10.1103/physrevd.64.044006",
+      "10.1016/j.physletb.2003.10.015",
+      "10.1007/bf02757029",
+      "10.1103/physrevd.7.2333",
+      "10.1016/j.nuclphysb.2016.02.030"
+    ],
+    "10.32388/n8xf07": [
+      "10.1038/248030a0",
+      "10.1007/bf02345020",
+      "10.1007/bf01645742",
+      "10.1103/physrevd.7.2333",
+      "10.1103/physrevd.13.191",
+      "10.1007/bf01208266",
+      "10.1007/s12648-019-01617-1",
+      "10.1209/0295-5075/118/60006",
+      "10.1007/s10509-016-2714-3",
+      "10.1007/s12036-016-9397-6",
+      "10.1007/s10714-015-1997-y",
+      "10.1139/cjp-2015-0495",
+      "10.1209/0295-5075/110/10008",
+      "10.12942/lrr-2001-6",
+      "10.1142/s0217751x19501586",
+      "10.1007/s10714-008-0749-7",
+      "10.1103/physrevd.60.024007",
+      "10.1088/1126-6708/2005/05/014",
+      "10.1088/1126-6708/2008/06/095",
+      "10.1016/j.physrep.2008.08.001",
+      "10.1103/physrevd.12.3077",
+      "10.1088/0264-9381/28/18/183001",
+      "10.1103/physrevd.96.124011",
+      "10.1103/physrevd.14.870",
+      "10.1103/physrevlett.46.1351",
+      "10.7208/chicago/9780226870373.001.0001",
+      "10.1103/physrevd.14.332",
+      "10.1007/bf00759183",
+      "10.1140/epjc/s10052-012-1983-4",
+      "10.1088/0264-9381/27/16/165016",
+      "10.1007/s10773-009-0156-1",
+      "10.1007/bf00675798",
+      "10.1139/p09-024",
+      "10.1007/978-94-009-6469-3_2",
+      "10.1103/physrevlett.85.5042",
+      "10.1088/0264-9381/25/9/095014",
+      "10.1016/j.physletb.2006.09.028",
+      "10.1103/physrevd.79.044005",
+      "10.1016/j.physletb.2007.10.005",
+      "10.1007/s10509-015-2482-5",
+      "10.1140/epjp/i2015-15110-9",
+      "10.1142/s0219887814500741",
+      "10.1016/j.nuclphysb.2019.114703",
+      "10.1140/epjp/s13360-023-03983-6",
+      "10.1140/epjc/s10052-023-11360-x",
+      "10.1088/1361-6382/acdb40",
+      "10.3389/fspas.2022.1008221",
+      "10.1016/j.aop.2022.168803",
+      "10.1088/1402-4896/acf2cf",
+      "10.1103/physrevd.97.104001",
+      "10.1140/epjc/s10052-020-7743-y",
+      "10.1088/1361-6382/ac8fda",
+      "10.3390/universe9050225",
+      "10.1103/physrevd.108.024004",
+      "10.1140/epjc/s10052-023-11846-8",
+      "10.1016/j.aop.2018.10.012",
+      "10.1142/s0218271815420067",
+      "10.1088/0253-6102/61/5/03",
+      "10.1143/ptp.125.1053",
+      "10.1103/physrev.119.1743",
+      "10.5486/pmd.1960.7.1-4.26",
+      "10.1140/epjc/s10052-016-4057-1",
+      "10.1016/j.physletb.2006.12.072",
+      "10.1103/physrevlett.77.3288",
+      "10.1007/s10773-011-0824-9",
+      "10.1088/1126-6708/2007/07/062",
+      "10.1088/1475-7516/2014/01/044",
+      "10.1103/physrevd.99.024042",
+      "10.1140/epjc/s10052-022-10044-2",
+      "10.1103/physrevd.100.124038",
+      "10.1088/0264-9381/26/22/224001",
+      "10.1016/s0550-3213(01)00620-4",
+      "10.1103/revmodphys.88.015002",
+      "10.1140/epjc/s10052-023-11231-5"
+    ],
+    "10.34257/gjsfrfvol24is2pg7": [],
+    "10.3847/1538-4357/ad8ec0": [
+      "10.3847/1538-4357/ad04de",
+      "10.1093/mnras/112.2.195",
+      "10.1103/physrevd.87.023507",
+      "10.1007/s10509-024-04270-1",
+      "10.21468/scipostphyslectnotes.48",
+      "10.1016/j.physrep.2023.11.005",
+      "10.3847/0004-637x/823/2/102",
+      "10.3847/0067-0049/222/1/8",
+      "10.1093/mnras/stae147",
+      "10.1103/physrevd.107.103052",
+      "10.1088/1361-6471/abc534",
+      "10.1093/mnras/152.1.75",
+      "10.1111/j.1365-2966.2011.18890.x",
+      "10.3847/1538-4365/acae8d",
+      "10.1046/j.1365-8711.2001.04022.x",
+      "10.1046/j.1365-8711.2001.04007.x",
+      "10.1093/mnras/sty1986",
+      "10.1093/mnras/stad588",
+      "10.1111/j.1365-2966.2012.20767.x",
+      "10.1093/mnrasl/slw013",
+      "10.3847/2041-8213/ad6990",
+      "10.1093/mnras/stac2647",
+      "10.1088/0067-0049/192/1/3",
+      "10.1086/309267",
+      "10.1093/mnras/194.2.475",
+      "10.3847/1538-4365/acdcfd"
+    ],
+    "10.14293/pr2199.001769.v1": [],
+    "10.3847/2515-5172/ac7331": [
+      "10.3847/2041-8213/ab0ec7",
+      "10.3847/2041-8213/ac6674",
+      "10.3847/2041-8213/ac6756",
+      "10.1103/physrevd.100.044057",
+      "10.1103/physrevd.101.041301",
+      "10.3847/1538-4357/ac1738",
+      "10.1103/physrevlett.124.061102",
+      "10.1086/312423",
+      "10.1103/physrevd.103.104038",
+      "10.1103/physrevd.104.024001",
+      "10.1088/0004-637x/718/1/446",
+      "10.1103/physrevd.103.104047",
+      "10.3847/2041-8213/ab518c",
+      "10.1140/epjc/s10052-020-8321-z",
+      "10.1016/j.physrep.2021.10.004",
+      "10.1103/physrevlett.83.3370",
+      "10.1103/physrevlett.83.4690",
+      "10.3847/1538-3881/abc3c3",
+      "10.1103/physrevd.100.024020"
+    ],
+    "10.14293/p2199-8442.1.sop-.pfvgys.v1": [],
+    "10.32388/o9lksi.4": [
+      "10.1007/978-3-319-91023-9",
+      "10.1086/161131"
+    ],
+    "10.1088/1475-7516/2025/05/039": [
+      "10.1103/physrevd.77.021502",
+      "10.1103/physrevd.80.084018",
+      "10.1103/physrevd.80.084035",
+      "10.1103/physrevd.80.044017",
+      "10.1103/physrevd.92.024010",
+      "10.1103/physrevd.92.124003",
+      "10.1002/prop.201600064",
+      "10.1103/physrevlett.126.131102",
+      "10.1103/physrevd.104.024013",
+      "10.1103/physrevd.103.084021",
+      "10.1103/physrevd.104.104062",
+      "10.1016/j.physletb.2024.139109",
+      "10.1088/1475-7516/2021/04/052",
+      "10.1007/jhep05(2021)038",
+      "10.1103/physrevlett.127.101101",
+      "10.1088/1475-7516/2022/01/032",
+      "10.1007/jhep09(2022)049",
+      "10.1007/jhep10(2022)175",
+      "10.1103/physrevlett.130.091403",
+      "10.1103/physrevd.107.124030",
+      "10.1103/physrevd.105.044047",
+      "10.1088/1475-7516/2023/01/035",
+      "10.1007/jhep07(2022)112",
+      "10.1088/1475-7516/2023/06/056",
+      "10.1103/physrevd.108.024048",
+      "10.1007/jhep07(2024)098",
+      "10.1016/j.physletb.2024.138710",
+      "10.1103/physrevd.109.124063",
+      "10.1002/andp.19534470412",
+      "10.1063/1.1705005",
+      "10.1103/physrev.167.1175",
+      "10.1103/physrevlett.114.151102",
+      "10.1063/1.1665427",
+      "10.1063/1.1665990",
+      "10.1007/bf00756190",
+      "10.1063/1.523896",
+      "10.1086/533487",
+      "10.1088/1361-6382/aab186",
+      "10.1103/physrevd.109.044067",
+      "10.1103/physrevd.79.123507",
+      "10.1103/physrevlett.133.111601"
+    ],
+    "10.1088/1475-7516/2023/01/035": [
+      "10.12942/lrr-1999-2",
+      "10.1088/0264-9381/26/16/163001",
+      "10.1007/978-3-319-19000-6",
+      "10.1103/physrevd.77.021502",
+      "10.1103/physrevd.80.084018",
+      "10.1103/physrevd.60.104030",
+      "10.1103/physrevd.80.124008",
+      "10.1007/s00023-021-01137-x",
+      "10.1007/jhep01(2022)024",
+      "10.1007/jhep12(2022)115",
+      "10.1103/physrevd.105.044047",
+      "10.1103/physrevlett.127.101101",
+      "10.1088/1475-7516/2022/01/032",
+      "10.1007/jhep10(2022)175",
+      "10.1007/jhep09(2022)049",
+      "10.1103/physrevd.30.295",
+      "10.1103/physrevd.64.104021",
+      "10.1103/physrevd.70.127502",
+      "10.1103/physrevd.78.084035",
+      "10.1103/physrevd.86.104006",
+      "10.1063/1.1724257",
+      "10.1063/1.1664958",
+      "10.1086/152444",
+      "10.1063/1.1705135",
+      "10.1023/a:1026654312961",
+      "10.1016/s0370-2693(98)00377-3",
+      "10.4310/atmp.1998.v2.n2.a2",
+      "10.1088/1126-6708/2002/09/042",
+      "10.1103/physrevd.72.086009",
+      "10.1103/physrevd.62.024027",
+      "10.1088/0264-9381/21/1/l01",
+      "10.1103/physrevd.56.4975",
+      "10.1103/physrevd.68.124018",
+      "10.1007/jhep05(2021)038",
+      "10.1088/1126-6708/1999/01/007",
+      "10.2307/1969129",
+      "10.1098/rspa.1965.0195",
+      "10.1088/1126-6708/2003/05/013",
+      "10.1088/1126-6708/1999/11/021",
+      "10.1016/j.nuclphysb.2014.05.006"
+    ],
+    "10.3847/1538-4357/ac5026": [
+      "10.1103/physrevx.9.031040",
+      "10.1111/j.1365-2966.2012.20867.x",
+      "10.1146/annurev-astro-091916-055306",
+      "10.1088/0004-637x/794/2/106",
+      "10.1103/physrevd.102.123016",
+      "10.1093/mnras/stz1149",
+      "10.1088/0004-637x/757/1/27",
+      "10.3847/0004-637x/831/2/187",
+      "10.3847/1538-4357/ab88b2",
+      "10.1093/mnras/sty922",
+      "10.1051/0004-6361/202038795",
+      "10.1093/mnrasl/slw177",
+      "10.1086/154711",
+      "10.1103/physrevd.104.084002",
+      "10.1103/physrevd.102.043002",
+      "10.1093/mnras/stx2347",
+      "10.1051/0004-6361/201935332",
+      "10.3847/1538-4357/835/2/165",
+      "10.1051/0004-6361/202039804",
+      "10.1038/287307a0",
+      "10.3847/1538-4357/ab6d77",
+      "10.1038/nature18322",
+      "10.1093/mnras/stt628",
+      "10.3847/1538-4357/ab9d85",
+      "10.1086/144517",
+      "10.3847/1538-4357/aaffde",
+      "10.1093/mnras/stx2923",
+      "10.1093/mnras/stw1219",
+      "10.1093/mnras/staa2286",
+      "10.1093/mnras/stab2390",
+      "10.1088/0004-637x/779/1/72",
+      "10.1146/annurev-astro-081710-102602",
+      "10.1007/s10509-007-9511-y",
+      "10.1051/0004-6361/201117751",
+      "10.3847/2041-8213/abb671",
+      "10.1093/mnras/stz1651",
+      "10.1103/physrevlett.121.161103",
+      "10.1093/mnras/stz1175",
+      "10.1093/mnras/stz1803",
+      "10.1093/mnras/stab247",
+      "10.3847/2041-8213/abbc0a",
+      "10.3847/1538-4357/aaa0d7",
+      "10.1093/mnras/staa2629",
+      "10.1086/321359",
+      "10.3847/2041-8213/ab339b",
+      "10.1093/mnras/stv852",
+      "10.1093/mnras/stu797",
+      "10.1093/mnras/stw093",
+      "10.1093/mnras/sty1999",
+      "10.1111/j.1365-2966.2011.18320.x",
+      "10.1111/j.1365-2966.2006.10693.x",
+      "10.1088/0004-637x/785/1/71",
+      "10.1093/mnras/stab1722",
+      "10.3847/1538-4357/aabfee",
+      "10.3847/2041-8213/abdf5b",
+      "10.1103/physrevlett.98.091101",
+      "10.1093/mnras/sty2477",
+      "10.1086/424809",
+      "10.3847/1538-4357/aadae2",
+      "10.1093/mnras/stab2136",
+      "10.1093/mnras/stz1646",
+      "10.1086/118116",
+      "10.1086/375341",
+      "10.1093/mnras/173.3.729",
+      "10.3847/1538-4357/aaafce",
+      "10.1111/j.1365-2966.2005.09087.x",
+      "10.3847/2041-8205/825/2/l19",
+      "10.1086/506273",
+      "10.1086/375495",
+      "10.1046/j.1365-8711.2000.03426.x",
+      "10.1046/j.1365-8711.2002.05038.x",
+      "10.1146/annurev-astro-120419-014455",
+      "10.1093/mnras/79.6.408",
+      "10.1103/physrevd.95.064024",
+      "10.3847/1538-4357/aba518",
+      "10.3847/2041-8213/ac0aef",
+      "10.1088/0067-0049/213/2/34",
+      "10.1103/physrevlett.120.191103",
+      "10.1103/physrevd.99.063003",
+      "10.3847/1538-4357/abb945",
+      "10.3847/1538-4365/ab7919",
+      "10.1046/j.1365-8711.2001.04022.x",
+      "10.1093/mnras/staa2276",
+      "10.1093/mnras/272.3.605",
+      "10.3847/1538-4365/aacb24",
+      "10.3847/1538-4357/aad09f",
+      "10.1093/mnras/sty3432",
+      "10.3847/2041-8213/ab40c0",
+      "10.1088/0264-9381/27/11/114006",
+      "10.1103/physrevd.77.044028",
+      "10.1103/physrevlett.107.231102",
+      "10.1103/physrevd.85.084015",
+      "10.1086/588246",
+      "10.1093/mnras/stab1334",
+      "10.3847/1538-4357/abba25",
+      "10.1086/344156",
+      "10.1046/j.1365-8711.2002.05112.x",
+      "10.1088/0004-637x/692/1/917",
+      "10.1088/0004-637x/800/1/9",
+      "10.1093/mnras/staa3724",
+      "10.3847/2041-8213/abccc5",
+      "10.1111/j.1365-2966.2009.14653.x",
+      "10.3847/2041-8205/824/1/l12",
+      "10.1088/0067-0049/204/2/15",
+      "10.1088/0067-0049/192/1/3",
+      "10.1088/0067-0049/220/1/15",
+      "10.3847/2041-8213/ab2336",
+      "10.1103/physrev.136.b1224",
+      "10.3847/1538-4357/aa8628",
+      "10.1086/312422",
+      "10.1086/341798",
+      "10.1016/s1384-1076(96)00003-6",
+      "10.1088/0067-0049/190/1/1",
+      "10.3847/1538-4357/ab2c74",
+      "10.1093/mnras/sty3193",
+      "10.1051/0004-6361/202037710",
+      "10.1103/physrevlett.120.151101",
+      "10.3847/1538-4357/aacea4",
+      "10.3847/2041-8213/ab961d",
+      "10.3847/1538-4365/ac2edf",
+      "10.1086/505968",
+      "10.3847/1538-4357/aaab52",
+      "10.1126/science.1223344",
+      "10.1051/0004-6361/201219621",
+      "10.1093/mnras/stab280",
+      "10.1086/508994",
+      "10.1093/mnras/stx1576",
+      "10.1093/mnras/stz359",
+      "10.1093/mnras/stx097",
+      "10.1093/mnras/stw2260",
+      "10.1088/2041-8205/806/2/l28",
+      "10.1093/mnras/stab1617",
+      "10.1093/mnras/stab2315",
+      "10.3847/1538-4357/ab9b8c",
+      "10.3847/1538-4357/ab7922",
+      "10.3847/2041-8213/abd4d3",
+      "10.3847/1538-4357/abd555",
+      "10.3847/2041-8213/aba493",
+      "10.1103/physrevlett.122.011101",
+      "10.1093/mnras/stab842",
+      "10.1093/mnras/stu1536",
+      "10.3847/1538-4357/ac088d",
+      "10.3847/2041-8213/abd79c",
+      "10.1103/physrevd.103.083021",
+      "10.3847/1538-4357/836/2/244",
+      "10.3847/1538-4357/abe40e"
+    ],
+    "10.14293/pr2199.001572.v1": [],
+    "10.1088/1475-7516/2022/09/017": [
+      "10.1038/s41586-018-0542-z",
+      "10.1103/physrevlett.116.201301",
+      "10.1016/j.dark.2016.10.002",
+      "10.1103/physrevlett.117.061101",
+      "10.1093/mnras/152.1.75",
+      "10.1093/mnras/168.2.399",
+      "10.1086/153853",
+      "10.1103/physrevd.81.104019",
+      "10.1103/physrevlett.123.251102",
+      "10.1103/physrevlett.123.251101",
+      "10.1103/physrevd.101.123514",
+      "10.1038/s41550-019-0723-1",
+      "10.1086/319636",
+      "10.1051/0004-6361:20066017",
+      "10.1111/j.1365-2966.2011.19243.x",
+      "10.1086/587831",
+      "10.1103/physrevd.96.083524",
+      "10.1103/physrevd.86.043001",
+      "10.1103/physrevd.87.023507",
+      "10.1103/physrevd.87.123524",
+      "10.1088/1475-7516/2014/06/026",
+      "10.1103/physrevd.90.083507",
+      "10.1103/physrevd.92.063007",
+      "10.1088/1475-7516/2018/12/005",
+      "10.1088/1475-7516/2019/08/031",
+      "10.1088/1475-7516/2011/04/005",
+      "10.1016/j.physletb.2012.12.052",
+      "10.1103/physrevd.90.103501",
+      "10.1007/jhep02(2017)008",
+      "10.1088/1475-7516/2018/07/001",
+      "10.1088/1475-7516/2018/07/005",
+      "10.1103/physrevd.54.6040",
+      "10.1088/1475-7516/2012/05/022",
+      "10.1103/physrevd.85.103504",
+      "10.1103/physrevd.103.123512",
+      "10.1103/physrevd.104.123537",
+      "10.1016/j.physletb.2022.137542",
+      "10.1088/1475-7516/2019/06/016",
+      "10.1103/physrevd.104.083545",
+      "10.1016/s0370-1573(00)00064-8",
+      "10.1088/1126-6708/2006/06/051",
+      "10.1103/physrevd.87.103506",
+      "10.1088/1475-7516/2016/06/031",
+      "10.1088/1475-7516/2016/12/031",
+      "10.1088/1475-7516/2017/09/013",
+      "10.1088/1475-7516/2017/07/048",
+      "10.1088/1475-7516/2021/01/040",
+      "10.1088/1475-7516/2020/05/007",
+      "10.1088/1475-7516/2021/03/026",
+      "10.1103/physrevd.87.083520",
+      "10.1088/1475-7516/2013/12/009",
+      "10.1103/physrevd.92.123533",
+      "10.1103/physrevd.99.023513",
+      "10.1088/1475-7516/2018/07/023",
+      "10.1016/0550-3213(94)90143-0",
+      "10.1016/j.physletb.2014.04.014",
+      "10.1086/152650",
+      "10.1086/164143",
+      "10.1088/1475-7516/2020/11/022",
+      "10.1103/physrevd.101.063520",
+      "10.1103/physrevd.55.7423",
+      "10.1103/physrevd.57.7145",
+      "10.1103/physrevd.72.124004",
+      "10.1103/physrevd.88.103506",
+      "10.1142/s021827181350034x",
+      "10.1103/physrevd.86.043512",
+      "10.1088/1475-7516/2013/08/052",
+      "10.1103/physrevd.91.083521",
+      "10.1088/1475-7516/2015/04/034",
+      "10.1088/1475-7516/2016/02/029",
+      "10.1088/1475-7516/2021/02/002",
+      "10.1088/1475-7516/2014/07/045",
+      "10.1103/physrevd.100.123524",
+      "10.1142/s0218271820300025",
+      "10.1088/1475-7516/2019/11/012",
+      "10.1088/1475-7516/2022/05/037",
+      "10.1088/0264-9381/26/23/235001",
+      "10.1088/0264-9381/30/14/145009",
+      "10.1103/physrevd.95.043511",
+      "10.1143/ptp.126.351",
+      "10.1103/physrevlett.102.161101",
+      "10.1103/physrevd.95.123510",
+      "10.1103/physrevd.97.123512",
+      "10.1103/physrevd.97.103528",
+      "10.1088/1475-7516/2018/09/012",
+      "10.1103/physrevd.97.123532",
+      "10.1142/s0218271820500285",
+      "10.1088/1475-7516/2020/08/017",
+      "10.3390/universe7110398",
+      "10.1103/physrevlett.122.201101",
+      "10.1103/physrevd.99.041301",
+      "10.1088/1475-7516/2021/10/080",
+      "10.1103/physrevd.100.104055",
+      "10.1088/0264-9381/32/1/015014",
+      "10.3847/2041-8213/abd401"
+    ],
+    "10.14293/pr2199.001601.v1": [],
+    "10.1155/2018/3601489": [
+      "10.1007/bf02345020",
+      "10.1016/0550-3213(90)90019-a",
+      "10.1016/0550-3213(95)00150-q",
+      "10.1088/0264-9381/13/11/008",
+      "10.1088/0264-9381/14/1a/006",
+      "10.1103/physrevlett.77.3288",
+      "10.1016/0370-2693(95)01148-j",
+      "10.1007/bf02109521",
+      "10.1088/0264-9381/16/2/018",
+      "10.3938/jkps.68.730",
+      "10.1142/s0217732317500717",
+      "10.3938/jkps.68.735",
+      "10.1103/physrevd.7.2333",
+      "10.1088/1742-6596/229/1/012080"
+    ],
+    "10.32388/q0dx82": [
+      "10.1103/physrevd.109.104028",
+      "10.1016/j.physletb.2017.06.015",
+      "10.1103/physrevd.79.064016",
+      "10.1103/physrevd.95.081501",
+      "10.1016/j.physletb.2023.137674",
+      "10.1016/j.physletb.2024.138879",
+      "10.1103/physrevd.90.084009",
+      "10.1103/physrevd.93.064015",
+      "10.1103/physrevd.94.084025",
+      "10.1103/physrevd.97.084044",
+      "10.1103/physrevd.102.064058",
+      "10.1103/physrevd.109.084066",
+      "10.1093/mnras/stad1039",
+      "10.1140/epjc/s10052-021-09445-6",
+      "10.1103/physrevd.110.024032",
+      "10.1103/physrevd.103.124062",
+      "10.1103/physrevd.105.104004",
+      "10.1103/physrevd.103.104033",
+      "10.1103/physrevd.96.064007",
+      "10.1103/physrevd.104.084035",
+      "10.1103/physrevd.108.084035",
+      "10.1103/physrevd.101.044054",
+      "10.1103/physrevd.102.124071",
+      "10.1088/1475-7516/2016/09/014",
+      "10.1140/epjc/s10052-018-6467-8",
+      "10.1140/epjc/s10052-024-12563-6",
+      "10.1098/rspa.1985.0119",
+      "10.1103/revmodphys.83.793",
+      "10.1103/physrevd.47.5253",
+      "10.1103/physrevd.74.064017",
+      "10.1088/1361-6382/ab2e25"
+    ],
+    "10.32388/z1nixl.4": [
+      "10.1073/pnas.15.10.773",
+      "10.1119/10.0004881",
+      "10.12688/f1000research.22432.3)",
+      "10.1007/bf02302261",
+      "10.48550/arxiv.0903.3489",
+      "10.1007/s40509-017-0110-5",
+      "10.4006/0836-1398-34.4.583",
+      "10.1142/s2424942420500073",
+      "10.4006/0836-1398-35.1.15",
+      "10.1103/physrevlett.115.101301",
+      "10.1103/physrevd.28.2960",
+      "10.12988/astp.2022.91938",
+      "10.14331/ijfps.2023.330156",
+      "10.12988/astp.2023.91995",
+      "10.1093/mnras/staa1241",
+      "10.12988/astp.2022.91893",
+      "10.1038/nature13674",
+      "10.1093/mnras/stu2085",
+      "10.1093/mnrasl/slw229",
+      "10.1038/scientificamerican0411-36",
+      "10.1142/s0218271822500845",
+      "10.1142/s0218271822300142",
+      "10.12988/astp.2022.91935",
+      "10.1103/revmodphys.39.475",
+      "10.1016/j.crhy.2017.11.003",
+      "10.48550/arxiv.1509.07683",
+      "10.1088/0264-9381/27/1/015008",
+      "10.1007/s10701-014-9840-y"
+    ],
+    "10.14293/s2199-1006.1.sor-.ppg9mmi.v1": [],
+    "10.14293/s2199-1006.1.sor-.ppwpd1c.v1": [],
+    "10.1088/1748-0221/17/05/p05042": [
+      "10.23731/cyrm-2018-004",
+      "10.1103/physrevlett.86.3779",
+      "10.1103/physrevlett.112.034802",
+      "10.1103/physrevaccelbeams.24.051001",
+      "10.1109/pac.2007.4440591",
+      "10.5170/cern-2012-003",
+      "10.1103/physrevaccelbeams.23.071003",
+      "10.1103/physrevresearch.3.043063",
+      "10.1103/physrevaccelbeams.22.111001",
+      "10.1103/physrevd.40.923",
+      "10.1103/physrevlett.64.1231",
+      "10.1103/physrevaccelbeams.22.081301",
+      "10.1103/physrevaccelbeams.24.121304",
+      "10.1103/physrevaccelbeams.20.032803",
+      "10.1103/physreve.65.016407",
+      "10.1103/physreve.71.016401",
+      "10.1103/physrevlett.121.194801",
+      "10.1103/physrev.45.890",
+      "10.1109/tps.1987.4316689",
+      "10.1103/physrevlett.66.1705",
+      "10.1103/physrevaccelbeams.24.121306",
+      "10.1103/physrevaccelbeams.24.014801",
+      "10.1103/physrevlett.122.190404",
+      "10.1103/revmodphys.72.95",
+      "10.1103/physrevlett.61.1713",
+      "10.1016/j.nima.2016.02.055"
+    ],
+    "10.1209/0295-5075/ad0e83": [
+      "10.1088/0305-4470/8/4/022",
+      "10.1098/rspa.1976.0133",
+      "10.1103/physrevd.53.4382",
+      "10.1098/rspa.1977.0056",
+      "10.1098/rspa.1977.0130",
+      "10.1103/physrevd.13.2720",
+      "10.1103/revmodphys.80.787",
+      "10.1103/physrevlett.125.213603",
+      "10.1103/physrevlett.128.163603",
+      "10.1103/physrevd.56.6692",
+      "10.1119/1.1761064",
+      "10.1103/physrevd.98.056015",
+      "10.1007/bf02345020",
+      "10.1007/bf01608497"
+    ],
+    "10.14293/pr2199.002904.v1": []
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "tradition",
+      "value": "high‑energy phenomenology",
+      "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated"
+    },
+    {
+      "dimension": "tradition",
+      "value": "astrophysical constraints",
+      "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios"
+    },
+    {
+      "dimension": "language",
+      "value": "en",
+      "justification": "dominant language of the technical literature"
+    },
+    {
+      "dimension": "language",
+      "value": "pt",
+      "justification": "relevant for Brazilian research context of the question"
+    },
+    {
+      "dimension": "genre",
+      "value": "article",
+      "justification": "primary venue for detailed theoretical and phenomenological analyses"
+    },
+    {
+      "dimension": "genre",
+      "value": "chapter",
+      "justification": "book chapters often summarize broader safety assessments"
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "10.1590/1806-9126-rbef-2025-0026": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2024/11/026": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2026/05/014": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2026/05/055": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2025/12/042": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.3847/1538-4357/ac6d5c": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1155/2017/4817948": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/n8xf07": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.34257/gjsfrfvol24is2pg7": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.3847/1538-4357/ad8ec0": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/pr2199.001769.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.3847/2515-5172/ac7331": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/p2199-8442.1.sop-.pfvgys.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/o9lksi.4": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2025/05/039": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2023/01/035": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.3847/1538-4357/ac5026": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/pr2199.001572.v1": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1475-7516/2022/09/017": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/pr2199.001601.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1155/2018/3601489": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/q0dx82": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/z1nixl.4": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.ppg9mmi.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.ppwpd1c.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1088/1748-0221/17/05/p05042": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1209/0295-5075/ad0e83": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/pr2199.002904.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      }
+    },
+    "reader-b": {
+      "10.1590/1806-9126-rbef-2025-0026": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2024/11/026": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2026/05/014": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2026/05/055": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2025/12/042": {
+        "lean": "contradicts",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.3847/1538-4357/ac6d5c": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1155/2017/4817948": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/n8xf07": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.34257/gjsfrfvol24is2pg7": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.3847/1538-4357/ad8ec0": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/pr2199.001769.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.3847/2515-5172/ac7331": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/p2199-8442.1.sop-.pfvgys.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/o9lksi.4": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2025/05/039": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2023/01/035": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.3847/1538-4357/ac5026": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/pr2199.001572.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1475-7516/2022/09/017": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/pr2199.001601.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1155/2018/3601489": {
+        "lean": "supports",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/q0dx82": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/z1nixl.4": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.ppg9mmi.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/s2199-1006.1.sor-.ppwpd1c.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1088/1748-0221/17/05/p05042": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1209/0295-5075/ad0e83": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/pr2199.002904.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      }
+    }
+  },
+  "derived": {
+    "convergenceMap": {
+      "verdicts": [
+        {
+          "claimId": "10.1590/1806-9126-rbef-2025-0026",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2024/11/026",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2026/05/014",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2026/05/055",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2025/12/042",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "contradicts"
+          }
+        },
+        {
+          "claimId": "10.3847/1538-4357/ac6d5c",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1155/2017/4817948",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.32388/n8xf07",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.34257/gjsfrfvol24is2pg7",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.3847/1538-4357/ad8ec0",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/pr2199.001769.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.3847/2515-5172/ac7331",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/p2199-8442.1.sop-.pfvgys.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.32388/o9lksi.4",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2025/05/039",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2023/01/035",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.3847/1538-4357/ac5026",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/pr2199.001572.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1475-7516/2022/09/017",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/pr2199.001601.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1155/2018/3601489",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "supports"
+          }
+        },
+        {
+          "claimId": "10.32388/q0dx82",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.32388/z1nixl.4",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/s2199-1006.1.sor-.ppg9mmi.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/s2199-1006.1.sor-.ppwpd1c.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1088/1748-0221/17/05/p05042",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1209/0295-5075/ad0e83",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/pr2199.002904.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        }
+      ]
+    },
+    "coverageAudit": {
+      "findings": [
+        {
+          "dimension": "tradition",
+          "value": "high‑energy phenomenology",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated"
+        },
+        {
+          "dimension": "tradition",
+          "value": "astrophysical constraints",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios"
+        },
+        {
+          "dimension": "language",
+          "value": "en",
+          "observedSources": 3,
+          "expected": true,
+          "isEmptyChair": false,
+          "justification": "dominant language of the technical literature"
+        },
+        {
+          "dimension": "language",
+          "value": "pt",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "relevant for Brazilian research context of the question"
+        },
+        {
+          "dimension": "genre",
+          "value": "article",
+          "observedSources": 17,
+          "expected": true,
+          "isEmptyChair": false,
+          "justification": "primary venue for detailed theoretical and phenomenological analyses"
+        },
+        {
+          "dimension": "genre",
+          "value": "chapter",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "book chapters often summarize broader safety assessments"
+        }
+      ],
+      "emptyChairs": [
+        {
+          "dimension": "tradition",
+          "value": "high‑energy phenomenology",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "core field where TeV‑scale gravity and collider black‑hole production are debated"
+        },
+        {
+          "dimension": "tradition",
+          "value": "astrophysical constraints",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "uses observations of white dwarfs, neutron stars, and cosmic rays to bound scenarios"
+        },
+        {
+          "dimension": "language",
+          "value": "pt",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "relevant for Brazilian research context of the question"
+        },
+        {
+          "dimension": "genre",
+          "value": "chapter",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "book chapters often summarize broader safety assessments"
+        }
+      ]
+    },
+    "reliabilityProfiles": [
+      {
+        "claimId": "10.1590/1806-9126-rbef-2025-0026",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2024/11/026",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2026/05/014",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2026/05/055",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2025/12/042",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.3847/1538-4357/ac6d5c",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1155/2017/4817948",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/n8xf07",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.34257/gjsfrfvol24is2pg7",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.3847/1538-4357/ad8ec0",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/pr2199.001769.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.3847/2515-5172/ac7331",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/p2199-8442.1.sop-.pfvgys.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/o9lksi.4",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2025/05/039",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2023/01/035",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.3847/1538-4357/ac5026",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/pr2199.001572.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1475-7516/2022/09/017",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/pr2199.001601.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1155/2018/3601489",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/q0dx82",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/z1nixl.4",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/s2199-1006.1.sor-.ppg9mmi.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/s2199-1006.1.sor-.ppwpd1c.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1088/1748-0221/17/05/p05042",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1209/0295-5075/ad0e83",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/pr2199.002904.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      }
+    ]
+  }
+}

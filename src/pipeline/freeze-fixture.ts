@@ -5,6 +5,7 @@ import type { ExpectedCategory } from "../domain/coverage.js";
 import type { Claim } from "../domain/types.js";
 import { computeReplay, modelOf } from "./replay.js";
 import type { ReplayFixture, SavedLean } from "./replay.js";
+import { diagnoseAbstention } from "../domain/abstention-diagnosis.js";
 
 /**
  * FREEZE the real Phase-5c read into a versioned, offline replay fixture — the
@@ -13,11 +14,19 @@ import type { ReplayFixture, SavedLean } from "./replay.js";
  * baseline, and BAKES the derived artifacts (convergence map, coverage audit,
  * reliability profiles) as an answer key. Pure/offline/deterministic.
  *
- * Usage: npm run freeze -- corpus/<corpus>.summarized.read.json [version]
+ * Generalized over cases: the case slug + expectedCoverage travel IN the corpus
+ * (written by the step-0 bridge), so freezing a new case (LHC, …) is execution,
+ * not new code. COVID stays the default (case "sago-origin", SAGO baseline) when
+ * the corpus carries neither — backward compatible.
+ *
+ * Usage: npm run freeze -- corpus/<corpus>.summarized.read.json [version] [case-slug]
  */
 
 interface ReadCorpus extends ReplayFixture {
   readonly referenceHypothesis?: string;
+  /** Present for anchored regimes: which PDF the ruler was distilled from
+   * (sha256 + locus — provenance without redistributing the bytes). */
+  readonly sourceAnchor?: { readonly file: string; readonly sha256: string; readonly locus?: string };
 }
 
 /** Curated, CITED expected-coverage baseline for the SARS-CoV-2 origin dispute.
@@ -67,8 +76,11 @@ function nonLlmSummaryIds(claims: readonly Claim[]): readonly string[] {
 
 async function main(): Promise<void> {
   const arg = process.argv[2];
-  if (arg === undefined) throw new Error("usage: npm run freeze -- <corpus.read.json> [version]");
+  if (arg === undefined) throw new Error("usage: npm run freeze -- <corpus.read.json> [version] [case-slug]");
   const version = process.argv[3] ?? "0.1";
+  // Case slug: explicit arg for a new case (e.g. "lhc-origin"); COVID default
+  // when omitted (the COVID corpus's own slug is an internal harvest name).
+  const caseName = process.argv[4] ?? "sago-origin";
 
   const inPath = isAbsolute(arg) ? arg : resolve(process.cwd(), arg);
   const corpus = JSON.parse(readFileSync(inPath, "utf8")) as ReadCorpus;
@@ -76,30 +88,41 @@ async function main(): Promise<void> {
     throw new Error("corpus has no referenceHypothesis — cannot freeze an unanchored read");
   }
 
-  // The replay INPUT (what computeReplay reads). expectedCoverage is curated here.
+  // expectedCoverage travels in the corpus (step-0 bridge); fall back to the
+  // curated SAGO baseline for the COVID case.
+  const expectedCoverage = corpus.expectedCoverage ?? SAGO_EXPECTED_COVERAGE;
+
+  // The replay INPUT (what computeReplay reads).
   const input: ReplayFixture = {
-    case: "sago-origin",
+    case: caseName,
     claims: corpus.claims,
     readers: corpus.readers as Readonly<Record<string, Readonly<Record<string, SavedLean>>>>,
-    expectedCoverage: SAGO_EXPECTED_COVERAGE,
+    expectedCoverage,
     ...(corpus.citationGraph !== undefined ? { citationGraph: corpus.citationGraph } : {}),
   };
 
   // Derived ANSWER KEY — baked once. The regression test recomputes and compares.
   const { map, coverage, profiles, oneReaderCount } = await computeReplay(input);
 
+  // Why did it abstain (when it did)? A measured property of the corpus, baked in.
+  const abstentionDiagnosis = diagnoseAbstention(input.claims, map);
+
   const nonLlm = nonLlmSummaryIds(corpus.claims);
   const frozen = {
-    schema: "tacet/replay-fixture@0.1",
+    schema: "tacet/replay-fixture@0.1.1",
     case: input.case,
     version,
     frozenFrom: arg,
     referenceHypothesis: corpus.referenceHypothesis,
+    abstentionDiagnosis,
     source: {
       corpus: "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
       referenceHypothesis:
-        "Paraphrased from the WHO Scientific Advisory Group for the Origins of Novel Pathogens (SAGO) report, 2025 — CC BY-NC-SA 3.0 IGO. Attribution: World Health Organization.",
+        caseName === "sago-origin"
+          ? "Paraphrased from the WHO Scientific Advisory Group for the Origins of Novel Pathogens (SAGO) report, 2025 — CC BY-NC-SA 3.0 IGO. Attribution: World Health Organization."
+          : "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
       readerModels: readerModelsFrom(input.readers),
+      ...(corpus.sourceAnchor !== undefined ? { anchor: corpus.sourceAnchor } : {}),
     },
     notes: {
       nonLlmSummaries: nonLlm,
@@ -118,7 +141,7 @@ async function main(): Promise<void> {
     },
   };
 
-  const outPath = fileURLToPath(new URL(`../../fixtures/replay/sago-origin-v${version}.json`, import.meta.url));
+  const outPath = fileURLToPath(new URL(`../../fixtures/replay/${caseName}-v${version}.json`, import.meta.url));
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, JSON.stringify(frozen, null, 2) + "\n");
 

@@ -1,0 +1,3117 @@
+{
+  "schema": "tacet/replay-fixture@0.1",
+  "case": "eggs-cv",
+  "version": "0.1",
+  "frozenFrom": "corpus/eggs-cv.summarized.read.json",
+  "referenceHypothesis": "Meta-análises recentes de coortes prospectivas em populações ocidentais sugerem que consumo moderado de ovos (em torno de 1 por dia) não está consistentemente associado a aumento de risco cardiovascular na população adulta geral; o efeito sobre lipídios séricos existe mas é modesto e atenuado por substituições dietéticas. As Dietary Guidelines for Americans (2015 em diante) e a AHA (2020) refletem esse afrouxamento em relação ao teto rígido de 300 mg/dia de colesterol dietético. A posição acima repousa sobre (a) heterogeneidade entre subpopulações — diabéticos, portadores de ApoE4 e hiper-respondedores ao colesterol dietético apresentam respostas medidas distintas; (b) endpoints substitutos (LDL, colesterol sérico) versus desfechos duros (MACE, mortalidade), com a maior parte do otimismo recente apoiada em endpoints substitutos e meta-análises observacionais; (c) viés de financiamento documentado da indústria do ovo na ciência nutricional; (d) efeito de substituição — o que o ovo substitui no prato determina parte importante do impacto.",
+  "source": {
+    "corpus": "Crossref abstracts filtered to CC BY 4.0 at harvest (open-license).",
+    "referenceHypothesis": "Distilled in step 0 from the seed question (model proposed, human accepted); see the case protocol. Coherence, not truth.",
+    "readerModels": {
+      "reader-a": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "reader-b": "openai/gpt-oss-120b:free"
+    }
+  },
+  "notes": {
+    "nonLlmSummaries": [],
+    "nonLlmReason": "These records' LLM summary fell back to a truncated abstract stub. They are off-topic to origin and both readers independently judged them 'insufficient', so a real summary changes no lean and no signal. Kept as LABELLED non-summaries (summaryMethod: 'truncated-stub'), never as a fabricated summary.",
+    "oneReaderClaims": 0
+  },
+  "claims": [
+    {
+      "id": "10.1136/bmj.m513",
+      "text": "Egg consumption and risk of cardiovascular disease: three large prospective US cohort studies, systematic review, and updated meta-analysis",
+      "provenance": [
+        {
+          "sourceId": "10.1136/bmj.m513",
+          "locator": "https://doi.org/10.1136/bmj.m513",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The research investigated the link between egg intake and cardiovascular disease among large US health professional cohorts. Over up to 32 years of follow‑up, participants with higher egg consumption experienced more cardiovascular events, indicating a positive association between egg intake and cardiovascular risk.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Jean-Philippe Drouin-Chartier",
+            "Siyu Chen",
+            "Yanping Li",
+            "Amanda L Schwab",
+            "Meir J Stampfer",
+            "Frank M Sacks",
+            "Bernard Rosner",
+            "Walter C Willett",
+            "Frank B Hu",
+            "Shilpa N Bhupathiraju"
+          ],
+          "venue": "BMJ",
+          "structured": {
+            "centralClaim": "Higher egg consumption is associated with increased risk of cardiovascular disease in US adults.",
+            "citedEvidence": "The authors analyzed three large prospective US cohorts (Nurses’ Health Study, Nurses’ Health Study II, and Health Professionals’ Follow‑Up Study) with over 5.5 million person‑years of follow‑up and identified 14,806 incident cardiovascular disease events.",
+            "originStance": "none",
+            "summaryText": "The research investigated the link between egg intake and cardiovascular disease among large US health professional cohorts. Over up to 32 years of follow‑up, participants with higher egg consumption experienced more cardiovascular events, indicating a positive association between egg intake and cardiovascular risk."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1371/journal.pmed.1003508",
+      "text": "Egg and cholesterol consumption and mortality from cardiovascular and different causes in the United States: A population-based cohort study",
+      "provenance": [
+        {
+          "sourceId": "10.1371/journal.pmed.1003508",
+          "locator": "https://doi.org/10.1371/journal.pmed.1003508",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers followed more than half a million adults for up to 16 years, linking self‑reported egg and cholesterol consumption to death outcomes. They found that higher intakes were associated with increased risk of both cardiovascular and all‑cause mortality, even after adjusting for total energy. The findings suggest that these dietary components may have adverse effects on longevity in this population.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Pan Zhuang",
+            "Fei Wu",
+            "Lei Mao",
+            "Fanghuan Zhu",
+            "Yiju Zhang",
+            "Xiaoqian Chen",
+            "Jingjing Jiao",
+            "Yu Zhang"
+          ],
+          "venue": "PLOS Medicine",
+          "structured": {
+            "centralClaim": "Higher consumption of eggs and dietary cholesterol is linked to greater all‑cause and cardiovascular disease mortality in a large US cohort.",
+            "citedEvidence": "The study analyzed data from 521,120 participants aged 50–71 who completed a validated food frequency questionnaire, and used cause‑specific hazard models with competing risks to assess associations between egg and cholesterol intake and mortality over a median 16‑year follow‑up.",
+            "originStance": "none",
+            "summaryText": "The researchers followed more than half a million adults for up to 16 years, linking self‑reported egg and cholesterol consumption to death outcomes. They found that higher intakes were associated with increased risk of both cardiovascular and all‑cause mortality, even after adjusting for total energy. The findings suggest that these dietary components may have adverse effects on longevity in this population."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.09.18.25336069",
+      "text": "Current polygenic risk scores are unlikely to exacerbate unfairness in cardiovascular disease risk prediction",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.09.18.25336069",
+          "locator": "https://doi.org/10.1101/2025.09.18.25336069",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The paper examines whether adding genetic risk scores to existing CVD models could exacerbate health disparities, especially among different ancestral groups. Using UK Biobank participants, it tests the fairness of PRS when applied alone or to refine risk for intermediate‑risk patients. The results aim to guide equitable use of genetic information in clinical risk assessment.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Claire Coffey",
+            "Scott C. Ritchie",
+            "Lisa Pennells",
+            "Angela M. Wood",
+            "Michael Inouye",
+            "Samuel A. Lambert"
+          ],
+          "structured": {
+            "centralClaim": "Incorporating polygenic risk scores into cardiovascular disease risk prediction may improve stratification but could affect fairness across ancestry groups, requiring explicit assessment of equity.",
+            "citedEvidence": "The authors analyze data from the UK Biobank (N = 327,923) to evaluate the fairness of using PRS both as a standalone risk factor and as a risk‑enhancing factor for individuals at intermediate risk.",
+            "originStance": "none",
+            "summaryText": "The paper examines whether adding genetic risk scores to existing CVD models could exacerbate health disparities, especially among different ancestral groups. Using UK Biobank participants, it tests the fairness of PRS when applied alone or to refine risk for intermediate‑risk patients. The results aim to guide equitable use of genetic information in clinical risk assessment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/pr2199.002481.v1",
+      "text": "AI-Powered Predictive Analytics for Cardiovascular Disease Risk Assessment",
+      "provenance": [
+        {
+          "sourceId": "10.14293/pr2199.002481.v1",
+          "locator": "https://doi.org/10.14293/pr2199.002481.v1",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The researchers developed an AI system that combines demographic, lab, lifestyle, and medical history data to predict individual cardiovascular disease risk. Their experiments demonstrate that this approach yields more accurate predictions than traditional methods, especially for complex patterns, and could enable earlier risk stratification and personalized prevention.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Garba M.",
+            "Santhosh Chitraju"
+          ],
+          "structured": {
+            "centralClaim": "The study presents an AI-powered predictive analytics model that improves cardiovascular disease risk assessment accuracy by leveraging multimodal clinical data and machine learning, outperforming traditional statistical methods.",
+            "citedEvidence": "Experimental results show the AI model achieves higher prediction accuracy than conventional approaches, particularly in capturing complex, non-linear patterns, and uses feature selection to identify key risk determinants while maintaining transparency.",
+            "originStance": "none",
+            "summaryText": "The researchers developed an AI system that combines demographic, lab, lifestyle, and medical history data to predict individual cardiovascular disease risk. Their experiments demonstrate that this approach yields more accurate predictions than traditional methods, especially for complex patterns, and could enable earlier risk stratification and personalized prevention."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.64898/2026.05.18.26353477",
+      "text": "Long-term risk of cardiovascular disease after assisted reproductive technology and infertility",
+      "provenance": [
+        {
+          "sourceId": "10.64898/2026.05.18.26353477",
+          "locator": "https://doi.org/10.64898/2026.05.18.26353477",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "Researchers examined a large Swedish cohort of women who had conceived after Assisted Reproductive Technology, tracking them for up to three decades to evaluate their risk of acute myocardial infarction, cerebral ischemia, intracranial hemorrhage, type 2 diabetes, heart failure, aortic aneurysm or dissection, and chronic kidney disease. By comparing these women to those with infertility who did not use ART, the study aims to isolate the contribution of ART procedures—particularly high estrogen exposure—to long‑term cardiovascular and metabolic outcomes, while also considering underlying infertility factors.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Angelo G. Mezzoiuso",
+            "Peter Henriksson",
+            "Márta Radó",
+            "Kenny Rodriguez-Wallberg",
+            "A. Sara Öberg"
+          ],
+          "structured": {
+            "centralClaim": "The study claims that women who conceived via Assisted Reproductive Technology have a long-term increased risk of cardiovascular and metabolic diseases such as myocardial infarction, stroke, heart failure, and chronic kidney disease.",
+            "citedEvidence": "It uses Swedish national registers to follow a nationwide cohort of 380,756 women from their first birth between 1992 and 2002 until the end of 2023, comparing those who conceived with ART to other women to assess disease incidence.",
+            "originStance": "none",
+            "summaryText": "Researchers examined a large Swedish cohort of women who had conceived after Assisted Reproductive Technology, tracking them for up to three decades to evaluate their risk of acute myocardial infarction, cerebral ischemia, intracranial hemorrhage, type 2 diabetes, heart failure, aortic aneurysm or dissection, and chronic kidney disease. By comparing these women to those with infertility who did not use ART, the study aims to isolate the contribution of ART procedures—particularly high estrogen exposure—to long‑term cardiovascular and metabolic outcomes, while also considering underlying infertility factors."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.64898/2026.03.20.26348884",
+      "text": "Metabolic Phenotyping Objectively Captures Dietary Intake and Short-term Cardiovascular Disease Risk Responses Under an Inpatient Randomized Crossover Clinical Trial",
+      "provenance": [
+        {
+          "sourceId": "10.64898/2026.03.20.26348884",
+          "locator": "https://doi.org/10.64898/2026.03.20.26348884",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study demonstrates that an inpatient crossover design with controlled diets enables precise measurement of metabolic responses to distinct dietary patterns. Using NMR metabolomics and supervised multivariate analysis, the researchers show that urinary metabolic phenotypes can objectively distinguish adherence to the NICE diet from a Western diet and reflect corresponding changes in CVD risk markers.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Yiwei Wu",
+            "Lina Alqarni",
+            "Joram M Posma",
+            "Melpomeni Kasapi",
+            "Liam Walsh",
+            "Orla O’Sullivan",
+            "Elaine Holmes",
+            "Gary Frost",
+            "Isabel Garcia-Perez"
+          ],
+          "structured": {
+            "centralClaim": "Metabolic phenotyping via NMR and multivariate analysis can objectively classify dietary adherence and reveal short‑term differences in CVD risk factors between a NICE‑aligned diet and a Western‑style diet in adults at elevated CVD risk.",
+            "citedEvidence": "The claim is supported by a randomized crossover inpatient trial in which 18 participants consumed two 72‑hour isocaloric diets (NICE‑compliant and Western‑style) and their fasting serum and 24‑hour urine metabolites were profiled using NMR and MCCV‑PLS‑DA.",
+            "originStance": "none",
+            "summaryText": "The study demonstrates that an inpatient crossover design with controlled diets enables precise measurement of metabolic responses to distinct dietary patterns. Using NMR metabolomics and supervised multivariate analysis, the researchers show that urinary metabolic phenotypes can objectively distinguish adherence to the NICE diet from a Western diet and reflect corresponding changes in CVD risk markers."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.09.22.25336381",
+      "text": "Relationships of serum osmolality with cardiovascular disease and mortality risk: A retrospective cohort study of the National Health and Nutrition Examination Surveys database",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.09.22.25336381",
+          "locator": "https://doi.org/10.1101/2025.09.22.25336381",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "Researchers used nationally representative NHANES data to explore how calculated serum osmolality relates to cardiovascular disease and death. They applied logistic regression to link osmolality with CVD prevalence and Cox regression to evaluate mortality among those with CVD. The findings suggest a potential link between serum osmolality and cardiovascular outcomes, though further investigation is needed.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Kun Cao",
+            "Feng Hai"
+          ],
+          "structured": {
+            "centralClaim": "Serum osmolality is associated with cardiovascular disease and mortality risk in adults.",
+            "citedEvidence": "The study analyzed 28,715 adults from the NHANES database (2007‑2018) and used weighted univariate and multivariate logistic regression to examine the link between calculated serum osmolality and CVD, and weighted Cox regression to assess all‑cause mortality among CVD patients.",
+            "originStance": "none",
+            "summaryText": "Researchers used nationally representative NHANES data to explore how calculated serum osmolality relates to cardiovascular disease and death. They applied logistic regression to link osmolality with CVD prevalence and Cox regression to evaluate mortality among those with CVD. The findings suggest a potential link between serum osmolality and cardiovascular outcomes, though further investigation is needed."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1017/s0007114522000988",
+      "text": "Egg and cholesterol intake, apoE4 phenotype and risk of venous thromboembolism: findings from a prospective cohort study",
+      "provenance": [
+        {
+          "sourceId": "10.1017/s0007114522000988",
+          "locator": "https://doi.org/10.1017/s0007114522000988",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "Researchers followed a group of men for nearly three decades to see whether eating eggs or consuming more cholesterol was linked to blood clot formation in veins. They also examined whether a genetic variant affecting cholesterol metabolism (apoE4) changed this relationship, using food records and national health registries to track outcomes.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Setor K. Kunutsor",
+            "Jari A. Laukkanen",
+            "Jyrki K. Virtanen"
+          ],
+          "venue": "British Journal of Nutrition",
+          "structured": {
+            "centralClaim": "Higher egg and dietary cholesterol intake may increase the risk of venous thromboembolism, an effect that could be modified by the apoE4 phenotype.",
+            "citedEvidence": "The study used a prospective cohort of 1852 middle‑aged men, dietary assessment via 4‑day food records, linked hospital discharge registries to identify incident VTE, and Cox regression to calculate hazard ratios over a median 28.8‑year follow‑up, with 13 VTE events recorded.",
+            "originStance": "none",
+            "summaryText": "Researchers followed a group of men for nearly three decades to see whether eating eggs or consuming more cholesterol was linked to blood clot formation in veins. They also examined whether a genetic variant affecting cholesterol metabolism (apoE4) changed this relationship, using food records and national health registries to track outcomes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.01.26.25321145",
+      "text": "Joint association of genetic risk and accelerometer-based step count with cardiovascular disease: a UK-Biobank cohort study",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.01.26.25321145",
+          "locator": "https://doi.org/10.1101/2025.01.26.25321145",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "Researchers examined whether accelerometer‑measured physical activity predicts cardiovascular disease onset beyond genetic predisposition. Using UK Biobank data, they found that individuals with high genetic risk and low step counts experienced a higher rate of cardiovascular events over nearly eight years of follow‑up. The findings suggest that lifestyle activity may modify genetic risk for CVD.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Panagiota Birmpili",
+            "Laura Portas",
+            "Thomas J. Littlejohns",
+            "Aiden Doherty"
+          ],
+          "structured": {
+            "centralClaim": "High genetic risk combined with low daily step count is associated with increased incident cardiovascular disease compared to low genetic risk and higher step counts.",
+            "citedEvidence": "The study analyzed 84,286 UK Biobank participants without prevalent CVD, followed for a median of 7.9 years, during which 4,847 incident CVD events occurred; adjusted Cox models revealed a log‑additive association between high genetic risk, low step count, and CVD incidence.",
+            "originStance": "none",
+            "summaryText": "Researchers examined whether accelerometer‑measured physical activity predicts cardiovascular disease onset beyond genetic predisposition. Using UK Biobank data, they found that individuals with high genetic risk and low step counts experienced a higher rate of cardiovascular events over nearly eight years of follow‑up. The findings suggest that lifestyle activity may modify genetic risk for CVD."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12872-019-1196-y",
+      "text": "Modeling lifetime abuse and cardiovascular disease risk among women",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12872-019-1196-y",
+          "locator": "https://doi.org/10.1186/s12872-019-1196-y",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers examined how cumulative abuse over a lifetime may increase cardiovascular disease risk in women who have left abusive partners. Using structural equation modeling on a sample of 227 women, they tested both direct effects on blood pressure and indirect effects mediated by health behaviors and depressive symptoms. Their findings support a conceptual model linking abuse severity to CVD risk through multiple pathways.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Kelly A. Scott-Storey",
+            "Marilyn Hodgins",
+            "Judith Wuest"
+          ],
+          "venue": "BMC Cardiovascular Disorders",
+          "structured": {
+            "centralClaim": "Lifetime abuse severity directly and indirectly influences women's cardiovascular disease risk through pathways involving blood pressure and depressive symptoms.",
+            "citedEvidence": "The study used structural equation modeling with latent growth curve analysis on data from 227 Canadian women who had left an abusive partner, testing direct effects of abuse severity on CVD risk measured by systolic and diastolic blood pressure and indirect effects through CVD risk behaviors and initial depressive symptoms.",
+            "originStance": "none",
+            "summaryText": "The researchers examined how cumulative abuse over a lifetime may increase cardiovascular disease risk in women who have left abusive partners. Using structural equation modeling on a sample of 227 women, they tested both direct effects on blood pressure and indirect effects mediated by health behaviors and depressive symptoms. Their findings support a conceptual model linking abuse severity to CVD risk through multiple pathways."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.32388/1svuci.2",
+      "text": "Implementing Machine Learning to Predict the 10-Year Risk of Cardiovascular Disease",
+      "provenance": [
+        {
+          "sourceId": "10.32388/1svuci.2",
+          "locator": "https://doi.org/10.32388/1svuci.2",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The authors conducted a literature review of cardiovascular disease risk prediction techniques and applied several machine learning algorithms—including logistic regression, random forests, and artificial neural networks—to the UCI Heart dataset. They optimized model performance through cross‑validation, normalization, and hyperparameter tuning, and compared the results with traditional approaches.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Simranjeet Singh Dahia",
+            "Claudia Szabo"
+          ],
+          "structured": {
+            "centralClaim": "The study develops and evaluates multiple machine learning models to predict the 10‑year risk of cardiovascular disease using the UCI Heart dataset.",
+            "citedEvidence": "It reviews existing literature on CVD risk prediction methods and algorithms, and cites the use of Logistic Regression, Decision Trees, Random Forests, SVM, ANN, and KNN, along with cross‑validation, normalization, and hyperparameter tuning to optimize performance.",
+            "originStance": "none",
+            "summaryText": "The authors conducted a literature review of cardiovascular disease risk prediction techniques and applied several machine learning algorithms—including logistic regression, random forests, and artificial neural networks—to the UCI Heart dataset. They optimized model performance through cross‑validation, normalization, and hyperparameter tuning, and compared the results with traditional approaches."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1093/geroni/igz038.2944",
+      "text": "COMPARISON OF A FRAILTY INDEX WITH CARDIOVASCULAR RISK SCORES IN PREDICTING CARDIOVASCULAR DISEASE MORTALITY",
+      "provenance": [
+        {
+          "sourceId": "10.1093/geroni/igz038.2944",
+          "locator": "https://doi.org/10.1093/geroni/igz038.2944",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers found that the frailty index correlated only weakly with the cardiovascular risk scores, while the risk scores themselves showed a range of correlations with each other. Only a small fraction of participants experienced CVD death, limiting the ability to fully assess predictive performance. Overall, the frailty index did not markedly outperform the traditional scores in this cohort.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Dustin S Kehler",
+            "Olga Theou",
+            "Kenneth Rockwood"
+          ],
+          "venue": "Innovation in Aging",
+          "structured": {
+            "centralClaim": "The study compares the predictive ability of a 33‑item frailty index with several traditional cardiovascular risk scores for estimating 10‑year cardiovascular disease mortality.",
+            "citedEvidence": "Using NHANES data from 32,066 adults free of CVD, the authors calculated a CVD‑excluded frailty index and four risk equations, found only 1 % (322) died from CVD, reported low correlations between the frailty index and the risk scores (Spearman’s r = 0.19‑0.33) and variable correlations among the risk scores (r = 0.19‑0.88).",
+            "originStance": "none",
+            "summaryText": "The researchers found that the frailty index correlated only weakly with the cardiovascular risk scores, while the risk scores themselves showed a range of correlations with each other. Only a small fraction of participants experienced CVD death, limiting the ability to fully assess predictive performance. Overall, the frailty index did not markedly outperform the traditional scores in this cohort."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12944-019-1133-1",
+      "text": "Heated egg white has no effect, but lactic fermented and unheated egg white reduces abdominal fat in rats",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12944-019-1133-1",
+          "locator": "https://doi.org/10.1186/s12944-019-1133-1",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers tested different forms of egg white protein in rats to see how they affect abdominal fat. They found that heating the egg white eliminated its fat‑reducing effect, but both the unheated and lactic‑fermented versions lowered abdominal fat compared with a casein control.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ryosuke Matsuoka",
+            "Yayoi Takahashi",
+            "Ayano Muto",
+            "Mamoru Kimura"
+          ],
+          "venue": "Lipids in Health and Disease",
+          "structured": {
+            "centralClaim": "Heated egg white does not reduce abdominal fat, whereas unheated egg white and lactic fermented egg white do.",
+            "citedEvidence": "In Trial 1, rats fed heated egg white showed no significant difference in abdominal fat weight compared with casein-fed controls; in Trial 2, rats fed unheated egg white or lactic fermented egg white exhibited reduced abdominal fat relative to controls.",
+            "originStance": "none",
+            "summaryText": "The researchers tested different forms of egg white protein in rats to see how they affect abdominal fat. They found that heating the egg white eliminated its fat‑reducing effect, but both the unheated and lactic‑fermented versions lowered abdominal fat compared with a casein control."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12872-020-01826-1",
+      "text": "Serum alanine aminotransferase activity and risk factors for cardiovascular disease in a Caucasian population: the Tromsø study",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12872-020-01826-1",
+          "locator": "https://doi.org/10.1186/s12872-020-01826-1",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers examined how serum ALT levels relate to cardiovascular risk factors in a large Norwegian cohort of middle‑aged adults, stratified by sex. They reported that abnormal ALT was linked to most traditional risk markers such as BMI and glucose, while showing sex‑specific patterns for blood pressure and inflammation. These findings suggest ALT may serve as a marker of overall cardiometabolic risk in this population.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Svein Ivar Bekkelund"
+          ],
+          "venue": "BMC Cardiovascular Disorders",
+          "structured": {
+            "centralClaim": "Elevated serum alanine aminotransferase (ALT) is positively associated with multiple cardiovascular disease risk factors in a middle‑aged Caucasian population, with sex‑specific differences in related biomarkers.",
+            "citedEvidence": "The study analyzed cross‑sectional data from 2,555 men and 2,858 women (mean age ~60 years) in the Tromsø 6 survey, using variance analysis and multivariable logistic regression to link abnormal ALT (detected in 4.4% of men and 6.6% of women) with BMI, waist‑to‑hip ratio, blood pressure, lipids, glucose, HbA1c and high‑sensitivity CRP, finding positive associations for most risk factors except systolic blood pressure and CRP in women.",
+            "originStance": "none",
+            "summaryText": "The researchers examined how serum ALT levels relate to cardiovascular risk factors in a large Norwegian cohort of middle‑aged adults, stratified by sex. They reported that abnormal ALT was linked to most traditional risk markers such as BMI and glucose, while showing sex‑specific patterns for blood pressure and inflammation. These findings suggest ALT may serve as a marker of overall cardiometabolic risk in this population."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.14293/p2199-8442.1.sop-.pw9sli.v1",
+      "text": "Egg yolk and albumen as biomonitoring tissues for organic pollution: Estimating mother-egg partitioning",
+      "provenance": [
+        {
+          "sourceId": "10.14293/p2199-8442.1.sop-.pw9sli.v1",
+          "locator": "https://doi.org/10.14293/p2199-8442.1.sop-.pw9sli.v1",
+          "date": "2023",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The researchers collected paired plasma, yolk, and albumen samples from 56 nesting loggerhead turtles and quantified a suite of persistent organic pollutants. By applying robust regression on order statistics, they characterized the partitioning of contaminant levels between maternal tissue and egg components, demonstrating that egg tissues can reflect maternal exposure.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Cynthia C. Munoz",
+            "Peter Vermeiren"
+          ],
+          "structured": {
+            "centralClaim": "Egg yolk and albumen from sea turtle mothers can serve as effective biomonitoring tissues for tracking organic pollutants and estimating maternal transfer of contaminants.",
+            "citedEvidence": "The study measured concentrations of 56 PCBs, 12 organochlorine pesticides, and 34 PBDEs in plasma, yolk, and albumen of 56 loggerhead turtle mothers and used robust regression on order statistics to derive summary statistics for compounds below detection limits.",
+            "originStance": "none",
+            "summaryText": "The researchers collected paired plasma, yolk, and albumen samples from 56 nesting loggerhead turtles and quantified a suite of persistent organic pollutants. By applying robust regression on order statistics, they characterized the partitioning of contaminant levels between maternal tissue and egg components, demonstrating that egg tissues can reflect maternal exposure."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.07.12.25331445",
+      "text": "Evaluating Feature Selection Methods and Feature Contributions for Cardiovascular Disease Risk Prediction",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.07.12.25331445",
+          "locator": "https://doi.org/10.1101/2025.07.12.25331445",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The researchers applied three distinct feature selection techniques to a dataset from NHANES to determine which clinical variables most strongly predict CVD risk. They found that these methods can help isolate relevant predictors, potentially improving risk assessment tools. The work highlights the importance of feature relevance in machine learning models for healthcare.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Suraiya Akhter",
+            "John H. Miller"
+          ],
+          "structured": {
+            "centralClaim": "The study evaluates and compares three feature selection methods—ADT-based analysis, CVFE, and HFE—to identify the most predictive clinical variables for cardiovascular disease risk prediction.",
+            "citedEvidence": "The authors use data from the National Health and Nutrition Examination Survey (NHANES) administered by the National Center for Health Statistics.",
+            "originStance": "none",
+            "summaryText": "The researchers applied three distinct feature selection techniques to a dataset from NHANES to determine which clinical variables most strongly predict CVD risk. They found that these methods can help isolate relevant predictors, potentially improving risk assessment tools. The work highlights the importance of feature relevance in machine learning models for healthcare."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.03.21.25324379",
+      "text": "Artificial Intelligence (AI) Models for Cardiovascular Disease Risk Prediction in Primary and Ambulatory Care: A Scoping Review",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.03.21.25324379",
+          "locator": "https://doi.org/10.1101/2025.03.21.25324379",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "This scoping review maps the current state of AI‑based cardiovascular risk prediction models used in primary and ambulatory care, summarizing 25 studies selected from 22,860 screened articles. It highlights that many models have not been externally validated and discusses potential sources of bias and other limitations. The work aims to inform researchers and clinicians about the development stage and reliability of these AI tools.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Caoimhe Provost",
+            "John Broughan",
+            "Geoff McCombe",
+            "Mark O Kelly",
+            "Mark Ledwidge",
+            "Walter Cullen",
+            "Joseph Gallagher"
+          ],
+          "structured": {
+            "centralClaim": "AI models are being explored to improve cardiovascular disease risk prediction in primary and ambulatory care, but most lack external validation and are subject to bias and other limitations.",
+            "citedEvidence": "The review screened 22,860 records, identified 25 eligible studies, and observed a lack of external validation in many models.",
+            "originStance": "none",
+            "summaryText": "This scoping review maps the current state of AI‑based cardiovascular risk prediction models used in primary and ambulatory care, summarizing 25 studies selected from 22,860 screened articles. It highlights that many models have not been externally validated and discusses potential sources of bias and other limitations. The work aims to inform researchers and clinicians about the development stage and reliability of these AI tools."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2024.07.12.24310323",
+      "text": "A novel monocyte-based biomarker of cardiovascular risk: comparison with traditional cardiovascular risk calculators",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2024.07.12.24310323",
+          "locator": "https://doi.org/10.1101/2024.07.12.24310323",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The researchers developed a monocyte‑based risk score called MARS and tested it in a small cohort of asymptomatic adults. They found that MARS correlated with carotid intima–media thickness and plaque presence, whereas conventional QRISK3 scores did not capture these early disease markers. This suggests that monocyte activation and platelet‑monocyte interactions may serve as novel biomarkers for silent cardiovascular disease.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Fatemah Almarri",
+            "Shuaihua Qiao",
+            "Jiale Gao",
+            "Li’na Kang",
+            "Soundrie Padayachee",
+            "Biao Xu",
+            "Ashish Patel",
+            "Albert Ferro"
+          ],
+          "structured": {
+            "centralClaim": "Monocyte activation and platelet–monocyte interactions can be combined into a composite biomarker (MARS) that predicts early atherosclerosis better than traditional cardiovascular risk calculators.",
+            "citedEvidence": "The study measured monocyte subsets and monocyte–platelet aggregates by flow cytometry in 39 asymptomatic adults, performed carotid intima–media thickness and plaque ultrasonography, derived the MARS score, and compared it with QRISK3 risk estimates.",
+            "originStance": "none",
+            "summaryText": "The researchers developed a monocyte‑based risk score called MARS and tested it in a small cohort of asymptomatic adults. They found that MARS correlated with carotid intima–media thickness and plaque presence, whereas conventional QRISK3 scores did not capture these early disease markers. This suggests that monocyte activation and platelet‑monocyte interactions may serve as novel biomarkers for silent cardiovascular disease."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1093/geroni/igab046.3594",
+      "text": "Egg Consumption and 4-Year Change in Cognitive Function: The Rancho Bernardo Study",
+      "provenance": [
+        {
+          "sourceId": "10.1093/geroni/igab046.3594",
+          "locator": "https://doi.org/10.1093/geroni/igab046.3594",
+          "date": "2021",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The research examined how regular egg eating relates to cognitive performance over a four-year span in a cohort of seniors, using standard neuropsychological tests. It found differing baseline cognitive scores between men and women and varying levels of egg consumption, but the abstract does not report the final association results.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Donna Kritz-Silverstein",
+            "Ricki Bettencourt"
+          ],
+          "venue": "Innovation in Aging",
+          "structured": {
+            "centralClaim": "The study investigates the association between egg consumption and 4-year changes in cognitive function among older community-dwelling adults.",
+            "citedEvidence": "Egg intake was assessed using a food frequency questionnaire, and cognitive function was measured at baseline and after four years with the Mini-Mental Status Exam, Trails B, and category fluency in a sample of 890 participants aged around 70 years.",
+            "originStance": "none",
+            "summaryText": "The research examined how regular egg eating relates to cognitive performance over a four-year span in a cohort of seniors, using standard neuropsychological tests. It found differing baseline cognitive scores between men and women and varying levels of egg consumption, but the abstract does not report the final association results."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2025.08.04.25332803",
+      "text": "Clinical Presentation, Risk Factors, and Outcomes of Cardiovascular Disease in a Military Cardiac Center in Yemen",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2025.08.04.25332803",
+          "locator": "https://doi.org/10.1101/2025.08.04.25332803",
+          "date": "2025",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The research was conducted at the Military Cardiac Center in Sana’a, which houses a 7‑bed CCU, 75 general ward beds, emergency and operating theater beds. By reviewing records of all CCU admissions in 2019, the authors characterized patient demographics, prior medical histories, and clinical outcomes to describe the burden of CVD in this setting. The findings highlight the limited but growing data on cardiovascular disease in Yemen’s military health system.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Abdulelah Mansoor Al-Ganad",
+            "Ahmed Al-Motarreb",
+            "Taha Al-Maimoony",
+            "Nabil Al-Rabeei",
+            "Abdulaziz Aonallah",
+            "Esmail Al-Dabis"
+          ],
+          "structured": {
+            "centralClaim": "The study evaluated the clinical characteristics, risk factors, and outcomes of cardiovascular diseases among patients admitted to the Coronary Care Unit of a military cardiac center in Yemen.",
+            "citedEvidence": "It used a retrospective cohort design that included all patients admitted to the CCU in 2019, extracting clinical data from electronic and archived paper records dating back to 2008 or 2010.",
+            "originStance": "none",
+            "summaryText": "The research was conducted at the Military Cardiac Center in Sana’a, which houses a 7‑bed CCU, 75 general ward beds, emergency and operating theater beds. By reviewing records of all CCU admissions in 2019, the authors characterized patient demographics, prior medical histories, and clinical outcomes to describe the burden of CVD in this setting. The findings highlight the limited but growing data on cardiovascular disease in Yemen’s military health system."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12933-020-01017-4",
+      "text": "Change in glucose intolerance status and risk of incident cardiovascular disease: Tehran Lipid and Glucose Study",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12933-020-01017-4",
+          "locator": "https://doi.org/10.1186/s12933-020-01017-4",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "Researchers tracked Iranian participants without baseline diabetes or CVD, classifying them into various glucose tolerance categories at baseline and after three years. They found that moving to impaired glucose tolerance or remaining in such states was associated with higher hazard ratios for cardiovascular disease, even after adjusting for other risk factors.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Maryam Kabootari",
+            "Mitra Hasheminia",
+            "Fereidoun Azizi",
+            "Mohammadhassan Mirbolouk",
+            "Farzad Hadaegh"
+          ],
+          "venue": "Cardiovascular Diabetology",
+          "structured": {
+            "centralClaim": "Progression to or persistence of impaired glucose tolerance states increases the risk of incident cardiovascular disease compared with remaining normoglycemic.",
+            "citedEvidence": "The study followed 4094 Iranian adults for a median of 12.4 years, categorizing them by glucose tolerance at baseline and after 3 years, and used Cox proportional hazards models adjusted for traditional risk factors to calculate hazard ratios for incident CVD.",
+            "originStance": "none",
+            "summaryText": "Researchers tracked Iranian participants without baseline diabetes or CVD, classifying them into various glucose tolerance categories at baseline and after three years. They found that moving to impaired glucose tolerance or remaining in such states was associated with higher hazard ratios for cardiovascular disease, even after adjusting for other risk factors."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1101/2024.09.19.24313914",
+      "text": "Hypothalamic Gliosis is Associated With Multiple Cardiovascular Disease Risk Factors",
+      "provenance": [
+        {
+          "sourceId": "10.1101/2024.09.19.24313914",
+          "locator": "https://doi.org/10.1101/2024.09.19.24313914",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The researchers used brain MRI to quantify hypothalamic gliosis and tested its relationship with various cardiovascular risk markers and prevalent coronary heart disease. They found that greater relative T2 signal in the mediobasal hypothalamus correlated with higher body‑mass index, dyslipidemia, hypertension, and diabetes, suggesting a link between hypothalamic inflammation and cardiovascular pathology.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Justin Lo",
+            "Susan J Melhorn",
+            "Sarah Kee",
+            "Kelsey LW Olerich",
+            "Alyssa Huang",
+            "Dabin Yeum",
+            "Alexa Beiser",
+            "Sudha Seshadri",
+            "Charles De Carli",
+            "Ellen A Schur"
+          ],
+          "structured": {
+            "centralClaim": "Hypothalamic gliosis, measured by T2 signal ratios in the mediobasal hypothalamus, is cross‑sectionally associated with multiple cardiovascular disease risk factors in a human cohort.",
+            "citedEvidence": "The study examined MRI-derived T2 signal intensities from the mediobasal hypothalamus and reference regions in 867 Framingham Heart Study participants, finding positive associations between higher MBH/AMY ratios and higher BMI, lower HDL‑C, higher triglycerides, hypertension, and diabetes mellitus.",
+            "originStance": "none",
+            "summaryText": "The researchers used brain MRI to quantify hypothalamic gliosis and tested its relationship with various cardiovascular risk markers and prevalent coronary heart disease. They found that greater relative T2 signal in the mediobasal hypothalamus correlated with higher body‑mass index, dyslipidemia, hypertension, and diabetes, suggesting a link between hypothalamic inflammation and cardiovascular pathology."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.64898/2026.02.13.26346232",
+      "text": "Does Vitamin D Supplementation Modulate Metabolic Risk Factors of Cardiovascular Disease? A Systematic Review and Meta-Analysis of Clinical Trials",
+      "provenance": [
+        {
+          "sourceId": "10.64898/2026.02.13.26346232",
+          "locator": "https://doi.org/10.64898/2026.02.13.26346232",
+          "date": "2026",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "preprint"
+          },
+          "languageSource": "defaulted",
+          "summary": "The meta‑analysis found no consistent effect of vitamin D supplementation on lipid levels, blood pressure, or glucose control across the included studies. Subgroup analyses indicated that age and baseline vitamin D status might modify any observed associations, but the limited number of trials and heterogeneity restrict firm conclusions.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Suhad Abumweis",
+            "Sarah Alqadi",
+            "Ala’a Al Tarteer",
+            "Waed Alrefai",
+            "Foad Alzoughool",
+            "Stephanie Jew",
+            "Taima Qudah"
+          ],
+          "structured": {
+            "centralClaim": "Vitamin D supplementation may affect cardiometabolic risk factors related to cardiovascular disease, but evidence from randomized controlled trials remains inconsistent.",
+            "citedEvidence": "The authors pooled data from 45 RCTs identified through PubMed, the Cochrane Library, and ClinicalTrials.gov, using the Cochrane risk‑of‑bias tool and random‑effects models to estimate effects on lipid profile, blood pressure, and glycaemic parameters.",
+            "originStance": "none",
+            "summaryText": "The meta‑analysis found no consistent effect of vitamin D supplementation on lipid levels, blood pressure, or glucose control across the included studies. Subgroup analyses indicated that age and baseline vitamin D status might modify any observed associations, but the limited number of trials and heterogeneity restrict firm conclusions."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12872-020-01329-z",
+      "text": "Association between cumulative social risk, particulate matter environmental pollutant exposure, and cardiovascular disease risk",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12872-020-01329-z",
+          "locator": "https://doi.org/10.1186/s12872-020-01329-z",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "In this community‑based study, higher cumulative social risk and greater 1‑year average PM2.5 exposure were linked to a higher incidence of cardiovascular disease events and death over about 8 years of follow‑up. The findings suggest that both social disadvantage and air pollution contribute synergistically to cardiovascular risk.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ann Canterbury",
+            "Justin B. Echouffo-Tcheugui",
+            "Daniel Shpilsky",
+            "Aryan Aiyer",
+            "Steven E. Reis",
+            "Sebhat Erqou"
+          ],
+          "venue": "BMC Cardiovascular Disorders",
+          "structured": {
+            "centralClaim": "Long-term exposure to particulate matter combined with higher cumulative social risk is associated with increased risk of cardiovascular disease events and mortality.",
+            "citedEvidence": "The authors analyzed data from the HeartSCORE cohort, assigning a Cumulative Social Risk score to 1,933 participants and estimating 1-year average PM2.5 exposure using land-use regression, then used Cox proportional hazards models adjusting for traditional CVD risk factors to assess associations with combined all-cause mortality and non‑fatal CVD events.",
+            "originStance": "none",
+            "summaryText": "In this community‑based study, higher cumulative social risk and greater 1‑year average PM2.5 exposure were linked to a higher incidence of cardiovascular disease events and death over about 8 years of follow‑up. The findings suggest that both social disadvantage and air pollution contribute synergistically to cardiovascular risk."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1530/ec-21-0537",
+      "text": "Menopause-associated risk of cardiovascular disease",
+      "provenance": [
+        {
+          "sourceId": "10.1530/ec-21-0537",
+          "locator": "https://doi.org/10.1530/ec-21-0537",
+          "date": "2022",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "und",
+            "genre": "article"
+          },
+          "languageSource": "defaulted",
+          "summary": "The study finds that women entering menopause face higher cardiovascular risk, especially when menopause occurs early, due to metabolic changes. It argues that hormone therapy, particularly transdermal estrogen, can reduce these risks when initiated within ten years of menopause or before age 60.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Panagiotis Anagnostis",
+            "Irene Lambrinoudaki",
+            "John C Stevenson",
+            "Dimitrios G Goulis"
+          ],
+          "venue": "Endocrine Connections",
+          "structured": {
+            "centralClaim": "Menopause, particularly early menopause, is linked to increased cardiovascular disease risk, and hormone therapy—especially transdermal estrogen—can mitigate this risk if started early.",
+            "citedEvidence": "The abstract cites epidemiologic evidence that early menopause (<45 years) independently raises CVD events and notes that MHT improves risk factors such as lipid profiles and blood pressure, with transdermal estrogens avoiding triglyceride elevation and VTE risk.",
+            "originStance": "none",
+            "summaryText": "The study finds that women entering menopause face higher cardiovascular risk, especially when menopause occurs early, due to metabolic changes. It argues that hormone therapy, particularly transdermal estrogen, can reduce these risks when initiated within ten years of menopause or before age 60."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12874-020-01173-x",
+      "text": "An assessment of the potential miscalibration of cardiovascular disease risk predictions caused by a secular trend in cardiovascular disease in England",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12874-020-01173-x",
+          "locator": "https://doi.org/10.1186/s12874-020-01173-x",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The researchers investigated how a long‑term downward trend in CVD incidence might cause risk prediction models to overestimate individual risk if not accounted for. Using a large UK primary‑care database, they tested a CVD risk model’s calibration in a later cohort and found that including the trend altered predictions, suggesting that secular changes and statin use should be considered in risk modeling.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Alexander Pate",
+            "Tjeerd van Staa",
+            "Richard Emsley"
+          ],
+          "venue": "BMC Medical Research Methodology",
+          "structured": {
+            "centralClaim": "Modelling a secular decline in cardiovascular disease incidence may improve calibration of CVD risk prediction models and prevent over‑prediction of individual risk in contemporary England.",
+            "citedEvidence": "The study used a cohort of 3,855,660 patients from the Clinical Practice Research Datalink (1998–2015), split into development and validation groups, and evaluated model calibration both before and after incorporating the secular trend, also examining the possible role of increasing statin use.",
+            "originStance": "none",
+            "summaryText": "The researchers investigated how a long‑term downward trend in CVD incidence might cause risk prediction models to overestimate individual risk if not accounted for. Using a large UK primary‑care database, they tested a CVD risk model’s calibration in a later cohort and found that including the trend altered predictions, suggesting that secular changes and statin use should be considered in risk modeling."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1155/2024/4133365",
+      "text": "Major Limitations of Cardiovascular Risk Scores",
+      "provenance": [
+        {
+          "sourceId": "10.1155/2024/4133365",
+          "locator": "https://doi.org/10.1155/2024/4133365",
+          "date": "2024",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The paper reviews how current cardiovascular risk calculators, built on traditional risk factors, have notable limitations that hinder their accuracy and broad use. It emphasizes the need for better-tailored models to overcome these constraints. The authors aim to inform clinicians about these restrictions to improve risk assessment.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Ibtissam Talha",
+            "Noureddine Elkhoudri",
+            "Abderraouf Hilali"
+          ],
+          "venue": "Cardiovascular Therapeutics",
+          "structured": {
+            "centralClaim": "Cardiovascular risk scores suffer from significant limitations that reduce their sensitivity and applicability across populations.",
+            "citedEvidence": "The authors note that most models rely on classic risk factors and therefore may miss relevant predictors, leading to reduced performance, and they summarize critical analyses highlighting these shortcomings.",
+            "originStance": "none",
+            "summaryText": "The paper reviews how current cardiovascular risk calculators, built on traditional risk factors, have notable limitations that hinder their accuracy and broad use. It emphasizes the need for better-tailored models to overcome these constraints. The authors aim to inform clinicians about these restrictions to improve risk assessment."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1093/geroni/igz038.1277",
+      "text": "INCREASED CARDIOVASCULAR DISEASE RISK FACTORS IN PERSONS WITH CEREBRAL PALSY",
+      "provenance": [
+        {
+          "sourceId": "10.1093/geroni/igz038.1277",
+          "locator": "https://doi.org/10.1093/geroni/igz038.1277",
+          "date": "2019",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "The research evaluates cardiovascular risk in a cohort of adults with cerebral palsy, showing elevated metabolic syndrome rates and a link between mobility and waist circumference. These findings highlight the need for targeted CVD prevention in this population.",
+          "summaryMethod": "llm",
+          "authors": [
+            "Patricia C Heyn"
+          ],
+          "venue": "Innovation in Aging",
+          "structured": {
+            "centralClaim": "Adults with cerebral palsy and obstructed mobility exhibit a higher prevalence of cardiovascular disease risk factors, including metabolic syndrome, than the general population.",
+            "citedEvidence": "The study reports a 17.1% prevalence of metabolic syndrome in the cohort, exceeding the 10% rate observed in NHANES. It also finds a positive correlation between mobility level and waist circumference (r=0.28, p=0.02).",
+            "originStance": "none",
+            "summaryText": "The research evaluates cardiovascular risk in a cohort of adults with cerebral palsy, showing elevated metabolic syndrome rates and a link between mobility and waist circumference. These findings highlight the need for targeted CVD prevention in this population."
+          }
+        }
+      ]
+    },
+    {
+      "id": "10.1186/s12872-020-01427-y",
+      "text": "Community intervention for cardiovascular disease risk factors in Kalutara, Sri Lanka",
+      "provenance": [
+        {
+          "sourceId": "10.1186/s12872-020-01427-y",
+          "locator": "https://doi.org/10.1186/s12872-020-01427-y",
+          "date": "2020",
+          "tags": {
+            "language-family": "anglophone",
+            "language": "en",
+            "genre": "article"
+          },
+          "languageSource": "declared",
+          "summary": "Researchers examined whether a locally designed health promotion program could lower CVD and diabetes risk factors in a Sri Lankan community. By comparing surveys before and after the intervention, they found measurable shifts in key biomarkers and smoking rates, suggesting the program may have influenced risk profiles. The findings highlight the potential of community‑level strategies to address non‑communicable disease risk factors in low‑resource settings.",
+          "summaryMethod": "llm",
+          "authors": [
+            "L. Gamlath",
+            "S. Nandasena",
+            "P. de Silva",
+            "S. Morrell",
+            "C. Linhart",
+            "S. Lin",
+            "A. Sharpe",
+            "S. Nathan",
+            "R. Taylor"
+          ],
+          "venue": "BMC Cardiovascular Disorders",
+          "structured": {
+            "centralClaim": "The study evaluates the impact of a community-based health promotion intervention on cardiovascular disease and type 2 diabetes risk factors among adults in Kalutara, Sri Lanka.",
+            "citedEvidence": "It uses pre‑ and post‑intervention surveys of over 1,000 adults, measuring changes in resting blood pressure, fasting plasma glucose, total cholesterol, body mass index and tobacco smoking, while accounting for cluster sampling, age and socioeconomic factors.",
+            "originStance": "none",
+            "summaryText": "Researchers examined whether a locally designed health promotion program could lower CVD and diabetes risk factors in a Sri Lankan community. By comparing surveys before and after the intervention, they found measurable shifts in key biomarkers and smoking rates, suggesting the program may have influenced risk profiles. The findings highlight the potential of community‑level strategies to address non‑communicable disease risk factors in low‑resource settings."
+          }
+        }
+      ]
+    }
+  ],
+  "citationGraph": {
+    "10.1136/bmj.m513": [
+      "10.1161/01.cir.102.18.2284",
+      "10.1155/2018/6303810",
+      "10.1016/j.clnu.2016.06.009",
+      "10.1093/ajcn/87.4.964",
+      "10.1001/jama.281.15.1387",
+      "10.1001/jama.2019.1572",
+      "10.1007/s00394-017-1566-0",
+      "10.1136/heartjnl-2017-312651",
+      "10.1161/circulationaha.118.038813",
+      "10.1016/j.atherosclerosis.2014.04.019",
+      "10.1016/j.atherosclerosis.2013.04.003",
+      "10.1080/07315724.2016.1152928",
+      "10.1080/10408398.2017.1392288",
+      "10.3389/fnut.2017.00010",
+      "10.1016/s0140-6736(18)31788-4",
+      "10.2105/ajph.2016.303338",
+      "10.1093/oxfordjournals.aje.a009849",
+      "10.1093/oxfordjournals.aje.a116211",
+      "10.1093/oxfordjournals.aje.a114780",
+      "10.1093/ije/18.4.858",
+      "10.1016/0002-8223(93)91754-e",
+      "10.1016/0140-6736(91)93206-o",
+      "10.1093/oxfordjournals.aje.a113804",
+      "10.1056/nejm198711193172102",
+      "10.1097/00001648-199011000-00009",
+      "10.1093/oxfordjournals.aje.a115960",
+      "10.1097/00001648-199601000-00014",
+      "10.1093/oxfordjournals.aje.a116237",
+      "10.1161/circulationaha.109.915165",
+      "10.1007/s10654-018-0371-2",
+      "10.3945/jn.111.157222",
+      "10.1093/oxfordjournals.aje.a113332",
+      "10.7326/m16-2607",
+      "10.1371/journal.pmed.1000097",
+      "10.1016/j.cmpb.2009.11.005",
+      "10.1177/1536867x0600600103",
+      "10.1038/ejcn.2011.30",
+      "10.1016/j.numecd.2009.11.007",
+      "10.3945/ajcn.115.119263",
+      "10.3945/ajcn.115.122317",
+      "10.1093/ajcn/nqz066",
+      "10.1016/j.amepre.2016.10.041",
+      "10.1038/s41387-018-0033-1",
+      "10.1136/hrt.78.5.450",
+      "10.1093/aje/kws205",
+      "10.1017/bjn20061937",
+      "10.1038/s41430-017-0051-4",
+      "10.1093/ajcn/80.1.58",
+      "10.1093/ije/dyg151",
+      "10.1017/s1368980010001874",
+      "10.1111/j.1365-2796.2006.01638.x",
+      "10.1007/s10654-019-00483-9",
+      "10.1038/srep22619",
+      "10.1007/s00394-018-1692-3",
+      "10.1002/ana.23555",
+      "10.1136/heartjnl-2018-313781",
+      "10.1073/pnas.1402183111",
+      "10.1007/s00125-015-3525-8",
+      "10.1016/j.jcjd.2016.12.002",
+      "10.1093/ajcn/nqy048"
+    ],
+    "10.1371/journal.pmed.1003508": [
+      "10.3390/nu7095372",
+      "10.1016/s0140-6736(89)92759-1",
+      "10.1001/jama.2019.1572",
+      "10.1161/01.cir.102.18.2284",
+      "10.3945/ajcn.114.100305",
+      "10.1161/01.cir.0000437740.48606.d1",
+      "10.3945/an.116.012120",
+      "10.1016/j.atherosclerosis.2013.04.003",
+      "10.1136/bmj.e8539",
+      "10.3945/ajcn.112.051318",
+      "10.1080/07315724.2018.1534620",
+      "10.1007/s00394-018-1692-3",
+      "10.1093/aje/154.12.1119",
+      "10.1017/s1368980011000632",
+      "10.1093/aje/152.3.279",
+      "10.1017/s1368980007000419",
+      "10.3390/nu10040452",
+      "10.1093/acprof:oso/9780199754038.001.0001",
+      "10.1093/aje/kwp107",
+      "10.1161/circulationaha.115.017719",
+      "10.1136/bmj.j1957",
+      "10.1161/circresaha.118.314038",
+      "10.3390/nu10060771",
+      "10.1002/(sici)1097-0258(19970715)16:13<1515::aid-sim572>3.0.co;2-1",
+      "10.3945/ajcn.115.112029",
+      "10.1002/(sici)1097-0258(19981015)17:19<2265::aid-sim918>3.0.co;2-b",
+      "10.1080/07315724.2016.1152928",
+      "10.3389/fnut.2017.00010",
+      "10.1001/jama.281.15.1387",
+      "10.1136/bmj.314.7074.112",
+      "10.3390/nu12071995",
+      "10.1093/eurheartj/ehx144",
+      "10.1080/07315724.2017.1366878",
+      "10.1016/j.nutres.2016.04.009",
+      "10.3748/wjg.v21.i12.3711",
+      "10.1016/j.clnu.2014.07.009",
+      "10.1016/s0021-9150(03)00287-9",
+      "10.1080/01635580701499537",
+      "10.3945/ajcn.115.119933",
+      "10.5152/turkthoracj.2017.17043",
+      "10.1159/000053834",
+      "10.1007/s00394-018-1754-6",
+      "10.3945/ajcn.116.146753",
+      "10.1093/jn/133.5.1302",
+      "10.1093/jn/136.10.2519",
+      "10.1080/07315724.2017.1423248",
+      "10.3382/ps/pex399",
+      "10.1186/s13293-019-0265-3",
+      "10.1016/j.alcohol.2017.08.011",
+      "10.1136/hrt.2008.147066"
+    ],
+    "10.1101/2025.09.18.25336069": [
+      "10.1016/s0140-6736(19)32008-2",
+      "10.1136/bmj.j2099",
+      "10.1038/ng.3285",
+      "10.1093/hmg/ddz187",
+      "10.1186/s13073-024-01304-9",
+      "10.1038/s41591-021-01549-6",
+      "10.1093/eurheartj/ehw450",
+      "10.1016/j.jacc.2018.07.079",
+      "10.1371/journal.pmed.1003498",
+      "10.1001/jama.2019.22241",
+      "10.1016/j.amjcard.2021.02.032",
+      "10.1371/journal.pgen.1009723",
+      "10.1161/jaha.122.029296",
+      "10.1038/s44325-025-00049-7",
+      "10.1038/s41591-023-02429-x",
+      "10.1038/s41591-022-01767-6",
+      "10.1016/j.gim.2023.100006",
+      "10.1038/s41591-024-02796-z",
+      "10.1093/eurheartj/ehae342",
+      "10.1093/eurjpc/zwae004",
+      "10.1161/cir.0000000000001077",
+      "10.1126/science.aax2342",
+      "10.1016/s2214-109x(19)30365-1",
+      "10.1038/s41746-020-0304-9",
+      "10.1038/s41588-019-0379-x",
+      "10.1038/s41576-023-00637-2",
+      "10.1177/0049124118782533",
+      "10.1145/3394486.3406461",
+      "10.1287/educ.2020.0220",
+      "10.7326/m18-1990",
+      "10.1145/1754428.1754432",
+      "10.1016/s2468-2667(18)30200-7",
+      "10.1038/s41586-018-0579-z",
+      "10.1371/journal.pmed.1003672",
+      "10.1016/j.ajhg.2020.04.002",
+      "10.1038/s42003-021-02996-0",
+      "10.1016/j.xgen.2022.100118",
+      "10.1038/s41588-021-00783-5",
+      "10.1101/gr.278378.123",
+      "10.1161/circulationaha.118.035658",
+      "10.1093/eurheartj/ehy653",
+      "10.1089/big.2016.0047",
+      "10.1097/00001648-200009000-00011",
+      "10.1007/978-1-4757-1229-2_14",
+      "10.1007/978-1-4612-4380-9_41",
+      "10.3399/bjgp20x708053",
+      "10.1371/journal.pone.0018742",
+      "10.1093/biomet/70.1.41",
+      "10.1001/jama.2024.23784",
+      "10.1136/bmjhci-2021-100460",
+      "10.1038/s41598-022-06610-z",
+      "10.1016/j.jbi.2023.104294",
+      "10.1136/openhrt-2023-002395",
+      "10.1136/bmj.e4181",
+      "10.1038/s41431-023-01517-3",
+      "10.1097/gme.0000000000001403",
+      "10.1093/eurheartj/ehad472",
+      "10.1136/heartjnl-2022-321231",
+      "10.1136/bmj-2023-074819",
+      "10.1145/3306618.3314278",
+      "10.1161/jaha.123.029765",
+      "10.1111/papa.12189",
+      "10.1093/aje/kwx246",
+      "10.1136/bmj.m131"
+    ],
+    "10.14293/pr2199.002481.v1": [],
+    "10.64898/2026.05.18.26353477": [
+      "10.1093/humrep/deaf049",
+      "10.1016/j.jacc.2013.05.085",
+      "10.1016/j.ecl.2013.02.003",
+      "10.3389/fcvm.2020.552421",
+      "10.1503/cmaj.181124",
+      "10.1136/bmj.e8632",
+      "10.1111/jth.14840",
+      "10.1016/j.fertnstert.2014.06.024",
+      "10.1016/j.jacc.2017.07.753",
+      "10.1093/ije/dyz212",
+      "10.1161/circulationaha.117.028307",
+      "10.1111/cen.14593",
+      "10.1503/cmaj.160744",
+      "10.1007/s10654-009-9350-y",
+      "10.1007/s10654-022-00947-5",
+      "10.1016/j.jpeds.2016.04.055",
+      "10.1186/1471-2458-11-450",
+      "10.1007/s10654-017-0316-1",
+      "10.1177/1403494813499653",
+      "10.1016/j.cjca.2020.11.010",
+      "10.1007/bf02924688",
+      "10.1016/j.jclinepi.2007.11.008",
+      "10.1001/jamacardio.2023.2324",
+      "10.1093/eurheartj/ehae886",
+      "10.1093/hropen/hox008",
+      "10.1016/j.ajog.2019.01.006",
+      "10.1093/aje/kwx067",
+      "10.1093/humrep/deu106",
+      "10.1016/j.fertnstert.2022.05.038",
+      "10.1093/humrep/der400",
+      "10.1161/cir.0000000000001292"
+    ],
+    "10.64898/2026.03.20.26348884": [
+      "10.5334/gh.1288",
+      "10.1056/nejm200007063430103",
+      "10.3945/ajcn.2010.29673",
+      "10.1017/s0007114514003341",
+      "10.1093/eurjpc/zwae281",
+      "10.1017/s0007114507433086",
+      "10.1017/s0007114509990602",
+      "10.3945/ajcn.113.076133",
+      "10.1007/s11306-019-1532-3",
+      "10.1038/s43016-020-0093-y",
+      "10.1038/s42255-024-01067-y",
+      "10.1038/s41591-022-02014-8",
+      "10.1126/science.1223813",
+      "10.1016/s2213-8587(16)30419-3",
+      "10.1128/msystems.00677-20",
+      "10.1002/tsm2.215",
+      "10.1126/scitranslmed.aaa5680",
+      "10.1038/srep22525",
+      "10.1016/j.crohns.2012.04.019",
+      "10.1021/acs.analchem.8b02412",
+      "10.1021/acs.analchem.0c04952",
+      "10.1021/ac5025039",
+      "10.1021/ac201065j",
+      "10.1038/s41596-020-0343-3",
+      "10.1021/ac302360v",
+      "10.1016/j.jpba.2022.115060",
+      "10.21105/joss.01041",
+      "10.2307/3001968",
+      "10.1111/1467-9868.00346",
+      "10.1136/bmj.314.7074.112",
+      "10.1016/j.cmet.2015.08.009",
+      "10.1016/j.cmet.2020.08.014",
+      "10.1038/s41591-020-01209-1",
+      "10.1038/s41467-023-38778-x",
+      "10.1161/01.cir.95.1.69",
+      "10.1371/journal.pone.0241993",
+      "10.3390/nu5030928",
+      "10.1038/nature12820",
+      "10.1038/ncomms7342",
+      "10.3390/nu11122862",
+      "10.1128/msystems.00115-21",
+      "10.1038/s41579-020-0433-9",
+      "10.1093/ajcn/nqab332",
+      "10.1038/s41467-025-63799-z",
+      "10.1021/acs.jafc.5b05878",
+      "10.1021/acs.analchem.6b03324",
+      "10.1021/pr200326k",
+      "10.3945/ajcn.111.017921",
+      "10.3945/ajcn.110.000950",
+      "10.1021/pr060265y",
+      "10.1093/ajcn/nqab211",
+      "10.3389/fphys.2020.580171",
+      "10.1002/mnfr.201600324",
+      "10.3945/ajcn.114.090282",
+      "10.3390/microorganisms7010019",
+      "10.1038/nmicrobiol.2016.93"
+    ],
+    "10.1101/2025.09.22.25336381": [
+      "10.1093/eurjpc/zwac194",
+      "10.1016/j.jacc.2020.11.021",
+      "10.1161/circresaha.117.308903",
+      "10.1007/s00467-022-05668-1",
+      "10.3945/ajcn.114.091009",
+      "10.3390/nu11040923",
+      "10.1186/1476-9255-6-21",
+      "10.1152/physrev.00056.2006",
+      "10.1080/07853890.2019.1628352",
+      "10.1007/s00394-021-02575-3",
+      "10.1007/s12028-008-9169-5",
+      "10.1016/j.numecd.2023.01.007",
+      "10.3349/ymj.2021.62.7.600",
+      "10.3389/fpubh.2022.1023747",
+      "10.1007/s00394-019-02152-9",
+      "10.3389/fcvm.2022.899307",
+      "10.1161/circulationaha.107.185649",
+      "10.4158/ep.18.s1.1",
+      "10.7326/0003-4819-150-9-200905050-00006",
+      "10.1017/s1368980013003169",
+      "10.1159/000525730",
+      "10.1007/s00232-006-0048-8",
+      "10.1093/cvr/cvu199",
+      "10.3390/nu14102039",
+      "10.1152/ajpregu.00354.2015",
+      "10.3390/nu12040905",
+      "10.1016/j.jada.2005.05.003",
+      "10.1152/japplphysiol.00266.2021",
+      "10.1017/s0007114510001923",
+      "10.1042/cs20220500",
+      "10.1159/000435947",
+      "10.1016/j.ijcard.2011.09.079"
+    ],
+    "10.1017/s0007114522000988": [
+      "10.1093/ajcn/55.6.1060",
+      "10.1093/eurheartj/ehx144",
+      "10.1111/j.1538-7836.2006.02096.x",
+      "10.1093/ije/dyt034",
+      "10.3945/ajcn.114.104109",
+      "10.1016/j.atherosclerosis.2011.10.007",
+      "10.1160/th11-10-0726",
+      "10.3389/fnut.2020.00153",
+      "10.1016/j.atherosclerosis.2015.12.020",
+      "10.1007/s10654-011-9606-1",
+      "10.1111/j.1538-7836.2007.02467.x",
+      "10.1016/s0140-6736(16)30514-1",
+      "10.1016/j.ijcard.2016.06.069",
+      "10.1007/s10654-017-0242-2",
+      "10.1159/000519906",
+      "10.1161/01.cir.86.3.803",
+      "10.1001/jama.2019.1572",
+      "10.1080/14779072.2017.1357468",
+      "10.1161/jaha.115.002858",
+      "10.1093/aje/kwi309",
+      "10.1007/s00394-020-02345-7",
+      "10.1001/jamacardio.2018.4537",
+      "10.1016/s2352-3026(16)30184-3",
+      "10.1017/s000711451600146x",
+      "10.1159/000443568",
+      "10.1038/s41371-017-0008-z",
+      "10.1016/j.arcmed.2015.06.006",
+      "10.3945/ajcn.115.122317",
+      "10.1111/j.1538-7836.2006.02058.x",
+      "10.1001/jama.298.11.1300",
+      "10.1186/cvm-2-4-165",
+      "10.1111/j.1365-2362.2009.02234.x",
+      "10.1111/jth.15473",
+      "10.7326/0003-4819-147-11-200712040-00007",
+      "10.1097/00063198-200309000-00007",
+      "10.1055/s-0037-1615887",
+      "10.1007/978-1-4757-3294-8",
+      "10.1161/circulationaha.116.024507",
+      "10.1080/14017431.2019.1630748",
+      "10.1038/s41371-018-0068-8",
+      "10.1093/advances/nmy038",
+      "10.1111/j.1538-7836.2006.02121.x",
+      "10.1159/000515409",
+      "10.1016/j.numecd.2021.07.006",
+      "10.1016/s0022-2275(20)38833-7",
+      "10.3390/nu10060780",
+      "10.1160/th07-03-0212",
+      "10.1056/nejmoa022157",
+      "10.1067/mhj.2001.109951",
+      "10.1093/ajcn/nqz066",
+      "10.1161/circulationaha.107.709204",
+      "10.1016/j.atherosclerosis.2018.02.035",
+      "10.1007/s10654-019-00579-2",
+      "10.1093/eurjpc/zwab220",
+      "10.1016/j.cca.2009.12.027",
+      "10.1093/eurheartj/ehx107"
+    ],
+    "10.1101/2025.01.26.25321145": [
+      "10.1016/j.jacc.2020.11.010",
+      "10.1038/s41588-018&ndash;0183-z",
+      "10.1161/cir.0000000000001077",
+      "10.1186/s12966-024-01593-8",
+      "10.1371/journal.pmed.1003487",
+      "10.1038/s41435-022-00192-6",
+      "10.1001/jamacardio.2018.1717",
+      "10.1136/bmj.k4168",
+      "10.1161/circgen.120.003128",
+      "10.1093/eurjpc/zwac135",
+      "10.1016/j.numecd.2022.08.021",
+      "10.1016/j.atherosclerosis.2023.117300",
+      "10.1249/mss.0000000000003482",
+      "10.1093/aje/kwi054",
+      "10.1186/s12889-016-3172-0",
+      "10.1111/joim.13715",
+      "10.1371/journal.pone.0304653",
+      "10.1016/j.jacc.2023.07.029",
+      "10.1093/eurjpc/zwad229",
+      "10.1371/journal.pmed.1001779",
+      "10.1371/journal.pone.0169649",
+      "10.1249/mss.0000000000003478",
+      "10.1101/2022.06.16.22276246",
+      "10.1056/nejmoa1605086",
+      "10.1136/bmjopen-2013-004387",
+      "10.1038/s41746-024-01065-0",
+      "10.1002/sim.2098",
+      "10.1016/s0140-6736(07)61602-x",
+      "10.1161/circulationaha.117.032432",
+      "10.1001/jamainternmed.2022.4000",
+      "10.1016/s2468-2667(21)00302-9",
+      "10.1007/s11357-023-00873-8",
+      "10.1001/jama.2020.1382",
+      "10.1001/jamainternmed.2019.0899",
+      "10.1136/bmjsem-2019-000661",
+      "10.1093/aje/kwx246",
+      "10.1136/bmj.m131",
+      "10.1016/s2214-109x(24)00150-5"
+    ],
+    "10.1186/s12872-019-1196-y": [
+      "10.1037/e300342003-001",
+      "10.1016/s0140-6736(02)08336-8",
+      "10.1016/s0140-6736(08)60522-x",
+      "10.1016/j.socscimed.2009.01.003",
+      "10.1161/cir.0000000000000536",
+      "10.4088/jcp.v65n0217",
+      "10.1016/j.whi.2011.04.008",
+      "10.1161/01.cir.0000143074.54995.7f",
+      "10.1161/cir.0000000000000152",
+      "10.1097/jcn.0b013e318279e372",
+      "10.1177/1524838011404253",
+      "10.1016/j.ejphar.2007.11.071",
+      "10.1037/10723-009",
+      "10.1111/j.1365-2648.2009.05086.x",
+      "10.1023/a:1022079418229",
+      "10.1016/j.cnur.2011.08.001",
+      "10.3402/ejpt.v5.24794",
+      "10.1002/da.22347",
+      "10.1177/1524838011426152",
+      "10.1177/1559827611410266",
+      "10.1037/10723-004",
+      "10.1371/journal.pone.0037119",
+      "10.1111/j.1600-0447.1990.tb05465.x",
+      "10.1002/mds.26112",
+      "10.1136/hrt.2009.186957",
+      "10.3389/fpsyt.2016.00033",
+      "10.1177/1359105308095977",
+      "10.1016/s0022-3999(01)00302-6",
+      "10.1016/s0376-6357(02)00082-7",
+      "10.1037/0003-066x.55.1.110",
+      "10.1177/1077801203009007004",
+      "10.1001/jama.1990.03450120053028",
+      "10.1037/0022-006x.61.5.761",
+      "10.1093/ajcn/82.1.222s",
+      "10.4324/9781410610904",
+      "10.1177/0193945908328174",
+      "10.1161/01.hyp.0000107251.49515.c2",
+      "10.1176/ajp.151.8.1132",
+      "10.2307/351344",
+      "10.1891/0886-6708.9.3.259",
+      "10.2105/ajph.84.7.1086",
+      "10.1093/ajcn/85.5.1197",
+      "10.1177/014662167700100306",
+      "10.1007/s10896-005-7800-1",
+      "10.1177/0886260503258033",
+      "10.1016/j.mcna.2011.11.003",
+      "10.1007/bf02294204",
+      "10.56021/9780801834783",
+      "10.56021/9780801853364",
+      "10.1080/15427600902911247",
+      "10.4135/9781412995627.d38",
+      "10.1155/2012/735465",
+      "10.1186/1471-2288-14-124",
+      "10.1111/j.1469-7610.2004.00218.x",
+      "10.1016/j.psyneuen.2008.03.008",
+      "10.1146/annurev-clinpsy-050212-185634",
+      "10.1080/15299730802624577",
+      "10.1016/j.jmwh.2008.07.004"
+    ],
+    "10.32388/1svuci.2": [
+      "10.3390/s23031161",
+      "10.1161/01.cir.0000437741.48606.98",
+      "10.1161/circulationaha.111.075929",
+      "10.1186/s41043-017-0114-0",
+      "10.3390/diagnostics11060943",
+      "10.1371/journal.pone.0271723",
+      "10.1515/med-2022-0508",
+      "10.1371/journal.pone.0213653",
+      "10.1136/bmj.39261.471806.55",
+      "10.1136/bmj.b2584",
+      "10.1186/s12889-022-13944-w",
+      "10.1590/s1020-49892012000800007",
+      "10.2105/ajph.2014.302148",
+      "10.1136/hrt.2007.134890",
+      "10.1186/s12916-022-02349-6",
+      "10.1161/jaha.117.005676",
+      "10.1016/s2589-7500(21)00236-3",
+      "10.1001/jama.297.6.611",
+      "10.1016/j.jacc.2011.08.022",
+      "10.1136/bmj.i2416",
+      "10.15420/ecr.2022.11",
+      "10.1111/j.1742-1241.2010.02469.x",
+      "10.1038/s41598-020-72685-1",
+      "10.1038/s41746-020-00331-1",
+      "10.3389/fmed.2023.1150933",
+      "10.24432/c52p4x",
+      "10.1155/2023/9738123",
+      "10.1002/sam.11583",
+      "10.1016/j.cie.2021.107912",
+      "10.1006/jcss.1997.1504",
+      "10.1007/bfb0026683",
+      "10.1161/circulationaha.105.594929"
+    ],
+    "10.1093/geroni/igz038.2944": [],
+    "10.1186/s12944-019-1133-1": [
+      "10.5264/eiyogakuzashi.65.165",
+      "10.3177/jnsv.42.87",
+      "10.3109/09637486.2014.937800",
+      "10.1017/s0007114517002306",
+      "10.1155/2017/6817196",
+      "10.11301/jsfe.16.79",
+      "10.1002/(sici)1096-9136(199807)15:7<539::aid-dia668>3.0.co;2-s",
+      "10.1093/clinchem/15.3.248",
+      "10.1093/jn/107.7.1340",
+      "10.1016/s0021-9258(18)64849-5",
+      "10.1016/0009-8981(68)90041-7",
+      "10.1093/clinchem/23.9.1766",
+      "10.1021/jf502741b",
+      "10.1111/j.1432-1033.1983.tb07450.x",
+      "10.3388/jspaci.13.36",
+      "10.1016/0005-2760(84)90082-1",
+      "10.1021/acs.jafc.8b04730",
+      "10.1271/bbb.68.352",
+      "10.2334/josnusd.50.419",
+      "10.5551/jat.13.247",
+      "10.1017/s0007114510002734",
+      "10.1186/s12944-017-0631-2",
+      "10.1186/s12944-019-1047-y",
+      "10.1186/s12944-015-0133-z"
+    ],
+    "10.1186/s12872-020-01826-1": [
+      "10.1155/2016/4857917",
+      "10.1016/j.atherosclerosis.2006.04.006",
+      "10.1111/1753-0407.12221",
+      "10.1053/gast.2003.50004",
+      "10.2337/dc07-0086",
+      "10.2337/diabetes.51.6.1889",
+      "10.1111/jgh.13264",
+      "10.1373/clinchem.2006.081257",
+      "10.1097/md.0000000000006770",
+      "10.3390/ijerph15030545",
+      "10.1080/07315724.2019.1580169",
+      "10.1111/eci.12474",
+      "10.1016/j.atherosclerosis.2015.09.006",
+      "10.1093/aje/kwt209",
+      "10.1016/j.cca.2019.06.021",
+      "10.1016/j.atherosclerosis.2016.09.009",
+      "10.1371/journal.pone.0014254",
+      "10.1016/j.dld.2014.05.021",
+      "10.1111/j.1572-0241.2005.41822.x",
+      "10.1093/ije/dyr049",
+      "10.1097/hjh.0b013e32834068e0",
+      "10.1155/2019/1695874",
+      "10.1080/00365510410006324",
+      "10.1093/ije/dyt192",
+      "10.1371/journal.pone.0091410",
+      "10.1371/journal.pone.0242431",
+      "10.1016/j.cgh.2011.10.014",
+      "10.1093/gerona/glq082",
+      "10.1016/j.amjmed.2011.04.018",
+      "10.1002/hep.29542",
+      "10.7326/0003-4819-137-1-200207020-00006",
+      "10.1371/journal.pone.0021178",
+      "10.1016/j.atherosclerosis.2013.01.013"
+    ],
+    "10.14293/p2199-8442.1.sop-.pw9sli.v1": [],
+    "10.1101/2025.07.12.25331445": [
+      "10.3390/diagnostics14020144",
+      "10.1109/cibec.2014.7020942",
+      "10.1186/s12911-021-01527-5",
+      "10.3390/math9202537",
+      "10.1016/j.bspc.2024.106147",
+      "10.1109/titb.2012.2205009",
+      "10.1109/iscc.2017.8024530",
+      "10.1109/iccubea.2018.8697423",
+      "10.22489/cinc.2019.120",
+      "10.1161/hc0302.102575",
+      "10.26524/sajet.2022.12.49",
+      "10.1016/j.medengphy.2022.103825",
+      "10.1109/access.2021.3098688",
+      "10.1145/3018896.3036384",
+      "10.1038/s41598-023-50600-8",
+      "10.3389/fbinf.2023.1284705",
+      "10.1016/j.csbj.2022.12.046",
+      "10.1007/s10115-022-01786-2",
+      "10.15620/cdc/151927",
+      "10.1145/2939672.2939785",
+      "10.1038/s42256-019-0138-9",
+      "10.1038/s41598-023-31870-8",
+      "10.1097/mol.0b013e3280106b95",
+      "10.1136/hrt.2007.134890",
+      "10.1186/s13098-024-01516-4",
+      "10.1161/jaha.122.027011",
+      "10.1007/s11357-021-00486-z"
+    ],
+    "10.1101/2025.03.21.25324379": [
+      "10.1016/j.jacc.2020.11.010",
+      "10.7326/0003-4819-149-10-200811180-00009",
+      "10.1186/s13054-024-04948-6",
+      "10.2196/34295",
+      "10.1161/circulationaha.109.849166",
+      "10.1136/bmj-2023-074819",
+      "10.1186/s12916-023-03212-y",
+      "10.1136/bmjhci-2023-100784",
+      "10.1016/j.telpol.2020.101976",
+      "10.1186/s12916-021-01940-7",
+      "10.1016/j.cmpbup.2024.100148",
+      "10.3349/ymj.2022.63.s93",
+      "10.2196/32344",
+      "10.1186/s12933-023-01741-7",
+      "10.1136/bmj.n2281",
+      "10.1371/journal.pone.0241286",
+      "10.3389/fdgth.2024.1267290",
+      "10.1186/s12859-022-04761-4",
+      "10.1038/s41746-023-00916-6",
+      "10.1186/s12916-024-03273-7",
+      "10.1007/s11906-022-01212-6",
+      "10.1097/acm.0000000000001452",
+      "10.1080/1364557032000119616",
+      "10.1186/1748-5908-5-69",
+      "10.1136/bmj-2023-078378",
+      "10.1038/nrg.2016.160",
+      "10.1007/978-0-387-84858-7",
+      "10.3389/fcvm.2022.854287",
+      "10.1016/j.amjcard.2023.03.035",
+      "10.1016/j.cvdhj.2023.11.003",
+      "10.1002/ejhf.2155",
+      "10.1186/s12911-021-01482-1",
+      "10.1016/j.jacc.2022.01.021",
+      "10.1161/circulationaha.120.047829",
+      "10.1161/circulationaha.120.053134",
+      "10.1016/j.cjca.2021.08.006",
+      "10.3389/fcvm.2021.614204",
+      "10.1093/ehjdh/ztad031",
+      "10.1002/clc.24104",
+      "10.1371/journal.pone.0294050",
+      "10.1016/j.jelectrocard.2023.09.011",
+      "10.1253/circj.cj-21-0131",
+      "10.3389/fcvm.2023.1137892",
+      "10.1093/ehjci/jead009",
+      "10.1139/apnm-2021-0502",
+      "10.1136/openhrt-2023-002417",
+      "10.1016/j.jcmg.2021.07.004",
+      "10.1038/s41746-021-00549-7",
+      "10.1136/openhrt-2023-002292",
+      "10.1093/ehjdh/ztae010",
+      "10.3389/fcvm.2022.1022658",
+      "10.1093/ehjdh/ztad006",
+      "10.1007/s12525-021-00475-2",
+      "10.1109/iccv.2019.00628",
+      "10.1136/gpsych-2020-100453",
+      "10.1038/s44159-021-00003-1",
+      "10.4018/978-1-7998-9220-5.ch068",
+      "10.1093/jamia/ocac070",
+      "10.1007/978-3-030-60447-9_1",
+      "10.1007/978-3-319-89315-0_1",
+      "10.1080/0960085x.2021.1927212",
+      "10.1093/ckj/sfaa188",
+      "10.1371/journal.pdig.0000278",
+      "10.3390/app12125826",
+      "10.1007/s43681-022-00138-8",
+      "10.1111/2041-210x.13140"
+    ],
+    "10.1101/2024.07.12.24310323": [
+      "10.1161/circulationaha.121.055340",
+      "10.1161/circulationaha.123.067626",
+      "10.1136/bmj.j2099",
+      "10.1136/heartjnl-2022-321231",
+      "10.1038/s41598-019-47712-5",
+      "10.1038/s41392-022-00955-7",
+      "10.1161/circgenetics.111.960385",
+      "10.1016/j.jacc.2012.07.019",
+      "10.1093/eurheartj/ehq371",
+      "10.1038/srep39483",
+      "10.1371/journal.pone.0069409",
+      "10.1111/eci.12911",
+      "10.1161/01.atv.18.4.584",
+      "10.1161/circresaha.119.316062",
+      "10.1172/jci93025",
+      "10.1111/bph.13319",
+      "10.1161/jaha.115.002860",
+      "10.1016/j.echo.2007.11.011",
+      "10.1161/atvbaha.123.320138",
+      "10.1056/nejmoa1804988",
+      "10.1016/s0140-6736(18)31924-x",
+      "10.1056/nejmoa1805819",
+      "10.1093/cvr/cvaa234",
+      "10.1093/cvr/cvaf105"
+    ],
+    "10.1093/geroni/igab046.3594": [],
+    "10.1101/2025.08.04.25332803": [
+      "10.1002/ptr.1106",
+      "10.1007/s11892-019-1161-2/figures/4",
+      "10.1016/j.jcdr.2012.08.005",
+      "10.1080/20009666.2018.1500421",
+      "10.4065/mcp.2010.0398",
+      "10.3329/cardio.v7i2.22259",
+      "10.1016/j.atherosclerosissup.2015.02.013",
+      "10.1016/j.jacc.2020.06.007",
+      "10.1001/jamanetworkopen.2020.11686",
+      "10.1093/ehjcvp/pvx009",
+      "10.4081/jphia.2020.1323",
+      "10.1007/s10530-017-1378-4",
+      "10.1001/jamacardio.2019.2467",
+      "10.1097/hjh.0b013e32835a6611",
+      "10.2147/dmso.s235546",
+      "10.1016/j.gene.2020.144722",
+      "10.1016/j.acvd.2015.08.004",
+      "10.1093/eurheartj/ehl120",
+      "10.1016/s0002-9149(02)02489-x"
+    ],
+    "10.1186/s12933-020-01017-4": [
+      "10.1016/s0140-6736(12)60283-9",
+      "10.1186/s12933-019-0859-4",
+      "10.1186/s12933-019-0962-6",
+      "10.1136/bmj.i5953",
+      "10.2337/dc07-0959",
+      "10.1111/dme.13034",
+      "10.3810/pgm.2010.07.2180",
+      "10.2337/diacare.26.10.2910",
+      "10.2337/dc17-0610",
+      "10.2337/dc06-1238",
+      "10.1186/s12933-018-0694-z",
+      "10.1177/2047487319834396",
+      "10.1016/j.diabres.2013.12.034",
+      "10.1371/journal.pone.0105804",
+      "10.1186/1745-6215-10-5",
+      "10.1097/01.hjr.0000216552.81882.ca",
+      "10.1161/01.cir.0000100560.46946.ea",
+      "10.1016/j.atherosclerosis.2005.08.004",
+      "10.1161/jaha.117.006924",
+      "10.7326/0003-4819-150-9-200905050-00006",
+      "10.1007/s00592-015-0730-3",
+      "10.1007/s12020-014-0436-2",
+      "10.1016/s2213-8587(13)70175-x",
+      "10.2337/dc17-2233",
+      "10.2337/dc14-0656",
+      "10.1007/s00125-019-4895-0",
+      "10.2337/dc18-0524",
+      "10.1016/s2213-8587(19)30179-2"
+    ],
+    "10.1101/2024.09.19.24313914": [
+      "10.1038/s41593-018-0286-y",
+      "10.1038/s42255-020-00275-6",
+      "10.1002/oby.23286",
+      "10.1152/ajpendo.00059.2023",
+      "10.1111/jne.12907",
+      "10.1038/s41366-019-0399-8",
+      "10.1161/hypertensionaha.120.14521",
+      "10.1093/oxfordjournals.aje.a112813",
+      "10.1093/aje/kwm021",
+      "10.1002/sim.1743",
+      "10.1161/hyp.0000000000000065",
+      "10.2337/dc19-1758",
+      "10.1161/circulationaha.105.169404",
+      "10.1136/heartjnl-2012-303461",
+      "10.1002/oby.21248",
+      "10.1016/j.jacc.2018.11.003",
+      "10.1016/0002-9343(77)90874-9",
+      "10.2337/db17-0067",
+      "10.1194/jlr.m085456",
+      "10.1056/nejmoa1107579",
+      "10.1056/nejmoa1300955",
+      "10.1056/nejmoa1609581",
+      "10.1161/hypertensionaha.123.21723",
+      "10.1161/hypertensionaha.115.06425",
+      "10.1152/ajpheart.00216.2018",
+      "10.1186/s13293-020-00286-8",
+      "10.1161/01.hyp.0000128421.23499.b9",
+      "10.1161/hypertensionaha.115.06017",
+      "10.1113/jphysiol.2013.268763",
+      "10.1172/jci92008",
+      "10.1007/s00125-016-4181-3",
+      "10.1016/j.celrep.2014.11.018",
+      "10.2337/dc16-2523",
+      "10.1056/nejmoa1606148",
+      "10.1056/nejmoa1212914",
+      "10.1161/circulationaha.122.059595",
+      "10.1056/nejmoa2307563",
+      "10.1093/eurheartj/ehac071",
+      "10.1002/oby.22666",
+      "10.2337/figshare.25627503.v1",
+      "10.1016/j.tjnut.2023.05.003"
+    ],
+    "10.64898/2026.02.13.26346232": [
+      "10.1377/hlthaff.26.1.13",
+      "10.1016/j.jacc.2020.11.010",
+      "10.1186/s12889-021-10429-0",
+      "10.1111/j.1532-5415.2009.02359.x",
+      "10.1001/archinte.168.12.1340",
+      "10.1016/j.jacc.2008.08.050",
+      "10.1186/s12889-021-11051-w",
+      "10.1093/eurheartj/ehab454",
+      "10.1136/bmj.d5928",
+      "10.1002/sim.1186",
+      "10.1186/1476-511x-11-42",
+      "10.1093/nutrit/nuz037",
+      "10.3390/nu12113352",
+      "10.1097/hjh.0b013e32832f075b",
+      "10.1210/jc.2011-0398",
+      "10.1016/j.jash.2018.04.009",
+      "10.12688/f1000research.24623.3",
+      "10.1038/srep16142",
+      "10.1155/2018/7908764",
+      "10.1016/j.jsbmb.2016.11.021",
+      "10.1038/s41430-019-0417-x",
+      "10.12860/jnp.2014.07",
+      "10.1038/ejcn.2009.18",
+      "10.3390/nu11010188",
+      "10.1186/1471-2369-15-50",
+      "10.1038/ajh.2012.111",
+      "10.4103/ijpvm.ijpvm_329_15",
+      "10.1371/journal.pone.0129017",
+      "10.1038/nutd.2014.44",
+      "10.1161/hypertensionaha.114.03466",
+      "10.1001/jamacardio.2017.0175",
+      "10.3945/jn.110.131516",
+      "10.1371/journal.pone.0160905",
+      "10.3177/jnsv.62.88",
+      "10.1530/ec-18-0144",
+      "10.1097/mbp.0000000000000091",
+      "10.1016/j.clnu.2014.04.017",
+      "10.1186/s43043-019-0005-y",
+      "10.1080/09513590.2017.1418311",
+      "10.3945/jn.111.154005",
+      "10.1016/j.diabres.2014.08.030",
+      "10.1016/j.clnu.2014.10.002",
+      "10.1007/s40618-016-0507-8",
+      "10.1093/eurheartj/ehx235",
+      "10.1159/000495662",
+      "10.1016/j.clnu.2018.10.003",
+      "10.1007/s00394-015-1106-8",
+      "10.1210/jc.2015-4013",
+      "10.1016/j.atherosclerosis.2014.04.011",
+      "10.1016/j.jacl.2017.01.011",
+      "10.1016/j.ejim.2013.03.005",
+      "10.1016/j.pnpbp.2017.06.016",
+      "10.1016/j.orcp.2021.03.004",
+      "10.1017/s0007114520001890",
+      "10.1186/s12875-020-1096-3",
+      "10.1007/s10072-019-04220-8",
+      "10.1007/s00125-020-05300-7",
+      "10.1186/s12891-022-05364-z",
+      "10.1016/j.clnu.2019.03.007",
+      "10.1139/apnm-2019-0113",
+      "10.1111/jch.13926",
+      "10.1016/j.numecd.2021.07.028",
+      "10.3390/nu12072033",
+      "10.1001/jamanetworkopen.2021.40858",
+      "10.1038/s41598-019-56904-y",
+      "10.1080/09513590.2021.1878138"
+    ],
+    "10.1186/s12872-020-01329-z": [
+      "10.1161/01.cir.0000158136.76824.04",
+      "10.1161/str.0b013e3182213e24",
+      "10.1097/00001648-199701000-00007",
+      "10.1161/atvbaha.117.310305",
+      "10.1186/s12872-017-0539-9",
+      "10.1093/oxfordjournals.aje.a008863",
+      "10.1038/nrcardio.2009.163",
+      "10.1016/j.ijcard.2014.08.088",
+      "10.1097/ede.0b013e31824570bd",
+      "10.1186/1471-2458-5-7",
+      "10.1186/1476-069x-9-41",
+      "10.1289/ehp.1205201",
+      "10.1289/ehp.1206337",
+      "10.2105/ajph.2014.302135",
+      "10.1016/j.envres.2011.01.002",
+      "10.1161/cir.0b013e3181dbece1",
+      "10.2337/dc12-2189",
+      "10.1161/01.cir.0000108927.80044.7f",
+      "10.1016/j.annepidem.2013.02.007",
+      "10.1016/j.ijcard.2015.05.007",
+      "10.1186/s12885-015-1997-z",
+      "10.1038/jes.2015.14",
+      "10.1016/j.atmosenv.2016.01.045",
+      "10.1093/aje/kwr045",
+      "10.1007/s40572-015-0069-5",
+      "10.1007/s40572-014-0031-y",
+      "10.1093/eurheartj/ehp072",
+      "10.1016/j.atmosenv.2016.04.039"
+    ],
+    "10.1530/ec-21-0537": [
+      "10.1093/eurheartj/ehaa1044",
+      "10.1080/13697137.2021.1910232",
+      "10.1210/jc.2011-3362",
+      "10.2174/1570161117999190228123237",
+      "10.2174/1570161116666180709095348",
+      "10.1210/er.2016-1146",
+      "10.1038/s41598-021-94189-2",
+      "10.1016/s0002-9378(98)70634-9",
+      "10.1210/jc.2001-012034",
+      "10.1016/j.cmet.2011.08.009",
+      "10.1111/j.1365-2362.1993.tb00792.x",
+      "10.2337/db18-0638",
+      "10.1016/s0895-4356(00)00284-5",
+      "10.1530/eje-18-0602",
+      "10.1161/01.hyp.0000124670.03674.15",
+      "10.1097/mnh.0000000000000404",
+      "10.1097/hjh.0000000000001266",
+      "10.1016/j.maturitas.2020.03.006",
+      "10.1111/j.1463-1326.2005.00545.x",
+      "10.1016/j.maturitas.2015.02.262",
+      "10.1111/cen.13085",
+      "10.1016/j.jacc.2016.11.042",
+      "10.1111/ijcp.12903",
+      "10.1016/j.maturitas.2021.06.012",
+      "10.2174/1570161116666180711121949",
+      "10.1097/gme.0000000000000352",
+      "10.7326/0003-4819-85-4-447",
+      "10.7326/0003-4819-89-2-157",
+      "10.1056/nejm198704303161801",
+      "10.1001/jamacardio.2016.2415",
+      "10.3109/13697137.2015.1094784",
+      "10.1177/2047487314556004",
+      "10.1001/jama.2019.19191",
+      "10.1016/j.maturitas.2017.02.009",
+      "10.1210/jc.2015-2236",
+      "10.1016/j.maturitas.2020.03.007",
+      "10.7326/0003-4819-117-12-1016",
+      "10.1016/0091-7435(91)90006-p",
+      "10.1001/jama.288.3.321",
+      "10.1001/jama.2013.278040",
+      "10.1001/jama.291.14.1701",
+      "10.1093/eurheartj/ehn408",
+      "10.1056/nejmoa1505241",
+      "10.7326/m14-0353",
+      "10.1001/jama.280.7.605",
+      "10.1177/1754045313489645",
+      "10.1016/j.maturitas.2010.10.005",
+      "10.1210/jc.2015-1864",
+      "10.1080/13697137.2017.1421925",
+      "10.1016/j.maturitas.2018.08.009",
+      "10.1093/eurheartj/ehz455",
+      "10.1093/eurheartj/ehab484"
+    ],
+    "10.1186/s12874-020-01173-x": [
+      "10.1136/bmj.j2099",
+      "10.1186/s12916-019-1368-8",
+      "10.1136/heartjnl-2016-309573",
+      "10.1136/bmj.d8059",
+      "10.1136/bmjopen-2011-000269",
+      "10.1016/s0140-6736(04)16405-2",
+      "10.1093/ije/dyv098",
+      "10.18637/jss.v045.i03",
+      "10.1002/sim.7913",
+      "10.1097/00001648-200009000-00011",
+      "10.1097/00001648-200009000-00012",
+      "10.18637/jss.v043.i13",
+      "10.1093/aje/kwn164",
+      "10.1136/bmj.c2442",
+      "10.1186/s41512-018-0045-2"
+    ],
+    "10.1155/2024/4133365": [
+      "10.1016/s0140-6736(18)32203-7",
+      "10.1186/s12889-018-5806-x",
+      "10.1186/1471-2458-10-108",
+      "10.1016/j.atherosclerosis.2012.05.007",
+      "10.1093/eurheartj/ehw106",
+      "10.1016/0002-9149(76)90061-8",
+      "10.1016/0002-8703(91)90861-b",
+      "10.1161/01.cir.97.18.1837",
+      "10.1016/j.jacc.2021.01.059",
+      "10.1093/ije/31.6.1253",
+      "10.1111/j.1365-2362.2007.01888.x",
+      "10.1136/hrt.2006.108167",
+      "10.1177/2047487316653709",
+      "10.1001/jama.297.6.611",
+      "10.20471/acc.2018.57.01.03",
+      "10.1136/bmj.b2584",
+      "10.1016/j.recesp.2010.12.011",
+      "10.1161/01.str.29.7.1341",
+      "10.1093/aje/kwh189",
+      "10.1080/08037059943973312",
+      "10.1161/01.cir.0000437741.48606.98",
+      "10.5694/mja2.12061",
+      "10.1016/j.jval.2018.08.003",
+      "10.1016/j.ijcard.2014.07.066",
+      "10.1136/hrt.2010.220442",
+      "10.1186/s12872-018-0990-2",
+      "10.1136/bmj.e3318",
+      "10.1177/2047487315588390",
+      "10.1016/s1957-2557(19)30020-3",
+      "10.1016/s1885-5857(08)60055-9",
+      "10.3390/jpm12071180",
+      "10.1186/s12889-020-09579-4",
+      "10.1093/eurheartj/ehw301",
+      "10.1001/jama.2012.9624",
+      "10.1186/s12872-016-0462-5",
+      "10.7775/rac.es.v86.i1.12908",
+      "10.1161/circulationaha.105.607499",
+      "10.1111/j.1365-2125.2012.04219.x",
+      "10.3390/ijerph16071165",
+      "10.1371/journal.pone.0210329",
+      "10.7556/jaoa.2005.105.9.409",
+      "10.1002/clc.22930",
+      "10.1016/s2213-8587(15)00081-9",
+      "10.1136/bmj.i2416",
+      "10.1136/openhrt-2018-000849",
+      "10.1136/bmjopen-2019-035842",
+      "10.1016/s2214-109x(19)30318-3",
+      "10.1371/journal.pone.0020416"
+    ],
+    "10.1093/geroni/igz038.1277": [],
+    "10.1186/s12872-020-01427-y": [
+      "10.1186/1471-2458-14-644",
+      "10.1093/bmb/ldq037",
+      "10.2105/ajph.47.4_pt_2.4",
+      "10.1136/bmj.1.5395.1399",
+      "10.1136/bmj.1.5396.1460",
+      "10.1111/j.1467-842x.1998.tb01494.x",
+      "10.1136/bmj.326.7404.1423",
+      "10.1001/jama.299.17.2037",
+      "10.1097/01.hjr.0000220581.42387.d4",
+      "10.1136/jnnp-2011-300408",
+      "10.1016/j.gheart.2016.04.009",
+      "10.1093/ije/14.1.32",
+      "10.1016/s0140-6736(10)61353-0",
+      "10.1177/1010539517709028",
+      "10.3109/10641963.2013.863321",
+      "10.1186/1475-9276-11-76",
+      "10.4103/2224-3151.206258",
+      "10.1080/01621459.1949.10483314",
+      "10.1097/00004872-200311000-00002",
+      "10.1016/0277-9536(85)90013-9",
+      "10.1177/1010539512453670",
+      "10.1371/journal.pone.0180640",
+      "10.1186/1471-2458-6-13",
+      "10.1186/1471-2458-7-216",
+      "10.1370/afm.1799",
+      "10.1371/journal.pone.0140550",
+      "10.7326/0003-4819-151-9-200911030-00004",
+      "10.1093/heapro/dai034",
+      "10.1111/j.1467-789x.2011.00911.x",
+      "10.1136/bmj.h391",
+      "10.1016/j.jclinepi.2013.08.015"
+    ]
+  },
+  "expectedCoverage": [
+    {
+      "dimension": "language",
+      "value": "en",
+      "justification": "the bulk of cardiovascular-nutrition meta-analyses and the DGAC/AHA evidence base is published in English."
+    },
+    {
+      "dimension": "language",
+      "value": "pt",
+      "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population."
+    },
+    {
+      "dimension": "language",
+      "value": "es",
+      "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance."
+    },
+    {
+      "dimension": "genre",
+      "value": "article",
+      "justification": "primary literature — prospective-cohort meta-analyses and systematic reviews are journal-article in Crossref."
+    },
+    {
+      "dimension": "genre",
+      "value": "report",
+      "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles."
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "10.1136/bmj.m513": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1371/journal.pmed.1003508": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.09.18.25336069": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/pr2199.002481.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.64898/2026.05.18.26353477": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.64898/2026.03.20.26348884": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.09.22.25336381": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1017/s0007114522000988": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.01.26.25321145": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12872-019-1196-y": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.32388/1svuci.2": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1093/geroni/igz038.2944": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12944-019-1133-1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12872-020-01826-1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.14293/p2199-8442.1.sop-.pw9sli.v1": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.07.12.25331445": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.03.21.25324379": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2024.07.12.24310323": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1093/geroni/igab046.3594": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2025.08.04.25332803": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12933-020-01017-4": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1101/2024.09.19.24313914": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.64898/2026.02.13.26346232": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12872-020-01329-z": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1530/ec-21-0537": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12874-020-01173-x": {
+        "lean": "contradicts",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1155/2024/4133365": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1093/geroni/igz038.1277": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      },
+      "10.1186/s12872-020-01427-y": {
+        "lean": "insufficient",
+        "model": "nvidia/nemotron-3-nano-30b-a3b:free"
+      }
+    },
+    "reader-b": {
+      "10.1136/bmj.m513": {
+        "lean": "contradicts",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1371/journal.pmed.1003508": {
+        "lean": "contradicts",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.09.18.25336069": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/pr2199.002481.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.64898/2026.05.18.26353477": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.64898/2026.03.20.26348884": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.09.22.25336381": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1017/s0007114522000988": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.01.26.25321145": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12872-019-1196-y": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.32388/1svuci.2": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1093/geroni/igz038.2944": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12944-019-1133-1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12872-020-01826-1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.14293/p2199-8442.1.sop-.pw9sli.v1": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.07.12.25331445": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.03.21.25324379": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2024.07.12.24310323": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1093/geroni/igab046.3594": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2025.08.04.25332803": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12933-020-01017-4": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1101/2024.09.19.24313914": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.64898/2026.02.13.26346232": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12872-020-01329-z": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1530/ec-21-0537": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12874-020-01173-x": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1155/2024/4133365": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1093/geroni/igz038.1277": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      },
+      "10.1186/s12872-020-01427-y": {
+        "lean": "insufficient",
+        "model": "openai/gpt-oss-120b:free"
+      }
+    }
+  },
+  "derived": {
+    "convergenceMap": {
+      "verdicts": [
+        {
+          "claimId": "10.1136/bmj.m513",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "contradicts"
+          }
+        },
+        {
+          "claimId": "10.1371/journal.pmed.1003508",
+          "signal": "robust-core",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "contradicts"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.09.18.25336069",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/pr2199.002481.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.64898/2026.05.18.26353477",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.64898/2026.03.20.26348884",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.09.22.25336381",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1017/s0007114522000988",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.01.26.25321145",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12872-019-1196-y",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.32388/1svuci.2",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1093/geroni/igz038.2944",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12944-019-1133-1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12872-020-01826-1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.14293/p2199-8442.1.sop-.pw9sli.v1",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.07.12.25331445",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.03.21.25324379",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2024.07.12.24310323",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1093/geroni/igab046.3594",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2025.08.04.25332803",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12933-020-01017-4",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1101/2024.09.19.24313914",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.64898/2026.02.13.26346232",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12872-020-01329-z",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1530/ec-21-0537",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12874-020-01173-x",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "contradicts",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1155/2024/4133365",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1093/geroni/igz038.1277",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        },
+        {
+          "claimId": "10.1186/s12872-020-01427-y",
+          "signal": "unsupported",
+          "leans": {
+            "reader-a": "insufficient",
+            "reader-b": "insufficient"
+          }
+        }
+      ]
+    },
+    "coverageAudit": {
+      "findings": [
+        {
+          "dimension": "language",
+          "value": "en",
+          "observedSources": 14,
+          "expected": true,
+          "isEmptyChair": false,
+          "justification": "the bulk of cardiovascular-nutrition meta-analyses and the DGAC/AHA evidence base is published in English."
+        },
+        {
+          "dimension": "language",
+          "value": "pt",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population."
+        },
+        {
+          "dimension": "language",
+          "value": "es",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance."
+        },
+        {
+          "dimension": "genre",
+          "value": "article",
+          "observedSources": 15,
+          "expected": true,
+          "isEmptyChair": false,
+          "justification": "primary literature — prospective-cohort meta-analyses and systematic reviews are journal-article in Crossref."
+        },
+        {
+          "dimension": "genre",
+          "value": "report",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles."
+        }
+      ],
+      "emptyChairs": [
+        {
+          "dimension": "language",
+          "value": "pt",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "Brazilian nutritional cardiology (SBC) addresses egg/cholesterol guidance for a major non-anglophone population."
+        },
+        {
+          "dimension": "language",
+          "value": "es",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "Ibero-American cardiology contributes pertinent dietary-cholesterol evidence and guidance."
+        },
+        {
+          "dimension": "genre",
+          "value": "report",
+          "observedSources": 0,
+          "expected": true,
+          "isEmptyChair": true,
+          "justification": "institutional dietary guidelines (DGAC, AHA, SBC) are the consolidated policy basis — a distinct genre from articles."
+        }
+      ]
+    },
+    "reliabilityProfiles": [
+      {
+        "claimId": "10.1136/bmj.m513",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1371/journal.pmed.1003508",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "robust-core"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.09.18.25336069",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/pr2199.002481.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.64898/2026.05.18.26353477",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.64898/2026.03.20.26348884",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.09.22.25336381",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1017/s0007114522000988",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.01.26.25321145",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12872-019-1196-y",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.32388/1svuci.2",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1093/geroni/igz038.2944",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12944-019-1133-1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12872-020-01826-1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.14293/p2199-8442.1.sop-.pw9sli.v1",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.07.12.25331445",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.03.21.25324379",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2024.07.12.24310323",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1093/geroni/igab046.3594",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2025.08.04.25332803",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12933-020-01017-4",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1101/2024.09.19.24313914",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.64898/2026.02.13.26346232",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12872-020-01329-z",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1530/ec-21-0537",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12874-020-01173-x",
+        "traceability": {
+          "kind": "measured",
+          "value": true
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": true
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1155/2024/4133365",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1093/geroni/igz038.1277",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      },
+      {
+        "claimId": "10.1186/s12872-020-01427-y",
+        "traceability": {
+          "kind": "measured",
+          "value": false
+        },
+        "independentCorroboration": {
+          "kind": "measured",
+          "value": 1
+        },
+        "internalContestation": {
+          "kind": "measured",
+          "value": false
+        },
+        "agreementFromDoubt": {
+          "kind": "measured",
+          "value": "unsupported"
+        }
+      }
+    ]
+  }
+}

@@ -1,9 +1,9 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { isAbsolute, resolve as resolvePath } from "node:path";
-import { fetchCrossrefWorks } from "../ingestion/harvest.js";
+import { CC_BY, fetchCrossrefWorks } from "../ingestion/harvest.js";
 import { ingestCrossref } from "../ingestion/crossref.js";
-import { harvestQuery, renderReferenceHypothesis } from "./protocol.js";
+import { acceptedExpectedCoverage, harvestQuery, renderReferenceHypothesis } from "./protocol.js";
 import { buildCorpusReport, formatCorpusReport } from "./corpus-report.js";
 import type { InvestigationProtocol } from "./types.js";
 
@@ -52,10 +52,15 @@ async function checkOneDoi(doi: string): Promise<boolean> {
 
 async function main(): Promise<void> {
   const arg = process.argv[2];
-  if (arg === undefined) throw new Error("usage: npm run protocol:harvest -- <protocol.json> [limit]");
+  if (arg === undefined) throw new Error("usage: npm run protocol:harvest -- <protocol.json> [limit] [--cc-by]");
   const mailto = process.env["TACET_CONTACT_EMAIL"];
   if (!mailto) throw new Error("set TACET_CONTACT_EMAIL (Crossref polite pool) — see .env.example");
-  const limit = Number(process.argv[3] ?? "50");
+  const rest = process.argv.slice(3);
+  // --cc-by restricts to the redistributable slice (for a corpus to be FROZEN as
+  // a fixture); default is exploratory (no license filter, the true field).
+  const ccByOnly = rest.includes("--cc-by");
+  const limit = Number(rest.find((a) => /^\d+$/.test(a)) ?? "50");
+  const license = ccByOnly ? CC_BY : null;
 
   const inPath = isAbsolute(arg) ? arg : resolvePath(process.cwd(), arg);
   const protocol = JSON.parse(readFileSync(inPath, "utf8")) as InvestigationProtocol;
@@ -72,16 +77,23 @@ async function main(): Promise<void> {
   }
 
   const query = harvestQuery(protocol);
-  console.log(`harvesting (exploratory, no license filter) up to ${limit} abstracted records`);
+  console.log(`harvesting (${ccByOnly ? "CC-BY only — freezable slice" : "exploratory, no license filter"}) up to ${limit} abstracted records`);
   console.log(`  case: ${protocol.case}\n  query: ${query}\n`);
-  const works = await fetchCrossrefWorks(query, limit, mailto, null);
+  const works = await fetchCrossrefWorks(query, limit, mailto, license);
   const { claims, citationGraph } = ingestCrossref(works);
   console.log(`fetched ${works.length} works → ${claims.length} ingested claims\n`);
+
+  // The accepted expectedCoverage travels with the corpus → summarize → read →
+  // freeze (the empty-chair baseline, declared in step 0, never from the corpus).
+  const expectedCoverage = acceptedExpectedCoverage(protocol);
 
   const dir = corpusDir();
   mkdirSync(dir, { recursive: true });
   const outPath = resolvePath(dir, `${protocol.case}.json`);
-  writeFileSync(outPath, JSON.stringify({ case: protocol.case, referenceHypothesis, claims, citationGraph }, null, 2) + "\n");
+  writeFileSync(
+    outPath,
+    JSON.stringify({ case: protocol.case, referenceHypothesis, expectedCoverage, claims, citationGraph }, null, 2) + "\n",
+  );
   console.log(`wrote corpus → ${outPath} (gitignored)\n`);
 
   const report = buildCorpusReport(query, works, claims);

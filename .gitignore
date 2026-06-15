@@ -17,3 +17,7 @@ protocols/
 # third-party texts the researcher is not ready to publish in a public repo.
 # Drop the line (or force-add a specific file) to ship one as a demo fixture.
 fixtures/anchors/*.pdf
+
+# Anchor PDFs for the LHC anchored regimes (B1.5). NEVER redistributed — only
+# their sha256 + a locus go into the protocol's sourceAnchor (provenance, not bytes).
+pdfs/

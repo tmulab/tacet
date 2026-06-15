@@ -2,6 +2,7 @@ import { buildConvergenceMap } from "../domain/convergence.js";
 import type { ConvergenceMap } from "../domain/convergence.js";
 import { auditCoverage } from "../domain/coverage.js";
 import type { CoverageAudit, ExpectedCategory } from "../domain/coverage.js";
+import type { AbstentionDiagnosis } from "../domain/abstention-diagnosis.js";
 import { buildReliabilityProfile } from "../domain/reliability.js";
 import type { CitationGraph } from "../domain/reliability.js";
 import type { ReliabilityProfile } from "../domain/convergence.js";
@@ -29,6 +30,9 @@ export interface ReplayFixture {
   readonly readers: Readonly<Record<string, Readonly<Record<string, SavedLean>>>>;
   readonly expectedCoverage?: readonly ExpectedCategory[];
   readonly citationGraph?: CitationGraph;
+  /** Why the case abstained (when it did), computed at freeze (schema ≥0.1.1).
+   * Optional: pre-0.1.1 fixtures lack it and degrade gracefully. */
+  readonly abstentionDiagnosis?: AbstentionDiagnosis | null;
 }
 
 export interface ReplayResult {

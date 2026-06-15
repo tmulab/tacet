@@ -23,7 +23,9 @@ import { fetchJsonWithRetry } from "./fetch-retry.js";
 
 const API_BASE = "https://api.crossref.org/works";
 const PAGE_ROWS = 100;
-const CC_BY = "http://creativecommons.org/licenses/by/4.0/";
+/** CC-BY 4.0 license URL — the redistributable slice a frozen fixture is allowed
+ * to contain. Exported so the step-0 bridge can request it for a freezable case. */
+export const CC_BY = "http://creativecommons.org/licenses/by/4.0/";
 
 /**
  * Default query: the COVID-19 ORIGIN debate, not COVID in general. A broad

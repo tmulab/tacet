@@ -1,0 +1,181 @@
+{
+  "schemaName": "tacet/anchor-comparison@0.1",
+  "caseA": "C:\\Users\\hudso\\Documents\\TMULAB\\concurso\\tacet\\fixtures\\replay\\lhc-safety-anchored-v0.1.json",
+  "caseB": "C:\\Users\\hudso\\Documents\\TMULAB\\concurso\\tacet\\fixtures\\replay\\lhc-objection-anchored-v0.1.json",
+  "categories": {
+    "anchor-robust-same": 1,
+    "anchor-dependent-flip": 0,
+    "anchor-decided": 5,
+    "anchor-jointly-undecided": 22
+  },
+  "claims": [
+    {
+      "claimId": "10.1590/1806-9126-rbef-2025-0026",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2024/11/026",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2026/05/014",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2026/05/055",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2025/12/042",
+      "leanA": "insufficient",
+      "leanB": "supports",
+      "category": "anchor-decided"
+    },
+    {
+      "claimId": "10.3847/1538-4357/ac6d5c",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1155/2017/4817948",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.32388/n8xf07",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.34257/gjsfrfvol24is2pg7",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.3847/1538-4357/ad8ec0",
+      "leanA": "insufficient",
+      "leanB": "supports",
+      "category": "anchor-decided"
+    },
+    {
+      "claimId": "10.14293/pr2199.001769.v1",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.3847/2515-5172/ac7331",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.14293/p2199-8442.1.sop-.pfvgys.v1",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.32388/o9lksi.4",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2025/05/039",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2023/01/035",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.3847/1538-4357/ac5026",
+      "leanA": "insufficient",
+      "leanB": "contradicts",
+      "category": "anchor-decided"
+    },
+    {
+      "claimId": "10.14293/pr2199.001572.v1",
+      "leanA": "contradicts",
+      "leanB": "contradicts",
+      "category": "anchor-robust-same"
+    },
+    {
+      "claimId": "10.1088/1475-7516/2022/09/017",
+      "leanA": "insufficient",
+      "leanB": "contradicts",
+      "category": "anchor-decided"
+    },
+    {
+      "claimId": "10.14293/pr2199.001601.v1",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1155/2018/3601489",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.32388/q0dx82",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.32388/z1nixl.4",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.14293/s2199-1006.1.sor-.ppg9mmi.v1",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.14293/s2199-1006.1.sor-.ppwpd1c.v1",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1088/1748-0221/17/05/p05042",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    },
+    {
+      "claimId": "10.1209/0295-5075/ad0e83",
+      "leanA": "insufficient",
+      "leanB": "supports",
+      "category": "anchor-decided"
+    },
+    {
+      "claimId": "10.14293/pr2199.002904.v1",
+      "leanA": "insufficient",
+      "leanB": "insufficient",
+      "category": "anchor-jointly-undecided"
+    }
+  ]
+}
