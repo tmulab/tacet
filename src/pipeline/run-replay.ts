@@ -1,6 +1,9 @@
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { isAbsolute, resolve } from "node:path";
+import { buildSkeleton } from "../domain/narrative-skeleton.js";
+import type { SkeletonInput } from "../domain/narrative-skeleton.js";
+import { verifyNarrative } from "../domain/narrative-verify.js";
 import type { ClaimSignal, ConvergenceMap } from "../domain/convergence.js";
 import type { MeasuredCoverageAudit } from "../domain/coverage.js";
 import { shouldAbstain } from "../domain/reliability.js";
@@ -187,6 +190,32 @@ function printFreudContrast(c: FreudContrast): void {
   console.log(`  · proves:  ${c.difference.proves}`);
 }
 
+interface FrozenNarrative {
+  readonly prose: string;
+  readonly banned: readonly string[];
+  readonly model?: string;
+}
+
+/** Print the coerced narrative (passo 4) — the human-first reading of the
+ * structure — and RE-VERIFY both guards offline so the demo proves the prose
+ * never diverged from the measured structure. Skipped when no narrative exists. */
+function printNarrative(fixturePath: string): void {
+  const narrativePath = fixturePath.replace(/\.json$/, ".narrative.json");
+  if (!existsSync(narrativePath)) return;
+  const nar = JSON.parse(readFileSync(narrativePath, "utf8")) as FrozenNarrative;
+  const fx = JSON.parse(readFileSync(fixturePath, "utf8")) as SkeletonInput;
+  const skeleton = buildSkeleton(fx);
+  const g = verifyNarrative(nar.prose, skeleton, nar.banned);
+  console.log("\nTACET — coerced narrative (structure verbalized; the LLM only stitched");
+  console.log("the deterministic skeleton — never the topic). Re-verified offline.\n");
+  console.log(`  ${nar.prose}\n`);
+  console.log(
+    `  guards: numeric-fidelity=${g.numericFidelity.pass ? "PASS" : "FAIL"}  ` +
+      `thematic=${g.thematic.pass ? "PASS" : "FAIL"}` +
+      (nar.model !== undefined ? `  (stitched by ${nar.model})` : ""),
+  );
+}
+
 async function main(): Promise<void> {
   const path = resolveFixturePath();
   const raw = JSON.parse(readFileSync(path, "utf8")) as Record<string, unknown>;
@@ -201,6 +230,7 @@ async function main(): Promise<void> {
   const fixture = raw as unknown as ReplayFixture;
   const { readerIds, map, coverage, profiles, oneReaderCount } = await computeReplay(fixture);
 
+  printNarrative(path);
   printMap(fixture.case, fixture.claims, readerIds, map);
   printCoverage(coverage);
   printAbstentionDiagnosis(fixture);

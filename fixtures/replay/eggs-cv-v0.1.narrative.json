@@ -1,0 +1,236 @@
+{
+  "schema": "tacet/narrative@0.1",
+  "case": "eggs-cv",
+  "opaqueId": "case-03",
+  "fixture": "eggs-cv-v0.1.json",
+  "version": "0.1",
+  "prose": "The analysis judged 29 claims. No live-crux were identified. 27 claims were unsupported. The present coverage included language=en with 14 sources observed and genre=article with 15 sources observed. Empty chairs were noted for language=pt, language=es, and genre=report, each with 0 observed, totaling 3 empty chairs. The relevance gate was not-assessed. The lexical overlap fraction was 0.138. The abstention diagnosis was adjacent. Robust-core sources included https://doi.org/10.1136/bmj.m513 and https://doi.org/10.1371/journal.pmed.1003508. This narration is constrained to the measured structure; coherence, not truth.",
+  "mapping": [
+    {
+      "sentence": "The analysis judged 29 claims.",
+      "assertions": [
+        0
+      ]
+    },
+    {
+      "sentence": "No live-crux were identified.",
+      "assertions": [
+        2
+      ]
+    },
+    {
+      "sentence": "27 claims were unsupported.",
+      "assertions": [
+        3
+      ]
+    },
+    {
+      "sentence": "The present coverage included language=en with 14 sources observed and genre=article with 15 sources observed.",
+      "assertions": [
+        4,
+        5
+      ]
+    },
+    {
+      "sentence": "Empty chairs were noted for language=pt, language=es, and genre=report, each with 0 observed, totaling 3 empty chairs.",
+      "assertions": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "sentence": "The relevance gate was not-assessed.",
+      "assertions": [
+        10
+      ]
+    },
+    {
+      "sentence": "The lexical overlap fraction was 0.138.",
+      "assertions": [
+        11
+      ]
+    },
+    {
+      "sentence": "The abstention diagnosis was adjacent.",
+      "assertions": [
+        12
+      ]
+    },
+    {
+      "sentence": "Robust-core sources included https://doi.org/10.1136/bmj.m513 and https://doi.org/10.1371/journal.pmed.1003508.",
+      "assertions": [
+        13,
+        14
+      ]
+    }
+  ],
+  "skeleton": [
+    {
+      "kind": "count",
+      "text": "claims judged: 29",
+      "sourceNode": "claims",
+      "numbers": [
+        29
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "robust-core: 2",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        2
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "live-crux: 0",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        0
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "unsupported: 27",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        27
+      ],
+      "values": []
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: language=en (14 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        14
+      ],
+      "values": [
+        "language=en"
+      ]
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: genre=article (15 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        15
+      ],
+      "values": [
+        "genre=article"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: language=pt (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "language=pt"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: language=es (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "language=es"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: genre=report (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "genre=report"
+      ]
+    },
+    {
+      "kind": "count",
+      "text": "empty chairs: 3",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        3
+      ],
+      "values": []
+    },
+    {
+      "kind": "gate-status",
+      "text": "relevance gate: not-assessed",
+      "sourceNode": "relevanceGate",
+      "numbers": [],
+      "values": [],
+      "status": "not-assessed"
+    },
+    {
+      "kind": "gate-fraction",
+      "text": "lexical overlap fraction: 0.138",
+      "sourceNode": "relevanceGate",
+      "numbers": [
+        0.138
+      ],
+      "values": []
+    },
+    {
+      "kind": "abstention",
+      "text": "abstention diagnosis: adjacent",
+      "sourceNode": "abstentionDiagnosis",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1136/bmj.m513",
+      "sourceNode": "claims/10.1136/bmj.m513/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1371/journal.pmed.1003508",
+      "sourceNode": "claims/10.1371/journal.pmed.1003508/provenance",
+      "numbers": [],
+      "values": []
+    }
+  ],
+  "banned": [
+    "egg",
+    "eggs",
+    "cholesterol",
+    "cardiovascular",
+    "dietary",
+    "heart",
+    "ldl",
+    "hdl",
+    "diet",
+    "nutrition",
+    "serum",
+    "coronary"
+  ],
+  "guards": {
+    "numericFidelity": {
+      "pass": true,
+      "violations": []
+    },
+    "thematic": {
+      "pass": true,
+      "violations": []
+    },
+    "pass": true
+  },
+  "model": "openai/gpt-oss-120b:free",
+  "constraintNote": "This narration is constrained to the measured structure; coherence, not truth."
+}

@@ -1,0 +1,289 @@
+{
+  "schema": "tacet/narrative@0.1",
+  "case": "sago-origin",
+  "opaqueId": "case-01",
+  "fixture": "sago-origin-v0.1.json",
+  "version": "0.1",
+  "prose": "The analysis judged 44 claims. It identified 9 robust-core items. No live-crux items were found. 35 items were unsupported. Coverage was present for language-family=anglophone with 44 sources observed. No coverage was present for language-family=non-anglophone with 0 observed. There was 1 empty chair. One category under dimension(s) [geographic-locus] was not measured, needing content inference, never guessed. The relevance gate was not-assessed. The lexical overlap fraction was 0.023. No abstention diagnosis was recorded. The robust-core sources were https://doi.org/10.14202/vetworld.2021.190-199, https://doi.org/10.1371/journal.pone.0301195, https://doi.org/10.1002/bies.202000240, https://doi.org/10.1101/2020.03.16.993816, https://doi.org/10.1101/2020.12.03.410233, https://doi.org/10.12688/f1000research.72956.5, https://doi.org/10.14293/s2199-1006.1.sor-.ppdo2zu.v1, https://doi.org/10.1111/risa.14291, https://doi.org/10.1371/journal.pone.0309557. This narration is constrained to the measured structure; coherence, not truth.",
+  "mapping": [
+    {
+      "sentence": "The analysis judged 44 claims.",
+      "assertions": [
+        0
+      ]
+    },
+    {
+      "sentence": "It identified 9 robust-core items.",
+      "assertions": [
+        1
+      ]
+    },
+    {
+      "sentence": "No live-crux items were found.",
+      "assertions": [
+        2
+      ]
+    },
+    {
+      "sentence": "35 items were unsupported.",
+      "assertions": [
+        3
+      ]
+    },
+    {
+      "sentence": "Coverage was present for language-family=anglophone with 44 sources observed.",
+      "assertions": [
+        4
+      ]
+    },
+    {
+      "sentence": "No coverage was present for language-family=non-anglophone with 0 observed.",
+      "assertions": [
+        5
+      ]
+    },
+    {
+      "sentence": "There was 1 empty chair.",
+      "assertions": [
+        6
+      ]
+    },
+    {
+      "sentence": "One category under dimension(s) [geographic-locus] was not measured, needing content inference, never guessed.",
+      "assertions": [
+        7
+      ]
+    },
+    {
+      "sentence": "The relevance gate was not-assessed.",
+      "assertions": [
+        8
+      ]
+    },
+    {
+      "sentence": "The lexical overlap fraction was 0.023.",
+      "assertions": [
+        9
+      ]
+    },
+    {
+      "sentence": "No abstention diagnosis was recorded.",
+      "assertions": [
+        10
+      ]
+    },
+    {
+      "sentence": "The robust-core sources were https://doi.org/10.14202/vetworld.2021.190-199, https://doi.org/10.1371/journal.pone.0301195, https://doi.org/10.1002/bies.202000240, https://doi.org/10.1101/2020.03.16.993816, https://doi.org/10.1101/2020.12.03.410233, https://doi.org/10.12688/f1000research.72956.5, https://doi.org/10.14293/s2199-1006.1.sor-.ppdo2zu.v1, https://doi.org/10.1111/risa.14291, https://doi.org/10.1371/journal.pone.0309557.",
+      "assertions": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    }
+  ],
+  "skeleton": [
+    {
+      "kind": "count",
+      "text": "claims judged: 44",
+      "sourceNode": "claims",
+      "numbers": [
+        44
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "robust-core: 9",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        9
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "live-crux: 0",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        0
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "unsupported: 35",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        35
+      ],
+      "values": []
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: language-family=anglophone (44 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        44
+      ],
+      "values": [
+        "language-family=anglophone"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: language-family=non-anglophone (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "language-family=non-anglophone"
+      ]
+    },
+    {
+      "kind": "count",
+      "text": "empty chairs: 1",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        1
+      ],
+      "values": []
+    },
+    {
+      "kind": "not-measured",
+      "text": "not measured: 1 category(ies) under dimension(s) [geographic-locus] — need content inference, never guessed",
+      "sourceNode": "derived.coverageAudit.notMeasured",
+      "numbers": [
+        1
+      ],
+      "values": []
+    },
+    {
+      "kind": "gate-status",
+      "text": "relevance gate: not-assessed",
+      "sourceNode": "relevanceGate",
+      "numbers": [],
+      "values": [],
+      "status": "not-assessed"
+    },
+    {
+      "kind": "gate-fraction",
+      "text": "lexical overlap fraction: 0.023",
+      "sourceNode": "relevanceGate",
+      "numbers": [
+        0.023
+      ],
+      "values": []
+    },
+    {
+      "kind": "abstention",
+      "text": "abstention diagnosis: none",
+      "sourceNode": "abstentionDiagnosis",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.14202/vetworld.2021.190-199",
+      "sourceNode": "claims/10.14202/vetworld.2021.190-199/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1371/journal.pone.0301195",
+      "sourceNode": "claims/10.1371/journal.pone.0301195/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1002/bies.202000240",
+      "sourceNode": "claims/10.1002/bies.202000240/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1101/2020.03.16.993816",
+      "sourceNode": "claims/10.1101/2020.03.16.993816/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1101/2020.12.03.410233",
+      "sourceNode": "claims/10.1101/2020.12.03.410233/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.12688/f1000research.72956.5",
+      "sourceNode": "claims/10.12688/f1000research.72956.5/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.14293/s2199-1006.1.sor-.ppdo2zu.v1",
+      "sourceNode": "claims/10.14293/s2199-1006.1.sor-.ppdo2zu.v1/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1111/risa.14291",
+      "sourceNode": "claims/10.1111/risa.14291/provenance",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1371/journal.pone.0309557",
+      "sourceNode": "claims/10.1371/journal.pone.0309557/provenance",
+      "numbers": [],
+      "values": []
+    }
+  ],
+  "banned": [
+    "zoonotic",
+    "zoonosis",
+    "zoonoses",
+    "lab leak",
+    "lab-leak",
+    "wuhan",
+    "pangolin",
+    "sars",
+    "sars-cov-2",
+    "coronavirus",
+    "covid",
+    "covid-19",
+    "pandemic",
+    "virus",
+    "spillover",
+    "wet market",
+    "gain-of-function",
+    "furin",
+    "origin"
+  ],
+  "guards": {
+    "numericFidelity": {
+      "pass": true,
+      "violations": []
+    },
+    "thematic": {
+      "pass": true,
+      "violations": []
+    },
+    "pass": true
+  },
+  "model": "openai/gpt-oss-120b:free",
+  "constraintNote": "This narration is constrained to the measured structure; coherence, not truth."
+}

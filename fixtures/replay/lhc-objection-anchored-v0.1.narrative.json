@@ -1,0 +1,259 @@
+{
+  "schema": "tacet/narrative@0.1",
+  "case": "lhc-objection-anchored",
+  "opaqueId": "case-06",
+  "fixture": "lhc-objection-anchored-v0.1.json",
+  "version": "0.1",
+  "prose": "The analysis judged 28 claims. It identified 1 robust-core. It found 0 live-crux. It marked 27 as unsupported. The present coverage includes language=en with 3 sources observed. The present coverage includes genre=article with 17 sources observed. The present coverage includes genre=preprint with 11 sources observed. The empty chair for language=de had 0 observed. There are 1 empty chairs. Two categories under dimension(s) [tradition] were not measured, needing content inference, never guessed. The relevance gate is aligned. The lexical overlap fraction is 0.857. The abstention diagnosis is adjacent. The robust-core source is https://doi.org/10.1088/1475-7516/2025/12/042. This narration is constrained to the measured structure; coherence, not truth.",
+  "mapping": [
+    {
+      "sentence": "The analysis judged 28 claims.",
+      "assertions": [
+        0
+      ]
+    },
+    {
+      "sentence": "It identified 1 robust-core.",
+      "assertions": [
+        1
+      ]
+    },
+    {
+      "sentence": "It found 0 live-crux.",
+      "assertions": [
+        2
+      ]
+    },
+    {
+      "sentence": "It marked 27 as unsupported.",
+      "assertions": [
+        3
+      ]
+    },
+    {
+      "sentence": "The present coverage includes language=en with 3 sources observed.",
+      "assertions": [
+        4
+      ]
+    },
+    {
+      "sentence": "The present coverage includes genre=article with 17 sources observed.",
+      "assertions": [
+        5
+      ]
+    },
+    {
+      "sentence": "The present coverage includes genre=preprint with 11 sources observed.",
+      "assertions": [
+        6
+      ]
+    },
+    {
+      "sentence": "The empty chair for language=de had 0 observed.",
+      "assertions": [
+        7
+      ]
+    },
+    {
+      "sentence": "There are 1 empty chairs.",
+      "assertions": [
+        8
+      ]
+    },
+    {
+      "sentence": "Two categories under dimension(s) [tradition] were not measured, needing content inference, never guessed.",
+      "assertions": [
+        9
+      ]
+    },
+    {
+      "sentence": "The relevance gate is aligned.",
+      "assertions": [
+        10
+      ]
+    },
+    {
+      "sentence": "The lexical overlap fraction is 0.857.",
+      "assertions": [
+        11
+      ]
+    },
+    {
+      "sentence": "The abstention diagnosis is adjacent.",
+      "assertions": [
+        12
+      ]
+    },
+    {
+      "sentence": "The robust-core source is https://doi.org/10.1088/1475-7516/2025/12/042.",
+      "assertions": [
+        13
+      ]
+    },
+    {
+      "sentence": "This narration is constrained to the measured structure.",
+      "assertions": []
+    }
+  ],
+  "skeleton": [
+    {
+      "kind": "count",
+      "text": "claims judged: 28",
+      "sourceNode": "claims",
+      "numbers": [
+        28
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "robust-core: 1",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        1
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "live-crux: 0",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        0
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "unsupported: 27",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        27
+      ],
+      "values": []
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: language=en (3 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        3
+      ],
+      "values": [
+        "language=en"
+      ]
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: genre=article (17 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        17
+      ],
+      "values": [
+        "genre=article"
+      ]
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: genre=preprint (11 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        11
+      ],
+      "values": [
+        "genre=preprint"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: language=de (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "language=de"
+      ]
+    },
+    {
+      "kind": "count",
+      "text": "empty chairs: 1",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        1
+      ],
+      "values": []
+    },
+    {
+      "kind": "not-measured",
+      "text": "not measured: 2 category(ies) under dimension(s) [tradition] — need content inference, never guessed",
+      "sourceNode": "derived.coverageAudit.notMeasured",
+      "numbers": [
+        2
+      ],
+      "values": []
+    },
+    {
+      "kind": "gate-status",
+      "text": "relevance gate: aligned",
+      "sourceNode": "relevanceGate",
+      "numbers": [],
+      "values": [],
+      "status": "aligned"
+    },
+    {
+      "kind": "gate-fraction",
+      "text": "lexical overlap fraction: 0.857",
+      "sourceNode": "relevanceGate",
+      "numbers": [
+        0.857
+      ],
+      "values": []
+    },
+    {
+      "kind": "abstention",
+      "text": "abstention diagnosis: adjacent",
+      "sourceNode": "abstentionDiagnosis",
+      "numbers": [],
+      "values": []
+    },
+    {
+      "kind": "robust-core-source",
+      "text": "robust-core source: https://doi.org/10.1088/1475-7516/2025/12/042",
+      "sourceNode": "claims/10.1088/1475-7516/2025/12/042/provenance",
+      "numbers": [],
+      "values": []
+    }
+  ],
+  "banned": [
+    "collider",
+    "black hole",
+    "black-hole",
+    "hawking",
+    "strangelet",
+    "cern",
+    "lhc",
+    "accelerator",
+    "particle",
+    "giddings",
+    "mangano",
+    "plaga",
+    "doomsday",
+    "cosmic ray",
+    "micro black"
+  ],
+  "guards": {
+    "numericFidelity": {
+      "pass": true,
+      "violations": []
+    },
+    "thematic": {
+      "pass": true,
+      "violations": []
+    },
+    "pass": true
+  },
+  "model": "openai/gpt-oss-120b:free",
+  "constraintNote": "This narration is constrained to the measured structure; coherence, not truth."
+}

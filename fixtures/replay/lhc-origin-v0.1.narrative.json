@@ -1,0 +1,280 @@
+{
+  "schema": "tacet/narrative@0.1",
+  "case": "lhc-origin",
+  "opaqueId": "case-04",
+  "fixture": "lhc-origin-v0.1.json",
+  "version": "0.1",
+  "prose": "The case has 28 claims judged. The robust-core count is 0. The live-crux count is 0. There are 28 unsupported items. Present coverage includes language=en with 3 sources observed. Present coverage includes genre=article with 17 sources observed. An empty chair exists for language=pt with 0 observed. An empty chair exists for language=es with 0 observed. An empty chair exists for genre=report with 0 observed. An empty chair exists for genre=chapter with 0 observed. The total number of empty chairs is 4. There are 2 categories not measured under dimension(s) [tradition] — need content inference, never guessed. The relevance gate is aligned. The lexical overlap fraction is 0.964. The abstention diagnosis is adjacent. This narration is constrained to the measured structure; coherence, not truth.",
+  "mapping": [
+    {
+      "sentence": "The case has 28 claims judged.",
+      "assertions": [
+        0
+      ]
+    },
+    {
+      "sentence": "The robust-core count is 0.",
+      "assertions": [
+        1
+      ]
+    },
+    {
+      "sentence": "The live-crux count is 0.",
+      "assertions": [
+        2
+      ]
+    },
+    {
+      "sentence": "There are 28 unsupported items.",
+      "assertions": [
+        3
+      ]
+    },
+    {
+      "sentence": "Present coverage includes language=en with 3 sources observed.",
+      "assertions": [
+        4
+      ]
+    },
+    {
+      "sentence": "Present coverage includes genre=article with 17 sources observed.",
+      "assertions": [
+        5
+      ]
+    },
+    {
+      "sentence": "An empty chair exists for language=pt with 0 observed.",
+      "assertions": [
+        6
+      ]
+    },
+    {
+      "sentence": "An empty chair exists for language=es with 0 observed.",
+      "assertions": [
+        7
+      ]
+    },
+    {
+      "sentence": "An empty chair exists for genre=report with 0 observed.",
+      "assertions": [
+        8
+      ]
+    },
+    {
+      "sentence": "An empty chair exists for genre=chapter with 0 observed.",
+      "assertions": [
+        9
+      ]
+    },
+    {
+      "sentence": "The total number of empty chairs is 4.",
+      "assertions": [
+        10
+      ]
+    },
+    {
+      "sentence": "There are 2 categories not measured under dimension(s) [tradition] — need content inference, never guessed.",
+      "assertions": [
+        11
+      ]
+    },
+    {
+      "sentence": "The relevance gate is aligned.",
+      "assertions": [
+        12
+      ]
+    },
+    {
+      "sentence": "The lexical overlap fraction is 0.964.",
+      "assertions": [
+        13
+      ]
+    },
+    {
+      "sentence": "The abstention diagnosis is adjacent.",
+      "assertions": [
+        14
+      ]
+    },
+    {
+      "sentence": "This narration is constrained to the measured structure.",
+      "assertions": []
+    }
+  ],
+  "skeleton": [
+    {
+      "kind": "count",
+      "text": "claims judged: 28",
+      "sourceNode": "claims",
+      "numbers": [
+        28
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "robust-core: 0",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        0
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "live-crux: 0",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        0
+      ],
+      "values": []
+    },
+    {
+      "kind": "count",
+      "text": "unsupported: 28",
+      "sourceNode": "derived.convergenceMap",
+      "numbers": [
+        28
+      ],
+      "values": []
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: language=en (3 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        3
+      ],
+      "values": [
+        "language=en"
+      ]
+    },
+    {
+      "kind": "present",
+      "text": "present coverage: genre=article (17 sources observed)",
+      "sourceNode": "derived.coverageAudit.findings",
+      "numbers": [
+        17
+      ],
+      "values": [
+        "genre=article"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: language=pt (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "language=pt"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: language=es (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "language=es"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: genre=report (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "genre=report"
+      ]
+    },
+    {
+      "kind": "empty-chair",
+      "text": "empty chair: genre=chapter (0 observed)",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        0
+      ],
+      "values": [
+        "genre=chapter"
+      ]
+    },
+    {
+      "kind": "count",
+      "text": "empty chairs: 4",
+      "sourceNode": "derived.coverageAudit.emptyChairs",
+      "numbers": [
+        4
+      ],
+      "values": []
+    },
+    {
+      "kind": "not-measured",
+      "text": "not measured: 2 category(ies) under dimension(s) [tradition] — need content inference, never guessed",
+      "sourceNode": "derived.coverageAudit.notMeasured",
+      "numbers": [
+        2
+      ],
+      "values": []
+    },
+    {
+      "kind": "gate-status",
+      "text": "relevance gate: aligned",
+      "sourceNode": "relevanceGate",
+      "numbers": [],
+      "values": [],
+      "status": "aligned"
+    },
+    {
+      "kind": "gate-fraction",
+      "text": "lexical overlap fraction: 0.964",
+      "sourceNode": "relevanceGate",
+      "numbers": [
+        0.964
+      ],
+      "values": []
+    },
+    {
+      "kind": "abstention",
+      "text": "abstention diagnosis: adjacent",
+      "sourceNode": "abstentionDiagnosis",
+      "numbers": [],
+      "values": []
+    }
+  ],
+  "banned": [
+    "collider",
+    "black hole",
+    "black-hole",
+    "hawking",
+    "strangelet",
+    "cern",
+    "lhc",
+    "accelerator",
+    "particle",
+    "giddings",
+    "mangano",
+    "plaga",
+    "doomsday",
+    "cosmic ray",
+    "micro black"
+  ],
+  "guards": {
+    "numericFidelity": {
+      "pass": true,
+      "violations": []
+    },
+    "thematic": {
+      "pass": true,
+      "violations": []
+    },
+    "pass": true
+  },
+  "model": "openai/gpt-oss-120b:free",
+  "constraintNote": "This narration is constrained to the measured structure; coherence, not truth."
+}
