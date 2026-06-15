@@ -1,0 +1,11 @@
+/* Global base — copied literally from the design's <style> block. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #e4ded3; }
+textarea, input, button { font-family: inherit; }
+textarea:focus, input:focus { outline: 2px solid #2E5A4B33; border-color: #2E5A4B !important; }
+
+@keyframes tacet-spin { to { transform: rotate(360deg); } }
+@keyframes tacet-rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+
+a { color: inherit; }
