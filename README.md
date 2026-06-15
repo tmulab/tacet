@@ -48,6 +48,22 @@ compute prints `not measured`). No server, **no network, no API key**.
 Other scripts (`npm test`, `npm run typecheck`) are for maintainers and do use
 the dev tooling.
 
+### The web app is optional — to run the model locally you need none of it
+
+There is also a hosted demo at **[tacet.tmulab.org](https://tacet.tmulab.org)** —
+visit it if you want the visual experience in a browser. Its source is the
+`frontend/` directory: an **isolated Next app with its own `package.json`**. It
+is deliberately kept out of the command above —
+
+- the root `npm ci` does **not** install it (no Next/React at the root);
+- `npm run demo:replay`, `npm test`, `npm run build` and `npm run typecheck`
+  **never touch `frontend/`** (the root `tsconfig` is scoped to `src`/`tests`;
+  the test runner excludes `frontend/**`).
+
+So a judge who just wants to **run the model locally** ignores `frontend/`
+entirely and uses the one command above. To run the web app locally instead:
+`cd frontend && npm install && npm run dev`.
+
 ### Visual replay — `TACET.html`
 
 `TACET.html` (repo root) is the **same replay, read visually**. Open it in a
