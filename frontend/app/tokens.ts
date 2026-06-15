@@ -50,37 +50,7 @@ export const signals: Record<SignalKey, { glyph: string; color: string; text: st
   empty: { glyph: "○", color: c.chair, text: c.chair, name: "cadeira vazia" },
 };
 
-// The four worked cases. Door copy is literal from the design's case data.
-export interface CaseDoor {
-  readonly id: string;
-  readonly badge: string;
-  readonly badgeColor: string;
-  readonly star: boolean;
-  readonly doorTitle: string;
-  readonly doorSub: string;
-}
-export const CASES: readonly CaseDoor[] = [
-  {
-    id: "freud", badge: "fora do envelope", badgeColor: "#2E5A4B", star: true,
-    doorTitle: "a psicanálise é compatível com o marxismo?",
-    doorSub: "fora do envelope — a tradição que decidiria não foi colhida",
-  },
-  {
-    id: "covid", badge: "debate curado", badgeColor: "#0F6E56", star: false,
-    doorTitle: "qual hipótese sobre a origem do SARS-CoV-2 a evidência sustenta?",
-    doorSub: "debate curado — duas cláusulas, uma régua da OMS/SAGO",
-  },
-  {
-    id: "lhc", badge: "resposta confiante", badgeColor: "#3C3489", star: false,
-    doorTitle: "o LHC pode criar um buraco negro que ameace a Terra?",
-    doorSub: "resposta confiante — o deep research diria “não” e pararia",
-  },
-  {
-    id: "eggs", badge: "mundano-contestado", badgeColor: "#854F0B", star: false,
-    doorTitle: "ovos fazem mal ao coração?",
-    doorSub: "mundano-contestado — o efeito é heterogêneo, não nulo",
-  },
-];
+// (The four cases — door copy + full inner data — live in ./cases.ts, single source.)
 
 // The step bar across the inner screens (the live method, in order).
 export const STEPS: readonly { readonly key: string; readonly label: string }[] = [

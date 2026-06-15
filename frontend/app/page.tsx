@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { c, font, CASES } from "./tokens";
+import { c, font } from "./tokens";
+import { DOORS } from "./cases";
 
 /**
  * SCREEN 0 — HOME. Literal port of the design's Home: the tagline, the hero
@@ -112,7 +113,7 @@ export default function Home() {
 
       {/* four doors */}
       <div style={{ marginTop: 20, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 13 }}>
-        {CASES.map((d) => (
+        {DOORS.map((d) => (
           <Link
             key={d.id}
             href={`/caso/${d.id}`}
