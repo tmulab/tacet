@@ -34,7 +34,7 @@ npm ci && npm run demo:replay
 
 This compiles TypeScript → `dist/` with `tsc` and runs the demo on **plain
 `node` over the compiled JS** — it does **not** use `tsx`/`ts-node`. It loads the
-frozen fixture `fixtures/replay/sago-origin-v0.1.json` and prints, as text, the
+frozen fixture `fixtures/replay/sago-origin-v0.2.json` and prints, as text, the
 three outcomes the engine distinguishes (robust convergence / genuine crux /
 empty chair) plus the four juxtaposed reliability axes (an axis it cannot
 compute prints `not measured`). No server, **no network, no API key**.
@@ -73,7 +73,7 @@ models, and four axes. (Google Fonts are the only external reference and degrade
 to system fonts offline.)
 
 The terminal demo and the page **read the same frozen fixture**
-(`fixtures/replay/sago-origin-v0.1.json`) and must agree — same leans, same
+(`fixtures/replay/sago-origin-v0.2.json`) and must agree — same leans, same
 models, same axes. The page's data is generated from the fixture by
 `npm run build:html` (plain `node`, no tsx), and `tests/html-fixture.test.ts`
 fails if the two ever drift. **To regenerate after the fixture changes:**
@@ -92,14 +92,34 @@ npm run build:html                                        # re-embed it into TAC
   `Reader` interface, keys via `.env`) is **0.2** and is **not required** to
   verify 0.1 — everything the judge needs is in the frozen fixture.
 
-## Two worked cases
+## Curated run order — the four cases from the paper
 
-- **SARS-CoV-2 origin** — the anchor case. `fixtures/replay/sago-origin-v0.1.json`
-  is a frozen real run: 44 CC-BY abstracts, two independent models anchored to
-  the SAGO hypothesis. Default of `npm run demo:replay`.
-- **Coverage audit / curated** — `fixtures/covid-ingested.json` and
-  `fixtures/minimal.json` exercise the empty chair and the three signals
-  deterministically. Run via `npm run demo:replay -- <path>`.
+Each case is a frozen fixture; the numbers below were produced by running the
+commands offline (no network, no key) and match the paper exactly. `summary:`
+reports robust-core / live-crux / unsupported; the gate line reports the
+relevance-gate status and aligned fraction.
+
+| command | case | robust / crux / unsupported | gate |
+|---|---|---|---|
+| `npm run demo:replay -- lhc-safety` | LHC safety (base absent) | 0 / 0 / 28 | aligned · 0.893 |
+| `npm run demo:replay -- eggs` | eggs & cardiovascular risk | 2 / 0 / 27 | not-assessed · 0.138 |
+| `npm run demo:replay` (or `-- covid`) | SARS-CoV-2 origin (anchor) | 8 / 0 / 36 | not-assessed · 0.068 |
+| `npm run demo:replay -- freud-focused` | Freud (thesis invisible) | 1 / 0 / 29 | aligned · 0.8 |
+| `npm run demo:replay -- freud-derived` | Freud (drifted query) | 0 / 0 / 21 | mixed · 0.476 |
+
+Notes that travel with the numbers: the single robust-core in `freud-focused` is
+spurious — a paper on repair cafés (DOI 10.1590/1809-43412023v20d911) matched on
+shared vocabulary, not on Freud — which is the point: a lexically aligned gate
+(0.8) still does not reach the actual thesis. The live-crux signal is 0 across
+all five runs: on open corpora the readers converge or abstain; the empty chair
+is the product.
+
+**Reader-model attribution.** The demo prints the slot ids (`reader-a`,
+`reader-b`), not the model names. The models are recorded in each fixture under
+`source.readerModels` — reader A `nvidia/nemotron-3-nano-30b-a3b:free` (NVIDIA),
+reader B `openai/gpt-oss-120b:free` (OpenAI) — so every lean is auditable to the
+model that produced it. To see them: inspect `source.readerModels` in the
+fixture JSON.
 
 ## Layout
 
@@ -118,7 +138,7 @@ replay over a versioned fixture; full TDD suite green.
 **Code:** MIT.
 
 **Replay corpus (`fixtures/replay/`).** The frozen fixture
-`sago-origin-v0.1.json` is the judge's offline artifact for the SARS-CoV-2
+`sago-origin-v0.2.json` is the judge's offline artifact for the SARS-CoV-2
 origin case. Its claims are **abstracts harvested from Crossref filtered to
 Creative Commons Attribution (CC BY 4.0)** at harvest time — open-license,
 redistributable with attribution to the original publishers (each claim carries
