@@ -27,6 +27,7 @@
     "compare-uplift": "node --use-system-ca --import tsx --env-file-if-exists=.env src/pipeline/compare-uplift.ts",
     "compare-anchors": "node --import tsx src/pipeline/compare-anchors.ts",
     "mutation": "stryker run",
+    "audit": "tsx scripts/audit-fixtures.ts",
     "build:html": "node scripts/build-html.mjs",
     "llm:check": "node --use-system-ca --import tsx --env-file-if-exists=.env src/ingestion/llm-check.ts"
   },

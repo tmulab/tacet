@@ -19,7 +19,9 @@
           "total": 29,
           "resolved": 29,
           "fraction": 1
-        }
+        },
+        "hasDoiLayer": true,
+        "note": "landing 1.00 and registered 1.00 = all 29 CC-BY DOIs resolved both as reachable pages and as registered DOIs at the doi.org HANDLE. No link rot on the TACET side."
       },
       "baseline": {
         "landing": {
@@ -31,7 +33,9 @@
           "total": 0,
           "resolved": 0,
           "fraction": 0
-        }
+        },
+        "hasDoiLayer": false,
+        "note": "the deep-research output cited 0 resolvable sources (no DOIs, no extractable URLs); landing 0.00 and registered 0.00. There is no DOI layer to verify — 'registered' mirrors the empty landing, not a verification."
       },
       "note": "TWO layers: 'landing' = the cited page is reachable (<400); 'registered' = the DOI exists in the global DOI system (CSL content-negotiation), bypassing publisher link rot. Non-DOI citations have no registration layer (fall back to landing). No link-rot gap on the TACET side."
     },

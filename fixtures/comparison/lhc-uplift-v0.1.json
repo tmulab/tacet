@@ -19,7 +19,9 @@
           "total": 30,
           "resolved": 30,
           "fraction": 1
-        }
+        },
+        "hasDoiLayer": true,
+        "note": "registered 1.00 = 28 CC-BY DOIs + 2 arXiv ids resolved at the doi.org/arXiv HANDLE; landing 0.967 = the publisher page is reachable. The single landing miss is link rot on a REGISTERED DOI (10.34257/gjsfrfvol24is2pg7 — page 404, DOI registered). 30 academic identifiers verified."
       },
       "baseline": {
         "landing": {
@@ -31,7 +33,9 @@
           "total": 10,
           "resolved": 10,
           "fraction": 1
-        }
+        },
+        "hasDoiLayer": false,
+        "note": "landing 1.00 = all 10 cited URLs exist (<400), including a blog (backreaction.blogspot.com), a YouTube video and Wikipedia; 'resolve' means the URL exists, NOT academic quality (quality falls to the judge axes). 0 DOIs, so 'registered' merely MIRRORS landing (fallback) and is NOT comparable to TACET's registered, which verified 30 academic identifiers at the handle."
       },
       "note": "TWO layers: 'landing' = the cited page is reachable (<400); 'registered' = the DOI exists in the global DOI system (CSL content-negotiation), bypassing publisher link rot. Non-DOI citations have no registration layer (fall back to landing). TACET landing<registered because these registered DOIs have a rotted landing page: doi:10.34257/gjsfrfvol24is2pg7."
     },
