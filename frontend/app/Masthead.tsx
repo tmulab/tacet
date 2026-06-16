@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { c, font } from "./tokens";
 
-/** The masthead — wordmark + the standing limit "certifica coerência, nunca
- * verdade". Literal port of the design's masthead. The step bar (inner screens)
- * is a separate component added with the Passo 0 → Mapa screens (Phase 2). */
+/** The masthead — wordmark + the standing limit "certifies coherence, never
+ * truth". Literal port of the design's masthead. The step bar (inner screens)
+ * is a separate component added with the Step 0 → Map screens (Phase 2). */
 export function Masthead() {
   return (
     <div
@@ -30,9 +30,9 @@ export function Masthead() {
       <span
         style={{ fontFamily: font.mono, fontSize: 10, letterSpacing: "0.1em", color: c.m6, textAlign: "right", lineHeight: 1.6 }}
       >
-        certifica coerência,
+        certifies coherence,
         <br />
-        nunca verdade
+        never truth
       </span>
     </div>
   );

@@ -2,17 +2,17 @@ import { c, font } from "../../tokens";
 import { SIG, LEAN } from "../../cases";
 import type { CaseData } from "../../cases";
 
-/** SCREEN 3 — DOIS LEITORES. The heart: the same evidence read twice, no side
+/** SCREEN 3 — TWO READERS. The heart: the same evidence read twice, no side
  * assigned. The two leans sit side by side; the signal classifies the RELATION,
  * never fusing them into one voice. */
 export function DoisLeitores({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
   return (
     <div style={{ marginTop: 26 }}>
-      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>dois leitores · o coração</div>
-      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>a mesma evidência, lida duas vezes.</div>
+      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>two readers · the heart</div>
+      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>the same evidence, read twice.</div>
       <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.55, marginTop: 8, maxWidth: 840 }}>
-        nenhum dos dois tem lado atribuído. cada lean é conquistado da evidência. os dois ficam lado a lado — o sinal classifica a relação entre eles,{" "}
-        <span style={{ color: "#26231e" }}>nunca os funde numa resposta só</span>. certifica coerência, jamais verdade.
+        neither one is assigned a side. each lean is earned from the evidence. the two sit side by side — the signal classifies the relation between them,{" "}
+        <span style={{ color: "#26231e" }}>never fusing them into a single answer</span>. it certifies coherence, never truth.
       </div>
 
       <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginTop: 14, background: c.panel, border: `1px solid ${c.border}`, borderRadius: 3, padding: "11px 15px" }}>
@@ -70,15 +70,15 @@ export function DoisLeitores({ cs, onNext }: { cs: CaseData; onNext: () => void 
 
       {cs.isReal && (
         <div style={{ marginTop: 13, display: "flex", gap: 14, flexWrap: "wrap", fontFamily: font.mono, fontSize: 11, color: c.m2, borderTop: `1px solid ${c.borderSoft}`, paddingTop: 13 }}>
-          <span style={{ color: c.cruxText }}>▲ crux ausente · 0 — nenhum par de leans opostos neste corpus</span>
-          <span style={{ color: c.m3 }}>○ {cs.unsupportedCount} não-sustentados — evidência insuficiente (não exibidos como cartas)</span>
+          <span style={{ color: c.cruxText }}>▲ absent crux · 0 — no pair of opposing leans in this corpus</span>
+          <span style={{ color: c.m3 }}>○ {cs.unsupportedCount} unsupported — insufficient evidence (not shown as cards)</span>
         </div>
       )}
 
       <div style={{ marginTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
-        <span style={{ fontFamily: font.mono, fontSize: 10, color: c.m6, letterSpacing: "0.04em" }}>o sinal classifica a relação entre os dois leitores · jamais os colapsa numa voz</span>
+        <span style={{ fontFamily: font.mono, fontSize: 10, color: c.m6, letterSpacing: "0.04em" }}>the signal classifies the relation between the two readers · never collapses them into one voice</span>
         <button type="button" onClick={onNext} style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 12.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "11px 18px", cursor: "pointer" }}>
-          ver o mapa da disputa →
+          see the map of the dispute →
         </button>
       </div>
     </div>

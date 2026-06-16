@@ -51,11 +51,11 @@ Reading the real artifacts (server-side; the JSON is imported/bundled at build):
 
 | Screen | Reads from | Notes |
 |--------|-----------|-------|
-| **Passo 0** | replay `referenceHypothesis` (one SAGO-style paragraph; *not* two editable clauses) + `expectedCoverage` | The real anchor is one text. Show it; drop the editable two-clause fiction, or split on the concession clause. |
-| **Colheita** | replay `claims.length`, `notes.nonLlmSummaries`, `derived.coverageAudit` | harvest count + observed-vs-expected (real). Sources = Crossref only (honest). |
-| **Dois leitores** | replay `claims` + `readers` + `derived.convergenceMap.verdicts` | 28–44 claims, mostly unsupported, **0 crux**. Show the robust-core items as cards + the unsupported count; don't fabricate a crux card. |
-| **Mapa + cadeira vazia** | `derived.convergenceMap` tally + `derived.coverageAudit.emptyChairs` + `relevanceGate` | the real tricolor (mostly grey), the real empty chairs, the relevance-gate status. |
-| **Narrativa** | `*.narrative.json` `prose` (TACET column) + `fixtures/comparison/*-uplift` (deep-research column + the 4 rubric dims) | **covid + freud have no uplift** → no deep-research column for them. |
+| **Step 0** | replay `referenceHypothesis` (one SAGO-style paragraph; *not* two editable clauses) + `expectedCoverage` | The real anchor is one text. Show it; drop the editable two-clause fiction, or split on the concession clause. |
+| **Harvest** | replay `claims.length`, `notes.nonLlmSummaries`, `derived.coverageAudit` | harvest count + observed-vs-expected (real). Sources = Crossref only (honest). |
+| **Two readers** | replay `claims` + `readers` + `derived.convergenceMap.verdicts` | 28–44 claims, mostly unsupported, **0 crux**. Show the robust-core items as cards + the unsupported count; don't fabricate a crux card. |
+| **Map + empty chair** | `derived.convergenceMap` tally + `derived.coverageAudit.emptyChairs` + `relevanceGate` | the real tricolor (mostly grey), the real empty chairs, the relevance-gate status. |
+| **Narrative** | `*.narrative.json` `prose` (TACET column) + `fixtures/comparison/*-uplift` (deep-research column + the 4 rubric dims) | **covid + freud have no uplift** → no deep-research column for them. |
 
 ## 4. Decisions (RESOLVED — Hudson, 2026-06-16)
 
@@ -65,7 +65,7 @@ Reading the real artifacts (server-side; the JSON is imported/bundled at build):
    fixtures are built for them.
 2. (subsumed by 1 — do not build covid/freud uplift.)
 3. **Crux-less UX:** keep the three-signal vocabulary, but when `live-crux = 0`
-   the per-case map shows **"crux ausente"** (absent), not a fabricated crux card.
+   the per-case map shows **"absent crux"**, not a fabricated crux card.
 4. **Real names in the UI:** the public app shows the real case name (the doors
    are real questions); the `opaqueId` (case-0N) stays in the judging artifacts
    (narrative + uplift), not the browsing UI.

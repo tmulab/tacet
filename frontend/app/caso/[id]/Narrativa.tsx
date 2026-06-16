@@ -8,7 +8,7 @@ const ANCHOR: Record<NarrativeLine["anchor"], { text: string; bg: string; border
   empty: { text: "#993C1D", bg: "#FAECE7", border: "#e9cabb", glyph: "🪑" },
 };
 
-/** SCREEN 5 — NARRATIVA vs deep research. The same sub-question, two answers:
+/** SCREEN 5 — NARRATIVE vs deep research. The same sub-question, two answers:
  * TACET only says what the map measured (each line anchored to a node); deep
  * research is fluent and concludes — dissolving the crux, never naming the gap. */
 export function Narrativa({ cs }: { cs: CaseData }) {
@@ -20,15 +20,15 @@ export function Narrativa({ cs }: { cs: CaseData }) {
     const u = cs.uplift;
     const pct = (f: number) => `${Math.round(f * 100)}%`;
     const rows: { key: string; title: string; tacet: string; base: string }[] = [
-      { key: "verifiability", title: "fidelidade verificável", tacet: `DOIs resolvem ${u.verifiability.tacetN} · ${pct(u.verifiability.tacetFraction)}`, base: `${u.verifiability.baselineN} · ${pct(u.verifiability.baselineFraction)} (sem proveniência verificável)` },
-      { key: "uncertainty", title: "preservação da incerteza", tacet: `${u.uncertainty.tacetAbstentions} abstenções nomeadas`, base: `${u.uncertainty.baselineHedges} hedges · ${u.uncertainty.baselineVerdicts} veredictos` },
-      { key: "load-bearing", title: "evidência que sustenta — visível?", tacet: "cada conclusão expõe seus DOIs", base: "avaliado pelo juiz" },
-      { key: "hidden", title: "dependências ocultas reveladas", tacet: `nomeia ${u.hiddenDependency.count}: ${u.hiddenDependency.names.join(", ") || "—"}`, base: "usa-as sem revelar (fora do CC-BY)" },
+      { key: "verifiability", title: "verifiable fidelity", tacet: `DOIs resolve ${u.verifiability.tacetN} · ${pct(u.verifiability.tacetFraction)}`, base: `${u.verifiability.baselineN} · ${pct(u.verifiability.baselineFraction)} (no verifiable provenance)` },
+      { key: "uncertainty", title: "uncertainty preservation", tacet: `${u.uncertainty.tacetAbstentions} named abstentions`, base: `${u.uncertainty.baselineHedges} hedges · ${u.uncertainty.baselineVerdicts} verdicts` },
+      { key: "load-bearing", title: "load-bearing evidence — visible?", tacet: "every conclusion exposes its DOIs", base: "rated by the judge" },
+      { key: "hidden", title: "hidden dependencies disclosed", tacet: `names ${u.hiddenDependency.count}: ${u.hiddenDependency.names.join(", ") || "—"}`, base: "uses them without disclosing (outside CC-BY)" },
     ];
     return (
       <div style={{ marginTop: 26 }}>
-        <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrativa · o uplift medido</div>
-        <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>TACET medido vs deep research.</div>
+        <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrative · the measured uplift</div>
+        <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>TACET measured vs deep research.</div>
         <div style={{ fontFamily: font.serif, fontStyle: "italic", fontSize: 14, color: c.m2, lineHeight: 1.55, marginTop: 10, maxWidth: 880, textWrap: "pretty" }}>{u.asymmetry}</div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
@@ -42,14 +42,14 @@ export function Narrativa({ cs }: { cs: CaseData }) {
             </div>
           ))}
         </div>
-        <div style={{ fontFamily: font.mono, fontSize: 9.5, color: c.m5, marginTop: 10 }}>baseline: {u.baselineModel} · mede fidelidade verificável, não completude</div>
+        <div style={{ fontFamily: font.mono, fontSize: 9.5, color: c.m5, marginTop: 10 }}>baseline: {u.baselineModel} · measures verifiable fidelity, not completeness</div>
 
         <div style={{ marginTop: 18, border: "1px solid #b9cdc4", background: "#f1f5f2", borderRadius: 4, padding: "16px 18px" }}>
-          <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 12.5, letterSpacing: "0.1em", color: c.green }}>TACET · prosa ancorada</span>
+          <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 12.5, letterSpacing: "0.1em", color: c.green }}>TACET · anchored prose</span>
           <div style={{ fontFamily: font.serif, fontSize: 15.5, lineHeight: 1.6, color: "#26231e", marginTop: 11, textWrap: "pretty" }}>{cs.narrativeProse}</div>
         </div>
         <div style={{ marginTop: 22, display: "flex", justifyContent: "center" }}>
-          <Link href="/" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "13px 26px", textDecoration: "none" }}>rodar outra pergunta ↺</Link>
+          <Link href="/" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "13px 26px", textDecoration: "none" }}>run another question ↺</Link>
         </div>
       </div>
     );
@@ -59,21 +59,21 @@ export function Narrativa({ cs }: { cs: CaseData }) {
   if (cs.isReal && cs.hasUplift !== true && cs.narrativeProse) {
     return (
       <div style={{ marginTop: 26 }}>
-        <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrativa · só o que o mapa mediu</div>
-        <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>a narrativa ancorada — cada frase no que foi medido.</div>
+        <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrative · only what the map measured</div>
+        <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>the anchored narrative — every sentence on what was measured.</div>
         <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.55, marginTop: 8, maxWidth: 860 }}>
-          a do TACET só pode dizer o que o mapa mediu. este caso não tem comparação deep-research congelada — mostramos a prosa determinística do motor, gerada do fixture, sem coluna de baseline e sem alucinação.
+          TACET's can only say what the map measured. this case has no frozen deep-research comparison — we show the engine's deterministic prose, generated from the fixture, with no baseline column and no hallucination.
         </div>
         <div style={{ marginTop: 18, border: "1px solid #b9cdc4", background: "#f1f5f2", borderRadius: 4, padding: "18px 18px 16px" }}>
           <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 13, letterSpacing: "0.1em", color: c.green }}>TACET</span>
           <div style={{ fontFamily: font.serif, fontSize: 16, lineHeight: 1.65, color: "#26231e", marginTop: 13, textWrap: "pretty" }}>{cs.narrativeProse}</div>
           <div style={{ fontFamily: font.mono, fontSize: 9.5, color: "#6b8077", lineHeight: 1.5, marginTop: 16, borderTop: "1px solid #d4e0da", paddingTop: 10 }}>
-            certifica coerência, nunca verdade · prosa determinística do fixture (sem inferência livre)
+            certifies coherence, never truth · deterministic prose from the fixture (no free inference)
           </div>
         </div>
         <div style={{ marginTop: 22, display: "flex", justifyContent: "center" }}>
           <Link href="/" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "13px 26px", textDecoration: "none" }}>
-            rodar outra pergunta ↺
+            run another question ↺
           </Link>
         </div>
       </div>
@@ -82,10 +82,10 @@ export function Narrativa({ cs }: { cs: CaseData }) {
 
   return (
     <div style={{ marginTop: 26 }}>
-      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrativa · o uplift visível</div>
-      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>a mesma sub-pergunta, as duas respostas.</div>
+      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrative · the visible uplift</div>
+      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>the same sub-question, the two answers.</div>
       <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.55, marginTop: 8, maxWidth: 860 }}>
-        a do TACET só pode dizer o que o mapa mediu — cada frase ancora num nó, clicável. a do deep research é fluente e conclui. veja o que cada uma faz com a dúvida.
+        TACET's can only say what the map measured — each sentence anchors to a node, clickable. deep research's is fluent and concludes. see what each one does with the doubt.
       </div>
 
       <div style={{ marginTop: 18, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, alignItems: "start" }}>
@@ -93,7 +93,7 @@ export function Narrativa({ cs }: { cs: CaseData }) {
         <div style={{ border: "1px solid #b9cdc4", background: "#f1f5f2", borderRadius: 4, padding: "18px 18px 16px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
             <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 13, letterSpacing: "0.1em", color: c.green }}>TACET</span>
-            <span style={{ fontFamily: font.mono, fontSize: 10.5, color: "#0F6E56", background: "#E7F3EE", border: "1px solid #bfe0d2", borderRadius: 2, padding: "3px 8px" }}>{n.tacetAnchor} ancorado</span>
+            <span style={{ fontFamily: font.mono, fontSize: 10.5, color: "#0F6E56", background: "#E7F3EE", border: "1px solid #bfe0d2", borderRadius: 2, padding: "3px 8px" }}>{n.tacetAnchor} anchored</span>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 13, marginTop: 15 }}>
             {n.tacetLines.map((tl, i) => {
@@ -109,7 +109,7 @@ export function Narrativa({ cs }: { cs: CaseData }) {
             })}
           </div>
           <div style={{ fontFamily: font.mono, fontSize: 9.5, color: "#6b8077", lineHeight: 1.5, marginTop: 16, borderTop: "1px solid #d4e0da", paddingTop: 10 }}>
-            certifica coerência, nunca verdade · não conclui qual lado está certo
+            certifies coherence, never truth · does not conclude which side is right
           </div>
         </div>
 
@@ -117,28 +117,28 @@ export function Narrativa({ cs }: { cs: CaseData }) {
         <div style={{ border: `1px solid ${c.border}`, background: "#f3f0ea", borderRadius: 4, padding: "18px 18px 16px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
             <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 13, letterSpacing: "0.06em", color: c.m3 }}>deep research</span>
-            <span style={{ fontFamily: font.mono, fontSize: 10.5, color: "#888780", background: "#eae4d8", border: `1px solid ${c.border}`, borderRadius: 2, padding: "3px 8px" }}>{n.drAnchor} ancorado</span>
+            <span style={{ fontFamily: font.mono, fontSize: 10.5, color: "#888780", background: "#eae4d8", border: `1px solid ${c.border}`, borderRadius: 2, padding: "3px 8px" }}>{n.drAnchor} anchored</span>
           </div>
           <div style={{ fontFamily: font.serif, fontSize: 16.5, lineHeight: 1.6, color: "#34302a", marginTop: 15, textWrap: "pretty" }}>
             {n.drText1} <span style={{ background: "#F7EEDD", borderBottom: "1px solid #BA7517", padding: "0 2px" }}>{n.drHighlight}</span> {n.drText2}{" "}
             <em style={{ fontStyle: "italic", color: c.m1 }}>{n.drConclusion}</em>
           </div>
           <div style={{ fontFamily: font.mono, fontSize: 9.5, color: "#993C1D", lineHeight: 1.5, marginTop: 16, borderTop: `1px solid ${c.borderSoft}`, paddingTop: 10 }}>
-            dissolveu o crux numa frase de transição · nenhuma menção ao que faltou
+            dissolved the crux into a transition phrase · no mention of what was missing
           </div>
         </div>
       </div>
 
       <div style={{ marginTop: 18, background: "#EEEDFE", border: "1px solid #d6d3f4", borderLeft: "3px solid #3C3489", borderRadius: 3, padding: "15px 18px" }}>
-        <div style={{ fontFamily: font.mono, fontSize: 9.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3C3489", fontWeight: 600 }}>escala</div>
+        <div style={{ fontFamily: font.mono, fontSize: 9.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3C3489", fontWeight: 600 }}>scale</div>
         <div style={{ fontFamily: font.serif, fontSize: 17, color: "#2c2960", lineHeight: 1.5, marginTop: 8, textWrap: "pretty" }}>
-          a vantagem em ancoragem pode encolher com modelos melhores. a cadeira vazia, não — é uma capacidade estrutural que o formato narrativo-conclusivo não tem, por melhor que o modelo fique.
+          the lead in anchoring may shrink with better models. the empty chair will not — it is a structural capability that the narrative-conclusive format does not have, however good the model gets.
         </div>
       </div>
 
       <div style={{ marginTop: 22, display: "flex", justifyContent: "center" }}>
         <Link href="/" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "13px 26px", textDecoration: "none" }}>
-          rodar outra pergunta ↺
+          run another question ↺
         </Link>
       </div>
     </div>

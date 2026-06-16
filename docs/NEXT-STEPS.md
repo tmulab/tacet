@@ -1,25 +1,25 @@
-# Próximos passos (para o Claude Code)
+# Next steps (for Claude Code)
 
-Estado: esqueleto + contratos documentados + testes TDD em RED (implementações pendentes).
+State: skeleton + documented contracts + TDD tests in RED (implementations pending).
 
-## Ordem de implementação (TDD-first, Akita)
-1. **buildConvergenceMap** (`src/domain/convergence.ts`) — fazer os 6 testes de
-   `tests/convergence.test.ts` passarem (RED→GREEN). Não mexer nos testes.
-2. **shouldAbstain** — escrever testes primeiro, depois implementar.
-3. **auditCoverage** (`src/domain/coverage.ts`) — testes primeiro (empty chair,
-   baseline citado, descritivo-não-conclusivo), depois implementar.
-4. **ReliabilityProfile builder** — montar os 4 eixos a partir de claims +
-   convergence map + grafo de proveniência; degradação graciosa por eixo.
-5. **StubReader** (`src/readers/`) — leitor determinístico a partir de fixture.
-6. **Pipeline** (`src/pipeline/run-replay.ts`) — orquestra ingest→2 readers→
-   map→audit→profile sobre `fixtures/`. Alvo: clone limpo → roda em ~5 min.
-7. **Fixtures** — conjunto curado ~20–30 claims do caso COVID, com proveniência.
-8. **LlmReader** — só depois do replay verde. Prompt atrás da interface Reader.
-9. **Camada temporal** (saída descritiva sobre o mapa) + **Next UI** (borda).
+## Implementation order (TDD-first, Akita)
+1. **buildConvergenceMap** (`src/domain/convergence.ts`) — make the 6 tests in
+   `tests/convergence.test.ts` pass (RED→GREEN). Do not touch the tests.
+2. **shouldAbstain** — write the tests first, then implement.
+3. **auditCoverage** (`src/domain/coverage.ts`) — tests first (empty chair,
+   cited baseline, descriptive-not-conclusive), then implement.
+4. **ReliabilityProfile builder** — assemble the 4 axes from claims +
+   convergence map + provenance graph; graceful degradation per axis.
+5. **StubReader** (`src/readers/`) — deterministic reader from a fixture.
+6. **Pipeline** (`src/pipeline/run-replay.ts`) — orchestrates ingest→2 readers→
+   map→audit→profile over `fixtures/`. Target: clean clone → runs in ~5 min.
+7. **Fixtures** — a curated set of ~20–30 claims from the COVID case, with provenance.
+8. **LlmReader** — only after replay is green. Prompt behind the Reader interface.
+9. **Temporal layer** (descriptive output over the map) + **Next UI** (the edge).
 
-## Invariáveis (do CLAUDE.md — não renegociar)
-- TDD-first; strict total; OO no miolo, funcional na borda.
-- Leitores INDECISOS; certificam coerência, nunca verdade.
-- Perfil = 4 eixos justapostos, nunca fundidos; degradação graciosa.
-- Tempo = metadado na saída, nunca critério no julgamento.
-- Nada de credencial/dado de produção/corpus bruto no repo.
+## Invariants (from CLAUDE.md — non-negotiable)
+- TDD-first; strict throughout; OO in the core, functional at the edge.
+- UNDECIDED readers; they certify coherence, never truth.
+- Profile = 4 juxtaposed axes, never fused; graceful degradation.
+- Time = metadata in the output, never a criterion in the judgment.
+- No credentials / production data / raw corpus in the repo.

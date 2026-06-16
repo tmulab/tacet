@@ -1,5 +1,5 @@
 // Design tokens — the LITERAL contract from "TACET (standalone).html" (Claude
-// Design). Per Akita Regra 14: hex values, sizes and copy are copied verbatim;
+// Design). Per Akita Rule 14: hex values, sizes and copy are copied verbatim;
 // never "improved" or normalized. The whole palette of the prototype lives here
 // so a screen references a token, never a stray hex.
 
@@ -45,18 +45,18 @@ export const font = {
 
 export type SignalKey = "core" | "crux" | "empty";
 export const signals: Record<SignalKey, { glyph: string; color: string; text: string; name: string }> = {
-  core: { glyph: "●", color: c.core, text: c.coreText, name: "núcleo robusto" },
-  crux: { glyph: "▲", color: c.crux, text: c.cruxText, name: "crux vivo" },
-  empty: { glyph: "○", color: c.chair, text: c.chair, name: "cadeira vazia" },
+  core: { glyph: "●", color: c.core, text: c.coreText, name: "robust core" },
+  crux: { glyph: "▲", color: c.crux, text: c.cruxText, name: "live crux" },
+  empty: { glyph: "○", color: c.chair, text: c.chair, name: "empty chair" },
 };
 
 // (The four cases — door copy + full inner data — live in ./cases.ts, single source.)
 
 // The step bar across the inner screens (the live method, in order).
 export const STEPS: readonly { readonly key: string; readonly label: string }[] = [
-  { key: "passo-0", label: "passo 0" },
-  { key: "colheita", label: "colheita" },
-  { key: "leitores", label: "dois leitores" },
-  { key: "mapa", label: "mapa" },
-  { key: "narrativa", label: "narrativa" },
+  { key: "step-0", label: "step 0" },
+  { key: "harvest", label: "harvest" },
+  { key: "readers", label: "two readers" },
+  { key: "map", label: "map" },
+  { key: "narrative", label: "narrative" },
 ];

@@ -13,12 +13,12 @@ export const runtime = "nodejs";
 export async function POST(req: Request): Promise<NextResponse> {
   const secret = liveSecretFromEnv();
   if (secret === undefined) {
-    return NextResponse.json({ error: "acesso não configurado no servidor" }, { status: 503 });
+    return NextResponse.json({ error: "access not configured on the server" }, { status: 503 });
   }
   const body: { password?: unknown } = await req.json().catch(() => ({}));
   const provided = typeof body.password === "string" ? body.password : undefined;
   if (!secretMatches(provided, secret)) {
-    return NextResponse.json({ error: "chave incorreta" }, { status: 401 });
+    return NextResponse.json({ error: "incorrect key" }, { status: 401 });
   }
   const token = createHash("sha256").update(secret, "utf8").digest("hex");
   const res = NextResponse.json({ ok: true });

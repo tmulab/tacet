@@ -1,7 +1,7 @@
 import { c, font } from "../../tokens";
 import type { CaseData } from "../../cases";
 
-/** SCREEN 4 — MAPA + CADEIRA VAZIA. The shape of the dispute (robust core / live
+/** SCREEN 4 — MAP + EMPTY CHAIR. The shape of the dispute (robust core / live
  * crux / unsupported) and the measured coverage gap against the pre-registered
  * ruler — anticircular: the ruler came first. */
 export function Mapa({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
@@ -12,15 +12,15 @@ export function Mapa({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
   const pu = 100 - pc - px;
   const cruxAbsent = m.crux === 0;
   const metrics = [
-    { label: "núcleo robusto", value: String(m.core), color: c.core, glyph: "●" },
-    { label: cruxAbsent ? "crux ausente" : "crux vivo", value: cruxAbsent ? "—" : String(m.crux), color: c.crux, glyph: "▲" },
-    { label: "não sustentado", value: String(m.uns), color: "#8a8275", glyph: "○" },
+    { label: "robust core", value: String(m.core), color: c.core, glyph: "●" },
+    { label: cruxAbsent ? "absent crux" : "live crux", value: cruxAbsent ? "—" : String(m.crux), color: c.crux, glyph: "▲" },
+    { label: "unsupported", value: String(m.uns), color: "#8a8275", glyph: "○" },
   ];
 
   return (
     <div style={{ marginTop: 26 }}>
-      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>mapa · a forma da disputa</div>
-      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>a forma da disputa — e o que faltou.</div>
+      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>map · the shape of the dispute</div>
+      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>the shape of the dispute — and what was missing.</div>
 
       <div style={{ marginTop: 18, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 13 }}>
         {metrics.map((mm) => (
@@ -42,15 +42,15 @@ export function Mapa({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
       <div style={{ marginTop: 28, borderTop: `1px solid ${c.rule}`, paddingTop: 20 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
           <span style={{ fontSize: 19, color: c.chair, lineHeight: 1 }}>🪑</span>
-          <div style={{ fontFamily: font.serif, fontSize: 21, color: "#26231e" }}>a cadeira vazia</div>
+          <div style={{ fontFamily: font.serif, fontSize: 21, color: "#26231e" }}>the empty chair</div>
         </div>
         <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.55, marginTop: 9, maxWidth: 840 }}>
-          a régua foi declarada no passo 0, <span style={{ color: "#26231e" }}>antes da colheita</span>. isto não é o que achamos — é o que a base deveria conter e não continha. um buraco contável, não uma queixa.
+          the ruler was declared in step 0, <span style={{ color: "#26231e" }}>before the harvest</span>. this is not what we found — it is what the base should have contained and did not. a countable hole, not a complaint.
         </div>
 
         <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginTop: 13, fontFamily: font.mono, fontSize: 10.5 }}>
-          <span style={{ color: c.chair }}>● 0 — procuramos e não estava lá</span>
-          <span style={{ color: "#888780" }}>○ não-medido — sem como medir ainda</span>
+          <span style={{ color: c.chair }}>● 0 — we looked and it wasn't there</span>
+          <span style={{ color: "#888780" }}>○ not measured — no way to measure it yet</span>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 14 }}>
@@ -72,14 +72,14 @@ export function Mapa({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
         </div>
 
         <div style={{ marginTop: 18, background: "#EEEDFE", border: "1px solid #d6d3f4", borderLeft: "3px solid #3C3489", borderRadius: 3, padding: "15px 18px" }}>
-          <div style={{ fontFamily: font.mono, fontSize: 9.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3C3489", fontWeight: 600 }}>nota teórica</div>
+          <div style={{ fontFamily: font.mono, fontSize: 9.5, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3C3489", fontWeight: 600 }}>theoretical note</div>
           <div style={{ fontFamily: font.serif, fontSize: 17, color: "#2c2960", lineHeight: 1.5, marginTop: 8, textWrap: "pretty" }}>{cs.insight}</div>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14, flexWrap: "wrap", marginTop: 18 }}>
-          <span style={{ fontFamily: font.mono, fontSize: 10, letterSpacing: "0.08em", color: c.cruxText, background: "#F7EEDD", border: "1px solid #e7dcc6", borderRadius: 3, padding: "6px 11px" }}>medido contra a régua do passo 0 — anticircular</span>
+          <span style={{ fontFamily: font.mono, fontSize: 10, letterSpacing: "0.08em", color: c.cruxText, background: "#F7EEDD", border: "1px solid #e7dcc6", borderRadius: 3, padding: "6px 11px" }}>measured against the step-0 ruler — anticircular</span>
           <button type="button" onClick={onNext} style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 12.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "11px 18px", cursor: "pointer" }}>
-            narrativa vs deep research →
+            narrative vs deep research →
           </button>
         </div>
       </div>

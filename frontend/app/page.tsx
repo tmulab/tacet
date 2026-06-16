@@ -8,8 +8,8 @@ import { DOORS } from "./cases";
 /**
  * SCREEN 0 — HOME. Literal port of the design's Home: the tagline, the hero
  * question field, the honest "live · backend not connected" note (→ POST
- * /api/run), and the four worked-case doors. The inner screens (Passo 0 →
- * Mapa → Narrativa) and the case replays are Phase 2.
+ * /api/run), and the four worked-case doors. The inner screens (Step 0 →
+ * Map → Narrative) and the case replays are Phase 2.
  */
 export default function Home() {
   const [question, setQuestion] = useState("");
@@ -20,10 +20,10 @@ export default function Home() {
       {/* tagline */}
       <div style={{ marginTop: 40, maxWidth: 760 }}>
         <div style={{ fontFamily: font.serif, fontStyle: "italic", fontSize: 19, lineHeight: 1.5, color: c.m1, textWrap: "pretty" }}>
-          dois leitores indecisos, uma evidência, e o mapa entre eles — onde convergem é o{" "}
-          <span style={{ color: c.coreText, fontStyle: "normal" }}>núcleo robusto</span>, onde divergem é o{" "}
-          <span style={{ color: c.cruxText, fontStyle: "normal" }}>crux vivo</span>, o que ninguém cobriu é a{" "}
-          <span style={{ color: c.chair, fontStyle: "normal" }}>cadeira vazia</span>.
+          two undecided readers, one body of evidence, and the map between them — where they converge is the{" "}
+          <span style={{ color: c.coreText, fontStyle: "normal" }}>robust core</span>, where they diverge is the{" "}
+          <span style={{ color: c.cruxText, fontStyle: "normal" }}>live crux</span>, what nobody covered is the{" "}
+          <span style={{ color: c.chair, fontStyle: "normal" }}>empty chair</span>.
         </div>
       </div>
 
@@ -40,12 +40,12 @@ export default function Home() {
         }}
       >
         <label style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 15, color: c.ink }}>
-          faça uma pergunta <span style={{ fontWeight: 400, color: c.m2 }}>— qualquer disputa, qualquer campo</span>
+          ask a question <span style={{ fontWeight: 400, color: c.m2 }}>— any dispute, any field</span>
         </label>
         <textarea
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder="ex.: ovos fazem mal ao coração? · a psicanálise é compatível com o marxismo? · o LHC pode criar um buraco negro?"
+          placeholder="e.g.: are eggs bad for the heart? · is psychoanalysis compatible with Marxism? · could the LHC create a black hole?"
           style={{
             width: "100%", marginTop: 12, minHeight: 84, resize: "vertical",
             border: `1px solid ${c.borderInput}`, borderRadius: 3, background: c.input,
@@ -60,7 +60,7 @@ export default function Home() {
               background: c.panel2, border: `1px solid ${c.borderInput}`, borderRadius: 3, padding: "9px 14px", cursor: "pointer",
             }}
           >
-            <span style={{ fontFamily: font.mono }}>＋</span>PDF-âncora <span style={{ color: "#9a9282" }}>(opcional)</span>
+            <span style={{ fontFamily: font.mono }}>＋</span>anchor PDF <span style={{ color: "#9a9282" }}>(optional)</span>
           </button>
           <button
             type="button"
@@ -70,24 +70,24 @@ export default function Home() {
               border: "none", borderRadius: 3, padding: "12px 24px", cursor: "pointer", boxShadow: `0 1px 0 ${c.greenShadow}`,
             }}
           >
-            rodar o método →
+            run the method →
           </button>
         </div>
         <div style={{ fontFamily: font.mono, fontSize: 10.5, color: "#9a9282", marginTop: 13, letterSpacing: "0.02em" }}>
-          modo ao vivo — passo 0 → colheita → dois leitores → mapa → cadeira vazia → narrativa honesta
+          live mode — step 0 → harvest → two readers → map → empty chair → honest narrative
         </div>
 
         {/* honest live note */}
         {liveNote && (
           <div style={{ marginTop: 16, borderTop: `1px solid ${c.borderSoft}`, paddingTop: 15, animation: "tacet-rise 280ms ease both" }}>
             <div style={{ fontFamily: font.mono, fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: c.cruxText, fontWeight: 600 }}>
-              modo ao vivo · backend não conectado
+              live mode · backend not connected
             </div>
             <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.55, marginTop: 8, maxWidth: 680 }}>
-              o ao vivo toca rede e modelos externos via{" "}
-              <span style={{ fontFamily: font.mono, fontSize: 11.5, color: "#26231e" }}>POST /api/run</span> — sem resultado
-              fabricado para preencher. enquanto o endpoint não está ligado, veja o método completo em um mundo já rodado:{" "}
-              <span style={{ color: "#26231e" }}>offline, instantâneo, determinístico</span>.
+              live mode touches the network and external models via{" "}
+              <span style={{ fontFamily: font.mono, fontSize: 11.5, color: "#26231e" }}>POST /api/run</span> — with no fabricated
+              result to fill in. while the endpoint is not wired, see the full method in a world already run:{" "}
+              <span style={{ color: "#26231e" }}>offline, instant, deterministic</span>.
             </div>
             <Link
               href="/caso/freud"
@@ -96,7 +96,7 @@ export default function Home() {
                 background: c.green, border: "none", borderRadius: 3, padding: "9px 16px", textDecoration: "none",
               }}
             >
-              percorrer o método (caso Freud · offline) →
+              walk through the method (Freud case · offline) →
             </Link>
           </div>
         )}
@@ -106,7 +106,7 @@ export default function Home() {
       <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 34 }}>
         <span style={{ height: 1, background: c.rule, flex: 1 }} />
         <span style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.06em", color: c.m4, whiteSpace: "nowrap" }}>
-          ou veja o método em quatro mundos já rodados · offline · instantâneo
+          or see the method in four worlds already run · offline · instant
         </span>
         <span style={{ height: 1, background: c.rule, flex: 1 }} />
       </div>
@@ -131,19 +131,19 @@ export default function Home() {
               >
                 {d.badge}
               </span>
-              {d.star && <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.green, letterSpacing: "0.06em" }}>★ prova geral</span>}
+              {d.star && <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.green, letterSpacing: "0.06em" }}>★ overall proof</span>}
             </div>
             <div style={{ fontFamily: font.serif, fontSize: 18, color: "#26231e", marginTop: 12, lineHeight: 1.3, textWrap: "pretty" }}>
               {d.doorTitle}
             </div>
             <div style={{ fontSize: 11.5, color: c.m3, lineHeight: 1.4, marginTop: 7 }}>{d.doorSub}</div>
-            <div style={{ fontFamily: font.mono, fontSize: 10, color: c.green, marginTop: 13 }}>percorrer →</div>
+            <div style={{ fontFamily: font.mono, fontSize: 10, color: c.green, marginTop: 13 }}>walk through →</div>
           </Link>
         ))}
       </div>
 
       <div style={{ fontFamily: font.serif, fontStyle: "italic", fontSize: 14.5, color: c.m2, lineHeight: 1.5, marginTop: 22, maxWidth: 760, textWrap: "pretty" }}>
-        os quatro casos não são o produto — são a prova de que o palco aguenta qualquer ato. o produto é o campo lá em cima.
+        the four cases are not the product — they are the proof that the stage can hold any act. the product is the field up top.
       </div>
     </div>
   );

@@ -9,17 +9,17 @@ import { DoisLeitores } from "./DoisLeitores";
 import { Mapa } from "./Mapa";
 import { Narrativa } from "./Narrativa";
 
-const ORDER = ["passo-0", "colheita", "leitores", "mapa", "narrativa"] as const;
+const ORDER = ["step-0", "harvest", "readers", "map", "narrative"] as const;
 type Step = (typeof ORDER)[number];
 const LABEL: Record<Step, string> = {
-  "passo-0": "passo 0", colheita: "colheita", leitores: "dois leitores", mapa: "mapa", narrativa: "narrativa",
+  "step-0": "step 0", harvest: "harvest", readers: "two readers", map: "map", narrative: "narrative",
 };
 
 /** The inner case experience — mirrors the prototype's step SPA: one screen at a
  * time, driven by the step bar. The data is the design's illustrative mock until
  * Phase 3 wires the frozen fixtures. */
 export function CaseExperience({ cs }: { cs: CaseData }) {
-  const [step, setStep] = useState<Step>("passo-0");
+  const [step, setStep] = useState<Step>("step-0");
   const go = (s: Step): void => {
     setStep(s);
     if (typeof window !== "undefined") window.scrollTo(0, 0);
@@ -32,15 +32,15 @@ export function CaseExperience({ cs }: { cs: CaseData }) {
       <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
         <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontFamily: font.mono, fontSize: 10, letterSpacing: "0.06em", color: c.m1, background: c.panel, border: `1px solid ${c.border}`, borderRadius: 20, padding: "5px 11px" }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: c.unsupported, display: "inline-block" }} />
-          modo replay · offline · instantâneo
+          replay mode · offline · instant
         </span>
         {cs.isReal ? (
           <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.coreText, background: "#E7F3EE", border: "1px solid #bfe0d2", borderRadius: 3, padding: "4px 9px", letterSpacing: "0.04em" }}>
-            dado real · replay congelado (sago-origin-v0.2)
+            real data · frozen replay (sago-origin-v0.2)
           </span>
         ) : (
           <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.cruxText, background: "#F7EEDD", border: "1px solid #e7dcc6", borderRadius: 3, padding: "4px 9px", letterSpacing: "0.04em" }}>
-            números ilustrativos — até o motor rodar
+            illustrative numbers — until the engine runs
           </span>
         )}
       </div>
@@ -72,11 +72,11 @@ export function CaseExperience({ cs }: { cs: CaseData }) {
         })}
       </div>
 
-      {step === "passo-0" && <Passo0 cs={cs} onAccept={() => go("colheita")} />}
-      {step === "colheita" && <Colheita cs={cs} onNext={() => go("leitores")} />}
-      {step === "leitores" && <DoisLeitores cs={cs} onNext={() => go("mapa")} />}
-      {step === "mapa" && <Mapa cs={cs} onNext={() => go("narrativa")} />}
-      {step === "narrativa" && <Narrativa cs={cs} />}
+      {step === "step-0" && <Passo0 cs={cs} onAccept={() => go("harvest")} />}
+      {step === "harvest" && <Colheita cs={cs} onNext={() => go("readers")} />}
+      {step === "readers" && <DoisLeitores cs={cs} onNext={() => go("map")} />}
+      {step === "map" && <Mapa cs={cs} onNext={() => go("narrative")} />}
+      {step === "narrative" && <Narrativa cs={cs} />}
     </div>
   );
 }

@@ -17,12 +17,12 @@ const serif = Newsreader({
 
 export const metadata: Metadata = {
   title: "TACET — research engine · The Machine Unconscious",
-  description: "dois leitores indecisos, uma evidência, e o mapa entre eles. Certifica coerência, nunca verdade.",
+  description: "two undecided readers, one body of evidence, and the map between them. Certifies coherence, never truth.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
+    <html lang="en" className={`${sans.variable} ${mono.variable} ${serif.variable}`}>
       <body
         style={{
           minHeight: "100vh",

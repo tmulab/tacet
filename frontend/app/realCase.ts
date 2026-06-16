@@ -1,6 +1,6 @@
 // Phase 3 — project frozen replay fixtures (+ narrative prose + optional uplift
 // comparison) into the screens' view-model. Wired: covid (no uplift), eggs, lhc.
-// Honest to the real shape (live-crux=0 → "crux ausente"; abstention + empty
+// Honest to the real shape (live-crux=0 → "absent crux"; abstention + empty
 // chair as the finding). Server-only module; the JSON is bundled at build.
 
 import covidFx from "../../fixtures/replay/sago-origin-v0.2.json";
@@ -39,7 +39,7 @@ interface UpFx {
   readonly rubric: { readonly dimensions: readonly { readonly key: string; readonly title: string; readonly criterion: string }[] };
 }
 
-const LEAN_MAP: Record<string, LeanKey> = { supports: "sustenta", contradicts: "contradiz", insufficient: "insuficiente" };
+const LEAN_MAP: Record<string, LeanKey> = { supports: "supports", contradicts: "contradicts", insufficient: "insufficient" };
 
 function splitHypothesis(h: string): { a: string; b: string } {
   const i = h.search(/\bpor[ée]m\b/i);
@@ -68,7 +68,7 @@ function projectUplift(u: UpFx): Uplift {
   };
 }
 
-function project(baseId: string, fxJson: unknown, prose: string, upJson: unknown | null): CaseData {
+function project(baseId: string, fxJson: unknown, prose: string, upJson: unknown | null, caseLanguage?: string): CaseData {
   const base = CASE_DATA[baseId]!;
   const fx = fxJson as Fx;
   const verdicts = fx.derived.convergenceMap.verdicts;
@@ -85,27 +85,27 @@ function project(baseId: string, fxJson: unknown, prose: string, upJson: unknown
     .map((v) => ({
       signal: "core" as const,
       text: byId.get(v.claimId)?.text ?? v.claimId,
-      leanA: LEAN_MAP[fx.readers["reader-a"]?.[v.claimId]?.lean ?? ""] ?? "insuficiente",
-      leanB: LEAN_MAP[fx.readers["reader-b"]?.[v.claimId]?.lean ?? ""] ?? "insuficiente",
-      reading: "os dois leitores independentes (empresas distintas) convergem nesta evidência — núcleo robusto.",
+      leanA: LEAN_MAP[fx.readers["reader-a"]?.[v.claimId]?.lean ?? ""] ?? "insufficient",
+      leanB: LEAN_MAP[fx.readers["reader-b"]?.[v.claimId]?.lean ?? ""] ?? "insufficient",
+      reading: "the two independent readers (distinct companies) converge on this evidence — robust core.",
     }));
 
   const coverage = (fx.expectedCoverage ?? []).map((e) => ({ dim: e.dimension, vals: e.value }));
   const coverageReturn: CoverageReturnRow[] = fx.derived.coverageAudit.findings.map((f) => ({
     label: `${f.dimension}=${f.value}`,
     state: f.isEmptyChair ? "zero" : f.measurability === "measured" ? "ok" : "unmeasured",
-    val: f.isEmptyChair ? "0 — esperado, não veio" : f.measurability === "measured" ? `${f.observedSources} observados` : "não-medido",
+    val: f.isEmptyChair ? "0 — expected, didn't appear" : f.measurability === "measured" ? `${f.observedSources} observed` : "not measured",
   }));
   const emptyChair: EmptyChairRow[] = [
     ...fx.derived.coverageAudit.emptyChairs.map((e) => ({ kind: "zero" as const, label: e.value, detail: e.justification.slice(0, 120), val: "0" })),
     ...fx.derived.coverageAudit.findings
       .filter((f) => !f.isEmptyChair && f.measurability !== "measured")
-      .map((f) => ({ kind: "unmeasured" as const, label: f.value, detail: f.justification.slice(0, 120), val: "não-medido" })),
+      .map((f) => ({ kind: "unmeasured" as const, label: f.value, detail: f.justification.slice(0, 120), val: "not measured" })),
   ];
 
   const hyp = splitHypothesis(fx.referenceHypothesis);
   const g = fx.relevanceGate;
-  const gateNote = g ? `gate de relevância: ${g.status} (sobreposição lexical ${(g.alignedFraction * 100).toFixed(1)}%). ` : "";
+  const gateNote = g ? `relevance gate: ${g.status} (lexical overlap ${(g.alignedFraction * 100).toFixed(1)}%). ` : "";
   const modelA = Object.values(fx.readers["reader-a"] ?? {})[0]?.model ?? "?";
   const modelB = Object.values(fx.readers["reader-b"] ?? {})[0]?.model ?? "?";
   const up = upJson ? projectUplift(upJson as UpFx) : undefined;
@@ -113,29 +113,30 @@ function project(baseId: string, fxJson: unknown, prose: string, upJson: unknown
   return {
     ...base,
     isReal: true,
+    ...(caseLanguage !== undefined ? { caseLanguage } : {}),
     hasUplift: up !== undefined,
     ...(up ? { uplift: up } : {}),
     narrativeProse: prose,
     unsupportedCount: tally.uns,
     hypA: hyp.a,
-    hypB: hyp.b.length > 0 ? hyp.b : "(a âncora já carrega a concessão no próprio texto de referência)",
+    hypB: hyp.b.length > 0 ? hyp.b : "(the anchor already carries the concession in the reference text itself)",
     coverage,
     harvest: { scanned: "—", abstract: String(fx.claims.length), claims: String(fx.claims.length) },
     coverageReturn,
-    readerA: `leitor a · ${modelA}`,
-    readerB: `leitor b · ${modelB}`,
+    readerA: `reader a · ${modelA}`,
+    readerB: `reader b · ${modelB}`,
     claims,
     map: tally,
     emptyChair,
-    insight: `${gateNote}o achado é a abstenção honesta: ${tally.core} núcleo robusto, ${tally.uns} não-sustentados, e a cadeira vazia mede o que a régua do passo 0 esperava e a base não trouxe.`,
+    insight: `${gateNote}the finding is honest abstention: ${tally.core} robust core, ${tally.uns} unsupported, and the empty chair measures what the step-0 ruler expected and the base did not bring.`,
   };
 }
 
 const PROSE = (n: unknown): string => (n as { prose: string }).prose;
 
 const PROJECTORS: Record<string, () => CaseData> = {
-  covid: () => project("covid", covidFx, PROSE(covidNar), null),
-  eggs: () => project("eggs", eggsFx, PROSE(eggsNar), eggsUp),
+  covid: () => project("covid", covidFx, PROSE(covidNar), null, "Portuguese"),
+  eggs: () => project("eggs", eggsFx, PROSE(eggsNar), eggsUp, "Portuguese"),
   lhc: () => project("lhc", lhcFx, PROSE(lhcNar), lhcUp),
 };
 

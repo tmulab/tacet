@@ -1,13 +1,13 @@
 // The four worked cases — LITERAL mock data from the Claude-Design prototype
-// (Regra 14: copy/numbers verbatim). The prototype itself labels these numbers
-// "ilustrativos até o motor rodar"; Phase 3 wires the real frozen fixtures
+// (Rule 14: copy/numbers verbatim). The prototype itself labels these numbers
+// "illustrative until the engine runs"; Phase 3 wires the real frozen fixtures
 // (covid → sago-origin-v0.2) through the domain core. Until then, every screen
-// shows the `· ilustrativo` marker.
+// shows the `· illustrative` marker.
 
 import { c } from "./tokens";
 
 export type Signal = "core" | "crux" | "unsupported";
-export type LeanKey = "sustenta" | "contradiz" | "insuficiente";
+export type LeanKey = "supports" | "contradicts" | "insufficient";
 
 export interface ClaimRow {
   readonly signal: Signal;
@@ -63,6 +63,10 @@ export interface CaseData {
   // ── Phase 3 real-data extensions (absent on the illustrative mock) ──
   /** true → projected from a frozen fixture, not the design mock. */
   readonly isReal?: boolean;
+  /** the case's own language when it is not English (e.g. "Portuguese"); the
+   * reference hypothesis is shown in the case language, not translated — TACET
+   * operates on the case in its own language. Undefined for English cases. */
+  readonly caseLanguage?: string;
   /** the deterministic narrative prose (TACET column) for real cases. */
   readonly narrativeProse?: string;
   /** how many claims were unsupported (shown as a summary, not 36 cards). */
@@ -85,178 +89,178 @@ export interface Uplift {
 
 export const CASE_DATA: Record<string, CaseData> = {
   freud: {
-    id: "freud", badge: "fora do envelope", badgeColor: "#2E5A4B", star: true,
-    doorTitle: "a psicanálise é compatível com o marxismo?",
-    doorSub: "fora do envelope — a tradição que decidiria não foi colhida",
-    question: "a psicanálise freudiana é compatível com o materialismo histórico marxista?",
-    hypA: "as duas tradições operam em níveis distintos — a psicanálise no aparelho psíquico individual, o marxismo nas relações materiais de produção — e a leitura mais sustentada é a de tensão estrutural entre elas.",
-    hypB: "a tradição frankfurtiana (Fromm, Marcuse, Adorno) propôs sínteses explícitas, então a incompatibilidade não pode ser afirmada sem ressalva.",
+    id: "freud", badge: "outside the envelope", badgeColor: "#2E5A4B", star: true,
+    doorTitle: "is psychoanalysis compatible with Marxism?",
+    doorSub: "outside the envelope — the tradition that would decide was not harvested",
+    question: "is Freudian psychoanalysis compatible with Marxist historical materialism?",
+    hypA: "the two traditions operate at distinct levels — psychoanalysis on the individual psychic apparatus, Marxism on the material relations of production — and the best-supported reading is one of structural tension between them.",
+    hypB: "the Frankfurt School tradition (Fromm, Marcuse, Adorno) proposed explicit syntheses, so incompatibility cannot be asserted without qualification.",
     coverage: [
-      { dim: "língua", vals: "pt · de · fr" },
-      { dim: "gênero", vals: "livro" },
-      { dim: "tradição", vals: "frankfurtiana", unmeasured: true },
+      { dim: "language", vals: "pt · de · fr" },
+      { dim: "genre", vals: "book" },
+      { dim: "tradition", vals: "Frankfurt School", unmeasured: true },
     ],
     harvest: { scanned: "412", abstract: "147", claims: "28" },
     coverageReturn: [
-      { label: "língua pt", state: "ok", val: "34 registros" },
-      { label: "língua de", state: "zero", val: "0 — esperado, não veio" },
-      { label: "língua fr", state: "zero", val: "0 — esperado, não veio" },
-      { label: "gênero livro", state: "zero", val: "0 — esperado, não veio" },
-      { label: "tradição frankfurtiana", state: "unmeasured", val: "não-medida" },
+      { label: "language pt", state: "ok", val: "34 records" },
+      { label: "language de", state: "zero", val: "0 — expected, didn't appear" },
+      { label: "language fr", state: "zero", val: "0 — expected, didn't appear" },
+      { label: "genre book", state: "zero", val: "0 — expected, didn't appear" },
+      { label: "tradition Frankfurt School", state: "unmeasured", val: "not measured" },
     ],
-    readerA: "leitor a · glm-4.6", readerB: "leitor b · minimax-m2.7",
+    readerA: "reader a · glm-4.6", readerB: "reader b · minimax-m2.7",
     claims: [
-      { signal: "core", text: "Fromm e Marcuse desenvolveram sínteses explícitas entre a teoria pulsional e a crítica da economia política.", leanA: "sustenta", leanB: "sustenta", reading: "os dois leitores convergem, independentemente: a síntese frankfurtiana está documentada. convergência que significa algo." },
-      { signal: "crux", text: "a tópica freudiana do inconsciente é redutível à determinação de classe.", leanA: "contradiz", leanB: "insuficiente", reading: "aqui a evidência genuinamente não decide. um leitor lê contra a redução; o outro não encontra base suficiente. o desacordo não foi montado; emergiu." },
-      { signal: "unsupported", text: "há consenso clínico contemporâneo sobre a incompatibilidade metodológica entre as duas tradições.", leanA: "insuficiente", leanB: "insuficiente", reading: "a base não traz evidência suficiente para sustentar a afirmação — é o claim mais fraco do corpus, mostrado sem ser escondido." },
+      { signal: "core", text: "Fromm and Marcuse developed explicit syntheses between drive theory and the critique of political economy.", leanA: "supports", leanB: "supports", reading: "the two readers converge, independently: the Frankfurt-School synthesis is documented. convergence that means something." },
+      { signal: "crux", text: "the Freudian topography of the unconscious is reducible to class determination.", leanA: "contradicts", leanB: "insufficient", reading: "here the evidence genuinely does not decide. one reader reads against the reduction; the other finds no sufficient basis. the disagreement was not staged; it emerged." },
+      { signal: "unsupported", text: "there is contemporary clinical consensus on the methodological incompatibility between the two traditions.", leanA: "insufficient", leanB: "insufficient", reading: "the base brings no sufficient evidence to support the claim — it is the weakest claim in the corpus, shown rather than hidden." },
     ],
     map: { core: 88, crux: 31, uns: 28 },
     emptyChair: [
-      { kind: "zero", label: "lacuna linguística", detail: "de e fr esperados no passo 0 · zero observados", val: "0" },
-      { kind: "zero", label: "lacuna de gênero documental", detail: "livro esperado no passo 0 · zero observados", val: "0" },
-      { kind: "unmeasured", label: "tradição teórica", detail: "frankfurtiana — a tradição que a pergunta tratava", val: "não-medido" },
+      { kind: "zero", label: "language gap", detail: "de and fr expected in step 0 · zero observed", val: "0" },
+      { kind: "zero", label: "document-genre gap", detail: "book expected in step 0 · zero observed", val: "0" },
+      { kind: "unmeasured", label: "theoretical tradition", detail: "Frankfurt School — the tradition the question was about", val: "not measured" },
     ],
-    insight: "o instrumento mediu a ausência da própria tradição de que a pergunta tratava. a cadeira vazia não é um debatedor que faltou — é um buraco na evidência. aqui, ela é o achado.",
+    insight: "the instrument measured the absence of the very tradition the question was about. the empty chair is not a debater who failed to show — it is a hole in the evidence. here, it is the finding.",
     narrative: {
       tacetAnchor: "96%", drAnchor: "61%",
       tacetLines: [
-        { text: "a síntese frankfurtiana entre pulsão e crítica da economia política está documentada e convergente.", anchor: "core", label: "núcleo robusto · 88" },
-        { text: "se o inconsciente é redutível à classe permanece em disputa: a evidência não decide.", anchor: "crux", label: "crux vivo · 31" },
-        { text: "a base não cobriu a literatura em alemão e francês nem os livros da própria tradição frankfurtiana — a origem da disputa está fora do envelope colhido.", anchor: "empty", label: "cadeira vazia" },
+        { text: "the Frankfurt-School synthesis between drive and the critique of political economy is documented and convergent.", anchor: "core", label: "robust core · 88" },
+        { text: "whether the unconscious is reducible to class remains in dispute: the evidence does not decide.", anchor: "crux", label: "live crux · 31" },
+        { text: "the base did not cover the German- and French-language literature, nor the books of the Frankfurt School itself — the origin of the dispute is outside the harvested envelope.", anchor: "empty", label: "empty chair" },
       ],
-      drText1: "embora psicanálise e marxismo partam de pressupostos distintos sobre o sujeito,",
-      drHighlight: "o consenso aponta para uma síntese produtiva",
-      drText2: "na qual a teoria crítica reconcilia o desejo individual e a estrutura material.",
-      drConclusion: "as duas tradições são, no fim, compatíveis.",
+      drText1: "although psychoanalysis and Marxism start from distinct assumptions about the subject,",
+      drHighlight: "the consensus points to a productive synthesis",
+      drText2: "in which critical theory reconciles individual desire and material structure.",
+      drConclusion: "the two traditions are, in the end, compatible.",
     },
   },
   covid: {
-    id: "covid", badge: "debate curado", badgeColor: "#0F6E56", star: false,
-    doorTitle: "qual hipótese sobre a origem do SARS-CoV-2 a evidência sustenta?",
-    doorSub: "debate curado — duas cláusulas, uma régua da OMS/SAGO",
-    question: "qual hipótese sobre a origem do SARS-CoV-2 é mais sustentada pela evidência disponível?",
-    hypA: "sob a evidência atual, a origem zoonótica natural por transbordamento é a leitura mais sustentada.",
-    hypB: "a hipótese alternativa não pode ser nem descartada nem confirmada, por falta de dados — a questão permanece inconclusiva.",
+    id: "covid", badge: "curated debate", badgeColor: "#0F6E56", star: false,
+    doorTitle: "which hypothesis about the origin of SARS-CoV-2 does the evidence support?",
+    doorSub: "curated debate — two clauses, one WHO/SAGO ruler",
+    question: "which hypothesis about the origin of SARS-CoV-2 is best supported by the available evidence?",
+    hypA: "under current evidence, natural zoonotic origin via spillover is the best-supported reading.",
+    hypB: "the alternative hypothesis can be neither ruled out nor confirmed, for lack of data — the question remains inconclusive.",
     coverage: [
-      { dim: "língua", vals: "pt · en · zh" },
-      { dim: "gênero", vals: "artigo revisado" },
-      { dim: "tipo", vals: "pré-print", unmeasured: true },
+      { dim: "language", vals: "pt · en · zh" },
+      { dim: "genre", vals: "peer-reviewed article" },
+      { dim: "type", vals: "preprint", unmeasured: true },
     ],
     harvest: { scanned: "980", abstract: "410", claims: "64" },
     coverageReturn: [
-      { label: "língua en", state: "ok", val: "286 registros" },
-      { label: "língua pt", state: "ok", val: "19 registros" },
-      { label: "língua zh", state: "zero", val: "0 — esperado, não veio" },
-      { label: "tipo pré-print", state: "unmeasured", val: "não-medido" },
+      { label: "language en", state: "ok", val: "286 records" },
+      { label: "language pt", state: "ok", val: "19 records" },
+      { label: "language zh", state: "zero", val: "0 — expected, didn't appear" },
+      { label: "type preprint", state: "unmeasured", val: "not measured" },
     ],
-    readerA: "leitor a · glm-4.6", readerB: "leitor b · minimax-m2.7",
+    readerA: "reader a · glm-4.6", readerB: "reader b · minimax-m2.7",
     claims: [
-      { signal: "core", text: "três parentes virais próximos foram descritos em morcegos em amostragens independentes.", leanA: "sustenta", leanB: "sustenta", reading: "os dois leitores convergem: a evidência filogenética é consistente com a primeira cláusula. núcleo robusto." },
-      { signal: "crux", text: "a evidência genômica disponível distingue de forma conclusiva entre as duas hipóteses.", leanA: "contradiz", leanB: "insuficiente", reading: "um leitor lê contra a alegação de conclusividade; o outro a julga insuficiente. a divergência é real — cada um ancora numa cláusula distinta." },
-      { signal: "unsupported", text: "registros de mercado estabelecem o ponto exato do transbordamento.", leanA: "insuficiente", leanB: "insuficiente", reading: "a base não traz evidência suficiente para fixar um ponto exato — o claim mais fraco do corpus." },
+      { signal: "core", text: "three close viral relatives were described in bats across independent samplings.", leanA: "supports", leanB: "supports", reading: "the two readers converge: the phylogenetic evidence is consistent with the first clause. robust core." },
+      { signal: "crux", text: "the available genomic evidence conclusively distinguishes between the two hypotheses.", leanA: "contradicts", leanB: "insufficient", reading: "one reader reads against the claim of conclusiveness; the other judges it insufficient. the divergence is real — each anchors on a distinct clause." },
+      { signal: "unsupported", text: "market records establish the exact point of spillover.", leanA: "insufficient", leanB: "insufficient", reading: "the base brings no sufficient evidence to fix an exact point — the weakest claim in the corpus." },
     ],
     map: { core: 96, crux: 22, uns: 19 },
     emptyChair: [
-      { kind: "zero", label: "lacuna linguística", detail: "literatura em zh esperada · zero com abstract rastreável", val: "0" },
-      { kind: "unmeasured", label: "pré-prints", detail: "tipo declarado fora do envelope de proveniência", val: "não-medido" },
+      { kind: "zero", label: "language gap", detail: "zh literature expected · zero with a traceable abstract", val: "0" },
+      { kind: "unmeasured", label: "preprints", detail: "type declared outside the provenance envelope", val: "not measured" },
     ],
-    insight: "a régua antecipou a literatura em chinês e ela não veio com proveniência rastreável. a lacuna é contável e foi prevista — não é uma desculpa, é uma medida.",
+    insight: "the ruler anticipated the Chinese-language literature and it did not arrive with traceable provenance. the gap is countable and was foreseen — it is not an excuse, it is a measure.",
     narrative: {
       tacetAnchor: "94%", drAnchor: "58%",
       tacetLines: [
-        { text: "a evidência filogenética em morcegos sustenta, convergente, a primeira cláusula da hipótese de referência.", anchor: "core", label: "núcleo robusto · 96" },
-        { text: "se a genômica decide entre as hipóteses permanece em disputa: a evidência não conclui.", anchor: "crux", label: "crux vivo · 22" },
-        { text: "a base não cobriu a literatura em chinês com proveniência rastreável — parte do debate ficou fora do envelope.", anchor: "empty", label: "cadeira vazia" },
+        { text: "the phylogenetic evidence in bats supports, convergently, the first clause of the reference hypothesis.", anchor: "core", label: "robust core · 96" },
+        { text: "whether genomics decides between the hypotheses remains in dispute: the evidence does not conclude.", anchor: "crux", label: "live crux · 22" },
+        { text: "the base did not cover the Chinese-language literature with traceable provenance — part of the debate stayed outside the envelope.", anchor: "empty", label: "empty chair" },
       ],
-      drText1: "apesar das incertezas remanescentes sobre o intermediário,",
-      drHighlight: "o peso da evidência converge para a origem natural",
-      drText2: "e as demais hipóteses carecem de suporte empírico equivalente.",
-      drConclusion: "a questão está, para fins práticos, resolvida.",
+      drText1: "despite the remaining uncertainties about the intermediate host,",
+      drHighlight: "the weight of evidence converges on a natural origin",
+      drText2: "and the other hypotheses lack equivalent empirical support.",
+      drConclusion: "the question is, for practical purposes, settled.",
     },
   },
   lhc: {
-    id: "lhc", badge: "resposta confiante", badgeColor: "#3C3489", star: false,
-    doorTitle: "o LHC pode criar um buraco negro que ameace a Terra?",
-    doorSub: "resposta confiante — o deep research diria “não” e pararia",
-    question: "o LHC pode criar um buraco negro que ameace a Terra?",
-    hypA: "a leitura mais sustentada: micro-buracos-negros hipotéticos evaporariam por radiação Hawking em frações de segundo, sem ameaça.",
-    hypB: "a radiação Hawking é teórica e não foi observada diretamente; a confiança vem de argumentos de consistência, não de medição.",
+    id: "lhc", badge: "confident answer", badgeColor: "#3C3489", star: false,
+    doorTitle: "could the LHC create a black hole that threatens the Earth?",
+    doorSub: "confident answer — deep research would say “no” and stop",
+    question: "could the LHC create a black hole that threatens the Earth?",
+    hypA: "the best-supported reading: hypothetical micro black holes would evaporate via Hawking radiation in fractions of a second, with no threat.",
+    hypB: "Hawking radiation is theoretical and has not been observed directly; the confidence comes from consistency arguments, not from measurement.",
     coverage: [
-      { dim: "língua", vals: "en" },
-      { dim: "gênero", vals: "artigo revisado" },
-      { dim: "observação", vals: "direta de Hawking", unmeasured: true },
+      { dim: "language", vals: "en" },
+      { dim: "genre", vals: "peer-reviewed article" },
+      { dim: "observation", vals: "direct Hawking", unmeasured: true },
     ],
     harvest: { scanned: "320", abstract: "180", claims: "22" },
     coverageReturn: [
-      { label: "língua en", state: "ok", val: "180 registros" },
-      { label: "argumento de segurança astrofísico", state: "ok", val: "41 registros" },
-      { label: "observação direta de Hawking", state: "unmeasured", val: "não-medido" },
+      { label: "language en", state: "ok", val: "180 records" },
+      { label: "astrophysical safety argument", state: "ok", val: "41 records" },
+      { label: "direct Hawking observation", state: "unmeasured", val: "not measured" },
     ],
-    readerA: "leitor a · glm-4.6", readerB: "leitor b · minimax-m2.7",
+    readerA: "reader a · glm-4.6", readerB: "reader b · minimax-m2.7",
     claims: [
-      { signal: "core", text: "raios cósmicos de energia muito maior atingem a Terra há bilhões de anos sem incidente.", leanA: "sustenta", leanB: "sustenta", reading: "os dois convergem: o argumento de segurança astrofísico é robusto e independente. núcleo robusto." },
-      { signal: "crux", text: "a evaporação de micro-buracos-negros está empiricamente confirmada.", leanA: "contradiz", leanB: "insuficiente", reading: "um leitor lê contra a alegação de confirmação empírica; o outro a julga insuficiente. a confiança popular esconde este crux." },
-      { signal: "unsupported", text: "há detecção experimental de radiação Hawking em aceleradores.", leanA: "insuficiente", leanB: "insuficiente", reading: "a base não traz evidência suficiente — a confirmação direta não existe no corpus." },
+      { signal: "core", text: "cosmic rays of far higher energy have struck the Earth for billions of years without incident.", leanA: "supports", leanB: "supports", reading: "the two converge: the astrophysical safety argument is robust and independent. robust core." },
+      { signal: "crux", text: "the evaporation of micro black holes is empirically confirmed.", leanA: "contradicts", leanB: "insufficient", reading: "one reader reads against the claim of empirical confirmation; the other judges it insufficient. popular confidence hides this crux." },
+      { signal: "unsupported", text: "there is experimental detection of Hawking radiation in accelerators.", leanA: "insufficient", leanB: "insufficient", reading: "the base brings no sufficient evidence — direct confirmation does not exist in the corpus." },
     ],
     map: { core: 91, crux: 14, uns: 9 },
     emptyChair: [
-      { kind: "unmeasured", label: "observação direta de Hawking", detail: "a confirmação empírica que decidiria a segunda cláusula", val: "não-medido" },
+      { kind: "unmeasured", label: "direct Hawking observation", detail: "the empirical confirmation that would decide the second clause", val: "not measured" },
     ],
-    insight: "o deep research responde “não há perigo” e encerra. o TACET concorda na primeira cláusula — mas mostra que a segunda repousa em radiação nunca observada. a confiança é justificada; a lacuna, real.",
+    insight: "deep research answers “no danger” and stops. TACET agrees on the first clause — but shows that the second rests on radiation never observed. the confidence is justified; the gap, real.",
     narrative: {
       tacetAnchor: "93%", drAnchor: "64%",
       tacetLines: [
-        { text: "o argumento de segurança por raios cósmicos sustenta, convergente, a ausência de ameaça.", anchor: "core", label: "núcleo robusto · 91" },
-        { text: "se a evaporação está empiricamente confirmada permanece em disputa: a evidência não decide.", anchor: "crux", label: "crux vivo · 14" },
-        { text: "a base não cobriu observação direta de radiação Hawking — a confirmação empírica ficou fora do envelope.", anchor: "empty", label: "cadeira vazia" },
+        { text: "the cosmic-ray safety argument supports, convergently, the absence of a threat.", anchor: "core", label: "robust core · 91" },
+        { text: "whether evaporation is empirically confirmed remains in dispute: the evidence does not decide.", anchor: "crux", label: "live crux · 14" },
+        { text: "the base did not cover direct observation of Hawking radiation — the empirical confirmation stayed outside the envelope.", anchor: "empty", label: "empty chair" },
       ],
-      drText1: "os mecanismos físicos envolvidos são bem compreendidos, e",
-      drHighlight: "há consenso de que não existe risco algum",
-      drText2: "conforme atestam revisões de segurança dos próprios laboratórios.",
-      drConclusion: "não há absolutamente nada com que se preocupar.",
+      drText1: "the physical mechanisms involved are well understood, and",
+      drHighlight: "there is consensus that no risk exists",
+      drText2: "as attested by the laboratories' own safety reviews.",
+      drConclusion: "there is absolutely nothing to worry about.",
     },
   },
   eggs: {
-    id: "eggs", badge: "mundano-contestado", badgeColor: "#854F0B", star: false,
-    doorTitle: "ovos fazem mal ao coração?",
-    doorSub: "mundano-contestado — o efeito é heterogêneo, não nulo",
-    question: "ovos fazem mal ao coração?",
-    hypA: "a leitura mais sustentada: o consumo moderado de ovos não eleva de forma consistente o risco cardiovascular na população geral.",
-    hypB: "subgrupos (por exemplo, diabéticos) mostram associação em alguns estudos — o efeito é heterogêneo, não nulo.",
+    id: "eggs", badge: "mundane-but-contested", badgeColor: "#854F0B", star: false,
+    doorTitle: "are eggs bad for the heart?",
+    doorSub: "mundane-but-contested — the effect is heterogeneous, not null",
+    question: "are eggs bad for the heart?",
+    hypA: "the best-supported reading: moderate egg consumption does not consistently raise cardiovascular risk in the general population.",
+    hypB: "subgroups (for example, diabetics) show an association in some studies — the effect is heterogeneous, not null.",
     coverage: [
-      { dim: "língua", vals: "en · pt" },
-      { dim: "desenho", vals: "coorte · RCT" },
-      { dim: "população", vals: "não-ocidental", unmeasured: true },
+      { dim: "language", vals: "en · pt" },
+      { dim: "design", vals: "cohort · RCT" },
+      { dim: "population", vals: "non-Western", unmeasured: true },
     ],
     harvest: { scanned: "1240", abstract: "520", claims: "96" },
     coverageReturn: [
-      { label: "desenho coorte", state: "ok", val: "318 registros" },
-      { label: "desenho RCT longo prazo", state: "zero", val: "0 — esperado, não veio" },
-      { label: "população não-ocidental", state: "unmeasured", val: "não-medido" },
+      { label: "design cohort", state: "ok", val: "318 records" },
+      { label: "design long-term RCT", state: "zero", val: "0 — expected, didn't appear" },
+      { label: "non-Western population", state: "unmeasured", val: "not measured" },
     ],
-    readerA: "leitor a · glm-4.6", readerB: "leitor b · minimax-m2.7",
+    readerA: "reader a · glm-4.6", readerB: "reader b · minimax-m2.7",
     claims: [
-      { signal: "core", text: "meta-análises recentes não encontram associação consistente em população geral.", leanA: "sustenta", leanB: "sustenta", reading: "os dois convergem na primeira cláusula: o sinal médio é nulo na população geral. núcleo robusto." },
-      { signal: "crux", text: "o efeito em subgrupos diabéticos é decidido pela evidência atual.", leanA: "contradiz", leanB: "insuficiente", reading: "um leitor lê contra a alegação de que está decidido; o outro a julga insuficiente. o crux mora na heterogeneidade." },
-      { signal: "unsupported", text: "há um limiar diário seguro estabelecido para todas as populações.", leanA: "insuficiente", leanB: "insuficiente", reading: "a base não traz evidência suficiente para fixar um limiar universal — o claim mais fraco." },
+      { signal: "core", text: "recent meta-analyses find no consistent association in the general population.", leanA: "supports", leanB: "supports", reading: "the two converge on the first clause: the average signal is null in the general population. robust core." },
+      { signal: "crux", text: "the effect in diabetic subgroups is decided by current evidence.", leanA: "contradicts", leanB: "insufficient", reading: "one reader reads against the claim that it is decided; the other judges it insufficient. the crux lives in the heterogeneity." },
+      { signal: "unsupported", text: "there is an established safe daily threshold for all populations.", leanA: "insufficient", leanB: "insufficient", reading: "the base brings no sufficient evidence to fix a universal threshold — the weakest claim." },
     ],
     map: { core: 102, crux: 41, uns: 33 },
     emptyChair: [
-      { kind: "zero", label: "ensaios randomizados de longo prazo", detail: "desenho RCT longo esperado · zero com abstract", val: "0" },
-      { kind: "unmeasured", label: "populações não-ocidentais", detail: "fora das coortes colhidas", val: "não-medido" },
+      { kind: "zero", label: "long-term randomized trials", detail: "long RCT design expected · zero with an abstract", val: "0" },
+      { kind: "unmeasured", label: "non-Western populations", detail: "outside the harvested cohorts", val: "not measured" },
     ],
-    insight: "o efeito médio é nulo, mas a disputa real vive nos subgrupos — e os ensaios longos que decidiriam não estão na base. a cadeira vazia aponta exatamente onde a ciência ainda precisa olhar.",
+    insight: "the average effect is null, but the real dispute lives in the subgroups — and the long trials that would decide are not in the base. the empty chair points exactly where the science still needs to look.",
     narrative: {
       tacetAnchor: "95%", drAnchor: "60%",
       tacetLines: [
-        { text: "na população geral, o consumo moderado não eleva o risco de forma consistente — convergente.", anchor: "core", label: "núcleo robusto · 102" },
-        { text: "se o efeito em subgrupos está decidido permanece em disputa: a evidência não decide.", anchor: "crux", label: "crux vivo · 41" },
-        { text: "a base não cobriu ensaios randomizados de longo prazo nem populações não-ocidentais — fora do envelope.", anchor: "empty", label: "cadeira vazia" },
+        { text: "in the general population, moderate consumption does not consistently raise risk — convergent.", anchor: "core", label: "robust core · 102" },
+        { text: "whether the subgroup effect is decided remains in dispute: the evidence does not decide.", anchor: "crux", label: "live crux · 41" },
+        { text: "the base did not cover long-term randomized trials nor non-Western populations — outside the envelope.", anchor: "empty", label: "empty chair" },
       ],
-      drText1: "embora estudos antigos sugerissem cautela,",
-      drHighlight: "a evidência atual converge para a segurança do consumo moderado",
-      drText2: "sem distinções relevantes entre grupos.",
-      drConclusion: "pode comer ovos sem preocupação.",
+      drText1: "although older studies suggested caution,",
+      drHighlight: "current evidence converges on the safety of moderate consumption",
+      drText2: "with no relevant distinctions between groups.",
+      drConclusion: "you can eat eggs without worry.",
     },
   },
 };
@@ -266,12 +270,12 @@ export const DOORS: readonly CaseData[] = ["covid", "lhc", "eggs", "freud"].map(
 
 // signal + lean visual maps (literal from the prototype's _sig/_lean).
 export const SIG: Record<Signal, { glyph: string; name: string; color: string; text: string; tint: string; border: string }> = {
-  core: { glyph: "●", name: "núcleo robusto", color: "#1D9E75", text: "#0F6E56", tint: "#EEF4F0", border: "#cbe2d6" },
-  crux: { glyph: "▲", name: "crux vivo", color: "#BA7517", text: "#854F0B", tint: "#FBF4E7", border: "#BA7517" },
-  unsupported: { glyph: "○", name: "não sustentado", color: "#8a8275", text: "#57534c", tint: c.panel3, border: c.borderInput },
+  core: { glyph: "●", name: "robust core", color: "#1D9E75", text: "#0F6E56", tint: "#EEF4F0", border: "#cbe2d6" },
+  crux: { glyph: "▲", name: "live crux", color: "#BA7517", text: "#854F0B", tint: "#FBF4E7", border: "#BA7517" },
+  unsupported: { glyph: "○", name: "unsupported", color: "#8a8275", text: "#57534c", tint: c.panel3, border: c.borderInput },
 };
 export const LEAN: Record<LeanKey, { text: string; color: string }> = {
-  sustenta: { text: "↑ sustenta", color: "#0F6E56" },
-  contradiz: { text: "↓ contradiz", color: "#993C1D" },
-  insuficiente: { text: "◦ insuficiente", color: "#888780" },
+  supports: { text: "↑ supports", color: "#0F6E56" },
+  contradicts: { text: "↓ contradicts", color: "#993C1D" },
+  insufficient: { text: "◦ insufficient", color: "#888780" },
 };

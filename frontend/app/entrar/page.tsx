@@ -26,7 +26,7 @@ export default function Entrar() {
     }
     setBusy(false);
     const j: { error?: string } = await r.json().catch(() => ({}));
-    setErr(j.error ?? "falha ao entrar");
+    setErr(j.error ?? "sign-in failed");
   }
 
   return (
@@ -38,12 +38,12 @@ export default function Entrar() {
           <span style={{ color: signals.empty.color }}>○</span>
         </div>
         <div style={{ fontFamily: font.serif, fontStyle: "italic", fontSize: 18, color: c.m1, marginTop: 18, lineHeight: 1.5 }}>
-          dois leitores indecisos, uma evidência, e o mapa entre eles.
+          two undecided readers, one body of evidence, and the map between them.
         </div>
 
         <form onSubmit={submit} style={{ marginTop: 26, background: c.card, border: `1px solid ${c.focus}`, borderTop: `3px solid ${c.green}`, borderRadius: 4, padding: "24px 24px 22px", textAlign: "left", boxShadow: "0 2px 18px #2e5a4b14" }}>
           <label htmlFor="pw" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 14, color: c.ink }}>
-            acesso restrito <span style={{ fontWeight: 400, color: c.m2 }}>— informe a chave</span>
+            restricted access <span style={{ fontWeight: 400, color: c.m2 }}>— enter the key</span>
           </label>
           <input
             id="pw"
@@ -52,7 +52,7 @@ export default function Entrar() {
             onChange={(e) => setPw(e.target.value)}
             autoFocus
             autoComplete="current-password"
-            placeholder="chave de acesso"
+            placeholder="access key"
             style={{ width: "100%", marginTop: 11, border: `1px solid ${c.borderInput}`, borderRadius: 3, background: c.input, padding: "12px 13px", fontFamily: font.mono, fontSize: 15, color: "#26231e" }}
           />
           {err && (
@@ -63,12 +63,12 @@ export default function Entrar() {
             disabled={busy || pw.length === 0}
             style={{ width: "100%", marginTop: 16, fontFamily: font.sans, fontWeight: 600, fontSize: 14, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "12px 24px", cursor: busy ? "default" : "pointer", opacity: busy || pw.length === 0 ? 0.6 : 1, boxShadow: `0 1px 0 ${c.greenShadow}` }}
           >
-            {busy ? "verificando…" : "entrar →"}
+            {busy ? "verifying…" : "sign in →"}
           </button>
         </form>
 
         <div style={{ fontFamily: font.mono, fontSize: 10, color: c.m5, marginTop: 16, letterSpacing: "0.04em", lineHeight: 1.6 }}>
-          a chave é verificada no servidor · certifica coerência, nunca verdade
+          the key is verified on the server · certifies coherence, never truth
         </div>
       </div>
     </div>

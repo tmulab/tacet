@@ -2,9 +2,9 @@ import { c, font } from "../../tokens";
 import type { CaseData, CoverageReturnRow } from "../../cases";
 
 const SOURCES = [
-  { name: "Crossref", done: true, status: "concluída" },
-  { name: "OpenAlex", done: false, status: "planejado · fora desta execução" },
-  { name: "SciELO", done: false, status: "planejado · fora desta execução" },
+  { name: "Crossref", done: true, status: "complete" },
+  { name: "OpenAlex", done: false, status: "planned · outside this run" },
+  { name: "SciELO", done: false, status: "planned · outside this run" },
 ];
 
 function returnStyle(state: CoverageReturnRow["state"]): { glyph: string; gColor: string; bg: string; bd: string; vColor: string; vItalic: boolean } {
@@ -13,20 +13,20 @@ function returnStyle(state: CoverageReturnRow["state"]): { glyph: string; gColor
   return { glyph: "○", gColor: "#888780", bg: c.panel, bd: c.border, vColor: "#888780", vItalic: true };
 }
 
-/** SCREEN 2 — COLHEITA: the harvest metrics, the sources, and expected-vs-returned
+/** SCREEN 2 — HARVEST: the harvest metrics, the sources, and expected-vs-returned
  * coverage (the empty chair forming in front of you). */
 export function Colheita({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
   const metrics = [
-    { label: "registros varridos", value: cs.harvest.scanned },
-    { label: "com abstract", value: cs.harvest.abstract },
-    { label: "claims ingeridos", value: cs.harvest.claims },
+    { label: "records scanned", value: cs.harvest.scanned },
+    { label: "with an abstract", value: cs.harvest.abstract },
+    { label: "claims ingested", value: cs.harvest.claims },
   ];
   return (
     <div style={{ marginTop: 26 }}>
-      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>colheita · execução salva, reproduzida</div>
-      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>colhendo a base de evidência</div>
+      <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>harvest · run saved, replayed</div>
+      <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>harvesting the evidence base</div>
       <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.5, marginTop: 7, maxWidth: 800 }}>
-        o TACET audita a literatura sobre a disputa, não opina sobre ela. mantemos só registros com abstract e proveniência rastreável.
+        TACET audits the literature on the dispute, it does not opine on it. we keep only records with an abstract and traceable provenance.
       </div>
 
       <div style={{ marginTop: 18, display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 13 }}>
@@ -40,7 +40,7 @@ export function Colheita({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
 
       <div style={{ marginTop: 20, display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 18 }}>
         <div>
-          <div style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13, color: c.ink }}>fontes</div>
+          <div style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13, color: c.ink }}>sources</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 9, marginTop: 11 }}>
             {SOURCES.map((src) => (
               <div key={src.name} style={{ border: `1px solid ${c.border}`, background: c.card, borderRadius: 3, padding: "11px 13px" }}>
@@ -60,13 +60,13 @@ export function Colheita({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
             ))}
           </div>
           <div style={{ fontFamily: font.mono, fontSize: 9.5, color: c.m6, marginTop: 10, lineHeight: 1.5 }}>
-            esta execução colhe do Crossref. OpenAlex e SciELO entram como trabalho real quando ligados — não pintados como reais antes disso.
+            this run harvests from Crossref. OpenAlex and SciELO come in as real work once wired — not painted as real before then.
           </div>
         </div>
 
         <div>
           <div style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13, color: c.ink }}>
-            cobertura esperada <span style={{ fontWeight: 400, color: c.m3 }}>vs. o que voltou</span>
+            expected coverage <span style={{ fontWeight: 400, color: c.m3 }}>vs. what came back</span>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, marginTop: 11 }}>
             {cs.coverageReturn.map((cr) => {
@@ -83,14 +83,14 @@ export function Colheita({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
             })}
           </div>
           <div style={{ fontFamily: font.serif, fontStyle: "italic", fontSize: 13, color: c.m2, marginTop: 11, lineHeight: 1.5 }}>
-            a cadeira vazia se forma na sua frente: o que a régua esperava e a base não trouxe.
+            the empty chair forms in front of you: what the ruler expected and the base did not bring.
           </div>
         </div>
       </div>
 
       <div style={{ marginTop: 22, display: "flex", justifyContent: "flex-end" }}>
         <button type="button" onClick={onNext} style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 12.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "11px 18px", cursor: "pointer" }}>
-          ver os dois leitores →
+          see the two readers →
         </button>
       </div>
     </div>
