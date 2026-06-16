@@ -12,7 +12,7 @@ import lhcNar from "../../fixtures/replay/lhc-origin-v0.1.narrative.json";
 import eggsUp from "../../fixtures/comparison/eggs-uplift-v0.1.json";
 import lhcUp from "../../fixtures/comparison/lhc-uplift-v0.1.json";
 import { CASE_DATA } from "./cases";
-import type { CaseData, ClaimRow, CoverageReturnRow, EmptyChairRow, LeanKey, Uplift } from "./cases";
+import type { CaseData, ClaimRow, CoverageReturnRow, EmptyChairRow, LeanKey, Uplift, VerifiabilitySide } from "./cases";
 
 interface Fx {
   readonly referenceHypothesis: string;
@@ -28,11 +28,22 @@ interface Fx {
     };
   };
 }
+interface VLayer {
+  readonly resolved: number;
+  readonly total: number;
+  readonly fraction: number;
+}
+interface VSideFx {
+  readonly landing: VLayer;
+  readonly registered: VLayer;
+  readonly hasDoiLayer: boolean;
+  readonly note: string;
+}
 interface UpFx {
   readonly baseline: { readonly model: string };
   readonly asymmetry: string;
   readonly measurements: {
-    readonly verifiability: { readonly tacet: { readonly registered: { readonly resolved: number; readonly total: number; readonly fraction: number } }; readonly baseline: { readonly registered: { readonly resolved: number; readonly total: number; readonly fraction: number } } };
+    readonly verifiability: { readonly tacet: VSideFx; readonly baseline: VSideFx };
     readonly uncertainty: { readonly tacet: { readonly total?: number; readonly unsupported: number }; readonly baseline: { readonly hedges: number; readonly verdicts: number } };
     readonly hiddenDependency: { readonly count: number; readonly nameMentions?: readonly string[] };
   };
@@ -47,16 +58,23 @@ function splitHypothesis(h: string): { a: string; b: string } {
   return { a: h, b: "" };
 }
 
+const vside = (s: VSideFx): VerifiabilitySide => ({
+  landingFraction: s.landing.fraction,
+  registeredFraction: s.registered.fraction,
+  landingN: `${s.landing.resolved}/${s.landing.total}`,
+  registeredN: `${s.registered.resolved}/${s.registered.total}`,
+  hasDoiLayer: s.hasDoiLayer,
+  note: s.note,
+});
+
 function projectUplift(u: UpFx): Uplift {
   const m = u.measurements;
   return {
     baselineModel: u.baseline.model,
     asymmetry: u.asymmetry,
     verifiability: {
-      tacetFraction: m.verifiability.tacet.registered.fraction,
-      baselineFraction: m.verifiability.baseline.registered.fraction,
-      tacetN: `${m.verifiability.tacet.registered.resolved}/${m.verifiability.tacet.registered.total}`,
-      baselineN: `${m.verifiability.baseline.registered.resolved}/${m.verifiability.baseline.registered.total}`,
+      tacet: vside(m.verifiability.tacet),
+      baseline: vside(m.verifiability.baseline),
     },
     uncertainty: {
       tacetAbstentions: m.uncertainty.tacet.total ?? m.uncertainty.tacet.unsupported,

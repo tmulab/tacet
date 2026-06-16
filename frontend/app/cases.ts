@@ -77,11 +77,25 @@ export interface CaseData {
   readonly uplift?: Uplift;
 }
 
+/** One side of the two-layer verifiability measure. `landing` = the cited page is
+ * reachable; `registered` = the DOI exists at the doi.org handle. `hasDoiLayer`
+ * false means registered is a FALLBACK to landing (no DOIs), not verification —
+ * so "registered 1.00 vs 1.00" is never read as parity. `note` is the fixture's
+ * own interpretive rule, shown verbatim (never rewritten in the UI). */
+export interface VerifiabilitySide {
+  readonly landingFraction: number;
+  readonly registeredFraction: number;
+  readonly landingN: string;
+  readonly registeredN: string;
+  readonly hasDoiLayer: boolean;
+  readonly note: string;
+}
+
 /** Projected from a `tacet/uplift-comparison` fixture — the four rubric axes. */
 export interface Uplift {
   readonly baselineModel: string;
   readonly asymmetry: string;
-  readonly verifiability: { readonly tacetFraction: number; readonly baselineFraction: number; readonly tacetN: string; readonly baselineN: string };
+  readonly verifiability: { readonly tacet: VerifiabilitySide; readonly baseline: VerifiabilitySide };
   readonly uncertainty: { readonly tacetAbstentions: number; readonly baselineHedges: number; readonly baselineVerdicts: number };
   readonly hiddenDependency: { readonly count: number; readonly names: readonly string[] };
   readonly dimensions: readonly { readonly key: string; readonly title: string; readonly criterion: string }[];

@@ -19,8 +19,18 @@ export function Narrativa({ cs }: { cs: CaseData }) {
   if (cs.isReal && cs.uplift) {
     const u = cs.uplift;
     const pct = (f: number) => `${Math.round(f * 100)}%`;
-    const rows: { key: string; title: string; tacet: string; base: string }[] = [
-      { key: "verifiability", title: "verifiable fidelity", tacet: `DOIs resolve ${u.verifiability.tacetN} · ${pct(u.verifiability.tacetFraction)}`, base: `${u.verifiability.baselineN} · ${pct(u.verifiability.baselineFraction)} (no verifiable provenance)` },
+    const v = u.verifiability;
+    const layers = (s: typeof v.tacet): string =>
+      `landing ${s.landingN} (${pct(s.landingFraction)}) · registered ${s.registeredN} (${pct(s.registeredFraction)})`;
+    const rows: { key: string; title: string; tacet: string; base: string; tacetNote?: string; baseNote?: string }[] = [
+      {
+        key: "verifiability",
+        title: "verifiable fidelity",
+        tacet: layers(v.tacet),
+        base: layers(v.baseline) + (v.baseline.hasDoiLayer ? "" : " — registered = fallback (0 DOIs)"),
+        tacetNote: v.tacet.note,
+        baseNote: v.baseline.note,
+      },
       { key: "uncertainty", title: "uncertainty preservation", tacet: `${u.uncertainty.tacetAbstentions} named abstentions`, base: `${u.uncertainty.baselineHedges} hedges · ${u.uncertainty.baselineVerdicts} verdicts` },
       { key: "load-bearing", title: "load-bearing evidence — visible?", tacet: "every conclusion exposes its DOIs", base: "rated by the judge" },
       { key: "hidden", title: "hidden dependencies disclosed", tacet: `names ${u.hiddenDependency.count}: ${u.hiddenDependency.names.join(", ") || "—"}`, base: "uses them without disclosing (outside CC-BY)" },
@@ -39,6 +49,12 @@ export function Narrativa({ cs }: { cs: CaseData }) {
                 <div><span style={{ fontFamily: font.mono, fontSize: 11, fontWeight: 600, color: c.green }}>TACET</span> <span style={{ fontSize: 12.5, color: "#26231e" }}>{r.tacet}</span></div>
                 <div><span style={{ fontFamily: font.mono, fontSize: 11, fontWeight: 600, color: c.m3 }}>deep research</span> <span style={{ fontSize: 12.5, color: c.m1 }}>{r.base}</span></div>
               </div>
+              {(r.tacetNote || r.baseNote) && (
+                <div style={{ marginTop: 9, borderTop: `1px solid ${c.borderSoft}`, paddingTop: 8, display: "flex", flexDirection: "column", gap: 5 }}>
+                  {r.tacetNote && <div style={{ fontSize: 11, color: c.m2, lineHeight: 1.45 }}><span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.green }}>TACET rule · </span>{r.tacetNote}</div>}
+                  {r.baseNote && <div style={{ fontSize: 11, color: c.m2, lineHeight: 1.45 }}><span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.m3 }}>baseline rule · </span>{r.baseNote}</div>}
+                </div>
+              )}
             </div>
           ))}
         </div>
