@@ -69,6 +69,18 @@ export interface CaseData {
   readonly unsupportedCount?: number;
   /** whether a deep-research uplift comparison exists for this case. */
   readonly hasUplift?: boolean;
+  /** the TACET-vs-deep-research uplift measurement (eggs, lhc). */
+  readonly uplift?: Uplift;
+}
+
+/** Projected from a `tacet/uplift-comparison` fixture — the four rubric axes. */
+export interface Uplift {
+  readonly baselineModel: string;
+  readonly asymmetry: string;
+  readonly verifiability: { readonly tacetFraction: number; readonly baselineFraction: number; readonly tacetN: string; readonly baselineN: string };
+  readonly uncertainty: { readonly tacetAbstentions: number; readonly baselineHedges: number; readonly baselineVerdicts: number };
+  readonly hiddenDependency: { readonly count: number; readonly names: readonly string[] };
+  readonly dimensions: readonly { readonly key: string; readonly title: string; readonly criterion: string }[];
 }
 
 export const CASE_DATA: Record<string, CaseData> = {

@@ -14,6 +14,47 @@ const ANCHOR: Record<NarrativeLine["anchor"], { text: string; bg: string; border
 export function Narrativa({ cs }: { cs: CaseData }) {
   const n = cs.narrative;
 
+  // Real case WITH an uplift comparison (eggs, lhc): the four measured rubric
+  // dimensions, TACET vs deep-research, framed by the named asymmetry.
+  if (cs.isReal && cs.uplift) {
+    const u = cs.uplift;
+    const pct = (f: number) => `${Math.round(f * 100)}%`;
+    const rows: { key: string; title: string; tacet: string; base: string }[] = [
+      { key: "verifiability", title: "fidelidade verificável", tacet: `DOIs resolvem ${u.verifiability.tacetN} · ${pct(u.verifiability.tacetFraction)}`, base: `${u.verifiability.baselineN} · ${pct(u.verifiability.baselineFraction)} (sem proveniência verificável)` },
+      { key: "uncertainty", title: "preservação da incerteza", tacet: `${u.uncertainty.tacetAbstentions} abstenções nomeadas`, base: `${u.uncertainty.baselineHedges} hedges · ${u.uncertainty.baselineVerdicts} veredictos` },
+      { key: "load-bearing", title: "evidência que sustenta — visível?", tacet: "cada conclusão expõe seus DOIs", base: "avaliado pelo juiz" },
+      { key: "hidden", title: "dependências ocultas reveladas", tacet: `nomeia ${u.hiddenDependency.count}: ${u.hiddenDependency.names.join(", ") || "—"}`, base: "usa-as sem revelar (fora do CC-BY)" },
+    ];
+    return (
+      <div style={{ marginTop: 26 }}>
+        <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrativa · o uplift medido</div>
+        <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>TACET medido vs deep research.</div>
+        <div style={{ fontFamily: font.serif, fontStyle: "italic", fontSize: 14, color: c.m2, lineHeight: 1.55, marginTop: 10, maxWidth: 880, textWrap: "pretty" }}>{u.asymmetry}</div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 10, marginTop: 16 }}>
+          {rows.map((r) => (
+            <div key={r.key} style={{ border: `1px solid ${c.border}`, background: c.card, borderRadius: 3, padding: "12px 14px" }}>
+              <div style={{ fontFamily: font.mono, fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: c.m4 }}>{r.title}</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 8 }}>
+                <div><span style={{ fontFamily: font.mono, fontSize: 11, fontWeight: 600, color: c.green }}>TACET</span> <span style={{ fontSize: 12.5, color: "#26231e" }}>{r.tacet}</span></div>
+                <div><span style={{ fontFamily: font.mono, fontSize: 11, fontWeight: 600, color: c.m3 }}>deep research</span> <span style={{ fontSize: 12.5, color: c.m1 }}>{r.base}</span></div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div style={{ fontFamily: font.mono, fontSize: 9.5, color: c.m5, marginTop: 10 }}>baseline: {u.baselineModel} · mede fidelidade verificável, não completude</div>
+
+        <div style={{ marginTop: 18, border: "1px solid #b9cdc4", background: "#f1f5f2", borderRadius: 4, padding: "16px 18px" }}>
+          <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 12.5, letterSpacing: "0.1em", color: c.green }}>TACET · prosa ancorada</span>
+          <div style={{ fontFamily: font.serif, fontSize: 15.5, lineHeight: 1.6, color: "#26231e", marginTop: 11, textWrap: "pretty" }}>{cs.narrativeProse}</div>
+        </div>
+        <div style={{ marginTop: 22, display: "flex", justifyContent: "center" }}>
+          <Link href="/" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "13px 26px", textDecoration: "none" }}>rodar outra pergunta ↺</Link>
+        </div>
+      </div>
+    );
+  }
+
   // Real case without an uplift comparison (covid, freud): the TACET column only.
   if (cs.isReal && cs.hasUplift !== true && cs.narrativeProse) {
     return (
