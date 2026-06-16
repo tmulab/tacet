@@ -9,8 +9,10 @@ import eggsFx from "../../fixtures/replay/eggs-cv-v0.1.json";
 import eggsNar from "../../fixtures/replay/eggs-cv-v0.1.narrative.json";
 import lhcFx from "../../fixtures/replay/lhc-origin-v0.1.json";
 import lhcNar from "../../fixtures/replay/lhc-origin-v0.1.narrative.json";
-import eggsUp from "../../fixtures/comparison/eggs-uplift-v0.1.json";
 import lhcUp from "../../fixtures/comparison/lhc-uplift-v0.1.json";
+import eggsUp from "../../fixtures/comparison/eggs-uplift-v0.1.json";
+import freudFx from "../../fixtures/replay/freud-midas-focused-v0.1.json";
+import freudNar from "../../fixtures/replay/freud-midas-focused-v0.1.narrative.json";
 import { CASE_DATA } from "./cases";
 import type { CaseData, ClaimRow, CoverageReturnRow, EmptyChairRow, LeanKey, Uplift, VerifiabilitySide } from "./cases";
 
@@ -156,6 +158,8 @@ const PROJECTORS: Record<string, () => CaseData> = {
   covid: () => project("covid", covidFx, PROSE(covidNar), null, "Portuguese"),
   eggs: () => project("eggs", eggsFx, PROSE(eggsNar), eggsUp, "Portuguese"),
   lhc: () => project("lhc", lhcFx, PROSE(lhcNar), lhcUp),
+  // freud-midas-focused (case-09): English corpus, no uplift comparison (decided).
+  freud: () => project("freud", freudFx, PROSE(freudNar), null),
 };
 
 /** Real projection for a door, or null to fall back to the illustrative mock. */
