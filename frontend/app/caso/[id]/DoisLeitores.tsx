@@ -68,6 +68,13 @@ export function DoisLeitores({ cs, onNext }: { cs: CaseData; onNext: () => void 
         })}
       </div>
 
+      {cs.isReal && (
+        <div style={{ marginTop: 13, display: "flex", gap: 14, flexWrap: "wrap", fontFamily: font.mono, fontSize: 11, color: c.m2, borderTop: `1px solid ${c.borderSoft}`, paddingTop: 13 }}>
+          <span style={{ color: c.cruxText }}>▲ crux ausente · 0 — nenhum par de leans opostos neste corpus</span>
+          <span style={{ color: c.m3 }}>○ {cs.unsupportedCount} não-sustentados — evidência insuficiente (não exibidos como cartas)</span>
+        </div>
+      )}
+
       <div style={{ marginTop: 20, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
         <span style={{ fontFamily: font.mono, fontSize: 10, color: c.m6, letterSpacing: "0.04em" }}>o sinal classifica a relação entre os dois leitores · jamais os colapsa numa voz</span>
         <button type="button" onClick={onNext} style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 12.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "11px 18px", cursor: "pointer" }}>

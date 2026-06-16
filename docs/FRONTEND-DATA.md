@@ -57,20 +57,21 @@ Reading the real artifacts (server-side; the JSON is imported/bundled at build):
 | **Mapa + cadeira vazia** | `derived.convergenceMap` tally + `derived.coverageAudit.emptyChairs` + `relevanceGate` | the real tricolor (mostly grey), the real empty chairs, the relevance-gate status. |
 | **Narrativa** | `*.narrative.json` `prose` (TACET column) + `fixtures/comparison/*-uplift` (deep-research column + the 4 rubric dims) | **covid + freud have no uplift** → no deep-research column for them. |
 
-## 4. Open decisions (need Hudson / the pipeline process)
+## 4. Decisions (RESOLVED — Hudson, 2026-06-16)
 
-1. **freud canonical:** `freud-midas-derived` (case-08) or `freud-midas-focused`
-   (case-09) for the door? (Design door copy is "fora do envelope".)
-2. **covid + freud uplift:** build `sago-uplift` / `freud-uplift` comparison
-   fixtures, or render Narrativa for those two **without** the deep-research
-   column (TACET prose only)?
-3. **Crux-less UX:** with `live-crux = 0`, does the Dois-leitores screen keep the
-   three-signal legend (showing crux = 0), and does the Home tagline keep "onde
-   divergem é o crux vivo" even though no case currently has one? (Recommend:
-   keep the vocabulary — it's the method's capability — but the per-case map
-   shows the honest 0.)
-4. **Opaque ids:** the narratives carry `opaqueId` (case-01…09) for blind
-   judging. Does the public UI expose the real case name or the opaque id?
+1. **Deep-research column only where an uplift fixture exists** — i.e. **eggs**
+   and **lhc**. **covid + freud** render Narrativa with the **TACET column only**
+   (the `*.narrative.json` prose); no deep-research side, and no new uplift
+   fixtures are built for them.
+2. (subsumed by 1 — do not build covid/freud uplift.)
+3. **Crux-less UX:** keep the three-signal vocabulary, but when `live-crux = 0`
+   the per-case map shows **"crux ausente"** (absent), not a fabricated crux card.
+4. **Real names in the UI:** the public app shows the real case name (the doors
+   are real questions); the `opaqueId` (case-0N) stays in the judging artifacts
+   (narrative + uplift), not the browsing UI.
+5. **freud canonical variant:** not chosen yet → default to `freud-midas-focused`
+   (case-09, has 1 robust-core + 4 empty chairs, slightly richer than `derived`'s
+   0/21) when freud is wired; overridable.
 
 ## 5. Recommended Phase-3 order (once §4 is decided)
 

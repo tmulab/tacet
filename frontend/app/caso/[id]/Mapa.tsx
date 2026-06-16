@@ -10,10 +10,11 @@ export function Mapa({ cs, onNext }: { cs: CaseData; onNext: () => void }) {
   const pc = Math.round((m.core / tot) * 100);
   const px = Math.round((m.crux / tot) * 100);
   const pu = 100 - pc - px;
+  const cruxAbsent = m.crux === 0;
   const metrics = [
-    { label: "núcleo robusto", value: m.core, color: c.core, glyph: "●" },
-    { label: "crux vivo", value: m.crux, color: c.crux, glyph: "▲" },
-    { label: "não sustentado", value: m.uns, color: "#8a8275", glyph: "○" },
+    { label: "núcleo robusto", value: String(m.core), color: c.core, glyph: "●" },
+    { label: cruxAbsent ? "crux ausente" : "crux vivo", value: cruxAbsent ? "—" : String(m.crux), color: c.crux, glyph: "▲" },
+    { label: "não sustentado", value: String(m.uns), color: "#8a8275", glyph: "○" },
   ];
 
   return (

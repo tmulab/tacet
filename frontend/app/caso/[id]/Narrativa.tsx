@@ -13,6 +13,32 @@ const ANCHOR: Record<NarrativeLine["anchor"], { text: string; bg: string; border
  * research is fluent and concludes — dissolving the crux, never naming the gap. */
 export function Narrativa({ cs }: { cs: CaseData }) {
   const n = cs.narrative;
+
+  // Real case without an uplift comparison (covid, freud): the TACET column only.
+  if (cs.isReal && cs.hasUplift !== true && cs.narrativeProse) {
+    return (
+      <div style={{ marginTop: 26 }}>
+        <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrativa · só o que o mapa mediu</div>
+        <div style={{ fontFamily: font.serif, fontSize: 24, color: "#26231e", marginTop: 4 }}>a narrativa ancorada — cada frase no que foi medido.</div>
+        <div style={{ fontSize: 13, color: c.m1, lineHeight: 1.55, marginTop: 8, maxWidth: 860 }}>
+          a do TACET só pode dizer o que o mapa mediu. este caso não tem comparação deep-research congelada — mostramos a prosa determinística do motor, gerada do fixture, sem coluna de baseline e sem alucinação.
+        </div>
+        <div style={{ marginTop: 18, border: "1px solid #b9cdc4", background: "#f1f5f2", borderRadius: 4, padding: "18px 18px 16px" }}>
+          <span style={{ fontFamily: font.mono, fontWeight: 600, fontSize: 13, letterSpacing: "0.1em", color: c.green }}>TACET</span>
+          <div style={{ fontFamily: font.serif, fontSize: 16, lineHeight: 1.65, color: "#26231e", marginTop: 13, textWrap: "pretty" }}>{cs.narrativeProse}</div>
+          <div style={{ fontFamily: font.mono, fontSize: 9.5, color: "#6b8077", lineHeight: 1.5, marginTop: 16, borderTop: "1px solid #d4e0da", paddingTop: 10 }}>
+            certifica coerência, nunca verdade · prosa determinística do fixture (sem inferência livre)
+          </div>
+        </div>
+        <div style={{ marginTop: 22, display: "flex", justifyContent: "center" }}>
+          <Link href="/" style={{ fontFamily: font.sans, fontWeight: 600, fontSize: 13.5, color: "#fff", background: c.green, border: "none", borderRadius: 3, padding: "13px 26px", textDecoration: "none" }}>
+            rodar outra pergunta ↺
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div style={{ marginTop: 26 }}>
       <div style={{ fontFamily: font.mono, fontSize: 10.5, letterSpacing: "0.12em", textTransform: "uppercase", color: c.m5 }}>narrativa · o uplift visível</div>

@@ -60,6 +60,15 @@ export interface CaseData {
     readonly drText2: string;
     readonly drConclusion: string;
   };
+  // ── Phase 3 real-data extensions (absent on the illustrative mock) ──
+  /** true → projected from a frozen fixture, not the design mock. */
+  readonly isReal?: boolean;
+  /** the deterministic narrative prose (TACET column) for real cases. */
+  readonly narrativeProse?: string;
+  /** how many claims were unsupported (shown as a summary, not 36 cards). */
+  readonly unsupportedCount?: number;
+  /** whether a deep-research uplift comparison exists for this case. */
+  readonly hasUplift?: boolean;
 }
 
 export const CASE_DATA: Record<string, CaseData> = {

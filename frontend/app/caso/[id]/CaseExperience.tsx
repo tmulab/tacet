@@ -34,9 +34,15 @@ export function CaseExperience({ cs }: { cs: CaseData }) {
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: c.unsupported, display: "inline-block" }} />
           modo replay · offline · instantâneo
         </span>
-        <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.cruxText, background: "#F7EEDD", border: "1px solid #e7dcc6", borderRadius: 3, padding: "4px 9px", letterSpacing: "0.04em" }}>
-          números ilustrativos — até o motor rodar
-        </span>
+        {cs.isReal ? (
+          <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.coreText, background: "#E7F3EE", border: "1px solid #bfe0d2", borderRadius: 3, padding: "4px 9px", letterSpacing: "0.04em" }}>
+            dado real · replay congelado (sago-origin-v0.2)
+          </span>
+        ) : (
+          <span style={{ fontFamily: font.mono, fontSize: 9.5, color: c.cruxText, background: "#F7EEDD", border: "1px solid #e7dcc6", borderRadius: 3, padding: "4px 9px", letterSpacing: "0.04em" }}>
+            números ilustrativos — até o motor rodar
+          </span>
+        )}
       </div>
 
       {/* step bar */}

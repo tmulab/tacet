@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { CASE_DATA } from "../../cases";
+import { realCase } from "../../realCase";
 import { CaseExperience } from "./CaseExperience";
 
 /**
@@ -9,7 +10,7 @@ import { CaseExperience } from "./CaseExperience";
  */
 export default async function CasePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const cs = CASE_DATA[id];
+  const cs = realCase(id) ?? CASE_DATA[id];
   if (!cs) notFound();
   return <CaseExperience cs={cs} />;
 }
